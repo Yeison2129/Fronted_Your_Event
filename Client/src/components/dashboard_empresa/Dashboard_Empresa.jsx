@@ -25,35 +25,38 @@ export const Dashboard = () => {
                         <h3>Empresa</h3>
                         </li>
                     <li>
-                        <Link to="/crud_eventos">
+                    <Link to="/cardCrud">
+
                         <svg>
                             <use href="#pages"></use>
                         </svg>
-                        <span>Eventos</span>
+                        <span>Mis Eventos</span>
                         </Link>
                     </li>
-                     <li>
+                     {/* <li>
                         <Link to="/cardEvento">
                         <svg>
                             <use href="#collection"></use>
                         </svg>
                         <span>Colecciones</span>
                         </Link>
-                    </li>
+                    </li> */}
                     <li>
-                        <a href="#eventos">
+                        <Link to="/crud_eventos">
+                        
                         <svg>
                             <use href="#users"></use>
                         </svg>
-                        <span>Usuarios</span>
-                        </a>
+                        <span>Crear evento</span>
+                       
+                        </Link>     
                     </li>
                     <li>
                         <a href="#0">
                         <svg>
                             <use href="#trends"></use>
                         </svg>
-                        <span>Trends</span>
+                        <span>Estadísticas</span>
                         </a>
                     </li>
                    
@@ -62,7 +65,7 @@ export const Dashboard = () => {
                         <svg>
                             <use href="#comments"></use>
                         </svg>
-                        <span>Comentarios</span>
+                        <span>Asistencia</span>
                         </a>
                     </li>
                     <li>
@@ -70,7 +73,7 @@ export const Dashboard = () => {
                         <svg>
                             <use href="#appearance"></use>
                         </svg>
-                        <span>Apariencia</span>
+                        <span>Papelera  </span>
                         </a>
                     </li>
                     <li className="menu-heading">
@@ -81,7 +84,7 @@ export const Dashboard = () => {
                         <svg>
                             <use href="#settings"></use>
                         </svg>
-                        <span>Herramientas</span>
+                        <span>Opciones</span>
                         </a>
                     </li>
                     <li>
@@ -89,7 +92,7 @@ export const Dashboard = () => {
                         <svg>
                             <use href="#options"></use>
                         </svg>
-                        <span>Opciones </span>
+                        <span>Ayuda </span>
                         </a>
                     </li>
                     <li>
@@ -97,7 +100,7 @@ export const Dashboard = () => {
                         <svg>
                             <use href="#charts"></use>
                         </svg>
-                        <span>Estadisticas</span>
+                        <span>Atrás </span>
                         </a>
                     </li>
                     {/* <li>

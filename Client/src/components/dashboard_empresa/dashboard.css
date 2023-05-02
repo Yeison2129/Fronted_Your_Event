@@ -188,10 +188,8 @@ body {
   position: relative;
   left: var(--page-header-width);
   width: calc(100% - var(--page-header-width));
-  min-height: 100vh;
   padding: 30px;
   color: var(--page-content-txtColor);
-  background: var(--page-content-bgColor);
 }
 
 .search-and-user {

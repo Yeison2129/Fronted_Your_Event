@@ -14,6 +14,8 @@ import { Card_evento_admin } from "./components/Card_evento/Card_evento_admin"
 import { Crud_eventos } from "./components/CRUD_eventos/Crud_eventos"
 import { Session_company } from "./components/SessionCompany/SessionCompany"
 import { LoginEmpresa  } from  "./components/Login-Empresa/loginEmpresa"
+import { Card_crud  } from  "./components/Card_crud/Card"
+
 
 export default function App() {
     return (
@@ -29,6 +31,7 @@ export default function App() {
             <Route path='/CardPassword' element={<CardPassword/>}/>
             <Route path='/drop' element={<DropDown/>}/>
             <Route path='/cardEvento' element={<CardEvento/>}/>
+            <Route path='/cardCrud' element={<Card_crud/>}/>
             <Route path='/cardEventoAdmin' element={<Card_evento_admin/>}/>
             <Route path="/crud_eventos" element={<Crud_eventos/>}/>
             <Route path='/loginCompany' element={<Session_company/>}/>
