@@ -1,0 +1,56 @@
+.container-drop {
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+#img-container-drop {
+  cursor: pointer;
+  width: 40px;
+  border-radius: 200px;
+  display: flex;
+  justify-content: center;
+}
+.ul-drop {
+  background: white;
+  box-shadow: 0px 2px 6px #858585;
+  width: 150px;
+  border-radius: 14px;
+  margin: 8px 0px 0px -94px;
+}
+.li-style-drop {
+  list-style: none;
+  padding: 10px;
+  display: block;
+}
+#btn-logout {
+  font-family: sans-serif;
+  font-size: 17px;
+}
+.a-style-dropp {
+  text-decoration: none;
+  font-family: sans-serif;
+  display: block;
+  padding: 5px;
+  color: black;
+  border: #ccc 1px;
+}
+.inactive {
+  width: 0px;
+  overflow: hidden;
+  margin-top: 30px;
+  transition: 0s ease-out;
+}
+.active {
+  overflow: visible;
+  width: 100%;
+  margin-top: 50px;
+  transition: 0.5s ease-out;
+}
+
+ul.ul-drop > li.li-style-drop > a {
+  color: black !important;
+}
+
+ul.ul-drop > button.li-style-drop > a {
+  color: black !important;
+}

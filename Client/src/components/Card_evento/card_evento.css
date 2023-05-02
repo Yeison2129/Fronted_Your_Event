@@ -1,0 +1,220 @@
+.toda-la-card{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta{
+    background-color: rgb(155, 207, 255);
+    width: 30%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.titulo-evento{
+    width: 100%;
+    height: 15%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.imagen-evento{
+    width: 100%;
+    height: 40%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen-evento img{
+    width: 100%;
+    height: 100%;
+}
+
+.tipo-evento{
+    width: 100%;
+    height: 5%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+.descipcion-evento{
+    width: 100%;
+    height: 20%;
+    background-color: #fff;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.info-lugar-fecha{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.fecha-evento{
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+.hora-evento{
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.precio-evento{
+    width: 60%;
+    height: 5%;
+    background-color: #fff;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.btns-evento{
+    width: 60%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.comprar-entrada{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(5, 165, 0);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.eliminar-evento{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(201, 0, 0);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.comprar-entrada:hover{
+    background-color: rgb(3, 88, 0);
+    color: #fff;
+}
+
+.eliminar-evento:hover{
+    background-color: rgb(97, 0, 0);
+    color: #fff;
+}
+
+/* -----------------------------ADMIN------------------------------------------- */
+
+.eventos{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(155, 207, 255);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tarjetaEventos{
+    width: 100%;
+    height: 70px;
+    display: grid;
+    background-color: #fff;
+    grid-template-columns: 5% 30% 30% 20% 15%;
+}
+
+.headerEventos{
+    width: 100%;
+    height: 70px;
+    display: grid;
+    background-color: #fff;
+    grid-template-columns: 5% 30% 30% 20% 15%;
+}
+
+.nomEvento, .nomEmpresa, .fechaEvento, .idEventoAdmin{
+    display: flex;
+    align-items: center;
+    border: solid 1px #000;
+    padding-left: 5px;
+    justify-content: center;
+}
+
+.btnsAdmin{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    border: solid 1px #000;
+}
+
+.verEvento{
+    width: 70px;
+    height: 40px;
+    background-color: rgb(5, 165, 0);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.EliminarEvento{
+    width: 70px;
+    height: 40px;
+    background-color: rgb(201, 0, 0);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.verEvento:hover{
+    background-color: rgb(3, 88, 0);
+    color: #fff;
+}
+
+.EliminarEvento:hover{
+    background-color: rgb(97, 0, 0);
+    color: #fff;
+}
+
