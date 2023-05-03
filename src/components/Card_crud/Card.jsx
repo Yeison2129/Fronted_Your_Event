@@ -4,7 +4,7 @@ import { Dashboard } from '../dashboard_empresa/Dashboard_Empresa'
 // import image from '../../../assets/descarga.jpg'
 export const Card_crud = () => {
   return (
-    <>
+    <>/*adssadasd*/
     <Dashboard/>
     <div className="page-content">
     <div className='component-card'> 
