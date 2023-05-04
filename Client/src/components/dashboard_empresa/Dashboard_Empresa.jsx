@@ -7,14 +7,13 @@ import camaleon from "../../assets/logo-your-event.svg";
 import { CardEvento } from '../Card_evento/Card_evento';
 import { Crud_eventos } from '../CRUD_eventos/Crud_eventos';
 
-export const Dashboard = () => {
+export const  Dashboard = () => {
 
- 
+
     return (
         <>
 
-            {/* HEADER */}
-            <header className="page-header">
+            <div className="page-header">
                 <img src={camaleon} alt="camaleon" />
                 <nav>
                     <button className="toggle-mob-menu" aria-expanded="false" aria-label="open menu">
@@ -27,42 +26,42 @@ export const Dashboard = () => {
                     <li>
                     <Link to="/cardCrud">
 
-                        <svg>
+                        <svg className="svg-dash">
                             <use href="#pages"></use>
                         </svg>
                         <span>Mis Eventos</span>
                         </Link>
                     </li>
-                     {/* <li>
+                    {/* <li>
                         <Link to="/cardEvento">
                         <svg>
                             <use href="#collection"></use>
                         </svg>
                         <span>Colecciones</span>
-                        </Link>
+                        </Link> className="svg-dash"
                     </li> */}
                     <li>
                         <Link to="/crud_eventos">
                         
-                        <svg>
+                        <svg  className="svg-dash">
                             <use href="#users"></use>
                         </svg>
                         <span>Crear evento</span>
-                       
+                    
                         </Link>     
                     </li>
                     <li>
                         <a href="#0">
-                        <svg>
+                        <svg  className="svg-dash">
                             <use href="#trends"></use>
                         </svg>
                         <span>Estadísticas</span>
                         </a>
                     </li>
-                   
+                
                     <li>
                         <a href="#0">
-                        <svg>
+                        <svg className="svg-dash" >
                             <use href="#comments"></use>
                         </svg>
                         <span>Asistencia</span>
@@ -70,7 +69,7 @@ export const Dashboard = () => {
                     </li>
                     <li>
                         <a href="#0">
-                        <svg>
+                        <svg className="svg-dash" >
                             <use href="#appearance"></use>
                         </svg>
                         <span>Papelera  </span>
@@ -81,7 +80,7 @@ export const Dashboard = () => {
                     </li>
                     <li>
                         <a href="#0">
-                        <svg>
+                        <svg className="svg-dash" >
                             <use href="#settings"></use>
                         </svg>
                         <span>Opciones</span>
@@ -89,7 +88,7 @@ export const Dashboard = () => {
                     </li>
                     <li>
                         <a href="#0">
-                        <svg>
+                        <svg className="svg-dash">
                             <use href="#options"></use>
                         </svg>
                         <span>Ayuda </span>
@@ -97,7 +96,7 @@ export const Dashboard = () => {
                     </li>
                     <li>
                         <a href="#0">
-                        <svg>
+                        <svg className="svg-dash">
                             <use href="#charts"></use>
                         </svg>
                         <span>Atrás </span>
@@ -120,13 +119,13 @@ export const Dashboard = () => {
                     </li> */}
                     </ul>
                 </nav>
-            </header>
+            </div>
             {/* HEADER */}
-                    
+{/*                     
             <section className="page-content">
                     <div className='content-link'>
 
-                    </div>
+                    </div> */}
                 {/* <section className="search-and-user">
                     <form>
                         
@@ -148,7 +147,7 @@ export const Dashboard = () => {
                     {/* </a> 
                 </footer> */}
 
-            </section>
+            {/* </section> */}
 
         </>
     )

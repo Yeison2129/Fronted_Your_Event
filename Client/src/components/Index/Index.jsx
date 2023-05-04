@@ -112,7 +112,7 @@ return (
     <section>
         <div className="content-link-register">
 
-         <a href="/RegistroEmpresa" id="log">SI TIENES UN EMPRENDIMIENTO?, INGRESA AQUÍ!  <hr></hr></a> 
+        <a href="/RegistroEmpresa" id="log">SI TIENES UN EMPRENDIMIENTO?, INGRESA AQUÍ!  <hr></hr></a> 
 
         </div>
     </section>

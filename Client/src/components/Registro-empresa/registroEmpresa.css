@@ -39,7 +39,7 @@ input {
   z-index: 5;
 }
 
-form {
+signin-signup  {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -390,10 +390,14 @@ input[type="file"] {
   }
 }
 
-@media (max-width: 570px) {
+@media (max-width: 857px) {
   form {
     padding: 0 1.5rem;
   }
+
+.container-register:before {
+  z-index: 1; 
+}
 
   .image {
     display: none;
@@ -413,5 +417,13 @@ input[type="file"] {
   .container.sign-up-mode:before {
     bottom: 28%;
     left: 50%;
+  }
+  .panel h3 {
+    color: #000; 
+  }
+
+  .panel p {
+    color: #000; 
+
   }
 }

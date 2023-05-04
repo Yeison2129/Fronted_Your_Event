@@ -79,6 +79,7 @@ export const Inicio_Sesion = () => {
                         name="mail_user"
                         placeholder="Correo"
                         onChange={handleChange}
+                        required
                       />
                     </div>
                     <div className="input-field">
@@ -89,6 +90,7 @@ export const Inicio_Sesion = () => {
                         name="password_user"
                         placeholder="Contraseña"
                         onChange={handleChange}
+                        required
                       />
                     </div>
                     <a className="a1" href="/registro">

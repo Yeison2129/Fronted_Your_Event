@@ -97,10 +97,10 @@ color: #c2c1c1;
 }
 .nav-index{
     display: flex;
-    height: 8rem;
+    height: 6rem;
     align-items: center;
     justify-content: space-evenly;
-    padding: 30px 50px 0 0;
+    padding: 40px 50px ;
 }
 
 .nav-index > a{
@@ -360,11 +360,26 @@ footer p{
     width: 30px;
 }
 
-@media screen and (max-width:900px){
+@media screen and (max-width:1200px){
     header{
         background-position: center;
     }
-
+    .nav-index{
+        padding: 30px 50px  ;
+    }
+    
+    #register{
+        padding: 6px;
+    }
+    #img-logo{
+        height: 4rem;
+    }
+    .input-nav{
+        width:65%;
+    }
+    .content-nav{
+        width:60%
+    }
     .contenedor-sobre-nosotros{
         flex-direction: column;
         justify-content: center;
@@ -422,15 +437,31 @@ footer p{
     }
 }
 
-@media screen and (max-width:500px){
-    nav{
-        text-align: center;
-        padding: 30px 0 0 0;
+@media screen and (max-width:600px){
+    .nav-index{
+        display: flex;
+        flex-wrap: wrap ;
+        height: 170px;
+        padding: 30px 50px  ;
     }
-
-    nav > a{
-        margin-right: 5px;
+    #search-icon{
+            position: absolute;
+            width: 22px;
+            margin: -28px 0px 0px 83px;
     }
+    #register{
+        padding: 6px;
+    }
+    #img-logo{
+        height: 4rem;
+    }
+    .bar-nav .input-nav{
+        width: 12rem;
+    }
+    .content-nav{
+        width:100%;
+    }
+    
 
     .textos-header h1{
         font-size: 35px;
