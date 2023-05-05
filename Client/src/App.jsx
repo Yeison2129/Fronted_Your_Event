@@ -16,6 +16,7 @@ import { Session_company } from "./components/SessionCompany/SessionCompany"
 import { LoginEmpresa  } from  "./components/Login-Empresa/loginEmpresa"
 import { Card_crud  } from  "./components/Card_crud/card_evento_empresa/Card"
 import {  Crud } from  "./components/Card_crud/create_event/Crud" 
+import {  Homedash } from  "./components/Home/home-dash" 
 
 
 export default function App() {
@@ -38,6 +39,7 @@ export default function App() {
             <Route path='/loginCompany' element={<Session_company/>}/>
             <Route path='/loginEmpresa' element={<LoginEmpresa/>}/>
             <Route path='/crudEvent' element={<Crud/>}/>
+            <Route path='/home' element={<Homedash/>}/>
 
         </Routes>
     )

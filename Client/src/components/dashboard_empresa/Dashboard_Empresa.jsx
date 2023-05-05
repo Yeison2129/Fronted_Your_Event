@@ -22,8 +22,19 @@ export const  Dashboard = () => {
                     <ul className="admin-menu">
                     <li className="menu-heading">
                         <h3>Empresa</h3>
-                        </li>
+                        </li> 
+                        <li>
+                        <Link to="/home">
+                        
+                        <svg  className="svg-dash">
+                            <use href="#users"></use>
+                        </svg>
+                        <span>Inicio</span>
+                    
+                        </Link>     
+                    </li>
                     <li>
+                   
                     <Link to="/cardCrud">
 
                         <svg className="svg-dash">
@@ -121,12 +132,9 @@ export const  Dashboard = () => {
                 </nav>
             </div>
             {/* HEADER */}
-{/*                     
-            <section className="page-content">
-                    <div className='content-link'>
-
-                    </div> */}
-                {/* <section className="search-and-user">
+{                  
+           
+             /* <section className="search-and-user">
                     <form>
                         
                     </form>
@@ -136,7 +144,8 @@ export const  Dashboard = () => {
                             <span className="badge">1</span>
                             <svg><use href="#users"></use></svg>
                         </div>
-                    </div>
+                    </div> */}
+                    {/*
                 </section>
 
                     <section className='content-link'>
@@ -147,7 +156,6 @@ export const  Dashboard = () => {
                     {/* </a> 
                 </footer> */}
 
-            {/* </section> */}
 
         </>
     )

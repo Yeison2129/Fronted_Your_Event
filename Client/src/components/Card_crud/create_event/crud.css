@@ -8,7 +8,7 @@
     font-family: "Poppins", sans-serif;
 
 }
-hr{
+#hr-crud{
     width: 100px;
     border: 0.8px solid;
 }
@@ -37,7 +37,7 @@ hr{
 #placeholder::placeholder{
     color: #000000;
     font-family: "Poppins", sans-serif;
-    padding: 7px;
+    /* margin: 10rem 0; */
 }
 .form-crud{
     display: flex;
@@ -86,16 +86,18 @@ hr{
     font-size: 1rem;
     text-align: center;
     cursor: pointer;
+    border: #000000 1px ; 
+
     transition: all 0.3s;
     font-family: "Poppins", sans-serif;
 
 }
 
 #btn-accept:hover{
- background-color: rgba(49, 226, 43, 0.355);
+ background-color: rgba(45, 126, 42, 0.355);
  color: white;
 }
 #btn-cancel:hover{
-    background-color: rgba(226, 58, 43, 0.355);
+    background-color: rgba(172, 52, 41, 0.487);
     color: white;
    }

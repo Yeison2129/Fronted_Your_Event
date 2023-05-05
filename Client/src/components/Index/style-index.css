@@ -48,7 +48,7 @@ header {
     position: relative;
 }
 #img-logo{
-    height: 8rem;
+    height: 5rem;
 }
 .bar-nav{
     width: 30%;
@@ -100,7 +100,7 @@ color: #c2c1c1;
     height: 6rem;
     align-items: center;
     justify-content: space-evenly;
-    padding: 40px 50px ;
+    padding: 70px 50px ;
 }
 
 .nav-index > a{
@@ -119,16 +119,15 @@ color: #c2c1c1;
     -o-transition: .2s;
 }
 
-header .textos-header{
+header .textos-header {
     display: flex;
-    height: 430px;
+    height: 342px;
     margin-left: 10%;
-    align-items:flex-start;
-    justify-content:center;
+    align-items: flex-start;
+    justify-content: center;
     flex-direction: column;
     text-align: center;
 }
-
 
 .textos-header h1{
     font-size: 50px;
@@ -437,7 +436,7 @@ footer p{
     }
 }
 
-@media screen and (max-width:600px){
+@media screen and (max-width:711px){
     .nav-index{
         display: flex;
         flex-wrap: wrap ;
