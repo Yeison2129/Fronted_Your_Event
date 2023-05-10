@@ -14,7 +14,10 @@ import { Card_evento_admin } from "./components/Card_evento/Card_evento_admin"
 import { Crud_eventos } from "./components/CRUD_eventos/Crud_eventos"
 import { Session_company } from "./components/SessionCompany/SessionCompany"
 import { LoginEmpresa  } from  "./components/Login-Empresa/loginEmpresa"
-import { Card_crud  } from  "./components/Card_crud/Card"
+import { Card_crud  } from  "./components/Card_crud/card_evento_empresa/Card"
+import {  Crud } from  "./components/Card_crud/create_event/Crud" 
+import {  Homedash } from  "./components/Home/home-dash" 
+import { Cards } from "./components/Card_Categorias/Cards"
 
 
 export default function App() {
@@ -36,6 +39,9 @@ export default function App() {
             <Route path="/crud_eventos" element={<Crud_eventos/>}/>
             <Route path='/loginCompany' element={<Session_company/>}/>
             <Route path='/loginEmpresa' element={<LoginEmpresa/>}/>
+            <Route path='/crudEvent' element={<Crud/>}/>
+            <Route path='/home' element={<Homedash/>}/>
+            <Route path='/home' element={<Cards/>}/>
         </Routes>
     )
 }

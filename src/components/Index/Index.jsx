@@ -1,11 +1,30 @@
 import React, { useState, useCallback } from "react";
 import { ContactUs } from "../ContactUs/ContactUs";
+import { Cards } from "../Card_Categorias/Cards";
 import { Popup } from "../Popup";
 
 import logo from "../../assets/logo-your-event.svg";
 import "../Index/style-index.css";
 import { DropDown } from "../DropDown/DropDown";
 import { AiFillFileZip } from "react-icons/ai";
+import logoUno from '../../assets/slide-1.jpg'
+import logoDos from '../../assets/slide-2.jpg'
+import logoTres from '../../assets/slide-3.jpg'
+import logoCuatro from '../../assets/slide-4.jpg'                      
+import logoCinco from '../../assets/slide-5.jpg'
+import logoSeis from '../../assets/slide-6.jpg'
+
+// import Swiper core and required modules
+import { A11y, Autoplay } from 'swiper';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
 
 export const Index = () => {
     let user = localStorage.getItem("user");
@@ -109,15 +128,73 @@ return (
                 </div>
             </div>
         </section>
-    <section>
+        /<section>
+        <h2 className="titulo">Eventos Destacados</h2>
+</section> 
+    <section className="home" id="home" style={{
+      padding : "0 0 0 50px",
+    }}>
+          <div className="swiper-container home-slider">
+            <div className="swiper-wrapper">
+              <Swiper
+                modules={[A11y, Autoplay]}
+                effect={'coverflow'}
+                grabCursor={true}
+                centeredSlides={true}
+                slidesPerView={1}
+                coverflowEffect={{
+                  rotate: 0,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 2,
+                  slideShadows: true,
+                }}
+                spaceBetween={10}
+                loop={true}
+                breakpoints={{
+                  0: {
+                      slidesPerView: 1,
+                  },
+                  700: {
+                    slidesPerView: 2,
+                  },
+                  1050: {
+                    slidesPerView: 3,
+                  },    
+                }}
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction:false,
+                }}
+              >
+                <SwiperSlide className="swiper-slide" ><img src={logoUno} alt="" width="400px"/></SwiperSlide>
+                <SwiperSlide className="swiper-slide" ><img src={logoDos} alt=""  width="400px"/></SwiperSlide>
+                <SwiperSlide className="swiper-slide" ><img src={logoTres} alt=""  width="400px"/></SwiperSlide>
+                <SwiperSlide className="swiper-slide" ><img src={logoCuatro} alt=""  width="400px"/></SwiperSlide>
+                <SwiperSlide className="swiper-slide" ><img src={logoCinco} alt=""  width="400px"/></SwiperSlide>
+                <SwiperSlide className="swiper-slide" ><img src={logoSeis} alt=""  width="400px"/></SwiperSlide>
+              </Swiper>
+            </div>
+          </div>
+        </section>
+    </main>
+  /<section>
+    
         <div className="content-link-register">
 
-         <a href="/RegistroEmpresa" id="log">SI TIENES UN EMPRENDIMIENTO?, INGRESA AQUÍ!  <hr></hr></a> 
+        <a href="/RegistroEmpresa" id="log">SI TIENES UN EMPRENDIMIENTO, INGRESA AQUÍ!  <hr></hr></a> 
 
         </div>
+    </section> 
+    <section className="categorias">
+    <Cards/>
+    <Cards/>
+    <Cards/>
+    <Cards/>
+    <Cards/>
     </section>
-    </main>
-  
+    <hr />
+    <br />
     <section className='contact-us'>
             <ContactUs/>
     </section>

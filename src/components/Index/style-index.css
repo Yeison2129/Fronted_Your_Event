@@ -19,10 +19,9 @@
     width: 100%;
     color:white;    
     height: 10rem;
-    margin: 6rem 0;
 }
 .titulo {
-    color: #642a73;
+    color: #000000;
     font-size: 30px;
     text-align: center;
     margin-bottom: 60px;
@@ -37,18 +36,18 @@
 header {
     width: 100%;
     height: 650px;
-    background: #220e1c;
+    background: #1d191c;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(341, 53%, 15%, 0.459), hsla(317, 54%, 21%, 0.664)), url(https://res.cloudinary.com/dozodtdvl/image/upload/v1680050771/hin_rjd9bs.jpg);
+    background: -webkit-linear-gradient(to right, hsla(0, 2%, 11%, 0.459), hsla(0, 3%, 7%, 0.664)), url(https://res.cloudinary.com/dozodtdvl/image/upload/v1680050771/hin_rjd9bs.jpg);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(340, 76%, 22%, 0.459), hsla(317, 49%, 20%, 0.664)), url(https://res.cloudinary.com/dozodtdvl/image/upload/v1680050771/hin_rjd9bs.jpg);
+    background: linear-gradient(to right, hsla(339, 27%, 19%, 0.459), hsla(0, 0%, 9%, 0.664)), url(https://res.cloudinary.com/dozodtdvl/image/upload/v1680050771/hin_rjd9bs.jpg);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size:contain;
     background-attachment: fixed;
     position: relative;
 }
 #img-logo{
-    height: 8rem;
+    height: 5rem;
 }
 .bar-nav{
     width: 30%;
@@ -97,10 +96,10 @@ color: #c2c1c1;
 }
 .nav-index{
     display: flex;
-    height: 8rem;
+    height: 6rem;
     align-items: center;
     justify-content: space-evenly;
-    padding: 30px 50px 0 0;
+    padding: 70px 50px ;
 }
 
 .nav-index > a{
@@ -119,16 +118,15 @@ color: #c2c1c1;
     -o-transition: .2s;
 }
 
-header .textos-header{
+header .textos-header {
     display: flex;
-    height: 430px;
+    height: 342px;
     margin-left: 10%;
-    align-items:flex-start;
-    justify-content:center;
+    align-items: flex-start;
+    justify-content: center;
     flex-direction: column;
     text-align: center;
 }
-
 
 .textos-header h1{
     font-size: 50px;
@@ -172,8 +170,8 @@ main .sobre-nosotros{
 }
 
 .contenido-textos h3 span{
-    background:#69affa;
-    color: #fff;
+    background:#983C59;
+    color: #ffffff;
     border-radius: 50%;
     display: inline-block;
     text-align: center;
@@ -323,6 +321,10 @@ footer{
     width: 100%;
     height: 100%;
 }
+.swiper-slide img{
+    border-radius: 25px;
+}
+
 .cont img{
     width: 200px;
 }
@@ -360,11 +362,26 @@ footer p{
     width: 30px;
 }
 
-@media screen and (max-width:900px){
+@media screen and (max-width:1200px){
     header{
         background-position: center;
     }
-
+    .nav-index{
+        padding: 30px 50px  ;
+    }
+    
+    #register{
+        padding: 6px;
+    }
+    #img-logo{
+        height: 4rem;
+    }
+    .input-nav{
+        width:65%;
+    }
+    .content-nav{
+        width:60%
+    }
     .contenedor-sobre-nosotros{
         flex-direction: column;
         justify-content: center;
@@ -422,15 +439,31 @@ footer p{
     }
 }
 
-@media screen and (max-width:500px){
-    nav{
-        text-align: center;
-        padding: 30px 0 0 0;
+@media screen and (max-width:711px){
+    .nav-index{
+        display: flex;
+        flex-wrap: wrap ;
+        height: 170px;
+        padding: 30px 50px  ;
     }
-
-    nav > a{
-        margin-right: 5px;
+    #search-icon{
+            position: absolute;
+            width: 22px;
+            margin: -28px 0px 0px 83px;
     }
+    #register{
+        padding: 6px;
+    }
+    #img-logo{
+        height: 4rem;
+    }
+    .bar-nav .input-nav{
+        width: 12rem;
+    }
+    .content-nav{
+        width:100%;
+    }
+    
 
     .textos-header h1{
         font-size: 35px;
@@ -496,4 +529,12 @@ footer p{
     .titulo-final{
         font-size: 20px;
     }
+}
+
+.categorias{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
 }
