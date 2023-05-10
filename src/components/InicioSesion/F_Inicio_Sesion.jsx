@@ -1,8 +1,10 @@
 import { Formik, Form, Field } from "formik";
 import "./F_Inicio_Sesion.css";
 import wave from "../../assets/wave.svg";
-import loginperson from "../../assets/loginperson.svg";
-import collab from "../../assets/collab.svg";
+// import loginperson from "../../assets/loginperson.svg";
+import img_login from "../../assets/img_login.svg";
+import loginperson from "../../assets/My_password.svg";
+
 import { loginUser } from "../../api/App";
 import swal from "sweetalert2";
 
@@ -60,11 +62,11 @@ export const Inicio_Sesion = () => {
           <>
             <div className="login-design">
               <div className="waves">
-                <img src={loginperson} alt="" />
+                <img src={loginperson} id="loginpersonImg" alt="" />
               </div>
               <div className="login">
                 <div className="login-data">
-                  <img src={collab} alt="img" title="collab" />
+                  <img src={img_login} alt="img" title="img-login" id="img-login" />
                   <h2 className="title">Inicio de Sesión</h2>
                   <Form
                     action="#"
@@ -79,6 +81,7 @@ export const Inicio_Sesion = () => {
                         name="mail_user"
                         placeholder="Correo"
                         onChange={handleChange}
+                        required
                       />
                     </div>
                     <div className="input-field">
@@ -89,6 +92,7 @@ export const Inicio_Sesion = () => {
                         name="password_user"
                         placeholder="Contraseña"
                         onChange={handleChange}
+                        required
                       />
                     </div>
                     <a className="a1" href="/registro">
