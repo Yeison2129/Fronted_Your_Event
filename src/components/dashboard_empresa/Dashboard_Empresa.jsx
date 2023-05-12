@@ -3,7 +3,9 @@ import './dashboard.css';
 import { Link } from 'react-router-dom'
 
 
+import userIcon from "../../assets/userIcon.svg";
 import camaleon from "../../assets/logo-your-event.svg";
+
 import { CardEvento } from '../Card_evento/Card_evento';
 import { Crud_eventos } from '../CRUD_eventos/Crud_eventos';
 
@@ -14,7 +16,8 @@ export const  Dashboard = () => {
         <>
 
             <div className="page-header">
-                <img src={camaleon} alt="camaleon" />
+                <img src={userIcon} alt="icon" />
+                <p></p>
                 <nav>
                     <button className="toggle-mob-menu" aria-expanded="false" aria-label="open menu">
                         <svg width="20" height="20" aria-hidden="true"><use href="#down"></use></svg>
@@ -150,11 +153,12 @@ export const  Dashboard = () => {
 
                     <section className='content-link'>
                     </section>
-
+ */}
                 <footer className="page-footer">
                     <span>YourEvent </span>
-                    {/* </a> 
-                </footer> */}
+                    <img src={camaleon} alt="" />
+
+                </footer>
 
 
         </>

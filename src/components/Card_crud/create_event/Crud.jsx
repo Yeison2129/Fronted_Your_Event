@@ -6,11 +6,11 @@ export const Crud = () => {
    
   return (
     <>
-    <Dashboard/>
     <Formik>
     <div className="page-content">
     <div className='body-crud'>
-      <h1 id="hr-crud">Edita tu evento<hr /></h1> 
+      <h1 id="hr-crud">Edita tu evento  <hr /></h1> 
+    
       <div className="components-crud">
         <div className="img-crud  ">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />

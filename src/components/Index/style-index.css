@@ -312,7 +312,7 @@ main .sobre-nosotros{
     text-align: justify;
 }
 
-footer{
+.foo-index{
     background-color: #5e0c61;
   }
   .cont{
@@ -355,7 +355,7 @@ footer{
     align-items: center;
     justify-content: space-between;
 }
-footer p{
+.foo-index p{
     font-size: 16px;
 }
 .foo img{
