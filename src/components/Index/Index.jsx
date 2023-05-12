@@ -2,7 +2,7 @@ import React, { useState, useCallback } from "react";
 import { ContactUs } from "../ContactUs/ContactUs";
 import { Cards } from "../Card_Categorias/Cards";
 import { Popup } from "../Popup";
-
+import Stats from "../Estadisticas/stats"
 import logo from "../../assets/logo-your-event.svg";
 import "../Index/style-index.css";
 import { DropDown } from "../DropDown/DropDown";
@@ -185,10 +185,17 @@ return (
         <a href="/RegistroEmpresa" id="log">SI TIENES UN EMPRENDIMIENTO, INGRESA AQUÍ!  <hr></hr></a> 
 
         </div>
-    </section> 
+
+    </section>
+
+    <div className="grafico">
+          <Stats/>
+    </div>
+
     <section className="categorias" id="categorias">
     <Cards/>
     </section>
+
     <hr />
     <br />
     <section className='contact-us'>

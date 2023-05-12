@@ -18,7 +18,9 @@ import { Card_crud  } from  "./components/Card_crud/card_evento_empresa/Card"
 import {  Crud } from  "./components/Card_crud/create_event/Crud" 
 import {  Homedash } from  "./components/Home/home-dash" 
 import { Cards } from "./components/Card_Categorias/Cards"
-
+import Stats from "./components/Estadisticas/stats.jsx"
+import {CardView} from "./components/CardCompra/Card-view.jsx"
+import { PaginaCard } from "./components/PaginaCard/PaginaCard"
 
 export default function App() {
     return (
@@ -42,6 +44,9 @@ export default function App() {
             <Route path='/crudEvent' element={<Crud/>}/>
             <Route path='/home' element={<Homedash/>}/>
             <Route path='/home' element={<Cards/>}/>
+            <Route path='/Estadisticas' element={<Stats/>}/>
+            <Route path='/CardCompra' element={<CardView/>}/>
+            <Route path='/PaginaCard' element={<PaginaCard/>}/>
         </Routes>
     )
 }

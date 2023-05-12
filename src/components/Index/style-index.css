@@ -361,7 +361,10 @@ main .sobre-nosotros{
 .foo img{
     width: 30px;
 }
-
+.grafico{
+    padding-top: 5%;
+    padding-left: 20%;
+}
 @media screen and (max-width:1200px){
     header{
         background-position: center;
