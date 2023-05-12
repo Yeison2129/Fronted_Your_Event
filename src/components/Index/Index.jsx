@@ -71,7 +71,7 @@ return (
             <div class="content-nav">
               <a href="#">Inicio </a>
               <a href="#">Acerca de </a>
-              <a href="#">Categorias </a>
+              <a href="#categorias">Categorias </a>
               {user ? (
                 <>  
                     <a href="" id="enter1">Usuario: {user.charAt(0).toUpperCase() + user.slice(1)}</a>
@@ -186,11 +186,7 @@ return (
 
         </div>
     </section> 
-    <section className="categorias">
-    <Cards/>
-    <Cards/>
-    <Cards/>
-    <Cards/>
+    <section className="categorias" id="categorias">
     <Cards/>
     </section>
     <hr />

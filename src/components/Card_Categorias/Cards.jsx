@@ -50,12 +50,92 @@ export const Cards = ({dataImage}) => {
                 <div className="cards" style={{'transform': `rotateY(${rX}deg) rotateX(${rY}deg)`}} >
                 <div className="cards-bg" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
                 <div className="cards-info">
-                    <h1 slot="header">Beaches</h1>
+                    <h1 slot="header">Conciertos en vivo</h1>
                     <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
                 </div>
             </div>
             
+            <div
+                className="cards-wrap"
+                onMouseMove={handleMouseMove}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                ref={cardRef}
+            >
+                <div className="cards" style={{'transform': `rotateY(${rX}deg) rotateX(${rY}deg)`}} >
+                <div className="cards-bg" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
+                <div className="cards-info">
+                    <h1 slot="header">Beaches</h1>
+                    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                </div>
+            </div>
+
+            <div
+                className="cards-wrap"
+                onMouseMove={handleMouseMove}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                ref={cardRef}
+            >
+                <div className="cards" style={{'transform': `rotateY(${rX}deg) rotateX(${rY}deg)`}} >
+                <div className="cards-bg" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
+                <div className="cards-info">
+                    <h1 slot="header">Beaches</h1>
+                    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                </div>
+            </div>
+
+            <div
+                className="cards-wrap"
+                onMouseMove={handleMouseMove}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                ref={cardRef}
+            >
+                <div className="cards" style={{'transform': `rotateY(${rX}deg) rotateX(${rY}deg)`}} >
+                <div className="cards-bg" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
+                <div className="cards-info">
+                    <h1 slot="header">Beaches</h1>
+                    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                </div>
+            </div>
+
+            <div
+                className="cards-wrap"
+                onMouseMove={handleMouseMove}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                ref={cardRef}
+            >
+                <div className="cards" style={{'transform': `rotateY(${rX}deg) rotateX(${rY}deg)`}} >
+                <div className="cards-bg" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
+                <div className="cards-info">
+                    <h1 slot="header">Beaches</h1>
+                    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                </div>
+            </div>
+
+            <div
+                className="cards-wrap"
+                onMouseMove={handleMouseMove}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                ref={cardRef}
+            >
+                <div className="cards" style={{'transform': `rotateY(${rX}deg) rotateX(${rY}deg)`}} >
+                <div className="cards-bg" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
+                <div className="cards-info">
+                    <h1 slot="header">Beaches</h1>
+                    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+                </div>
+            </div>
+
         </div>
         
     );
