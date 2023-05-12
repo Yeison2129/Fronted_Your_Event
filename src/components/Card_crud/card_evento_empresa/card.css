@@ -4,6 +4,21 @@
     margin: 0;
     padding: 0;
 }
+#img-card-pointer{
+    cursor: pointer;
+}
+.inactive {
+    width: 100px;
+    overflow: hidden;
+    margin-top: 30px;
+    transition: 0s ease-out;
+}
+.active {
+    overflow: visible;
+    width: 100%;
+    margin-top: 50px;
+    transition: 0.5s ease-out;
+}
 
 .component-card{
     display: flex;
@@ -34,7 +49,6 @@
 .imagen-card{
     background-image: url('../../../assets/code.jpg');
     height: 60%;    
-    
     background-size: cover;
     background-repeat: no-repeat;
 

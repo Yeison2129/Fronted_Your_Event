@@ -210,7 +210,7 @@ return (
           ></path>
         </svg>
       </div>
-        <footer>
+        <footer className="foo-index">
         <div className="cont">
           <div className="icon">
             <p>YOUREVENT</p>

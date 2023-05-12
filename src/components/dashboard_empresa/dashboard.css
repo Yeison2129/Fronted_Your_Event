@@ -550,11 +550,10 @@ body {
 /* FOOTER
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .page-footer {
-  font-size: 1rem;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-top: 10px;
+  background-color: gray;
+  height: 6rem;
+  justify-content: space-between;
 }
 
 .page-footer a {
