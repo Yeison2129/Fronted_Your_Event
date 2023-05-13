@@ -132,7 +132,7 @@ return (
         <h2 className="titulo">Eventos Destacados</h2>
 </section> 
     <section className="home" id="home" style={{
-      padding : "0 0 0 50px",
+      padding:"20px"
     }}>
           <div className="swiper-container home-slider">
             <div className="swiper-wrapper">
@@ -149,10 +149,10 @@ return (
                   modifier: 2,
                   slideShadows: true,
                 }}
-                spaceBetween={10}
+                spaceBetween={0}
                 loop={true}
                 breakpoints={{
-                  0: {
+                  100: {
                       slidesPerView: 1,
                   },
                   700: {
@@ -160,7 +160,7 @@ return (
                   },
                   1050: {
                     slidesPerView: 3,
-                  },    
+                  },   
                 }}
                 autoplay={{
                   delay: 3000,
