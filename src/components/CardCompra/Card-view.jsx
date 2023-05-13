@@ -21,21 +21,13 @@ export const CardView = () => {
 
     return (
         <>
-            <div className="all">
 
-                <div className="containerc">
-                    <div className="products-container">
-                        <div className="product" data-name="p-1" onClick={handleClick}>
-                                <div className='image'>
-                            <img src={imgcard} alt="" /></div>
+                    <div className="all">
+                        <div className="product" data-name="p-1" onClick={handleClick} style={{backgroundImage: `url(${imgcard})`}}>
                             <h1>evento</h1>
                         </div>
                     </div>
-                </div>
-
-            
-
-        </div >
+        
             <div className={`products-preview ${previewActive ? 'active' : ''}`}>
 
                 <div className="preview" data-target="p-1">
