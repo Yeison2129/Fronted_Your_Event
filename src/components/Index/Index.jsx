@@ -187,10 +187,13 @@ return (
         </div>
 
     </section>
+    <section className="statas-section">
 
     <div className="grafico">
           <Stats/>
     </div>
+    
+    </section>
 
     <section className="categorias" id="categorias">
     <Cards/>
@@ -251,9 +254,9 @@ return (
             </li>
           </div>
         </div>
-        <div className="cont">
+        {/* <div className="cont">
           <img src="" alt="" />
-        </div>
+        </div> */}
         <div className="foo">
           <div>
             <p>Copyright &copy 2022</p>{" "}

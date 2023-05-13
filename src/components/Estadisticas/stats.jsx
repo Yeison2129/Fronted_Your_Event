@@ -46,7 +46,7 @@ function stats() {
     return (
         <>
             <ResponsiveContainer width="100%" aspect={3}>
-                <LineChart data={pdata} margin={{ right: 500 }}>
+                <LineChart data={pdata}>
                     <CartesianGrid />
                     <XAxis dataKey="name" 
                         interval={'preserveStartEnd'} />
