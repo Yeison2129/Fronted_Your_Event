@@ -3,7 +3,7 @@ import { ContactUs } from "../ContactUs/ContactUs";
 import { Cards } from "../Card_Categorias/Cards";
 import { Popup } from "../Popup";
 import Stats from "../Estadisticas/stats"
-import logo from "../../assets/logo-your-event.svg";
+import logo from "../../assets/logos/log-blanco.svg";
 import "../Index/style-index.css";
 import { DropDown } from "../DropDown/DropDown";
 import { AiFillFileZip } from "react-icons/ai";
@@ -13,6 +13,9 @@ import logoTres from '../../assets/slide-3.jpg'
 import logoCuatro from '../../assets/slide-4.jpg'                      
 import logoCinco from '../../assets/slide-5.jpg'
 import logoSeis from '../../assets/slide-6.jpg'
+import face from '../../assets/SocialMedia/face-w.svg'
+import insta from '../../assets/SocialMedia/insta-w.svg'
+import twit from '../../assets/SocialMedia/twitter-w.svg'
 
 // import Swiper core and required modules
 import { A11y, Autoplay } from 'swiper';
@@ -63,7 +66,7 @@ return (
     <div>
     <header>
         <nav className="nav-index">
-            <img src="../../../src/assets/log-blanco.svg" id="img-logo" alt="" />
+            <img src="../../../src/assets/logos/log-blanco.svg" id="img-logo" alt="" />
             <div class="bar-nav">
                 <input type="text" className="input-nav" placeholder="Buscar..." />
                 <img id='search-icon' src='../../../src/assets/search.svg' />
@@ -204,7 +207,7 @@ return (
     <section className='contact-us'>
             <ContactUs/>
     </section>
-    <div style={{ height: "150px", overflow: "hidden" }}>
+    <div id="wave" style={{ height: "150px", overflow: "hidden" }}>
         <svg
           viewBox="0 0 1440 190"
           preserveAspectRatio="none"
@@ -215,6 +218,7 @@ return (
             style={{ stroke: "none", fill: "#5e0c61" }}
           ></path>
         </svg>
+
       </div>
         <footer className="foo-index">
         <div className="cont">
@@ -222,7 +226,14 @@ return (
             <p>YOUREVENT</p>
             <img src={logo} alt="img" title="logo" />
           </div>
-          <div className="li">
+          <div className="Socialmedia-foo">
+            <div className="redes">
+            <a href=""> <img src={face} alt="" /></a> 
+            <a href=""><img src={insta} alt="" /></a>  
+             <a href=""><img src={twit} alt="" /></a>
+              </div>
+          </div>
+          {/* <div className="li">
             <li  id="li-li">
               <a href="">Terminos y condiciones</a>
             </li>
@@ -252,7 +263,7 @@ return (
             <li id="li-li">
               <p>301 4015599</p>
             </li>
-          </div>
+          </div> */}
         </div>
         {/* <div className="cont">
           <img src="" alt="" />

@@ -17,8 +17,11 @@ export const  Dashboard = () => {
         <>
 
             <div className="page-header">
-                <img src={userIcon} alt="icon" />
+                <div className="user-icon">
+                <img id='user-icon' src={userIcon} alt="icon" />
                 <p id='nom-user'>Name </p>
+                </div>
+                
                 <nav>
                     <button className="toggle-mob-menu" aria-expanded="false" aria-label="open menu">
                         <svg width="20" height="20" aria-hidden="true"><use href="#down"></use></svg>

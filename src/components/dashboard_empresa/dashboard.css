@@ -87,17 +87,27 @@ body {
   color: var(--page-header-txtColor);
   background: var(--page-header-bgColor);
 }
-#name-user{
-display: flex;
-}
+
 .page-header nav {
   display: flex;
   flex-direction: column;
   min-height: 89%;
 }
 
+.user-icon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#nom-user{
+  padding-top: 15px ;
 
-
+}
+#user-icon{
+  width: 100px;
+  background-color: #b9b9b9;
+  border-radius: 60px;
+}
 .page-header .logo {
   display: block;
   margin: 0 15px;
@@ -125,7 +135,6 @@ display: flex;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  margin-top: 35px;
 }
 
 /* .page-header .admin-menu li:nth-last-child(2) { */
@@ -220,7 +229,7 @@ display: flex;
   left: 220px;
   padding: 10px 40px;
   width: 80%;
-
+  height: 100vh ;
   justify-content: center;
 }
 
@@ -228,9 +237,8 @@ display: flex;
   right: 200px;
   width: 90%;
   display: flex;
-  padding: 30px;
-
-  justify-content: center;
+  padding: 0px 23px 0px 233px;
+    justify-content: center;
 }
 
 .search-and-user {

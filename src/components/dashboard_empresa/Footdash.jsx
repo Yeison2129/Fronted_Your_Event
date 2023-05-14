@@ -1,6 +1,6 @@
 import React from 'react'
 import './dashboard.css'
-import camaleon from "../../assets/logo-your-event.svg";
+import camaleon from "../../assets/logos/logo-gris.svg";
 
 export const Footdash = () => {
   return (
