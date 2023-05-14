@@ -32,7 +32,7 @@ export const CardView = () => {
 
                 <div className="preview" data-target="p-1">
                 <i className="fas fa-times" onClick={closePreview} id="cierre-ventana"></i>
-                    <img className='cardBig' src={imgcard} alt="" />
+                    <img id='img-cardview' className='cardBig' src={imgcard} alt="" />
                    
                     <h2>Evento</h2>
                     <div className="info">

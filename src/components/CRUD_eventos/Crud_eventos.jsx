@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Formik, Form, Field } from "formik";
 import swal from 'sweetalert2';
+import './crud_eventos.css'
 import { Link } from "react-router-dom"
 import { create_event } from "../../api/App";
 import { Dashboard } from "../dashboard_empresa/Dashboard_Empresa";
@@ -76,7 +77,78 @@ export const Crud_eventos = () => {
           
             <div className="">
               <Dashboard/>    
-              <div className="page-content">
+             
+    <div className="page-crud">
+    <div className='body-crud'>
+      <h1 id="hr-crud">Crea tu evento  <hr /></h1> 
+    
+      <div className="components-crud">
+        <div className="img-crud  ">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+            <label for="file-upload" className="custom-file-upload">
+              <i className="fa fa-cloud-upload"></i> Sube aquí el certificado de tu empresa
+            </label>  
+        </div>
+        <Form action="" className="form-crud">
+          <Field id="placeholder" type="text" name='nombre_evento' placeholder="Nombre"/>
+          <Field id="placeholder" type="date" name='hora_evento'  />
+          <Field id="placeholder" type="time" name='fecha_evento' />
+          <Field id="placeholder" type="text" name='lugar_evento' placeholder="Lugar"/>
+          <Field id="placeholder" type="double" name='precio_evento' placeholder="Precio"/>
+          <Field id="placeholder" className="select-crud" name="" as="select">
+            <option value="categoria">categoria...</option>
+            <option value="admin">admin</option>
+            <option value="user">user</option>
+            <option value="empresa">empresa</option>
+          </Field>
+
+        </Form>
+      </div>
+      <div className="end">
+        {/* <div className="content-end"> */}
+        <Form action="" className="form-crud">
+          <Field id="placeholder" type="text" placeholder="Descripcion" className="description" />
+        </Form>
+        <div className="botones-crud">
+          <button className='btn-crud' id='btn-cancel'>Limpiar</button>
+          <button className='btn-crud' id='btn-accept'>Aceptar</button>
+        {/* </div> */}
+        </div>
+      </div>
+    </div>
+    </div>
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              {/* <div className="page-content">
             <div className="forms-container">
               <div className="crear-evento">
                 <Form onSubmit={handleSubmit} className="nuevo-evento">
@@ -114,7 +186,7 @@ export const Crud_eventos = () => {
                 </Form>
               </div>
             </div>
-        </div>
+        </div> */}
       </div>
         )}
 
