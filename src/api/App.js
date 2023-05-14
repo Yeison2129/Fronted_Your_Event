@@ -44,4 +44,6 @@ export const deleteAdminAsist = async (id) =>
             token : token
         }
     })
-
+    
+export const events = async () => 
+    await axios.get('http://localhost:4000/events')

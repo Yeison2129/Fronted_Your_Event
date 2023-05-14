@@ -40,7 +40,7 @@ export default function App() {
             <Route path='/loginCompany' element={<Session_company/>}/>
             <Route path='/loginEmpresa' element={<LoginEmpresa/>}/>
             <Route path='/crudEvent' element={<Crud/>}/>
-            <Route path='/home' element={<Homedash/>}/>
+            <Route path='/homeDash' element={<Homedash/>}/>
             <Route path='/home' element={<Cards/>}/>
         </Routes>
     )
