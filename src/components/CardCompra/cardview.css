@@ -2,16 +2,11 @@
 
 .all {
    font-family: 'Nunito', sans-serif;
-   box-sizing: border-box;
-   outline: none;
-   border: none;
    text-decoration: none;
-   transition: all .2s linear;
-   text-transform: capitalize;
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 100vh;
+   flex-wrap: wrap;
 }
 
 .product {
@@ -31,12 +26,6 @@
 
 .product:hover {
    cursor: pointer;
-}
-
-#img-cardview {
-   height: 500px;
-   width: 350px;
-   border-radius: 20px 20px 0px 0px;
 }
 
 .products-preview {
