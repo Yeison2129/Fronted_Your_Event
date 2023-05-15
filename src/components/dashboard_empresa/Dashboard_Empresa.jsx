@@ -1,6 +1,5 @@
 import React from 'react';
 import './dashboard.css';
-import { Homedash } from '../Home/home-dash';
 import { Link } from 'react-router-dom'
 
 

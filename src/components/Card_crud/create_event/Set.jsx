@@ -2,7 +2,6 @@ import React,{useState} from 'react'
 import './set.css'
 import { Card_crud } from '../card_evento_empresa/Card'
 import { Formik,Form,Field } from 'formik'
-import { Modal } from 'bootstrap'
 export const Set = ({closeModal}) => {
   return (  
     <>
