@@ -4,7 +4,7 @@ let token = localStorage.getItem("token")
 let email = localStorage.getItem("email")
 let id = localStorage.getItem("id") 
 
-
+//Users
 export const registerUser = async (newUser) =>
     await axios.post('http://localhost:4000/registerUser', newUser)
 
@@ -21,6 +21,22 @@ export const update = async(update)=>
         }
     })    
 
+ //Recuperation_Password_User
+export const CompareEmailUser = async (emailsUser) => {
+    return await axios.post("http://localhost:4000/emailsUser", emailsUser)
+    
+}
+
+export const CompareCodeUser = async(codigoUser, email1)=>
+    await axios.post(`http://localhost:4000/codigoUser/${email1}`,codigoUser)
+
+export const RecuperationPasswordUser = async(recuperationUser,email1)=>
+    await axios.put(`http://localhost:4000/recuperationUser/${email1}`,recuperationUser)
+
+
+
+
+//Enterprise
 export const create_event = async(crudEventos)=> 
     await axios.post(`http://localhost:4000/registerEvent/${id}`, crudEventos, {
         headers : {
