@@ -8,7 +8,7 @@ import {
     YAxis,
     CartesianGrid
 } from 'recharts';
-  
+
 const pdata = [
     {
         name: 'MongoDb',
@@ -62,7 +62,7 @@ function stats() {
         </>
     );
 }
-  
+
 
 
 

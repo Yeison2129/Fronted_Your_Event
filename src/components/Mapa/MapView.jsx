@@ -4,7 +4,7 @@ import data from "./assets/data.json";
 import Markers from "./VenueMarkers";
 
 import { useLocation, useNavigate } from "react-router-dom";
-
+    
 import "leaflet/dist/leaflet.css";
 
 const MapView = (props) => {
@@ -42,7 +42,7 @@ const MapView = (props) => {
   }, [location]);
 
   return (
-    <MapContainer  center={state.currentLocation} zoom={state.zoom}>
+    <MapContainer className="mapView" center={state.currentLocation} zoom={state.zoom}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

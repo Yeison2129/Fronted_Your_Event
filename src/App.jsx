@@ -18,7 +18,7 @@ import { Card_crud  } from  "./components/Card_crud/card_evento_empresa/Card"
 import {  Homedash } from  "./components/Home/home-dash" 
 import { Cards } from "./components/Card_Categorias/Cards"
 import Stats from "./components/Estadisticas/stats.jsx"
-import {CardView} from "./components/CardCompra/Card-view.jsx"
+import {CardView} from "./components/CardView/Card-view.jsx"
 import { PaginaCard } from "./components/PaginaCard/PaginaCard"
 import MapView from "./components/Mapa/MapView"
 export default function App() {

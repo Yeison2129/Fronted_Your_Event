@@ -1,5 +1,5 @@
 import React from 'react'
-import '../CardCompra/cardview.css'
+import './cardview.css'
 import imgcard from '../../assets/imgcard.png'
 import { useState } from 'react'
 export const CardView = () => {

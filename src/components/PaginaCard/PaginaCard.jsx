@@ -1,5 +1,5 @@
 import React from 'react'
-import { CardView } from '../CardCompra/Card-view'
+import { CardView } from '../CardView/Card-view'
 
 export const PaginaCard = () => {
   return (

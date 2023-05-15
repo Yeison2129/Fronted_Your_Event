@@ -220,7 +220,7 @@ body {
   position: relative;
   left: 272px;
   height: 100vh;
-  width: 80%;
+  width: 86%;
 
 }
 
@@ -598,7 +598,7 @@ body {
 .page-footer {
   display: flex;
   height: 9rem;
-  width: 71.6rem;
+  width: 85%;
   color: gray;
   font-size: 20px;
   align-items: center;

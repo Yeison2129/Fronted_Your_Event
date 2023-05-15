@@ -86,7 +86,7 @@ export const Crud_eventos = () => {
         <div className="img-crud  ">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
             <label for="file-upload" className="custom-file-upload">
-              <i className="fa fa-cloud-upload"></i> Sube aquí el certificado de tu empresa
+              <i className="fa fa-cloud-upload"></i> Sube aquí una imagen para visualizar tu evento
             </label>  
         </div>
         <Form action="" className="form-crud">
