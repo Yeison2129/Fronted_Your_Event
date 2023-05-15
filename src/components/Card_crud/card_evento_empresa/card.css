@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 *{
     margin: 0;
@@ -7,24 +7,23 @@
 #img-card-pointer{
     cursor: pointer;
 }
-.inactive {
-    width: 100px;
-    overflow: hidden;
-    margin-top: 30px;
-    transition: 0s ease-out;
-}
-.active {
-    overflow: visible;
-    width: 100%;
-    margin-top: 50px;
-    transition: 0.5s ease-out;
-}
 
+#h1-cardEvent{
+    margin: 20px 30px;
+    font-family: montserrat;
+
+}
+#h1-cardEvent hr{
+    width: 200px ;
+    height:1px ;
+    border: #000 1px solid;
+}
 .component-card{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
      height: 20rem;
+     font-family: montserrat;
      width: 13rem;
      border-radius: 20px;
      position: absolute;

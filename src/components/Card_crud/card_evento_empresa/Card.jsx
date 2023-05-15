@@ -1,16 +1,20 @@
 import React, { useState } from 'react'
 import './card.css'
-import {  Crud } from  "../create_event/Crud" 
+import {  Set } from  "../create_event/Set" 
 import { Dashboard } from '../../dashboard_empresa/Dashboard_Empresa'
+import { Footdash } from '../../dashboard_empresa/Footdash'
 // import image from '../../../assets/descarga.jpg'
 export const Card_crud = () => {
-  const [active,setActive]=useState(false);
+  // const [active,setActive]=useState(false);  
+  const [open,setOpen]=useState(false);
+
   return (
     
     <>
     <Dashboard/>
-    <section className="page-content">
-      <h1>MIS EVENTOS </h1>
+    <section className="page-CardE">
+      <h1 id='h1-cardEvent'>MIS EVENTOS<hr /> </h1>
+      
     <div className='component-card'> 
 
     <div className="fondo"></div>
@@ -23,9 +27,10 @@ export const Card_crud = () => {
             <div className="icon-card">
             <img id='img-card-pointer'
             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAaFJREFUWEftl4FNxDAMRf9NABvACLABTAAbABvAJLABYgJgAtgARoANuA3QlxzkC07ye01OlaBSpUp14xf7J/ldYWHXamE8+LNA+wAurBsPAL5KndlFhY4APAI4NAjCnAJ4j6BGAxHmBQAr5K8i1EigHGZtRHu1So0CimBODOQVQIL6AHDsNTUCqASTNMP3HuoGwF3qZ2+gSDO5XvKYYUAlAXPyCYrPXuSfAPjdzzbQq0JRm66tFV7EBEorjiKnrjaWfw+gmmZyvSSphDB8OReoJWDmuARw7zahIsxcIAVGidnYMbetkJJIifl1emwDpCRSYsLzdSqQkkiJKdqwKUBKIiWm6glVICWREtM0qAqQkkiJacIoy15JpMRIMC0gJZESI8O0gOhVDmy0aHftDlMDYrK3XcPUgHhS3xrQM4BzV/chlWkZtCcAZxbkDdRQmFqFaJiSj7myZ3oX3lU/M0nBQXC0D3n9lMavWog5UBGQ10809jCYUstyIALwLyHd4R/nnKr4b0tHB10etUKIoQD5RJSzrNfkpXH+gVplWlyFvgFdfY8lhhs2YQAAAABJRU5ErkJggg=="
-             onClick={() => setActive(!active)}
+             onClick={() => setOpen(!open)}
             />            
-            
+          
+
 
             </div>
         </div>
@@ -35,9 +40,9 @@ export const Card_crud = () => {
             <p>Name</p>
         </div>
     </div>
-            <div className={active ? "active" : "inactive"}>
-              <Crud/>
-            </div>
+       
+    {open &&  <Set closeModal={setOpen}/>}
+
     </section>
 </>
   )

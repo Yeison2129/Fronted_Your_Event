@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+
+.all {
+   font-family: 'Nunito', sans-serif;
+   text-decoration: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.product {
+   height: 350px;
+   width: 250px;
+   margin: 50px;
+   box-shadow: 5px 5px 20px black;
+   overflow: hidden;
+   border-radius: 20px;
+   background-size: cover;
+}
+
+.product h1{
+   color: #fff;
+   text-align: center;
+}
+
+.product:hover {
+   cursor: pointer;
+}
+
+.products-preview {
+   display: none;
+}
+
+.products-preview.active {
+   display: block;
+}
+
+
+.preview {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: rgb(255, 255, 255);
+   border: .5px solid black;
+   border-radius: 20px;
+   height: 90%;
+   width: 40%;
+}
+
+.cardBig {
+   height: 45%;
+   width: 100%;
+}
+
+.info{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   padding: 20px;
+}
+
+.buttons {
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   height: 100px;
+}
+
+.reserv {
+   background-color: #69affa;
+   border-radius: 7px;
+   height: 50%;
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.reserv:hover {
+   background-color: #014288;
+ }
+ 
+.buy {
+   background-color: #983C59;
+   border-radius: 7px;
+   height: 50%;
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.buy:hover {
+   background-color: #55041e;
+ }
+
+
+#cierre-ventana {
+   font-size: 30px;
+   color: #000000;
+}
+
+#cierre-ventana:hover{
+   color: #a70000
+}
+
+.preview h2 {
+   display: flex;
+   font-size: 20px;
+   justify-content: center;
+}
+
+.products-preview .preview .fa-times {
+   position: absolute;
+   top: 20;
+   right: 1.5rem;
+   cursor: pointer;
+   color: #444;
+   font-size: 2rem;
+   padding-top: 20px;
+}
+
+
+
+
+@media (max-width:991px) {
+
+   html {
+      font-size: 55%;
+   }
+
+}
+
+@media (max-width:768px) {
+
+   .products-preview .preview img {
+      height: 25rem;
+   }
+
+}
+
+@media (max-width:450px) {
+
+   html {
+      font-size: 50%;
+   }
+
+}

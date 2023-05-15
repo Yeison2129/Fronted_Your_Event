@@ -1,13 +1,14 @@
 import React from 'react';
 import './dashboard.css';
+import { Homedash } from '../Home/home-dash';
 import { Link } from 'react-router-dom'
 
 
 import userIcon from "../../assets/userIcon.svg";
-import camaleon from "../../assets/logo-your-event.svg";
 
 import { CardEvento } from '../Card_evento/Card_evento';
 import { Crud_eventos } from '../CRUD_eventos/Crud_eventos';
+import { Footdash } from './Footdash';
 
 export const  Dashboard = () => {
 
@@ -16,8 +17,11 @@ export const  Dashboard = () => {
         <>
 
             <div className="page-header">
-                <img src={userIcon} alt="icon" />
-                <p></p>
+                <div className="user-icon">
+                <img id='user-icon' src={userIcon} alt="icon" />
+                <p id='nom-user'>Name </p>
+                </div>
+                
                 <nav>
                     <button className="toggle-mob-menu" aria-expanded="false" aria-label="open menu">
                         <svg width="20" height="20" aria-hidden="true"><use href="#down"></use></svg>
@@ -132,35 +136,13 @@ export const  Dashboard = () => {
                         </button>
                     </li> */}
                     </ul>
-                </nav>
+                </nav> 
+               
             </div>
-            {/* HEADER */}
-{                  
-           
-             /* <section className="search-and-user">
-                    <form>
-                        
-                    </form>
-                    <div className="admin-profile">
-                        <span className="greeting">Nombre user</span>
-                        <div className="notifications">
-                            <span className="badge">1</span>
-                            <svg><use href="#users"></use></svg>
-                        </div>
-                    </div> */}
-                    {/*
-                </section>
-
-                    <section className='content-link'>
-                    </section>
- */}
-                <footer className="page-footer">
-                    <span>YourEvent </span>
-                    <img src={camaleon} alt="" />
-
-                </footer>
-
-
+            <Footdash/>
+            {/* <div className="">
+                <Homedash/>
+    </div> */}
         </>
     )
 
