@@ -1,4 +1,7 @@
-
+.leaflet-container {
+    width: 50vw;
+    height: 50vh;
+}
 
 .contenedor {
     padding: 60px 0;

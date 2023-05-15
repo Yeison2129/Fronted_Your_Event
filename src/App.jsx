@@ -20,7 +20,7 @@ import { Cards } from "./components/Card_Categorias/Cards"
 import Stats from "./components/Estadisticas/stats.jsx"
 import {CardView} from "./components/CardCompra/Card-view.jsx"
 import { PaginaCard } from "./components/PaginaCard/PaginaCard"
-
+import MapView from "./components/Mapa/MapView"
 export default function App() {
     return (
         <Routes>
@@ -45,6 +45,7 @@ export default function App() {
             <Route path='/Estadisticas' element={<Stats/>}/>
             <Route path='/CardCompra' element={<CardView/>}/>
             <Route path='/PaginaCard' element={<PaginaCard/>}/>
+            <Route path='/Mapa' element={<MapView/>}/>
         </Routes>
     )
 }

@@ -47,10 +47,10 @@ export const Cards = ({dataImage}) => {
                 onMouseLeave={handleMouseLeave}
                 ref={cardRef}
             >
-                <div className="cards" style={{'transform': `rotateY(${rX}deg) rotateX(${rY}deg)`}} >
+            <div className="cards" style={{'transform': `rotateY(${rX}deg) rotateX(${rY}deg)`}} >
                 <div className="cards-bg" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
                 <div className="cards-info">
-                    <h1 slot="header">Conciertos en vivo</h1>
+                    <h1 slot="header">Musica </h1>
                     <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
                 </div>
@@ -64,9 +64,9 @@ export const Cards = ({dataImage}) => {
                 ref={cardRef}
             >
                 <div className="cards" style={{'transform': `rotateY(${rX}deg) rotateX(${rY}deg)`}} >
-                <div className="cards-bg" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
+                <div className="cards-bg-one" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
                 <div className="cards-info">
-                    <h1 slot="header">Beaches</h1>
+                    <h1 slot="header">Catering</h1>
                     <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
                 </div>
@@ -80,9 +80,9 @@ export const Cards = ({dataImage}) => {
                 ref={cardRef}
             >
                 <div className="cards" style={{'transform': `rotateY(${rX}deg) rotateX(${rY}deg)`}} >
-                <div className="cards-bg" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
+                <div className="cards-bg-two" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
                 <div className="cards-info">
-                    <h1 slot="header">Beaches</h1>
+                    <h1 slot="header">Concursos</h1>
                     <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
                 </div>
@@ -96,9 +96,9 @@ export const Cards = ({dataImage}) => {
                 ref={cardRef}
             >
                 <div className="cards" style={{'transform': `rotateY(${rX}deg) rotateX(${rY}deg)`}} >
-                <div className="cards-bg" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
+                <div className="cards-bg-tree" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
                 <div className="cards-info">
-                    <h1 slot="header">Beaches</h1>
+                    <h1 slot="header">Presentaciones</h1>
                     <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
                 </div>
@@ -112,29 +112,15 @@ export const Cards = ({dataImage}) => {
                 ref={cardRef}
             >
                 <div className="cards" style={{'transform': `rotateY(${rX}deg) rotateX(${rY}deg)`}} >
-                <div className="cards-bg" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
+                <div className="cards-bg-for" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
                 <div className="cards-info">
-                    <h1 slot="header">Beaches</h1>
+                    <h1 slot="header">Lugares</h1>
                     <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </div>
                 </div>
             </div>
 
-            <div
-                className="cards-wrap"
-                onMouseMove={handleMouseMove}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                ref={cardRef}
-            >
-                <div className="cards" style={{'transform': `rotateY(${rX}deg) rotateX(${rY}deg)`}} >
-                <div className="cards-bg" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
-                <div className="cards-info">
-                    <h1 slot="header">Beaches</h1>
-                    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                </div>
-                </div>
-            </div>
+
 
         </div>
         
