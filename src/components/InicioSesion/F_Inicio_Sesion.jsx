@@ -1,6 +1,6 @@
 import { Formik, Form, Field } from "formik";
 import "./F_Inicio_Sesion.css";
-import wave from "../../assets/wave.svg";
+import onda from "../../assets/onda.svg";
 // import loginperson from "../../assets/loginperson.svg";
 import img_login from "../../assets/img_login.svg";
 import loginperson from "../../assets/My_password.svg";

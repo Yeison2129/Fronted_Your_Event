@@ -67,12 +67,12 @@ export const CardPassword = () => {
             <div className="contentCardPassword">
               <div className="cardPassword">
                 <h2 id="title-recover">Recupera tu contraseña!</h2>
-                <p id="recover-text"></p>
+                <p id="recover-text">Ingresa tu correo Electronico</p>
                 <form onSubmit={handleSubmit}>
                   <div id="input-recover">
                     <input
                       type="email"
-                      id="mail_user"
+                      id="mail_user1"
                       name="mail_user"
                       placeholder="correo"
                       onChange={handleChange}
@@ -161,7 +161,13 @@ export const CardPassword = () => {
             </div>
             <Field type="submit" value="Siguiente" className="btn-next"/>
             </form>
+            <div className="btn-recover">
+                  <a href="/" id="hv">
+                    Inicio
+                  </a>
+                </div>
           </div>
+          
         </div>
       )}
     </Formik> : times2 ? (
@@ -215,7 +221,8 @@ export const CardPassword = () => {
           <p  className="text">
               Ingresa la nueva contraseña que deseas tener.
           </p>
-          <form onSubmit={handleSubmit}>
+
+          <form id="form-new" onSubmit={handleSubmit}>
               <input
                         type="password"
                         id="password_user"
@@ -228,7 +235,13 @@ export const CardPassword = () => {
             <Field type="submit" value="Siguiente" className="btn-next"/>
           </div>
           </form>
+          <div className="btn-recover">
+                  <a href="/" id="hv">
+                    Inicio
+                  </a>
+                </div>
       </div>
+      
       </div>
         )}
       </Formik>

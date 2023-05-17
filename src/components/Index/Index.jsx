@@ -113,26 +113,39 @@ return (
             <div className="contenedor-sobre-nosotros">
                 <img src="../../../src/assets/ilustracion4.svg" alt="" className="imagen-about-us"/>
                 <div className="contenido-textos">
-                    <h3><span>1</span>Los mejores productos</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
-                        consequuntur aperiam minima sed dicta odit numquam sapiente quam eum, architecto animi pariatur,
-                        velit doloribus laboriosam ut.</p>
-                        <h3><span>2</span>Los mejores productos</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
-                            consequuntur aperiam minima sed dicta odit numquam sapiente quam eum, architecto animi pariatur,
-                            velit doloribus laboriosam ut.</p>
-                            <h3><span>3</span>Los mejores productos</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
-                                consequuntur aperiam minima sed dicta odit numquam sapiente quam eum, architecto animi pariatur,
-                                velit doloribus laboriosam ut.</p>
-                    <h3><span>4</span>Los mejores productos</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
-                        consequuntur aperiam minima sed dicta odit numquam sapiente quam eum, architecto animi pariatur,
-                        velit doloribus laboriosam ut.</p>
-                </div>
-            </div>
-        </section>
-       
+                    
+                            <h3><span>1</span>Vive una nueva experiencia!</h3>
+                              <p>YourEvent es una innovadora aplicación web diseñada para 
+                              simplificar la creación y búsqueda de eventos en la 
+                              hermosa región del Quindío. 
+                              esta plataforma ofrece a los usuarios una forma conveniente de 
+                              descubrir y 
+                              participar en diversos eventos que tienen lugar en la zona.</p>
+                        
+                            <h3><span>2</span>Conoce mejor</h3>
+                            <p>Al utilizar YourEvent, los organizadores de eventos también se benefician de 
+                              una herramienta poderosa para promover sus actividades. Con solo unos pocos 
+                              clics, pueden crear y personalizar anuncios detallados de sus eventos, 
+                              que se mostrarán en la aplicación para que los usuarios 
+                              interesados puedan encontrarlos fácilmente.</p>
+
+
+                            <h3><span>3</span>Explora y dejate llevar</h3>
+                            <p>Ya sea que seas un amante de la cultura, un ávido asistente a conciertos o 
+                              simplemente busques actividades 
+                              emocionantes en el Quindío.</p>
+
+
+                            <h3><span>4</span>Recuerda siempre estaremos contigo</h3>
+                            <p>YourEvent es tu compañero ideal. Descubre la diversidad de eventos 
+                            disponibles, organiza tus propias actividades y forma parte de una comunidad 
+                            en crecimiento que celebra y disfruta de 
+                            todo lo que esta hermosa región tiene para ofrecer.</p>
+              
+                          </div>
+                        </div>
+                      </section>
+    
 
     <section className="slider" id="slider" >        
     <h2 className="h2-title">Eventos Destacados <hr></hr></h2>
