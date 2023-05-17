@@ -10,9 +10,7 @@ export const registerUser = async (newUser) =>
 
 export const loginUser = async (loginUser)=>
     await axios.post('http://localhost:4000/loginUser',loginUser)
-
-export const loginCompany = async (company)=>
-    await axios.post('http://localhost:4000/loginCompany',company)    
+    
 
 export const update = async(update)=>
     await axios.put(`http://localhost:4000/update/${email}`, update, {
@@ -37,12 +35,23 @@ export const RecuperationPasswordUser = async(recuperationUser,email1)=>
 
 
 //Enterprise
+
+
+export const loginCompany = async (company)=>
+    await axios.post('http://localhost:4000/loginCompany',company)
+
+export const registerCompany = async (RegisterCompany)=>
+    await axios.post('http://localhost:4000/RegisterCompany',RegisterCompany)
+
+
 export const create_event = async(crudEventos)=> 
     await axios.post(`http://localhost:4000/registerEvent/${id}`, crudEventos, {
         headers : {
             token : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtYWlsIjoieWVpc29uZGF2aWRjYXN0aWJsYW5jbzExQGdtYWlsLmNvbSIsImlhdCI6MTY4MjEzNDMyMCwiZXhwIjoxNjgyMjIwNzIwfQ.rxhyl4SuHu9Cc2oK0sje4NnxUGAiosqKA-Eg1rLHgVU"
         }
     })
+
+
 
 
 

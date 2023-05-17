@@ -1,6 +1,6 @@
 
 import { registerUser } from '../../api/App'
-import { Formik, Form,ErrorMessage, Field } from 'formik'
+import { Formik, Form,Field } from 'formik'
 import img from '../../assets/img.svg'
 import "./F_registro.css"
 import swal from 'sweetalert2';
@@ -56,15 +56,12 @@ export const F_registro = () => {
           }
 
         } catch (error) {
-          console.log(error);
           swal.fire({
             title: "Error interno en el servidor",
             text: "Intenta de nuevo más tarde",
             icon: "error",
             boton: "Ok",
             time: 1500
-      
-
           });
         }
       }}
