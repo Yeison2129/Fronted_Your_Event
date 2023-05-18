@@ -1,12 +1,11 @@
 import { Formik, Form, Field } from "formik";
-import wave1 from "../../assets/wave1.png";
-import empresa from "../../assets/empresa.svg";
-import male from "../../assets/male.svg";
 import React from "react";
 import "./loginEmpresa.css";
 import { loginCompany } from "../../api/App";
 import swal from "sweetalert2";
-
+import loginEmpresa3 from "../../assets/loginEmpresa-3.png"
+import empresa from "../../assets/loginEmpresa-2.svg"
+import male from "../../assets/loginEmpresa-1.svg"
 export const LoginEmpresa = () => {
   return (
     <>
@@ -80,10 +79,10 @@ export const LoginEmpresa = () => {
         {({ handleChange, handleSubmit }) => (
           <>
             <img
-              src={wave1}
+              src={loginEmpresa3}
               className="loginEmpresa-wave"
               alt="img"
-              title="wave1.png"
+              title="loginEmpresa3.png"
             />
             <div className="loginEmpresa-container">
               <div className="loginEmpresa-img">

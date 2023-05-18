@@ -48,7 +48,7 @@ const cerrarPopup = useCallback((valor) => {
                 <div className="page-header">
                 <div className="user-icon">
                 <img id='user-icon' src={userIcon} alt="icon" />
-                <p id='nom-user'> </p>
+                <p id='nom-user'> {company.charAt(0).toUpperCase() + user.slice(1)} </p>
                 </div>
                 
                 <nav>
