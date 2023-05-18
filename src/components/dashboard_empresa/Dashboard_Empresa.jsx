@@ -2,16 +2,14 @@ import React, { useCallback, useState } from 'react';
 import './dashboard.css';
 import { Homedash } from '../Home/home-dash';
 import { Link } from 'react-router-dom'
-
-
 import userIcon from "../../assets/userIcon.svg";
-
 import { CardEvento } from '../Card_evento/Card_evento';
 import { Crud_eventos } from '../CRUD_eventos/Crud_eventos';
 import { Footdash } from './Footdash';
 
 export const  Dashboard = () => {
-    let company = localStorage.getItem("user");
+    let company = window.localStorage.getItem("company");
+    console.log(company);
     const [isContainerActive, setIsContainerActive] = useState(false)
     const [ImagenPopup, setImagenPopup] = useState("")
     const [TextPopup, setTextPopup] = useState("")
@@ -48,7 +46,7 @@ const cerrarPopup = useCallback((valor) => {
                 <div className="page-header">
                 <div className="user-icon">
                 <img id='user-icon' src={userIcon} alt="icon" />
-                <p id='nom-user'> {company.charAt(0).toUpperCase() + user.slice(1)} </p>
+                <p id='nom-user'> {company.charAt(0).toUpperCase() + company.slice(1)} </p>
                 </div>
                 
                 <nav>
