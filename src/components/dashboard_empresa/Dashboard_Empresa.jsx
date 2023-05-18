@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import './dashboard.css';
 import { Homedash } from '../Home/home-dash';
 import { Link } from 'react-router-dom'
@@ -11,15 +11,44 @@ import { Crud_eventos } from '../CRUD_eventos/Crud_eventos';
 import { Footdash } from './Footdash';
 
 export const  Dashboard = () => {
+    let company = localStorage.getItem("user");
+    const [isContainerActive, setIsContainerActive] = useState(false)
+    const [ImagenPopup, setImagenPopup] = useState("")
+    const [TextPopup, setTextPopup] = useState("")
 
+     const closedToken = () => {
+        if (company) {
+        localStorage.removeItem("company")
+        localStorage.removeItem("auth")
+        setTimeout(() => {
+            window.location.href = "/"
+        }, 0.500);
+        }
+    }
+
+    const tarjetaAbrir = (imagen, commit) => {
+        console.log("Entra a la funcion!", imagen);
+        setIsContainerActive(true);
+        setImagenPopup(imagen);
+        setTextPopup(commit);
+        console.log(isContainerActive);
+        console.log(commit);
+        // overlay.classList.add('active');
+        // popup.classList.add('active');
+};
+
+const cerrarPopup = useCallback((valor) => {
+    setIsContainerActive(valor);
+}, []);
 
     return (
         <>
-
-            <div className="page-header">
+            {company ? (
+                <>
+                <div className="page-header">
                 <div className="user-icon">
                 <img id='user-icon' src={userIcon} alt="icon" />
-                <p id='nom-user'>Name </p>
+                <p id='nom-user'> </p>
                 </div>
                 
                 <nav>
@@ -143,6 +172,10 @@ export const  Dashboard = () => {
             {/* <div className="">
                 <Homedash/>
     </div> */}
+                </>
+
+            ):null}
+            
         </>
     )
 

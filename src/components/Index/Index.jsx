@@ -31,7 +31,7 @@ import 'swiper/css/scrollbar';
 
 
 export const Index = () => {
-    let user = localStorage.getItem("user");
+    let user= localStorage.getItem("user");
     let [isContainerActive, setIsContainerActive] = useState(false);
     let [imagenPopup, setImagenPopup] = useState("");
     let [textPopup, setTextPopup] = useState("");

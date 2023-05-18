@@ -37,8 +37,8 @@ export const RecuperationPasswordUser = async(recuperationUser,email1)=>
 //Enterprise
 
 
-export const loginCompany = async (company)=>
-    await axios.post('http://localhost:4000/loginCompany',company)
+export const loginCompany = async (loginCompany)=>
+    await axios.post('http://localhost:4000/loginCompany',loginCompany)
 
 export const registerCompany = async (RegisterCompany)=>
     await axios.post('http://localhost:4000/RegisterCompany',RegisterCompany)
