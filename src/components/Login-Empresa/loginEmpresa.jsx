@@ -1,7 +1,7 @@
 import { Formik, Form, Field } from "formik";
-import wave1 from '../../assets/loginEmpresa-3.png';
-import empresa from "../../assets/loginEmpresa-2.svg";
-import male from "../../assets/loginEmpresa-1.svg";
+// import wave1 from '../../assets/wave1.png';
+import empresa from "../../assets/empresa.svg";
+// import male from "../../assets/male.svg";
 import React from 'react'
 import "./loginEmpresa.css"
 
