@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./registroEmpresa.css";
-import undraw from "../../assets/undraw.svg";
 import { RegistroEmpresaFormulario } from "./Formulario_registro_evento";
 
 export const RegistroEmpresa = () => {
