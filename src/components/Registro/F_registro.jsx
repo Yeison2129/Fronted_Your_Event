@@ -1,7 +1,7 @@
 
 import { registerUser } from '../../api/App'
 import { Formik, Form,ErrorMessage, Field } from 'formik'
-import img from '../../assets/img.svg'
+import registro from "../../assets/registro-1.svg";
 import "./F_registro.css"
 import swal from 'sweetalert2';
 
@@ -118,7 +118,7 @@ export const F_registro = () => {
                  <u> <a href="/login">Ya tengo una cuenta</a></u>
                 </div>
                 
-                <img src={img} className="image" alt="" />
+                <img src={registro} className="image" alt="" />
 
               </div>
             </div>

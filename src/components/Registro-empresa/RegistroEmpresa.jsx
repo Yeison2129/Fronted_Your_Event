@@ -4,7 +4,7 @@ import {BiUser} from "react-icons/bi"
 import {BiLockAlt} from "react-icons/bi"
 import {BiEnvelope} from "react-icons/bi"
 import {AiOutlinePushpin} from "react-icons/ai"
-import  undraw  from "../../assets/undraw.svg"
+import  registroEmpresa  from "../../assets/registroEmpresa-1.svg"
 export const RegistroEmpresa = () => {
 
   return (
@@ -59,7 +59,7 @@ export const RegistroEmpresa = () => {
                 Únete a nuestra familia para subir tus eventos y no te pierdas de los servicios que brindamos.
               </p>
             </div>
-            <img src={undraw} className="image" alt="" /> 
+            <img src={registroEmpresa} className="image" alt="" /> 
 
           </div>  
         </div>

@@ -4,14 +4,12 @@ import { Cards } from "../Card_Categorias/Cards";
 import { Popup } from "../Popup";
 import Stats from "../Estadisticas/stats"
 import MapView from "../Mapa/MapView";
-import logo from "../../assets/logos/log-blanco.svg";
 import "../Index/style-index.css";
 import { DropDown } from "../DropDown/DropDown";
-import { AiFillFileZip } from "react-icons/ai";
 import logoUno from '../../assets/slide-1.jpg'
 import logoDos from '../../assets/slide-2.jpg'
 import logoTres from '../../assets/slide-3.jpg'
-import logoCuatro from '../../assets/slide-4.jpg'                      
+import logoCuatro from '../../assets/slide-4.jpg'                   
 import logoCinco from '../../assets/slide-5.jpg'
 import logoSeis from '../../assets/slide-6.jpg'
 import face from '../../assets/SocialMedia/face-w.svg'
@@ -111,7 +109,7 @@ return (
         <section className="contenedor sobre-nosotros">
             <h2 className="titulo">Nuestro Producto <hr /></h2>
             <div className="contenedor-sobre-nosotros">
-                <img src="../../../src/assets/ilustracion4.svg" alt="" className="imagen-about-us"/>
+                <img src="../../../src/assets/homePage.svg" alt="" className="imagen-about-us"/>
                 <div className="contenido-textos">
                     
                             <h3><span>1</span>Vive una nueva experiencia!</h3>
