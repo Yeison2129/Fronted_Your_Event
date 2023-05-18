@@ -48,6 +48,7 @@ export const RegistroEmpresaFormulario = () => {
             }
             if (users.data == "INSERT_ERROR") {
               swal.fire("error desconocido");
+              
             }
           } catch (error) {
             swal.fire({

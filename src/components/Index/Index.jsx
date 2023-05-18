@@ -66,10 +66,7 @@ return (
     <header className="header-index">
         <nav className="nav-index">
             <img src="../../../src/assets/logos/log-blanco.svg" id="img-logo" alt="" />
-            <div class="bar-nav">
-                <input type="text" className="input-nav" placeholder="Buscar..." />
-                <img id='search-icon' src='../../../src/assets/search.svg' />
-            </div>
+           
             <div class="content-nav">
               <a href="#">Inicio </a>
               <a href="#">Acerca de </a>
@@ -106,46 +103,41 @@ return (
             </svg></div>
     </header>
     <main>
-        <section className="contenedor sobre-nosotros">
-            <h2 className="titulo">Nuestro Producto <hr /></h2>
-            <div className="contenedor-sobre-nosotros">
-                <img src="../../../src/assets/homePage.svg" alt="" className="imagen-about-us"/>
-                <div className="contenido-textos">
-                    
-                            <h3><span>1</span>Vive una nueva experiencia!</h3>
-                              <p>YourEvent es una innovadora aplicación web diseñada para 
-                              simplificar la creación y búsqueda de eventos en la 
-                              hermosa región del Quindío. 
-                              esta plataforma ofrece a los usuarios una forma conveniente de 
-                              descubrir y 
-                              participar en diversos eventos que tienen lugar en la zona.</p>
-                        
-                            <h3><span>2</span>Conoce mejor</h3>
-                            <p>Al utilizar YourEvent, los organizadores de eventos también se benefician de 
-                              una herramienta poderosa para promover sus actividades. Con solo unos pocos 
-                              clics, pueden crear y personalizar anuncios detallados de sus eventos, 
-                              que se mostrarán en la aplicación para que los usuarios 
-                              interesados puedan encontrarlos fácilmente.</p>
+        <section className="statas">
+      <h2  className="h2-title"> Estadisticas</h2>
+      <div className=" estadist">
+    <div className="grafico">
+          <Stats/>
+    </div>
+    <div className="map">
+        <MapView/>
+      </div>
+      </div>
+    </section>
+  
+<section className="categorias" id="categorias">
+     <div className="titulo_bar">
+     <h2 className="h2-title"> Categorías <hr /></h2>
+      <div class="bar-nav">
+                <input type="text" className="input-nav" placeholder="Buscar..." />
+                <img id='search-icon' src='../../../src/assets/search.svg' />
+            </div>
+  
+      </div>   <Cards/>
+    </section>
 
 
-                            <h3><span>3</span>Explora y dejate llevar</h3>
-                            <p>Ya sea que seas un amante de la cultura, un ávido asistente a conciertos o 
-                              simplemente busques actividades 
-                              emocionantes en el Quindío.</p>
-
-
-                            <h3><span>4</span>Recuerda siempre estaremos contigo</h3>
-                            <p>YourEvent es tu compañero ideal. Descubre la diversidad de eventos 
-                            disponibles, organiza tus propias actividades y forma parte de una comunidad 
-                            en crecimiento que celebra y disfruta de 
-                            todo lo que esta hermosa región tiene para ofrecer.</p>
-              
-                          </div>
-                        </div>
-                      </section>
     
+    </main>
+  <section>
+    
+        <div className="content-link-register">
 
-    <section className="slider" id="slider" >        
+        <a href="/RegistroEmpresa" id="log">SI TIENES UN EMPRENDIMIENTO, INGRESA AQUÍ!  <hr></hr></a> 
+
+        </div>
+    </section>
+  <section className="slider" id="slider" >        
     <h2 className="h2-title">Eventos Destacados <hr></hr></h2>
 
           <div className="swiper-container home-slider">
@@ -191,36 +183,48 @@ return (
             </div>
           </div>
         </section>
-    </main>
-  /<section>
     
-        <div className="content-link-register">
 
-        <a href="/RegistroEmpresa" id="log">SI TIENES UN EMPRENDIMIENTO, INGRESA AQUÍ!  <hr></hr></a> 
-
-        </div>
-
-    </section>
-   
-    <section className="statas">
-      <h2  className="h2-title"> Estadisticas</h2>
-      <div className=" estadist">
-    <div className="grafico">
-          <Stats/>
-    </div>
-    <div className="map">
-        <MapView/>
-      </div>
-      </div>
-    </section>
-
-    <section className="categorias" id="categorias">
-      <h2 className="h2-title"> Categorías <hr /></h2>
-    <Cards/>
-    </section>
+    
 
     <br />
+<section className="contenedor sobre-nosotros">
+            <h2 className="titulo">Nuestro Producto <hr /></h2>
+            <div className="contenedor-sobre-nosotros">
+                <img src="../../../src/assets/homePage.svg" alt="" className="imagen-about-us"/>
+                <div className="contenido-textos">
+                    
+                            <h3><span>1</span>Vive una nueva experiencia!</h3>
+                              <p>YourEvent es una innovadora aplicación web diseñada para 
+                              simplificar la creación y búsqueda de eventos en la 
+                              hermosa región del Quindío. 
+                              esta plataforma ofrece a los usuarios una forma conveniente de 
+                              descubrir y 
+                              participar en diversos eventos que tienen lugar en la zona.</p>
+                        
+                            <h3><span>2</span>Conoce mejor</h3>
+                            <p>Al utilizar YourEvent, los organizadores de eventos también se benefician de 
+                              una herramienta poderosa para promover sus actividades. Con solo unos pocos 
+                              clics, pueden crear y personalizar anuncios detallados de sus eventos, 
+                              que se mostrarán en la aplicación para que los usuarios 
+                              interesados puedan encontrarlos fácilmente.</p>
 
+
+                            <h3><span>3</span>Explora y dejate llevar</h3>
+                            <p>Ya sea que seas un amante de la cultura, un ávido asistente a conciertos o 
+                              simplemente busques actividades 
+                              emocionantes en el Quindío.</p>
+
+
+                            <h3><span>4</span>Recuerda siempre estaremos contigo</h3>
+                            <p>YourEvent es tu compañero ideal. Descubre la diversidad de eventos 
+                            disponibles, organiza tus propias actividades y forma parte de una comunidad 
+                            en crecimiento que celebra y disfruta de 
+                            todo lo que esta hermosa región tiene para ofrecer.</p>
+              
+                          </div>
+                        </div>
+                      </section>
    
         <footer className="foo-index">
         <ContactUs/>

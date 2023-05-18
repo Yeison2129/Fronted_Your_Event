@@ -63,7 +63,13 @@
     height: 20px;
     z-index: 1;
 }
+
+.titulo_bar{
+    display:flex ;
+    
+}
 .bar-nav .input-nav{
+    background-color: #a09e9e;
     width: 80%;
     outline: none;
     border: none;

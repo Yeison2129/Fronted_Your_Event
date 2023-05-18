@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./registroEmpresa.css";
 import { RegistroEmpresaFormulario } from "./Formulario_registro_evento";
+import registroEmpresa1 from "../../assets/registroEmpresa-1.svg"
 
 export const RegistroEmpresa = () => {
   return (
@@ -15,7 +16,7 @@ export const RegistroEmpresa = () => {
                 de los servicios que brindamos.
               </p>
             </div>
-            <img src={undraw} className="image" alt="" />
+            <img src={registroEmpresa1} className="image" alt="" />
           </div>
         <div className="formulario_empresa">
           <RegistroEmpresaFormulario />

@@ -11,7 +11,7 @@ import { Crud_eventos } from '../CRUD_eventos/Crud_eventos';
 import { Footdash } from './Footdash';
 
 export const  Dashboard = () => {
-    let company = localStorage.getItem("user");
+    let company = localStorage.getItem("company");
     const [isContainerActive, setIsContainerActive] = useState(false)
     const [ImagenPopup, setImagenPopup] = useState("")
     const [TextPopup, setTextPopup] = useState("")
@@ -48,7 +48,7 @@ const cerrarPopup = useCallback((valor) => {
                 <div className="page-header">
                 <div className="user-icon">
                 <img id='user-icon' src={userIcon} alt="icon" />
-                <p id='nom-user'> {company.charAt(0).toUpperCase() + user.slice(1)} </p>
+                <p id='nom-user'> {company.charAt(0).toUpperCase() + company.slice(1)} </p>
                 </div>
                 
                 <nav>
