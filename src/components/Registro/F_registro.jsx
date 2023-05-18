@@ -1,6 +1,5 @@
 import { registerUser } from "../../api/App";
 import { Formik, Form, Field } from "formik";
-import img from "../../assets/img.svg";
 import "./F_registro.css";
 import swal from "sweetalert2";
 
