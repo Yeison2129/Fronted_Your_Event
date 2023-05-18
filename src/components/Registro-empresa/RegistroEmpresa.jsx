@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import "./registroEmpresa.css";
-import { BiUser } from "react-icons/bi";
-import { BiLockAlt } from "react-icons/bi";
-import { BiEnvelope } from "react-icons/bi";
-import { AiOutlinePushpin } from "react-icons/ai";
 import undraw from "../../assets/undraw.svg";
-import { Formik, Form, Field } from "formik";
-import { registerCompany } from "../../api/App";
-import swal from "sweetalert2";
 import { RegistroEmpresaFormulario } from "./Formulario_registro_evento";
 
 export const RegistroEmpresa = () => {

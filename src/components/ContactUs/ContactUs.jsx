@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 import face from '../../assets/SocialMedia/face.svg'
 import insta from '../../assets/SocialMedia/insta.svg'
 import twit from '../../assets/SocialMedia/twitter.svg'
-import message from '../../assets/SocialMedia/message.svg'
+import logoY from '../../assets/logos/logo-your-event.svg'
 
 
 export const ContactUs = () => {
@@ -36,7 +36,7 @@ export const ContactUs = () => {
           </div>
           <p>Gmail <br /> YourEvent@gmail.com</p>
           <p>Teléfono <br /> 3127849302</p>
-          <img  src={message} alt="" id='img-message' />
+          <img  src={logoY} alt="" id='img-message' />
         </div>
       </div>
       <div className='contus2'>

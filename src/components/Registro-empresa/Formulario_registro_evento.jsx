@@ -1,71 +1,66 @@
-import React, { useRef } from 'react';
-import { Formik, Form, Field } from 'formik';
-import { registerCompany } from '../../api/App';
-import swal from 'sweetalert2';
+import React from "react";
+import { Formik, Form, Field } from "formik";
+import { registerCompany } from "../../api/App";
+import swal from "sweetalert2";
 
 export const RegistroEmpresaFormulario = () => {
-  const fileInputRef = useRef(null);
-
-  const handleSubmit = async (values) => {
-    try {
-      const empresas = await registerCompany(values);
-      if (empresas.data.data === 'INSERT_OK') {
-        swal.fire({
-          title: 'Registro Exitoso',
-          text: 'Gracias por registrarte con nosotros',
-          icon: 'success',
-          boton: 'ok',
-          time: 1500,
-        });
-        const timeout = () => {
-          setTimeout(function () {
-            window.location.href = '/loginEmpresa';
-          }, 2000);
-        };
-        timeout();
-      }
-      if (empresas.data.data === 'INSERT_ERROR') {
-        swal.fire({
-          title: 'Error Al registrarte',
-          text: 'Error',
-          icon: 'warning',
-          boton: 'Ok',
-          time: 1500,
-        });
-      }
-      if (empresas.data.data === 'company_exist') {
-        swal.fire({
-          title: 'Tu usuario ya esta registrado',
-          text: 'Error',
-          icon: 'Warning',
-          boton: 'Ok',
-          time: 1500,
-        });
-      }
-    } catch (error) {
-      swal.fire({
-        title: 'Error interno en el servidor',
-        text: 'Intenta de nuevo mas tarde',
-        icon: 'error',
-        boton: 'Ok',
-        time: 1500,
-      });
-    }
-  };
-
   return (
     <>
       <Formik
         initialValues={{
-          nom_empresa: '',
-          mail_empresa: '',
-          telefono_empresa: '',
-          password_empresa: '',
-          image: '',
+          nom_empresa: "",
+          mail_empresa: "",
+          telefono_empresa: "",
+          password_empresa: "",
+          image: null,
         }}
-        onSubmit={handleSubmit}
+        onSubmit={async (values) => {
+
+          try {
+            const users = await registerCompany(values);
+            console.log(users.data);
+
+            if (users.data == "INSERT_OK") {
+              swal.fire({
+                title: "Registro exitoso",
+                text: "Gracias por registrarte con nosotros",
+                icon: "success",
+                boton: "Ok",
+                time: 1500,
+              });
+              //sirve para definir una funcion de tiempo
+              const timeout =()=>{
+                setTimeout(function () {
+                  window.location.href = "/loginEmpresa";
+                }, 2000);
+              } 
+              timeout()
+              }
+              
+            if (users.data == "company exist") {
+              swal.fire({
+                title: "La compañia ya existe",
+                text: "Inicia sesion",
+                icon: "warning",
+                boton: "Ok",
+                time: 1500,
+              });
+            }
+            if (users.data == "INSERT_ERROR") {
+              swal.fire("error desconocido");
+            }
+          } catch (error) {
+            swal.fire({
+              title: "Error interno en el servidor",
+              text: "Intenta de nuevo más tarde",
+              icon: "error",
+              boton: "Ok",
+              time: 1500,
+            });
+          }
+        }}
       >
-        {({ handleChange, handleSubmit, setFieldValue }) => (
+        {({ handleChange, setFieldValue,handleSubmit }) => (
           <Form onSubmit={handleSubmit} className="sign-in-form">
             <h2 className="title">Registra tu empresa</h2>
             <div className="input-field">
@@ -76,6 +71,7 @@ export const RegistroEmpresaFormulario = () => {
                 name="nom_empresa"
                 placeholder="Nombre de la empresa"
                 required
+                onChange={handleChange}
               />
             </div>
             <div className="input-field">
@@ -85,6 +81,7 @@ export const RegistroEmpresaFormulario = () => {
                 id="telefono_empresa"
                 name="telefono_empresa"
                 placeholder="Telefono"
+                onChange={handleChange}
               />
             </div>
             <div className="input-field">
@@ -95,6 +92,7 @@ export const RegistroEmpresaFormulario = () => {
                 name="mail_empresa"
                 placeholder="Correo"
                 required
+                onChange={handleChange}
               />
             </div>
             <div className="input-field">
@@ -105,29 +103,23 @@ export const RegistroEmpresaFormulario = () => {
                 name="password_empresa"
                 placeholder="Contraseña"
                 required
+                onChange={handleChange}
               />
             </div>
             <div className="input-field">
-            <i> </i>
-              <Field
+              <i> </i>
+              <input
                 type="file"
                 id="image"
-                name="image"
-                innerRef={fileInputRef.current}
+                name="img_certificado"
+                onChange={(event) => {
+                  const file = event.target.files[0];
+                  setFieldValue("img_certificado", file);
+                }}
               />
             </div>
 
-            <button
-              type="submit"
-              value="Enviar"
-              className="btn solid"
-              onClick={() => {
-                const file = fileInputRef.current.files[0];
-                if (file) {
-                  setFieldValue("image", file);
-                }
-              }}
-            >
+            <button type="submit" className="btn solid">
               Registrate
             </button>
             <a href="/">Volver al inicio</a>
