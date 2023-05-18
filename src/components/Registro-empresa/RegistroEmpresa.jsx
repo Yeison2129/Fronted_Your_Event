@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
-import './registroEmpresa.css'
-import {BiUser} from "react-icons/bi" 
-import {BiLockAlt} from "react-icons/bi"
-import {BiEnvelope} from "react-icons/bi"
-import {AiOutlinePushpin} from "react-icons/ai"
-import  undraw  from "../../assets/undraw.svg"
+import React, { useState } from "react";
+import "./registroEmpresa.css";
+import undraw from "../../assets/undraw.svg";
+import { RegistroEmpresaFormulario } from "./Formulario_registro_evento";
+
 export const RegistroEmpresa = () => {
   return (
     <>
@@ -18,9 +16,11 @@ export const RegistroEmpresa = () => {
                 de los servicios que brindamos.
               </p>
             </div>
-            <img src={registroEmpresa} className="image" alt="" /> 
-
-          </div>  
+            <img src={undraw} className="image" alt="" />
+          </div>
+        <div className="formulario_empresa">
+          <RegistroEmpresaFormulario />
+        </div>
         </div>
       </div>
     </>
