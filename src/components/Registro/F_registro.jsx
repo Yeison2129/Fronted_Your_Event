@@ -2,7 +2,6 @@ import { registerUser } from "../../api/App";
 import { Formik, Form, Field } from "formik";
 import "./F_registro.css";
 import swal from "sweetalert2";
-import registro1 from "../../assets/registro-1.svg"
 
 export const F_registro = () => {
   return (
@@ -146,7 +145,7 @@ export const F_registro = () => {
                   </u>
                 </div>
 
-                <img src={registro1} className="image" alt="" />
+                <img src={img} className="image" alt="" />
               </div>
             </div>
           </div>

@@ -1,10 +1,12 @@
 import {Route, Routes} from "react-router-dom"
 import {Inicio_Sesion} from './components/InicioSesion/F_Inicio_Sesion'
 import { F_registro } from './components/Registro/F_registro'
-import { Password } from './components/Configuraciones/Editar/Password'
+import { Password } from './components/Editar/Password'
 import { Index } from "./components/Index/Index"
 import { RegistroEmpresa } from "./components/Registro-empresa/RegistroEmpresa"
 import { Dashboard } from "./components/dashboard_empresa/Dashboard_Empresa"
+import { CardCode } from "./components/RecuperacionContrasena/CardCode/CardCode"
+import { CardNewPassword } from "./components/RecuperacionContrasena/CardNew/CardNewPassword"
 import { CardPassword } from "./components/RecuperacionContrasena/CardPassword/CardPassword"
 import {DropDown} from './components/DropDown/DropDown';
 import { CardEvento } from "./components/Card_evento/Card_evento"
@@ -18,7 +20,6 @@ import { Cards } from "./components/Card_Categorias/Cards"
 import Stats from "./components/Estadisticas/stats.jsx"
 import {CardView} from "./components/CardView/Card-view.jsx"
 import { PaginaCard } from "./components/PaginaCard/PaginaCard"
-import { ConfigDash } from "./components/Configuraciones/DashC/Config"
 import MapView from "./components/Mapa/MapView"
 export default function App() {
     return (
@@ -29,6 +30,8 @@ export default function App() {
             <Route path='/password' element={<Password/>}/>
             <Route path='/RegistroEmpresa' element={<RegistroEmpresa/>}/>
             <Route path='/dashboard' element={<Dashboard/>}/>
+            <Route path='/CardCode' element={<CardCode/>}/>
+            <Route path='/CardNew' element={<CardNewPassword/>}/>
             <Route path='/CardPassword' element={<CardPassword/>}/>
             <Route path='/drop' element={<DropDown/>}/>
             <Route path='/cardEvento' element={<CardEvento/>}/>
@@ -43,8 +46,6 @@ export default function App() {
             <Route path='/CardCompra' element={<CardView/>}/>
             <Route path='/PaginaCard' element={<PaginaCard/>}/>
             <Route path='/Mapa' element={<MapView/>}/>
-            <Route path='/config' element={<ConfigDash/>}/>
-
         </Routes>
     )
 }

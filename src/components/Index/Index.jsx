@@ -12,7 +12,6 @@ import logoTres from "../../assets/slide-3.jpg";
 import logoCuatro from "../../assets/slide-4.jpg";
 import logoCinco from "../../assets/slide-5.jpg";
 import logoSeis from "../../assets/slide-6.jpg";
-import bell from "../../assets/logos/bell.png";
 import face from "../../assets/SocialMedia/face-w.svg";
 import insta from "../../assets/SocialMedia/insta-w.svg";
 import twit from "../../assets/SocialMedia/twitter-w.svg";
@@ -76,11 +75,10 @@ export const Index = () => {
             <a href="#categorias">Categorias </a>
             {user ? (
               <>
-                <img src={bell} alt="" />
-                <div className="dropDown">
-                  <p href="" id="enter1">
+                <a href="" id="enter1">
                   {user.charAt(0).toUpperCase() + user.slice(1)}
-                </p>
+                </a>
+                <div className="dropDown">
                   <DropDown />
                 </div>
               </>

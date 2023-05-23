@@ -1,6 +1,6 @@
 .leaflet-container {
-    width: 100%;
-    height: 100%;
+    width: 50vw;
+    height: 50vh;
 }
 
 .contenedor {
@@ -97,7 +97,7 @@ color: #c2c1c1;
 }
 .content-nav{
    display: flex;
-   width: 55%;
+   width: 35%;
    align-items: center;
    justify-content: space-around;
 }
@@ -143,15 +143,6 @@ header .textos-header {
     font-size: 50px;
     color:#fff;
 }
-.dropDown{
-    display: flex;
-    align-items: center;
-}
-.dropDown p{
-    color: white;
-    padding: 0 10px;
-}
-
 
 .textos-header h2{
     font-size: 30px;
@@ -372,9 +363,12 @@ main .sobre-nosotros{
     width: 40%;
     padding: 20px;
 }
-
+.map-section{
+    width: 100%;   
+}
 .map{
     overflow: hidden;    
+    width: 40%;
     padding: 20px
 
 }
@@ -391,7 +385,6 @@ main .sobre-nosotros{
     display: flex;
     justify-content:center;
     align-items: center;
-    width: 100%;
 }
 .slider{ 
     display: flex;
