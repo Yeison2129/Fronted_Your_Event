@@ -12,6 +12,7 @@ import logoTres from "../../assets/slide-3.jpg";
 import logoCuatro from "../../assets/slide-4.jpg";
 import logoCinco from "../../assets/slide-5.jpg";
 import logoSeis from "../../assets/slide-6.jpg";
+import bell from "../../assets/logos/bell.png";
 import face from "../../assets/SocialMedia/face-w.svg";
 import insta from "../../assets/SocialMedia/insta-w.svg";
 import twit from "../../assets/SocialMedia/twitter-w.svg";
@@ -75,10 +76,11 @@ export const Index = () => {
             <a href="#categorias">Categorias </a>
             {user ? (
               <>
-                <a href="" id="enter1">
-                  {user.charAt(0).toUpperCase() + user.slice(1)}
-                </a>
+                <img src={bell} alt="" />
                 <div className="dropDown">
+                  <p href="" id="enter1">
+                  {user.charAt(0).toUpperCase() + user.slice(1)}
+                </p>
                   <DropDown />
                 </div>
               </>
@@ -86,11 +88,16 @@ export const Index = () => {
               <>
                 {company ? (
                   <>
-                   <a href="" id="enter1">
+                    <img src={bell} alt="" />
+                    <div className="dropDown">
+                    <p href="" id="enter1">
                   {company.charAt(0).toUpperCase() + company.slice(1)}
-                </a>
+                </p>
+                    <DropDown />
+
+                    </div>
+                   
                 <div className="dropDown">
-                  <DropDown />
                 </div>
                   </>
                 ) : (
@@ -110,7 +117,7 @@ export const Index = () => {
         <section className="textos-header">
           <h1>YourEvent</h1>
           <h2>
-            Eventos en el Quindío <br></br> A solo un click
+            Donde la magia de los eventos <br></br> cobran vida en el Quindío
           </h2>
         </section>
         <div className="wave" style={{ height: "150px", overflow: "hidden" }}>
