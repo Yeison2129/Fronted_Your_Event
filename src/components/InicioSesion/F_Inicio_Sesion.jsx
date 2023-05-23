@@ -65,28 +65,28 @@ export const Inicio_Sesion = () => {
               <div className="login">
                 <div className="login-data">
                   <img src={img_login} alt="img" title="img-login" id="img-login" />
-                  <h2 className="title">Inicio de Sesión</h2>
+                  <h2 className="titleLogin">Inicio de Sesión</h2>
                   <Form
                     action="#"
                     onSubmit={handleSubmit}
                     className="login-form"
                   >
-                    <div className="input-field">
+                    <div className="input-field-log">
                       <i className="fas fa-envelope"></i>
                       <Field
                         type="email"
-                        id="mail_user"
+                        id="mail_user_log"
                         name="mail_user"
                         placeholder="Correo"
                         onChange={handleChange}
                         required
                       />
                     </div>
-                    <div className="input-field">
+                    <div className="input-field-log">
                       <i className="fas fa-lock"></i>
                       <Field
                         type="password"
-                        id="password_user"
+                        id="password_user_log"
                         name="password_user"
                         placeholder="Contraseña"
                         onChange={handleChange}
