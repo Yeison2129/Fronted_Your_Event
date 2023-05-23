@@ -15,7 +15,7 @@ import { Crud_eventos } from "./components/CRUD_eventos/Crud_eventos"
 import { Session_company } from "./components/SessionCompany/SessionCompany"
 import { LoginEmpresa  } from  "./components/Login-Empresa/loginEmpresa"
 import { Card_crud  } from  "./components/Card_crud/card_evento_empresa/Card"
-import {  Homedash } from  "./components/Home/Home-dash" 
+import {  Homedash } from  "./components/Home/home-dash" 
 import { Cards } from "./components/Card_Categorias/Cards"
 import Stats from "./components/Estadisticas/stats.jsx"
 import {CardView} from "./components/CardView/Card-view.jsx"
@@ -40,7 +40,7 @@ export default function App() {
             <Route path="/crud_eventos" element={<Crud_eventos/>}/>
             <Route path='/loginCompany' element={<Session_company/>}/>
             <Route path='/loginEmpresa' element={<LoginEmpresa/>}/>
-            <Route path='/homeDash' element={<Homedash/>}/>
+            <Route path='/home' element={<Homedash/>}/>
             <Route path='/home' element={<Cards/>}/>
             <Route path='/Estadisticas' element={<Stats/>}/>
             <Route path='/CardCompra' element={<CardView/>}/>

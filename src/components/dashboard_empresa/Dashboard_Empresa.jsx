@@ -1,24 +1,52 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import './dashboard.css';
+import { Homedash } from '../Home/home-dash';
 import { Link } from 'react-router-dom'
-
-
 import userIcon from "../../assets/userIcon.svg";
-
 import { CardEvento } from '../Card_evento/Card_evento';
 import { Crud_eventos } from '../CRUD_eventos/Crud_eventos';
 import { Footdash } from './Footdash';
 
 export const  Dashboard = () => {
+    let company = window.localStorage.getItem("company");
+    console.log(company);
+    const [isContainerActive, setIsContainerActive] = useState(false)
+    const [ImagenPopup, setImagenPopup] = useState("")
+    const [TextPopup, setTextPopup] = useState("")
 
+     const closedToken = () => {
+        if (company) {
+        localStorage.removeItem("company")
+        localStorage.removeItem("auth")
+        setTimeout(() => {
+            window.location.href = "/"
+        }, 0.500);
+        }
+    }
+
+    const tarjetaAbrir = (imagen, commit) => {
+        console.log("Entra a la funcion!", imagen);
+        setIsContainerActive(true);
+        setImagenPopup(imagen);
+        setTextPopup(commit);
+        console.log(isContainerActive);
+        console.log(commit);
+        // overlay.classList.add('active');
+        // popup.classList.add('active');
+};
+
+const cerrarPopup = useCallback((valor) => {
+    setIsContainerActive(valor);
+}, []);
 
     return (
         <>
-
-            <div className="page-header">
+            {company ? (
+                <>
+                <div className="page-header">
                 <div className="user-icon">
                 <img id='user-icon' src={userIcon} alt="icon" />
-                <p id='nom-user'>Name </p>
+                <p id='nom-user'> {company.charAt(0).toUpperCase() + company.slice(1)} </p>
                 </div>
                 
                 <nav>
@@ -112,11 +140,11 @@ export const  Dashboard = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="#0">
+                        <a href="/">
                         <svg className="svg-dash">
                             <use href="#charts"></use>
                         </svg>
-                        <span>Atrás </span>
+                        <span>Atras</span>
                         </a>
                     </li>
                     {/* <li>
@@ -142,6 +170,10 @@ export const  Dashboard = () => {
             {/* <div className="">
                 <Homedash/>
     </div> */}
+                </>
+
+            ):null}
+            
         </>
     )
 

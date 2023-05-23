@@ -51,7 +51,7 @@ export const Cards = ({dataImage}) => {
                 <div className="cards-bg" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
                 <div className="cards-info">
                     <h1 slot="header">Musica </h1>
-                    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p slot="content">Disfruta de artistas locales y nacionales.</p>
                 </div>
                 </div>
             </div>
@@ -66,8 +66,8 @@ export const Cards = ({dataImage}) => {
                 <div className="cards" style={{'transform': `rotateY(${rX}deg) rotateX(${rY}deg)`}} >
                 <div className="cards-bg-one" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
                 <div className="cards-info">
-                    <h1 slot="header">Catering</h1>
-                    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <h1 slot="header">Cáterin</h1>
+                    <p slot="content">buffets y de mas sorpresas relacionadas con la comida.</p>
                 </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@ export const Cards = ({dataImage}) => {
                 <div className="cards-bg-two" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
                 <div className="cards-info">
                     <h1 slot="header">Concursos</h1>
-                    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p slot="content">Participa y unete a las comunidades.</p>
                 </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@ export const Cards = ({dataImage}) => {
                 <div className="cards-bg-tree" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
                 <div className="cards-info">
                     <h1 slot="header">Presentaciones</h1>
-                    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p slot="content">El mejor entretenimiento con los mejores.</p>
                 </div>
                 </div>
             </div>
@@ -115,7 +115,7 @@ export const Cards = ({dataImage}) => {
                 <div className="cards-bg-for" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
                 <div className="cards-info">
                     <h1 slot="header">Lugares</h1>
-                    <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p slot="content">Descubre y conoce sientete diferente.</p>
                 </div>
                 </div>
             </div>

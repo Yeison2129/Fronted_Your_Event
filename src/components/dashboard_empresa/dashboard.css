@@ -595,7 +595,7 @@ body {
 
 /* FOOTER
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.page-footer {
+.page-footer{
   display: flex;
   height: 9rem;
   width: 85%;
@@ -620,7 +620,7 @@ body {
   width: 100%;
   position: fixed;
   bottom: 0;
-  z-index: 1;
+  z-index: -1;
   flex-direction: column;
   align-items: flex-end;
 

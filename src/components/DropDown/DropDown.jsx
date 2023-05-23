@@ -4,6 +4,7 @@ import './dropDown.css'
 
 export const DropDown = () => {
     let user = localStorage.getItem("user");
+    let company = localStorage.getItem("company")
     const closedToken = () => {
         if (user) {
         localStorage.removeItem("user")
@@ -11,6 +12,12 @@ export const DropDown = () => {
         setTimeout(() => {
             window.location.href = "/"
         }, 0.500);
+        }if(company){
+            localStorage.removeItem("company")
+            localStorage.removeItmen("auth")
+            setTimeout(()=>{
+                window.location.href ="/"
+            },0.500);
         }
     }
     const [active, setActive] = useState(false);
@@ -20,21 +27,22 @@ export const DropDown = () => {
                 <img src={userIcon} alt="" id='img-container-drop'
                     onClick={() => setActive(!active)}
                 />
-                <div className={active ? "active" : "inactive"}>
+                 {company ? (
+                        <>
+                        <div className={active ? "active" : "inactive"}>
                     
                     <ul className='ul-drop' >
                         <li className='li-style-drop'>
                             <a className='a-style-dropp' href=""> Inicio </a>
                         </li>
-
                         <hr color='#eee'/>
                         <li className='li-style-drop'>
-                            <a className='a-style-dropp' href="" > Contactos </a>
+                            <a className='a-style-dropp' href="/dashboard" > Zona Trabajo </a>
                         </li>
 
                         <hr color='#eee'/>
                         <li className='li-style-drop'>
-                            <a className='a-style-dropp' href="password" > Cambiar Constraseña </a>
+                            <a className='a-style-dropp' href="password" > Configuracion </a>
                         </li>
                             
                         <hr color='#eee'/>
@@ -44,6 +52,35 @@ export const DropDown = () => {
 
                     </ul>
                 </div>
+                        </>):(
+                        <>
+                        {user ?(
+                        <>
+                        <div className={active ? "active" : "inactive"}>
+                    
+                    <ul className='ul-drop' >
+                        <li className='li-style-drop'>
+                            <a className='a-style-dropp' href=""> Inicio </a>
+                        </li>
+                        <hr color='#eee'/>
+                        <li className='li-style-drop'>
+                            <a className='a-style-dropp' href="" > Contactos </a>
+                        </li>
+
+                        <hr color='#eee'/>
+                        <li className='li-style-drop'>
+                            <a className='a-style-dropp' href="password" > Configuracion </a>
+                        </li>
+                            
+                        <hr color='#eee'/>
+                        <button id='btn-logout' className='li-style-drop' onClick={closedToken}>
+                            <a  className='a-style-dropp'  href="" >Cerrar Sesion</a> 
+                        </button>
+
+                    </ul>
+                </div>
+                        </>):null}
+                        </>)}
 
             </div>
 

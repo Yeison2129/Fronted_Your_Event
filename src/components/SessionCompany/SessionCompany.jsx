@@ -20,7 +20,7 @@ export const Session_company = () => {
           try {
             if (respons.data.data == "logueado") {
               swal.fire({
-                title: "Inicio de sesión Ok",
+                title: "Bienvenido",
                 text: "Gracias por iniciar con nosotros",
                 icon: "success",
                 boton: "Ok",
@@ -29,13 +29,27 @@ export const Session_company = () => {
               const timeout = () => {
                 setTimeout(function () {
                   window.location.href = "/dashboard";
-                  localStorage.setItem("token", respons.data.token);
-                  localStorage.setItem("id", respons.data.rows[0].id_empresa);
+                  localStorage.setItem("token_company", respons.data.token_company);
+                  localStorage.setItem("id_empresa", respons.data.rows[0].id_empresa);
                 }, 2000);
               };
               timeout();
-            } else if (users.data.data == "INICIO_ERROR") {
-              swal.fire("error desconocido");
+            }if (respons.data.data == "usuario No existe") {
+              swal.fire({
+                title:"Usuario No existe",
+                text:"por favor Registrate",
+                icon:"warning",
+                boton:"Ok",
+                time:1500
+              })
+            }if(respons.data.data == "ERROR 404"){
+              swal.fire({
+                title:"Error interno en el servidor",
+                text:"Intentalo de nuevo mas tarde",
+                icon:"warning",
+                boton:"Ok",
+                time:1500
+              })
             }
           } catch (error) {
             console.log(error);

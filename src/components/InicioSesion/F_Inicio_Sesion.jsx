@@ -1,9 +1,7 @@
 import { Formik, Form, Field } from "formik";
 import "./F_Inicio_Sesion.css";
-import wave from "../../assets/wave.svg";
-// import loginperson from "../../assets/loginperson.svg";
-import img_login from "../../assets/img_login.svg";
-import loginperson from "../../assets/My_password.svg";
+import img_login from "../../assets/login-1.svg";
+import loginperson from "../../assets/login-2.svg";
 
 import { loginUser } from "../../api/App";
 import swal from "sweetalert2";

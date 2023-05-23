@@ -9,8 +9,8 @@ import "leaflet/dist/leaflet.css";
 
 const MapView = (props) => {
   const [state, setState] = useState({
-    currentLocation: { lat: 52.52437, lng: 13.41053 },
-    zoom: 13,
+    currentLocation: { lat: 4.53390, lng: -75.58700 },
+    zoom: 11,
     data,
   });
 
@@ -42,7 +42,7 @@ const MapView = (props) => {
   }, [location]);
 
   return (
-    <MapContainer className="mapView" center={state.currentLocation} zoom={state.zoom}>
+    <MapContainer className="mapView" center={state.currentLocation} zoom={state.zoom} dragging={false} scrollWheelZoom={false}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
