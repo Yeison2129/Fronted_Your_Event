@@ -42,7 +42,7 @@ const MapView = (props) => {
   }, [location]);
 
   return (
-    <MapContainer className="mapView" center={state.currentLocation} zoom={state.zoom}>
+    <MapContainer className="mapView" center={state.currentLocation} zoom={state.zoom} dragging={false} scrollWheelZoom={false}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
