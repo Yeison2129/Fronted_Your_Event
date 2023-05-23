@@ -6,7 +6,7 @@ import "./crud_eventos.css";
 import { Link } from "react-router-dom";
 import { create_event } from "../../api/App";
 import { Dashboard } from "../dashboard_empresa/Dashboard_Empresa";
-import MapView2 from "../Mapa2/MapView2";
+import MapView from "../Mapa/MapView";
 
 export const Crud_eventos = () => {
   return (
@@ -113,7 +113,7 @@ export const Crud_eventos = () => {
                       <option value="empresa">empresa</option>
                     </Field>
                   </Form>
-                  <MapView2 />
+                  <MapView />
                 </div>
                 <div className="end">
                   {/* <div className="content-end"> */}
