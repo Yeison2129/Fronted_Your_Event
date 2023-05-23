@@ -1,7 +1,7 @@
 import { Formik, Form, Field } from "formik";
 import React from "react";
 import swal from "sweetalert2";
-import { update } from "../../api/App";
+import { update } from "../../../api/App";
 import "./Password.css";
 
 export const Password = () => {
