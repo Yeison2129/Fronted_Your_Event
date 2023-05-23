@@ -143,6 +143,15 @@ header .textos-header {
     font-size: 50px;
     color:#fff;
 }
+.dropDown{
+    display: flex;
+    align-items: center;
+}
+.dropDown p{
+    color: white;
+    padding: 0 10px;
+}
+
 
 .textos-header h2{
     font-size: 30px;
