@@ -119,75 +119,9 @@ export const Crud_eventos = () => {
     </div>
     </div>
       
+          
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              {/* <div className="page-content">
-            <div className="forms-container">
-              <div className="crear-evento">
-                <Form onSubmit={handleSubmit} className="nuevo-evento">
-                  <h2 className="title">Crea tu evento</h2>
-                  <div className="input-field">
-                    <i className="fas fa-user"></i>
-                    <Field type="text" id="nom_event" name="nom_event" required placeholder="Nombre del evento" onChange={handleChange} />
-                  </div>
-                  <div className="input-field">
-                    <i className="fas fa-user"></i>
-                    <Field type="text" id="img_event" name="img_event" required placeholder="Inserte la imagen" onChange={handleChange} />
-                  </div>
-                  <div className="input-field">
-                    <i className="fas fa-envelope"></i>
-                    <Field type="text" id="tipo_event" name="tipo_event" required placeholder="Tipo del evento" onChange={handleChange} />
-                  </div>
-                  <div className="input-field">
-                    <i className="fas fa-lock"></i>
-                    <Field type="text" id="description_event" name="description_event" required placeholder="Descripción del evento" onChange={handleChange} />
-                  </div>
-                  <div className="input-field">
-                    <i className="fas fa-lock"></i>
-                    <Field type="date" id="fecha" name="fecha" required placeholder="Fecha del evento" onChange={handleChange} />
-                  </div>
-                  <div className="input-field">
-                    <i className="fas fa-lock"></i>
-                    <Field type="time" id="hora" name="hora" required placeholder="Hora del evento" onChange={handleChange} />
-                  </div>
-                  <div className="input-field">
-                    <i className="fas fa-lock"></i>
-                    <Field type="number" id="precio_entrada" name="precio_entrada" required placeholder="Precio del evento" onChange={handleChange} />
-                  </div>
-                  <button type="submit" className="btn solid">Crear Evento</button>
-                  <Link to="/dashboard">Volver al inicio</Link>
-                </Form>
-              </div>
-            </div>
-        </div> */}
       </div>
         )}
 

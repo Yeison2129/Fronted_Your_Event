@@ -6,7 +6,7 @@ export const Dashc = () => {
   return (
     <div className="dash-config">
        
-      <aside className="aside-config"> 
+      <div className="aside-config"> 
       <div className="ti-dashconfig">
       <i className="fa fa-solid fa-gear fa-spin" />
 
@@ -39,7 +39,7 @@ export const Dashc = () => {
             <Link to="/">Volver al inicio</Link>
           </li>
         </ul>
-      </aside>
+      </div>
     </div>
   );
 };
