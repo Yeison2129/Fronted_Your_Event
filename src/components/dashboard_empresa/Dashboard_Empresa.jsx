@@ -63,7 +63,7 @@ const cerrarPopup = useCallback((valor) => {
                         <svg  className="svg-dash">
                             <use href="#users"></use>
                         </svg>
-                        <span>Inicio</span>
+                        <span className='span-dash'>Inicio</span>
                     
                         </Link>     
                     </li>
@@ -74,24 +74,18 @@ const cerrarPopup = useCallback((valor) => {
                         <svg className="svg-dash">
                             <use href="#pages"></use>
                         </svg>
-                        <span>Mis Eventos</span>
+                        <span className='span-dash' >Mis Eventos</span>
                         </Link>
                     </li>
-                    {/* <li>
-                        <Link to="/cardEvento">
-                        <svg>
-                            <use href="#collection"></use>
-                        </svg>
-                        <span>Colecciones</span>
-                        </Link> className="svg-dash"
-                    </li> */}
+             
+                
                     <li>
                         <Link to="/crud_eventos">
                         
                         <svg  className="svg-dash">
                             <use href="#users"></use>
                         </svg>
-                        <span>Crear evento</span>
+                        <span className='span-dash' >Crear evento</span>
                     
                         </Link>     
                     </li>
@@ -100,7 +94,7 @@ const cerrarPopup = useCallback((valor) => {
                         <svg  className="svg-dash">
                             <use href="#trends"></use>
                         </svg>
-                        <span>Estadísticas</span>
+                        <span className='span-dash' >Estadísticas</span>
                         </a>
                     </li>
                 
@@ -109,7 +103,7 @@ const cerrarPopup = useCallback((valor) => {
                         <svg className="svg-dash" >
                             <use href="#comments"></use>
                         </svg>
-                        <span>Asistencia</span>
+                        <span className='span-dash' >Asistencia</span>
                         </a>
                     </li>
                     <li>
@@ -117,7 +111,7 @@ const cerrarPopup = useCallback((valor) => {
                         <svg className="svg-dash" >
                             <use href="#appearance"></use>
                         </svg>
-                        <span>Papelera  </span>
+                        <span className='span-dash' >Papelera  </span>
                         </a>
                     </li>
                     <li className="menu-heading">
@@ -128,7 +122,7 @@ const cerrarPopup = useCallback((valor) => {
                         <svg className="svg-dash" >
                             <use href="#settings"></use>
                         </svg>
-                        <span>Opciones</span>
+                        <span className='span-dash'>Opciones</span>
                         </a>
                     </li>
                     <li>
@@ -136,7 +130,7 @@ const cerrarPopup = useCallback((valor) => {
                         <svg className="svg-dash">
                             <use href="#options"></use>
                         </svg>
-                        <span>Ayuda </span>
+                        <span className='span-dash' >Ayuda </span>
                         </a>
                     </li>
                     <li>
@@ -144,24 +138,10 @@ const cerrarPopup = useCallback((valor) => {
                         <svg className="svg-dash">
                             <use href="#charts"></use>
                         </svg>
-                        <span>Atras</span>
+                        <span className='span-dash' >Atras</span>
                         </a>
                     </li>
-                    {/* <li>
-                        <div className="switch">
-                        <input type="checkbox" id="mode" checked />
-                        <label htmlFor="mode">
-                            <span></span>
-                            <span>Dark</span>
-                        </label>
-                        </div>
-                        <button className="collapse-btn" onClick={ collapsed } aria-expanded="true" aria-label="collapse menu">
-                            <svg aria-hidden="true">
-                                <use href="#collapse"></use>
-                            </svg>
-                            <span>Contraer</span>
-                        </button>
-                    </li> */}
+                   
                     </ul>
                 </nav> 
                

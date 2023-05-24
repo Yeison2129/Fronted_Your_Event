@@ -94,7 +94,7 @@ export const Inicio_Sesion = () => {
                         required
                       />
                     </div>
-                    <Link className="a1" to="/registro">
+                    <Link className="lll" to="/registro">
                       ¿Necesitas una Cuenta?
                     </Link>
                     <Field

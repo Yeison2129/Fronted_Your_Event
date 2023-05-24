@@ -15,7 +15,7 @@ export const DropDown = () => {
         }, 0.500);
         }if(company){
             localStorage.removeItem("company")
-            localStorage.removeItmen("auth")
+            localStorage.removeItem("auth")
             setTimeout(()=>{
                 window.location.href ="/"
             },0.500);
@@ -74,9 +74,9 @@ export const DropDown = () => {
                         </li>
                             
                         <hr color='#eee'/>
-                        <button id='btn-logout' className='li-style-drop' onClick={closedToken}>
-                            <Link className='a-style-dropp'  to="" >Cerrar Sesion</Link> 
-                        </button>
+                        <li id='btn-logout' className='li-style-drop' onClick={closedToken}>
+                            <Link   to="" className='a-style-dropp'>Cerrar Sesion</Link> 
+                        </li>
 
                     </ul>
                 </div>

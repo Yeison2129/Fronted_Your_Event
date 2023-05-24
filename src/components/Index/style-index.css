@@ -135,7 +135,9 @@ color: #c2c1c1;
     -ms-transition: .2s;
     -o-transition: .2s;
 }
-
+#log{
+    color: white;
+}
 header .textos-header {
     display: flex;
     height: 342px;
