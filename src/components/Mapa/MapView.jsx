@@ -14,32 +14,7 @@ const MapView = (props) => {
     data,
   });
 
-  const location = useLocation();
-  // const history = useNavigate();
 
-  useEffect(() => {
-    // if (location.state.latitude && location.state.longitude) {
-    //   const currentLocation = {
-    //     lat: location.state.latitude,
-    //     lng: location.state.longitude,
-    //   };
-    //   console.log(state);
-    //   setState({
-    //     ...state,
-    //     data: {
-    //       venues: state.data.venues.concat({
-    //         name: "new",
-    //         geometry: [currentLocation.lat, currentLocation.lng],
-    //       }),
-    //     },
-    //     currentLocation,
-    //   });
-    //   history.replace({
-    //     pathname: "/map",
-    //     state: {},
-    //   });
-    // }
-  }, [location]);
 
   return (
     <MapContainer className="mapView" center={state.currentLocation} zoom={state.zoom} dragging={false} scrollWheelZoom={false}>
