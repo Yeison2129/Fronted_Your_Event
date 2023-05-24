@@ -1,7 +1,7 @@
 import {Route, Routes} from "react-router-dom"
 import {Inicio_Sesion} from './components/InicioSesion/F_Inicio_Sesion'
 import { F_registro } from './components/Registro/F_registro'
-import { Password } from './components/Editar/Password'
+import { Password } from './components/Configuracion/Editar/Password'
 import { Index } from "./components/Index/Index"
 import { RegistroEmpresa } from "./components/Registro-empresa/RegistroEmpresa"
 import { Dashboard } from "./components/dashboard_empresa/Dashboard_Empresa"
@@ -21,6 +21,10 @@ import Stats from "./components/Estadisticas/stats.jsx"
 import {CardView} from "./components/CardView/Card-view.jsx"
 import { PaginaCard } from "./components/PaginaCard/PaginaCard"
 import MapView from "./components/Mapa/MapView"
+import { Dashc } from './components/Configuracion/Dashconfig/Dashc'
+import { Editinfo } from "./components/Configuracion/Editinfo/Editinf"
+
+
 export default function App() {
     return (
         <Routes>
@@ -46,6 +50,9 @@ export default function App() {
             <Route path='/CardCompra' element={<CardView/>}/>
             <Route path='/PaginaCard' element={<PaginaCard/>}/>
             <Route path='/Mapa' element={<MapView/>}/>
+            <Route path='/dashconfig' element={<Dashc/>}/>
+            <Route path='/editap' element={<Editinfo/>}/>
+
         </Routes>
     )
 }

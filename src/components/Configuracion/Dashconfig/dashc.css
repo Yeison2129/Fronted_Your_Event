@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+.dash-config{
+    width:16%;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+
+}
+.aside-config{
+    display:flex;
+    display: block;
+    background-color:#CDCDCD;
+    height:100%
+}
+.aside-config ul{    
+    display: block;
+display: flex;
+justify-content:space-around;
+flex-direction:column;
+height: 50%;
+padding:13px 0px 66px 0px;
+}
+.aside-config li{
+padding:10px 27px ;
+}
+.li-style-dash i{
+padding: 0 10px;
+}
+.li-style-dash:hover{
+background-color:gray;
+transform: .7s;
+}
+.ti-dashconfig{
+    display: block;
+    display: flex;
+    align-items: center;
+    padding:40px 20px 0px;
+}
+.ti-dashconfig i{
+    padding: 0 20px;
+}
