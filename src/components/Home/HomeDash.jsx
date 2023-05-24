@@ -1,6 +1,6 @@
 import React from 'react'
 import { Dashboard } from '../dashboard_empresa/Dashboard_Empresa'
-import './home-dash.css'
+import './homeDash.css'
 export const Homedash = () => {
   let company = window.localStorage.getItem("company");
   return (

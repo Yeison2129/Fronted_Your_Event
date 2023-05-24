@@ -15,7 +15,7 @@ import { Crud_eventos } from "./components/CRUD_eventos/Crud_eventos"
 import { Session_company } from "./components/SessionCompany/SessionCompany"
 import { LoginEmpresa  } from  "./components/Login-Empresa/loginEmpresa"
 import { Card_crud  } from  "./components/Card_crud/card_evento_empresa/Card"
-import {  Homedash } from  "./components/Home/home-dash" 
+import {  Homedash } from  "./components/Home/HomeDash" 
 import { Cards } from "./components/Card_Categorias/Cards"
 import Stats from "./components/Estadisticas/stats.jsx"
 import {CardView} from "./components/CardView/Card-view.jsx"
@@ -24,9 +24,9 @@ import MapView from "./components/Mapa/MapView"
 export default function App() {
     return (
         <Routes>
-            <Route path='/' element={<Index/>}/>
-            <Route path='/login' element={<Inicio_Sesion/>}/>
-            <Route path='/registro' element={<F_registro/>}/>
+            <Route path='/' element={<Index/>} />
+            <Route path='/login' element={<Inicio_Sesion/>} />
+            <Route element={<F_registro/>} path='/registro'/>
             <Route path='/password' element={<Password/>}/>
             <Route path='/RegistroEmpresa' element={<RegistroEmpresa/>}/>
             <Route path='/dashboard' element={<Dashboard/>}/>

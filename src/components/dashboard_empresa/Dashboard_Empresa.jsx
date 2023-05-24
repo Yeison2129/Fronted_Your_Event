@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import './dashboard.css';
-import { Homedash } from '../Home/home-dash';
+import { Homedash } from '../Home/HomeDash';
 import { Link } from 'react-router-dom'
 import userIcon from "../../assets/userIcon.svg";
 import { CardEvento } from '../Card_evento/Card_evento';
