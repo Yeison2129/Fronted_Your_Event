@@ -117,7 +117,7 @@ export const Index = () => {
         <section className="textos-header">
           <h1>YourEvent</h1>
           <h2>
-            Eventos en el Quindío <br></br> A solo un click
+            Donde la magia de los eventos <br></br>cobra vida cobra vida en el Quindio 
           </h2>
         </section>
         <div className="wave" style={{ height: "150px", overflow: "hidden" }}>
