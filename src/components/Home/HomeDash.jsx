@@ -1,6 +1,8 @@
 import React from 'react'
 import { Dashboard } from '../dashboard_empresa/Dashboard_Empresa'
 import './homeDash.css'
+import {Link} from 'react-router-dom'
+
 export const Homedash = () => {
   let company = window.localStorage.getItem("company");
   return (
@@ -13,12 +15,12 @@ export const Homedash = () => {
           <h1 id='h1-cardEvent'>PARA TI <hr /> </h1>
           <div className='content-dash'>
             <div className="box1-home">
-              <a>
+              <Link>
                 BIENVENIDO DE NUEVO  {company.charAt(0).toUpperCase() + company.slice(1)}
-              </a> <br />
+              </Link> <br />
               <p >
               Empieza a crear eventos desde ya
-               con YourEvent Aquí
+              con YourEvent Aquí
               </p>
             </div>
             <div className="box2-home">
@@ -39,6 +41,6 @@ export const Homedash = () => {
       </div>
 
       </>):null}
-     </>
+    </>
   )
 }

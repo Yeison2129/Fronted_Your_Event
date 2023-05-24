@@ -41,8 +41,8 @@ export const Crud_eventos = () => {
               setTimeout(function () {
                 window.location.href="/login"
               }, 2000)
-             }
-             timeout()
+            }
+            timeout()
 
           }if (users.data.data == "envent exist") {
             swal.fire({
@@ -78,7 +78,7 @@ export const Crud_eventos = () => {
           
             <div className="">
               <Dashboard/>    
-             
+            
     <div className="page-crud">
     <div className='body-crud'>
       <h1 id="hr-crud">Crea tu evento  <hr /></h1> 
@@ -118,7 +118,7 @@ export const Crud_eventos = () => {
       </div>
     </div>
     </div>
-       
+      
 
 
 
