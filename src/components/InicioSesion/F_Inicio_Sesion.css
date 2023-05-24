@@ -92,7 +92,7 @@ input {
   align-items: center;
 }
 
-.a1{
+.lll{
   text-decoration: none;
   color: #6c1aef
 }
@@ -153,7 +153,7 @@ input {
   #password_user_log, #mail_user_log{
     font-size: 30px;  
   }  
- 
+
   .titleLogin{
     font-size: 40px;
   }

@@ -22,7 +22,11 @@ padding:13px 0px 66px 0px;
 }
 .aside-config li{
 padding:10px 27px ;
+
 }
+.li-style-dash a{
+color: white;
+    }
 .li-style-dash i{
 padding: 0 10px;
 }
