@@ -5,7 +5,7 @@ import face from '../../assets/SocialMedia/face.svg'
 import insta from '../../assets/SocialMedia/insta.svg'
 import twit from '../../assets/SocialMedia/twitter.svg'
 import logoY from '../../assets/logos/logo-your-event.svg'
-
+import {Link} from 'react-router-dom'
 
 export const ContactUs = () => {
   const refForm = useRef();
@@ -29,9 +29,9 @@ export const ContactUs = () => {
           <div className="Socialmedia">
             <p>Nuestras Redes Sociales</p>
             <div className="redes">
-            <a href=""> <img src={face} alt="" /></a> 
-            <a href=""><img src={insta} alt="" /></a>  
-             <a href=""><img src={twit} alt="" /></a>
+            <Link to="https://www.facebook.com/profile.php?id=100093102635509"> <img src={face} /></Link> 
+            <Link to="https://instagram.com/youreventvykmb?igshid=MmJiY2I4NDBkZg=="><img src={insta}  /></Link>  
+            <Link to="https://twitter.com/YourEvent152151"><img src={twit}  /></Link>
               </div>
           </div>
           <p>Gmail <br /> YourEvent@gmail.com</p>

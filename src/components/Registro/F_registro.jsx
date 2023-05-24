@@ -3,6 +3,7 @@ import { Formik, Form, Field } from "formik";
 import "./F_registro.css";
 import swal from "sweetalert2";
 import imgRegistro from "../../assets/registro-1.svg"
+import {Link} from 'react-router-dom'
 
 export const F_registro = () => {
   return (
@@ -126,7 +127,7 @@ export const F_registro = () => {
                   <button type="submit" className="btn solid">
                     Registrarse
                   </button>
-                  <a href="/">Volver al inicio</a>
+                  <Link to="/">Volver al inicio</Link>
                 </Form>
               </div>
             </div>
@@ -142,7 +143,7 @@ export const F_registro = () => {
 
                   <u>
                     {" "}
-                    <a href="/login">Ya tengo una cuenta</a>
+                    <Link to="/login">Ya tengo una cuenta</Link>
                   </u>
                 </div>
 

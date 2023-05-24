@@ -2,6 +2,8 @@ import React from "react";
 import { Formik, Form, Field } from "formik";
 import { registerCompany } from "../../api/App";
 import swal from "sweetalert2";
+import {Link} from 'react-router-dom'
+
 
 export const RegistroEmpresaFormulario = () => {
   return (
@@ -123,7 +125,7 @@ export const RegistroEmpresaFormulario = () => {
             <button type="submit" className="btn solid">
               Registrate
             </button>
-            <a href="/">Volver al inicio</a>
+            <Link to="/">Volver al inicio</Link>
           </Form>
         )}
       </Formik>

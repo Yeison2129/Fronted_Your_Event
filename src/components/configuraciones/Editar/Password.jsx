@@ -3,7 +3,7 @@ import React from "react";
 import swal from "sweetalert2";
 import { update } from "../../../api/App";
 import "./Password.css";
-
+import {Link} from 'react-router-dom'
 export const Password = () => {
   let token = localStorage.getItem("token");
   return (
@@ -51,7 +51,7 @@ export const Password = () => {
                   <button type="su" className="btn-login">
                     Enviar
                   </button>
-                  <a href="/">volver</a>
+                  <Link to="/">volver</Link>
                 </Form>
               </div>
             </section>

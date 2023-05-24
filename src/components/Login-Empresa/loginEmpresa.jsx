@@ -6,6 +6,9 @@ import swal from "sweetalert2";
 import loginEmpresa3 from "../../assets/loginEmpresa-3.png"
 import empresa from "../../assets/loginEmpresa-2.svg"
 import male from "../../assets/loginEmpresa-1.svg"
+import {Link} from 'react-router-dom'
+
+
 export const LoginEmpresa = () => {
   return (
     <>

@@ -15,6 +15,7 @@ import logoSeis from "../../assets/slide-6.jpg";
 import face from "../../assets/SocialMedia/face-w.svg";
 import insta from "../../assets/SocialMedia/insta-w.svg";
 import twit from "../../assets/SocialMedia/twitter-w.svg";
+import {Link} from 'react-router-dom'
 
 // import Swiper core and required modules
 import { A11y, Autoplay } from "swiper";
@@ -26,6 +27,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+
 
 export const Index = () => {
   let user = localStorage.getItem("user");
@@ -70,29 +72,29 @@ export const Index = () => {
           />
 
           <div class="content-nav">
-            <a href="#">Inicio </a>
-            <a href="#">Acerca de </a>
-            <a href="#categorias">Categorias </a>
+            <Link to="#">Inicio </Link>
+            <Link to="#">Acerca de </Link>
+            <Link to="#categorias">Categorias </Link>
             
             {user ? (
               <>
-              <a href=""><i className="fa fa-solid fa-bell" /></a>
+              <Link to=""><i className="fa fa-solid fa-bell" /></Link>
               <div className="dropDown"> 
-              <p href="" id="enter1">
+              <p to="" id="enter1">
                   {user.charAt(0).toUpperCase() + user.slice(1)}
                 </p>
                 <DropDown />
               </div>
-               
-               
+              
+              
               </>
             ) : (
               <>
                 {company ? (
                   <>
-                <a href=""><i className="fa fa-solid fa-bell" /></a>
+                <Link to=""><i className="fa fa-solid fa-bell" /></Link>
                 <div className="dropDown">
-                <p href="" id="enter1">
+                <p to="" id="enter1">
                   {company.charAt(0).toUpperCase() + company.slice(1)}
                 </p>
                   <DropDown />
@@ -100,12 +102,12 @@ export const Index = () => {
                   </>
                 ) : (
                   <>
-                    <a href="/login" id="log">
+                    <Link to="/login" id="log">
                       Ingresa Aquí <hr></hr>
-                    </a>
-                    <a href="/registro" id="register">
+                    </Link>
+                    <Link to="/registro" id="register">
                       Registrate{" "}
-                    </a>
+                    </Link>
                   </>
                 )}
               </>
@@ -167,9 +169,9 @@ export const Index = () => {
       </main>
       <section>
         <div className="content-link-register">
-          <a href="/RegistroEmpresa" id="log">
+          <Link to="/RegistroEmpresa" id="log">
             SI TIENES UN EMPRENDIMIENTO, INGRESA AQUÍ! <hr></hr>
-          </a>
+          </Link>
         </div>
       </section>
       <section className="slider" id="slider">

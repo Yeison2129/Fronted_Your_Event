@@ -3,6 +3,8 @@ import "./registroEmpresa.css";
 import { RegistroEmpresaFormulario } from "./Formulario_registro_evento";
 import registroEmpresa1 from "../../assets/registroEmpresa-1.svg"
 
+
+
 export const RegistroEmpresa = () => {
   return (
     <>

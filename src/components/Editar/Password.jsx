@@ -3,6 +3,7 @@ import React from "react";
 import swal from "sweetalert2";
 import { update } from "../../api/App";
 import "./Password.css";
+import {Link} from 'react-router-dom'
 
 export const Password = () => {
   let token = localStorage.getItem("token");
@@ -41,17 +42,17 @@ export const Password = () => {
                   onSubmit={handleSubmit}
                   className="contain-form-f"
                 >
-                  <input
+                  <Field
                     onChange={handleChange}
                     type="password"
                     placeholder="Ingrese su nueva contrasena"
                     name="password_user"
                     id="password_user"
                   />
-                  <button type="su" className="btn-login">
+                  <button type="submit" className="btn-login">
                     Enviar
                   </button>
-                  <a href="/">volver</a>
+                  <Link to="/">volver</Link>
                 </Form>
               </div>
             </section>
