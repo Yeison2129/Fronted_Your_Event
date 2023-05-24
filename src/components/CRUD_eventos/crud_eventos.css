@@ -28,7 +28,7 @@
     align-items: flex-end;
     justify-content: end;
     height: 100%;
-    width: 12rem;
+    width: 30%;
     border-radius: 20px;
     background-color: #e5e5e5;
 }
@@ -50,7 +50,7 @@
     border: none;
     outline: none;
 }
-.description{
+.description-crud{
     height: 4rem;
 }
 .form-crud input{
@@ -70,16 +70,15 @@
 
 .botones-crud{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 16rem;
     height: 15%;
-    margin-right: 28px;
 }
 .btn-crud{
     display: flex;
     align-items: center;
-    padding: 15px;
     border-radius: 10px;
+    padding: 20px;
     border: none ;
     font-size: 1rem;
     text-align: center;
@@ -90,11 +89,23 @@
 
 }
 
-#btn-accept:hover{
- background-color: rgba(45, 126, 42, 0.355);
+button#btn-accept.btn-crud:hover{
+ background-color: rgba(20, 164, 15, 0.636);
  color: white;
 }
-#btn-cancel:hover{
-    background-color: rgba(172, 52, 41, 0.487);
+button#btn-cancel.btn-crud:hover{
+    background-color: rgba(189, 0, 0, 0.66);
     color: white;
    }
+
+.mapCrud{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    flex-direction: column;
+}
+
+.mapCrud h2{
+    padding: 20px;
+}

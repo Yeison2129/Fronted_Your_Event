@@ -5,6 +5,7 @@ import loginperson from "../../assets/login-2.svg";
 
 import { loginUser } from "../../api/App";
 import swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 export const Inicio_Sesion = () => {
   return (
@@ -93,18 +94,18 @@ export const Inicio_Sesion = () => {
                         required
                       />
                     </div>
-                    <a className="a1" href="/registro">
+                    <Link className="a1" to="/registro">
                       ¿Necesitas una Cuenta?
-                    </a>
+                    </Link>
                     <Field
                       type="submit"
                       value="Iniciar Sesión"
                       className="btn-login"
                     />
-                    <a href="/">Volver al inicio</a>
+                    <Link to="/">Volver al inicio</Link>
                   </Form>
                   <div className="recuperation">
-                    <a href="/CardPassword">Olvidaste tu contraseña?</a>
+                    <Link to="/CardPassword">Olvidaste tu contraseña?</Link>
                   </div>
                   <p>
 

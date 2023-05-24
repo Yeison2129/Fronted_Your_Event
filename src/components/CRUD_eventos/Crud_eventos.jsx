@@ -6,6 +6,7 @@ import './crud_eventos.css'
 import { Link } from "react-router-dom"
 import { create_event } from "../../api/App";
 import { Dashboard } from "../dashboard_empresa/Dashboard_Empresa";
+import MapCrud from "../Mapa/MapaCrud/MapCrud";
 
 export const Crud_eventos = () => {
 
@@ -40,8 +41,8 @@ export const Crud_eventos = () => {
               setTimeout(function () {
                 window.location.href="/login"
               }, 2000)
-             }
-             timeout()
+            }
+            timeout()
 
           }if (users.data.data == "envent exist") {
             swal.fire({
@@ -77,7 +78,7 @@ export const Crud_eventos = () => {
           
             <div className="">
               <Dashboard/>    
-             
+            
     <div className="page-crud">
     <div className='body-crud'>
       <h1 id="hr-crud">Crea tu evento  <hr /></h1> 
@@ -93,7 +94,6 @@ export const Crud_eventos = () => {
           <Field id="placeholder" type="text" name='nombre_evento' placeholder="Nombre"/>
           <Field id="placeholder" type="date" name='hora_evento'  />
           <Field id="placeholder" type="time" name='fecha_evento' />
-          <Field id="placeholder" type="text" name='lugar_evento' placeholder="Lugar"/>
           <Field id="placeholder" type="double" name='precio_evento' placeholder="Precio"/>
           <Field id="placeholder" className="select-crud" name="" as="select">
             <option value="categoria">categoria...</option>
@@ -101,14 +101,15 @@ export const Crud_eventos = () => {
             <option value="user">user</option>
             <option value="empresa">empresa</option>
           </Field>
-
+          <Field id="placeholder" type="text" placeholder="Descripcion" className="description-crud" />
         </Form>
       </div>
+          <div className="mapCrud">
+            <h2>Ingresa el lugar</h2>
+            <MapCrud />
+          </div>
       <div className="end">
         {/* <div className="content-end"> */}
-        <Form action="" className="form-crud">
-          <Field id="placeholder" type="text" placeholder="Descripcion" className="description" />
-        </Form>
         <div className="botones-crud">
           <button className='btn-crud' id='btn-cancel'>Limpiar</button>
           <button className='btn-crud' id='btn-accept'>Aceptar</button>
@@ -117,7 +118,7 @@ export const Crud_eventos = () => {
       </div>
     </div>
     </div>
-       
+      
 
 
 

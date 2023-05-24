@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import userIcon from '../../../src/assets/userIcon.svg'
 import './dropDown.css'
+import { Link } from 'react-router-dom';
 
 export const DropDown = () => {
     let user = localStorage.getItem("user");
@@ -33,21 +34,21 @@ export const DropDown = () => {
                     
                     <ul className='ul-drop' >
                         <li className='li-style-drop'>
-                            <a className='a-style-dropp' href=""> Inicio </a>
+                            <Link className='a-style-dropp' to=""> Inicio </Link>
                         </li>
                         <hr color='#eee'/>
                         <li className='li-style-drop'>
-                            <a className='a-style-dropp' href="/dashboard" > Zona Trabajo </a>
+                            <Link className='a-style-dropp' to="/dashboard" > Zona Trabajo </Link>
                         </li>
 
                         <hr color='#eee'/>
                         <li className='li-style-drop'>
-                            <a className='a-style-dropp' href="password" > Configuracion </a>
+                            <Link className='a-style-dropp' to="password" > Configuracion </Link>
                         </li>
                             
                         <hr color='#eee'/>
                         <button id='btn-logout' className='li-style-drop' onClick={closedToken}>
-                            <a  className='a-style-dropp'  href="" >Cerrar Sesion</a> 
+                            < Link className='a-style-dropp'  to="" >Cerrar Sesion</Link> 
                         </button>
 
                     </ul>
@@ -60,21 +61,21 @@ export const DropDown = () => {
                     
                     <ul className='ul-drop' >
                         <li className='li-style-drop'>
-                            <a className='a-style-dropp' href=""> Inicio </a>
+                            <Link className='a-style-dropp' to=""> Inicio </Link>
                         </li>
                         <hr color='#eee'/>
                         <li className='li-style-drop'>
-                            <a className='a-style-dropp' href="" > Contactos </a>
+                            <Link className='a-style-dropp' to="" > Contactos </Link>
                         </li>
 
                         <hr color='#eee'/>
                         <li className='li-style-drop'>
-                            <a className='a-style-dropp' href="password" > Configuracion </a>
+                            <Link className='a-style-dropp' to="password" > Configuracion </Link>
                         </li>
                             
                         <hr color='#eee'/>
                         <button id='btn-logout' className='li-style-drop' onClick={closedToken}>
-                            <a  className='a-style-dropp'  href="" >Cerrar Sesion</a> 
+                            <Link className='a-style-dropp'  to="" >Cerrar Sesion</Link> 
                         </button>
 
                     </ul>

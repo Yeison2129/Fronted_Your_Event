@@ -27,23 +27,7 @@
   box-sizing: border-box;
 }
 
-ul {
-  list-style: none;
-}
 
-a,
-button {
-  color: inherit;
-}
-
-a {
-  text-decoration: none;
-}
-
-button {
-  background: none;
-  cursor: pointer;
-}
 
 /* input {
   -webkit-appearance: none;
@@ -54,22 +38,7 @@ button {
   left: -9999px;
 }
 
-label {
-  cursor: pointer;
-}
 
-button,
-input {
-  border: none;
-}
-
-.svg-dash {
-  display: block;
-}
-
-body {
-  font: 16px/1.5 "Lato", sans-serif;
-}
 
 
 /* HEADER STYLES
