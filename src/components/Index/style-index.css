@@ -82,6 +82,13 @@
     -ms-border-radius: 2rem;
     -o-border-radius: 2rem;
 }
+.dropDown{
+display: flex;
+align-items: center;
+}
+.dropDown p{
+color: white;
+}
 
 #register{
     background-color: #800080;

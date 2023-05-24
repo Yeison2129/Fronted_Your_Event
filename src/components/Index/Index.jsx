@@ -73,23 +73,28 @@ export const Index = () => {
             <a href="#">Inicio </a>
             <a href="#">Acerca de </a>
             <a href="#categorias">Categorias </a>
+            
             {user ? (
               <>
-                <a href="" id="enter1">
+              <a href=""><i className="fa fa-solid fa-bell" /></a>
+              <div className="dropDown"> 
+              <p href="" id="enter1">
                   {user.charAt(0).toUpperCase() + user.slice(1)}
-                </a>
-                <div className="dropDown">
-                  <DropDown />
-                </div>
+                </p>
+                <DropDown />
+              </div>
+               
+               
               </>
             ) : (
               <>
                 {company ? (
                   <>
-                   <a href="" id="enter1">
-                  {company.charAt(0).toUpperCase() + company.slice(1)}
-                </a>
+                <a href=""><i className="fa fa-solid fa-bell" /></a>
                 <div className="dropDown">
+                <p href="" id="enter1">
+                  {company.charAt(0).toUpperCase() + company.slice(1)}
+                </p>
                   <DropDown />
                 </div>
                   </>
