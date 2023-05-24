@@ -494,8 +494,11 @@ main .sobre-nosotros{
     }
 
     .sobre-nosotros .contenido-textos{
+        display: flex;
+        flex-direction: column;
         width: 100%;
         font-size: 30px ;
+        align-items: center;
     }
 
     /* Galeria */
