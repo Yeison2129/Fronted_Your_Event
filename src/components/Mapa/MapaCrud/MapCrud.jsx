@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, useMapEvents } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import { Crud_eventos } from "../../CRUD_eventos/Crud_eventos";
 
 const MapCrud = (props) => {
   const mapRef = useRef(null);
@@ -10,6 +11,10 @@ const MapCrud = (props) => {
   ];
 
   const [markerPosition, setMarkerPosition] = useState([4.45, -75.607]);
+
+  const [Latitud, setLatitud] = useState()
+  const [Longitud, setLongitud] = useState()
+
 
   useEffect(() => {
     const leafletMap = mapRef.current;
@@ -27,11 +32,15 @@ const MapCrud = (props) => {
     if (latlng) {
       const { lat, lng } = latlng;
       setMarkerPosition([lat, lng]);
-      console.log("Latitud:", lat);
-      console.log("Longitud:", lng);
+      setLatitud(lat)
+      setLongitud(lng)
+
+      console.log("Latitud:", Latitud);
+      console.log("Longitud:", Longitud);
     }
   };
-
+  <Crud_eventos Latitud={Latitud} setLatitud={setLatitud} Longitud={Longitud} setLongitud={setLongitud}/>
+  
   const MapEvents = () => {
     useMapEvents({
       dblclick: handleClick
@@ -60,5 +69,7 @@ const MapCrud = (props) => {
     </MapContainer>
   );
 };
+
+
 
 export default MapCrud;

@@ -64,8 +64,8 @@ export const registerCompany = async (RegisterCompany) => {
 };
 
 
-export const create_event = async (crudEventos) =>
-    await axios.post(`http://localhost:4000/registerEvent/${id}`, crudEventos, {
+export const create_event = async (createEvent) =>
+    await axios.post(`http://localhost:4000/registerEvent/${id}`, createEvent, {
         headers: {
             token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtYWlsIjoieWVpc29uZGF2aWRjYXN0aWJsYW5jbzExQGdtYWlsLmNvbSIsImlhdCI6MTY4MjEzNDMyMCwiZXhwIjoxNjgyMjIwNzIwfQ.rxhyl4SuHu9Cc2oK0sje4NnxUGAiosqKA-Eg1rLHgVU"
         }
