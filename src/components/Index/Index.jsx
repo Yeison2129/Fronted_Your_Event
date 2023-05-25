@@ -66,7 +66,7 @@ export const Index = () => {
       <header className="header-index">
         <nav className="nav-index">
           <img
-            src="../../../src/assets/logos/log-blanco.svg"
+            src="https://res.cloudinary.com/dlfn93ikw/image/upload/v1685016494/YourEvent/log_blanco_mezgdr.png"
             id="img-logo"
             alt=""
           />
@@ -161,7 +161,7 @@ export const Index = () => {
                 className="input-nav"
                 placeholder="Buscar..."
               />
-              <img id="search-icon" src="../../../src/assets/search.svg" />
+              <img id="search-icon" src="https://res.cloudinary.com/dlfn93ikw/image/upload/v1685017828/YourEvent/search11_bk6yp9.png" />
             </div>
           </div>{" "}
           <Cards />
@@ -242,7 +242,7 @@ export const Index = () => {
         </h2>
         <div className="contenedor-sobre-nosotros">
           <img
-            src="../../../src/assets/homePage.svg"
+            src="https://res.cloudinary.com/dlfn93ikw/image/upload/v1685017660/YourEvent/homePage_pwgqcc.png"
             alt=""
             className="imagen-about-us"
           />

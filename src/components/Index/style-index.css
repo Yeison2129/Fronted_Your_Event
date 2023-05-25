@@ -175,10 +175,16 @@ main .sobre-nosotros{
     display: flex;
     width: 87rem;
     justify-content: space-between;
+    align-items: center;
 }
 
 .imagen-about-us{
+    display: flex;
     width: 40%;
+    height: 35%;
+    flex-direction: column;
+    justify-content: center;
+    
 }
 
 .sobre-nosotros .contenido-textos{
