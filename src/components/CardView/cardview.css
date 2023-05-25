@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
 
-.all {
+.all-cards-events {
    font-family: 'Nunito', sans-serif;
    text-decoration: none;
    display: flex;
@@ -36,7 +36,7 @@
    display: block;
 }
 
-
+/* -.-.-.-.-.-.-.-.-.-.-.-.-..-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-..-PREVIEW.-..-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. */
 .preview {
    position: fixed;
    top: 50%;
@@ -47,6 +47,7 @@
    border-radius: 20px;
    width: 30%;
    height: 90%;
+   z-index: 10;
 }
 
 .cardBig {

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import './cardview.css'
 import imgcard from '../../assets/imgcard.png'
 import { useState } from 'react'
@@ -6,6 +6,41 @@ import { getEvents } from '../../api/App'
 import MapEvento from '../Mapa/MapaEvento/MapEvento'
 
 export const CardView = () => {
+
+    const cardRef = useRef(null);
+    const [width, setWidth] = useState(0);
+    const [height, setHeight] = useState(0);
+    const [mouseX, setMouseX] = useState(0);
+    const [mouseY, setMouseY] = useState(0);
+    const [mouseLeaveDelay, setMouseLeaveDelay] = useState(null);
+
+    const handleMouseMove = (e) => {
+        const { offsetLeft, offsetTop } = cardRef.current;
+        const cardWidth = cardRef.current.offsetWidth;
+        const cardHeight = cardRef.current.offsetHeight;
+        setMouseX(e.pageX - offsetLeft - cardWidth / 2);
+        setMouseY(e.pageY - offsetTop - cardHeight / 2);
+    };
+
+    const handleMouseEnter = () => {
+        clearTimeout(mouseLeaveDelay);
+    };
+
+    const handleMouseLeave = () => {
+        const delay = setTimeout(() => {
+        setMouseX(0);
+        setMouseY(0);
+        }, 1000);
+        setMouseLeaveDelay(delay);
+    };
+
+    const mousePX = mouseX / width;
+    const mousePY = mouseY / height;
+    const rX = mousePX * 30;
+    const rY = mousePY * -30;
+    const tX = mousePX * -40;
+    const tY = mousePY * -40;
+
   const [allEvents, setAllEvents] = useState([])
 
   const handleClick = (event) => {
@@ -31,16 +66,26 @@ export const CardView = () => {
 
   return (
     <>
+    <div className="all-cards-events">
+
       {allEvents.map((event) => (
-        <div className="all" key={event.id_event}>
+        <div className="cardsEventos" key={event.id_event}>
           <div
-            className="product"
-            data-name="p-1"
-            onClick={() => handleClick(event)}
-            style={{ backgroundImage: `url(${imgcard})` }}
-          >
-            <h1>{event.nom_event}</h1>
-          </div>
+                className="cards-wrap"
+                onMouseMove={handleMouseMove}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                ref={cardRef}
+                onClick={() =>handleClick(event)}
+            >
+            <div className="cards" style={{'transform': `rotateY(${rX}deg) rotateX(${rY}deg)`}} >
+                <div className="cards-bg" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
+                <div className="cards-info">
+                    <h1 slot="header"> {event.nom_event} </h1>
+                    <p slot="content"> {event.description_event} </p>
+                </div>
+                </div>
+            </div>
           {event.previewActive && (
             <div className={`products-preview active`} key={`preview-${event.id_event}`}>
               <div className="preview" data-target="p-1">
@@ -64,6 +109,7 @@ export const CardView = () => {
           )}
         </div>
       ))}
+    </div>
     </>
   )
 }
