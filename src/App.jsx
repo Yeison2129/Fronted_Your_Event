@@ -49,7 +49,7 @@ export default function App() {
             <Route path='/dashconfig' element={<Dashc/>}/>
             <Route path='/DeleteAccount' element={<DeleteAcc/>}/>
             <Route path='/editap' element={<Editinfo/>}/>
-            <Route path='/SobreNosostros' element={<SobreNosotros/>}/>
+            <Route path='/SobreNosotros' element={<SobreNosotros/>}/>
         </Routes>
     )
 }

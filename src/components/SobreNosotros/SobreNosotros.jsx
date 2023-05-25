@@ -1,71 +1,72 @@
 import React, { useEffect } from "react";
 import { Formik, Form, Field } from "formik";
-import "../SobreNosotros/SobreNosotros.css";
+import "./SobreNosotros.css";
 import swal from "sweetalert2";
 import imgRegistro from "../../assets/registro-1.svg";
 import { Link } from "react-router-dom";
 import imgBrallan from "../../assets/Brallan.jpg";
 import search from "../../assets/arrow.svg";
+import img123 from "../../assets/arrowI.svg"
 export const SobreNosotros = () => {
 
   return (
     <>
-      <header className="header" id="inicio">
-        <img src="" alt="Logo" />
+      <header className="header-SobreNosotros" id="inicio">
+        <img src="https://res.cloudinary.com/dlfn93ikw/image/upload/v1685016494/YourEvent/log_blanco_mezgdr.png" alt="Logo" />
 
         <nav>
-          <div className="contenedor head"></div>
+          <div className="contenedor head-SobreNosotros"></div>
         </nav>
       </header>
 
       <section id="centro">
-        <div className="centro-box">
-          <div className="centro"></div>
+        <div className="centro-box-SobreNosotros">
+          <div className="centro-SobreNosotros"></div>
         </div>
       </section>
 
-      <section className="slider">
-        <div className="slider__container container">
-          <img src= {search} className="slider__arrow" id="before" />
+      <section className="slider-SobreNosotros">
+        <div className="slider__container container-SobreNosotros">
+          <img src= {search} className="slider__arrow-SobreNosotros" id="before" />
 
-          <section className="slider__body slider__body--show" data-id="1">
-            <div className="slider__texts">
-              <h2 className="subtitulo">hola mi nombre es Brallan Gonzalez</h2>
-              <p className="slider__reviw">
+          <section className="slider__body slider__body--show-SobreNosotros" data-id="1">
+            <div className="slider__texts-SobreNosotros">
+              <h2 className="subtitulo-SobreNosotros">hola mi nombre es Brallan Gonzalez</h2>
+              <p className="slider__reviw-SobreNosotros">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Delectus reiciendis qui odio animi sequi veniam repudiandae
                 corrupti asperiores, accusantium modi excepturi voluptas totam
                 labore! Maiores ducimus dolorem delectus iure impedit!
               </p>
             </div>
-            <figure className="slider__picture">
-              <img src={imgBrallan} alt="Brallan" className="slider__img" />
-            </figure>
+            <div className="slider__picture-SobreNosotros">
+              <img src={imgBrallan} alt="Brallan" className="slider__img-SobreNosotros" />
+            </div>
           </section>
 
-          {/* Resto del contenido del slider... */}
+         
 
-          <img src="assets/arrowI.svg" className="slider__arrow" id="next" />
+          <img src={img123} className="slider__arrow-SobreNosotros" id="next" />
         </div>
       </section>
 
-      <footer id="contacto">
-        <div className="contenedor footer-content">
-          <div className="contact-us">
+      <footer className="footer-SobreNosotros" id="contacto">
+        <div className="contenedor footer-content-SobreNosotros">
+          <div className="contact-us-SobreNosotros">
             <h2 className="brand">YourEvent</h2>
             <p>Donde la magia de los eventos cobra vida en el Quindío.</p>
           </div>
-          <div className="social-media">
-            <a href="./" className="social-media-icon">
-              <i className="bx bxl-twitter"></i>
+          <div className="social-media-SobreNosotros">
+            <a href="./" className="social-media-icon-SobreNosotros">
+              <i className="fa fa-brands fa-facebook"></i>
             </a>
 
-            <a href="./" className="social-media-icon">
-              <i className="bx bxl-facebook"></i>
+            <a href="./" className="social-media-icon-SobreNosotros">
+              <i className="fa fa-brands fa-twitter"></i> 
             </a>
 
-            <a href="./" className="social-media-icon">
-              <i className="bx bxl-instagram"></i>
+            <a href="./" className="social-media-icon-SobreNosotros">
+              <i className="fa fa-brands fa-instagram"></i>
             </a>
           </div>
         </div>

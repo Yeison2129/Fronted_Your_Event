@@ -10,17 +10,19 @@ body{
 }
 
 
-header{
+.header-SobreNosotros{
     height: 30vh;
     background: -webkit-linear-gradient(to right, hsla(0, 2%, 11%, 0.459), hsla(0, 3%, 7%, 0.664)), url(https://res.cloudinary.com/dozodtdvl/image/upload/v1680050771/hin_rjd9bs.jpg);
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, hsla(339, 27%, 19%, 0.459), hsla(0, 0%, 9%, 0.664)), url(https://res.cloudinary.com/dozodtdvl/image/upload/v1680050771/hin_rjd9bs.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    color: black;
     background-attachment: fixed;
     background-position: center;  
  
 }
+
 .head{
    padding: 0;   
    height: 100%;
@@ -32,7 +34,7 @@ header{
 
 }
 
-.titulo{
+.titulo-SobreNosotros{
     font-size:60px ;
     margin-bottom: 15px;
 }
@@ -42,12 +44,12 @@ header{
     font-size: 25px;
 }
 
-footer{
+.footer-SobreNosotros{
 background: #800080;
 padding-bottom: 0.1px;
 
 }
-.footer-content{
+.footer-content-SobreNosotros{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -56,7 +58,7 @@ padding-bottom: 0.1px;
     padding-bottom: 40px;
 }
 
-.contact-us{
+.contact-us-SobreNosotros{
     width: 40%;
     color: #fff;
 }
@@ -70,14 +72,16 @@ padding-bottom: 0.1px;
     font-weight: 500;
 }
 
-.social-media{
+.social-media-SobreNosotros{
     width: 50%;
     display: flex;
     justify-content: flex-end;
 }
 
-.social-media-icon{
-    display: inline-block;
+.social-media-icon-SobreNosotros{
+    display:flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 20px;
     width: 60px;
     height: 60px;
@@ -87,7 +91,7 @@ padding-bottom: 0.1px;
     color: #fff;
 }
 
-.social-media-icon:hover{
+.social-media-icon-SobreNosotros:hover{
     background: #fff;
     color: #44041c;
 }
@@ -98,7 +102,7 @@ padding-bottom: 0.1px;
 }
 
 .logo{
-    width: 300px;
+    width: 100%;
     position: absolute;
     top: 4%;
     left: 10%;
@@ -251,7 +255,7 @@ margin: auto;
 }
 
 /*--testimonios--*/
-.container{
+.container-SobreNosotros{
     width:90%;
     min-height: 100vh;
     max-width: 1200px;
@@ -259,7 +263,7 @@ margin: auto;
     overflow: hidden;
 }
 
-.slider{
+.slider-SobreNosotros{
     background-color: #fff;
     padding: 48px 0;
 }
@@ -284,27 +288,27 @@ margin: auto;
     
 }
 
-.slider__body--show{
+.slider__body--show-SobreNosotros{
     opacity: 1;
-    pointer-events: unset;
+    /* pointer-events: unset; */
 }
 
 
-.slider__texts{
+.slider__texts-SobreNosotros{
     max-width: 600px ;
 }
-.subtitulo{
+.subtitulo-SobreNosotros{
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-.slider__reviw{
+.slider__reviw-SobreNosotros{
     font-weight: 300;
     font-size: 20px;
     line-height: 1.7;
 }
 
-.slider__img{
+.slider__img-SobreNosotros{
     width: 230px;
     height: 230px;
     border-radius: 50%;
@@ -313,11 +317,11 @@ margin: auto;
     margin: 0 auto;
 }
 
-.slider__arrow{
+.slider__arrow-SobreNosotros{
     cursor: pointer;
-    width: 90%;
+    width:100%;
 }
 
-.slider__arrow:nth-of-type(2){
+.slider__arrow-SobreNosotros:nth-of-type(2){
     justify-self:end ;
 }

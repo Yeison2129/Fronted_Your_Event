@@ -25,8 +25,8 @@ export const Crud_eventos = (props) => {
           description_event: "",
           fecha: "",
           hora: "",
-          lugar_latitud: setLatitud(),
-          lugar_longitud: setLongitud(),
+          lugar_latitud: "",
+          lugar_longitud: "",
           precio_entrada: "",
         }}
         onSubmit={async (value, e) => {
