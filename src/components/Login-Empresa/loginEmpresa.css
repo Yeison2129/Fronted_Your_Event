@@ -172,42 +172,42 @@ Field.loginEmpresa-btn:hover {
 	background-position: right;
 }
 
-
-@media screen and (max-width: 1050px){
-	.loginEmpresa-container{
-		grid-gap: 5rem;
-	}
+.input-field-LE{
+	max-width: 380px;
+    width: 100%;
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    height: 55px;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
+    position: relative;
 }
 
-@media screen and (max-width: 1000px){
-	.formulario-formik {
-		width: 290px;
-	}
 
-	.loginEmpresa-login-content h2{
-        font-size: 2.4rem;
-        margin: 8px 0;
-	}
 
-	.loginEmpresa-img img{
-		width: 400px;
-	}
-}
-
-@media screen and (max-width: 900px){
-	.loginEmpresa-container{
-		grid-template-columns: 1fr;
-	}
-
-	.loginEmpresa-img{
+@media (max-width: 870px){
+	
+	div.loginEmpresa-img{
 		display: none;
 	}
-
 	.loginEmpresa-wave{
 		display: none;
 	}
-
-	.loginEmpresa-login-content{
+	form.login-form-E{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+		width:100%;
+		
+	}
+	.in
+	div.loginEmpresa-container{
+		display: flex;
 		justify-content: center;
+		align-items: center;
+		
 	}
 }

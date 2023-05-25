@@ -69,7 +69,7 @@ export const F_registro = () => {
             <div className="forms-container">
               <div className="signin-signup">
                 <Form onSubmit={handleSubmit} className="sign-in-form">
-                  <h2 className="title">Registrate</h2>
+                  <h2 className="title-r">Registrate</h2>
                   <div className="input-field">
                     <i className="fas fa-user"></i>
                     <Field
