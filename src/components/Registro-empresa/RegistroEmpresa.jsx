@@ -14,7 +14,7 @@ export const RegistroEmpresa = () => {
     <>
       <div className="container-register-RegistroEmpresa">
         <div className="panels-container-RegistroEmpresa">
-          <div className="panel left-panel-RegistroEmpresa">
+          <div className=" left-panel-RegistroEmpresa">
             <div className="content-RegistroEmpresa">
               <h3>¿Tienes un emprendimiento?</h3>
               <p>
