@@ -127,7 +127,7 @@ export const F_registro = () => {
                   <button type="submit" className="btn solid">
                     Registrarse
                   </button>
-                  <Link to="/">Volver al inicio</Link>
+                  <Link id="a-black" to="/">Volver al inicio</Link>
                 </Form>
               </div>
             </div>
@@ -143,7 +143,7 @@ export const F_registro = () => {
 
                   <u>
                     {" "}
-                    <Link to="/login">Ya tengo una cuenta</Link>
+                    <Link id="a-white" to="/login">Ya tengo una cuenta</Link>
                   </u>
                 </div>
 

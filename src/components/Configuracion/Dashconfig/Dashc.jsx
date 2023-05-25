@@ -1,7 +1,7 @@
 import React from "react";
 import "./dashc.css";
 import { Link } from "react-router-dom";
-
+ 
 export const Dashc = () => {
   return (
     <div className="dash-config">
@@ -21,7 +21,7 @@ export const Dashc = () => {
 
           <li className="li-style-dash">
             <i className="fa  fa-solid fa-lock" />
-            <Link to="">Cambiar Contraseña</Link>
+            <Link to="/password">Cambiar Contraseña</Link>
           </li>
 
           <li className="li-style-dash">

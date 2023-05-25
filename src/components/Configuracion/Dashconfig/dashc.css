@@ -6,6 +6,8 @@
     flex-direction: row;
     width:100%;
     height: 100vh;
+    background:linear-gradient(rgba(171, 171, 171, 0.6), rgba(175, 131, 184, 0.6));   
+
     font-family: "Poppins", sans-serif;
 
 }
@@ -13,7 +15,7 @@
     width: 18%;
     display:flex;
     display: block;
-    background-color:#afafaf;
+    background-color: #ebebebe6;
     height:100%;
 }
 .aside-config ul{    
@@ -29,18 +31,18 @@ padding:10px 27px ;
 
 }
 .li-style-dash a{
-color: rgb(235, 235, 235);
+    color: rgb(98 98 98);
     }
 .li-style-dash i{
 padding: 0 10px;
 }
 .li-style-dash:hover{
-background-color:rgb(121, 121, 121);
-transform: .7s;
+background-color:rgb(169, 169, 169);
+transform: .10s;
 }
 .ti-dashconfig{
-    display: block;
     display: flex;
+    justify-content: center;
     align-items: center;
     padding:40px 0px 0px;
     overflow: hidden;
@@ -56,8 +58,19 @@ transform: .7s;
 .edit-info{
     display: flex;
     justify-content: center;
+    align-items: center;
     position: relative;
     left: 20%;
     width: 80%;
     height: 100vh;
+}
+.contain{
+    background: linear-gradient(rgba(171, 171, 171, 0.6), rgba(175, 131, 184, 0.6));
+    height: 100vh;
+    width: 82%;
+    left: 18%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }

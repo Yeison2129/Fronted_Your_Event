@@ -125,6 +125,7 @@ export const LoginEmpresa = () => {
                     className="boton-morado btn solid"
                     value="Iniciar Sesión"
                   />
+                  <Link id="a-black" to="/">Volver al inicio</Link>
                 </Form>
               </div>
             </div>

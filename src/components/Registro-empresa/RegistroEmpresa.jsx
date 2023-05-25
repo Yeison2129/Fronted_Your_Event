@@ -22,7 +22,7 @@ export const RegistroEmpresa = () => {
                 Únete a nuestra familia para subir tus eventos y no te pierdas
                 de los servicios que brindamos.
               </p>
-              <Link to="/loginEmpresa">Ya tengo una cuenta</Link>
+              <Link id="a-white" to="/loginEmpresa">Ya tengo una cuenta</Link>
 
             </div>
             <img src={registroEmpresa1} className="image-RegistroEmpresa" alt="" />
@@ -148,10 +148,10 @@ export const RegistroEmpresa = () => {
             <button type="submit" className="btn solid">
               Registrate
             </button>
-            <Link to="/">Volver al inicio</Link>
+            <Link id="a-black" to="/">Volver al inicio</Link>
           </Form>
         )}
-      </Formik>
+      </Formik> 
     </>
         </div>
         </div>

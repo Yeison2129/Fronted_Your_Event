@@ -10,7 +10,10 @@ body,
 input {
   font-family: "Poppins", sans-serif;
 }
-
+#a-white{
+  color: white;
+  text-decoration:underline;
+}
 .container {
   position: relative;
   width: 100%;

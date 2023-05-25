@@ -4,6 +4,10 @@ import swal from "sweetalert2";
 import { update } from "../../../api/App";
 import "./Password.css";
 import {Link} from 'react-router-dom'
+import { Footdash } from "../../dashboard_empresa/Footdash";
+
+import { Dashc } from "../Dashconfig/Dashc";
+
 export const Password = () => {
   let token = localStorage.getItem("token");
   return (
@@ -31,6 +35,8 @@ export const Password = () => {
           }}
         >
           {({ handleChange, handleSubmit }) => (
+            <div className="">
+              <Dashc/>
             <section className="contain">
               <div className="contain-form">
                 <h2>Hola</h2>
@@ -51,10 +57,12 @@ export const Password = () => {
                   <button type="su" className="btn-login">
                     Enviar
                   </button>
-                  <Link to="/">volver</Link>
                 </Form>
               </div>
             </section>
+            <Footdash/> 
+            </div>
+            
           )}
         </Formik>
       ) : null}

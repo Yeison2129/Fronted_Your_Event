@@ -5,7 +5,12 @@ img.loginEmpresa-wave {
 	height: 100%;
 	z-index: -1;
 }
-
+#a-black{
+	color: black;
+}#a-black:hover{
+	text-decoration: underline;
+	transition:.3s;
+}
 div.loginEmpresa-container {
     width: 100vw;
     height: 100vh;
