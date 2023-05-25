@@ -4,6 +4,7 @@ import registroEmpresa1 from "../../assets/registroEmpresa-1.svg"
 import { Formik, Form, Field } from "formik";
 import { registerCompany } from "../../api/App";
 import {Link} from 'react-router-dom'
+import Swal from "sweetalert2"
 
 
 
@@ -17,9 +18,12 @@ export const RegistroEmpresa = () => {
             <div className="content-RegistroEmpresa">
               <h3>¿Tienes un emprendimiento?</h3>
               <p>
+                
                 Únete a nuestra familia para subir tus eventos y no te pierdas
                 de los servicios que brindamos.
               </p>
+              <Link to="/loginEmpresa">Ya tengo una cuenta</Link>
+
             </div>
             <img src={registroEmpresa1} className="image-RegistroEmpresa" alt="" />
           </div>
@@ -37,10 +41,10 @@ export const RegistroEmpresa = () => {
 
           try {
             const users = await registerCompany(values);
-            console.log(users.data);
+            console.log(users);
 
-            if (users.data == "INSERT_OK") {
-              swal.fire({
+            if (users.data === "INSERT_OK") {
+              Swal.fire({
                 title: "Registro exitoso",
                 text: "Gracias por registrarte con nosotros",
                 icon: "success",
@@ -56,8 +60,8 @@ export const RegistroEmpresa = () => {
               timeout()
               }
               
-            if (users.data == "company exist") {
-              swal.fire({
+            if (users.data == "company_exist") {
+              Swal.fire({
                 title: "La compañia ya existe",
                 text: "Inicia sesion",
                 icon: "warning",
@@ -66,11 +70,11 @@ export const RegistroEmpresa = () => {
               });
             }
             if (users.data == "INSERT_ERROR") {
-              swal.fire("error desconocido");
+              Swal.fire("error desconocido");
               
             }
           } catch (error) {
-            swal.fire({
+            Swal.fire({
               title: "Error interno en el servidor",
               text: "Intenta de nuevo más tarde",
               icon: "error",
