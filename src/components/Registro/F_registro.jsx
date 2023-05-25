@@ -2,8 +2,8 @@ import { registerUser } from "../../api/App";
 import { Formik, Form, Field } from "formik";
 import "./F_registro.css";
 import swal from "sweetalert2";
-import imgRegistro from "../../assets/registro-1.svg"
-import {Link} from 'react-router-dom'
+import imgRegistro from "../../assets/registro-1.svg";
+import { Link } from "react-router-dom";
 
 export const F_registro = () => {
   return (
@@ -73,6 +73,7 @@ export const F_registro = () => {
                   <div className="input-field">
                     <i className="fas fa-user"></i>
                     <Field
+                      autocomplete="off"
                       type="text"
                       id="document_user"
                       name="document_user"
@@ -84,6 +85,7 @@ export const F_registro = () => {
                   <div className="input-field">
                     <i className="fas fa-user"></i>
                     <Field
+                      autocomplete="off"
                       type="text"
                       id="nom_user"
                       name="nom_user"
@@ -95,6 +97,7 @@ export const F_registro = () => {
                   <div className="input-field">
                     <i className="fas fa-envelope"></i>
                     <Field
+                      autocomplete="off"
                       type="email"
                       id="mail_user"
                       name="mail_user"
@@ -106,6 +109,7 @@ export const F_registro = () => {
                   <div className="input-field">
                     <i className="fas fa-lock"></i>
                     <Field
+                      autocomplete="off"
                       type="password"
                       id="password_user"
                       name="password_user"
@@ -117,6 +121,7 @@ export const F_registro = () => {
                   <div className="input-field">
                     <i className="fas fa-lock"></i>
                     <Field
+                      autocomplete="off"
                       type="phone"
                       name="phone_user"
                       required
@@ -127,7 +132,9 @@ export const F_registro = () => {
                   <button type="submit" className="btn solid">
                     Registrarse
                   </button>
-                  <Link id="a-black" to="/">Volver al inicio</Link>
+                  <Link id="a-black" to="/">
+                    Volver al inicio
+                  </Link>
                 </Form>
               </div>
             </div>
@@ -143,7 +150,9 @@ export const F_registro = () => {
 
                   <u>
                     {" "}
-                    <Link id="a-white" to="/login">Ya tengo una cuenta</Link>
+                    <Link id="a-white" to="/login">
+                      Ya tengo una cuenta
+                    </Link>
                   </u>
                 </div>
 

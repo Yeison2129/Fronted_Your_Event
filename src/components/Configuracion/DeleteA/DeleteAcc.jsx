@@ -2,13 +2,14 @@ import { Formik, Form, Field } from "formik";
 import React from "react";
 import swal from "sweetalert2";
 import { update } from "../../../api/App";
-import "./Password.css";
+import "../Editar/Password.css";
+import "./deletea.css";
 import {Link} from 'react-router-dom'
 import { Footdash } from "../../dashboard_empresa/Footdash";
 
 import { Dashc } from "../Dashconfig/Dashc";
 
-export const Password = () => {
+export const DeleteAcc = () => {
   let token = localStorage.getItem("token");
   return (
     <>
@@ -38,9 +39,9 @@ export const Password = () => {
             <div className="">
               <Dashc/>
             <section className="contain">
-              <div className="contain-form">
-                <h2>HOLA!</h2>
-                <p>Cambia tu contraseña ahora!</p>
+              <div id="form-deleteA" >
+                <h2>¿Quieres eliminar tu cuenta?</h2>
+                <p>Ingresa tu contraseña para eliminar tu cuenta en YourEvent.</p>
 
                 <Form
                   action="#"
@@ -50,12 +51,12 @@ export const Password = () => {
                   <input
                     onChange={handleChange}
                     type="password"
-                    placeholder="Ingrese su nueva contraseña"
+                    placeholder="Ingrese contraseña"
                     name="password_user"
                     id="password_user"
                   />
                   <button type="su" id="btn-updatep" >
-                    Enviar
+                    Eliminar
                   </button>
                 </Form>
               </div>

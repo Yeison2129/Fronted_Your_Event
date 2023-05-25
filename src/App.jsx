@@ -20,6 +20,7 @@ import { PaginaCard } from "./components/PaginaCard/PaginaCard"
 import MapView from "./components/Mapa/MapView"
 import { Dashc } from './components/Configuracion/Dashconfig/Dashc'
 import { Editinfo } from "./components/Configuracion/Editinfo/Editinf"
+import { DeleteAcc } from "./components/Configuracion/DeleteA/DeleteAcc"
 
 
 export default function App() {
@@ -45,6 +46,7 @@ export default function App() {
             <Route path='/PaginaCard' element={<PaginaCard/>}/>
             <Route path='/Mapa' element={<MapView/>}/>
             <Route path='/dashconfig' element={<Dashc/>}/>
+            <Route path='/DeleteAccount' element={<DeleteAcc/>}/>
             <Route path='/editap' element={<Editinfo/>}/>
 
         </Routes>
