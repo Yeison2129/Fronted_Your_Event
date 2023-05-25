@@ -1,11 +1,11 @@
 import React, { useState, useCallback } from "react";
 import { ContactUs } from "../ContactUs/ContactUs";
-import { Cards } from "../Card_Categorias/Cards";
 import { Popup } from "../Popup";
 import Stats from "../Estadisticas/stats";
 import MapView from "../Mapa/MapView";
 import "../Index/style-index.css";
 import { DropDown } from "../DropDown/DropDown";
+import { CardView } from "../CardView/Card-view";
 import logoUno from "../../assets/slide-1.jpg";
 import logoDos from "../../assets/slide-2.jpg";
 import logoTres from "../../assets/slide-3.jpg";
@@ -164,7 +164,7 @@ export const Index = () => {
               <img id="search-icon" src="https://res.cloudinary.com/dlfn93ikw/image/upload/v1685017828/YourEvent/search11_bk6yp9.png" />
             </div>
           </div>{" "}
-          <Cards />
+          <CardView />
         </section>
       </main>
       <section>

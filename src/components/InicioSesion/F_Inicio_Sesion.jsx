@@ -75,6 +75,7 @@ export const Inicio_Sesion = () => {
                     <div className="input-field-log">
                       <i className="fas fa-envelope"></i>
                       <Field
+                        autocomplete="off"
                         type="email"
                         id="mail_user_log"
                         name="mail_user"
@@ -86,6 +87,7 @@ export const Inicio_Sesion = () => {
                     <div className="input-field-log">
                       <i className="fas fa-lock"></i>
                       <Field
+                        autocomplete="off"
                         type="password"
                         id="password_user_log"
                         name="password_user"
@@ -98,6 +100,7 @@ export const Inicio_Sesion = () => {
                       ¿Necesitas una Cuenta?
                     </Link>
                     <Field
+                      autocomplete="off"
                       type="submit"
                       value="Iniciar Sesión"
                       className="btn-login"

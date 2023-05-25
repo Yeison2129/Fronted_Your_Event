@@ -506,7 +506,16 @@ main .sobre-nosotros{
         font-size: 30px ;
         align-items: center;
     }
-
+    .contenido-textos p{
+        width: 100%;
+    }
+    .content-link-register{
+        height: 100px;
+        font-size: 25px;
+    }
+    .contus1{
+        height: 100%;
+    }
     /* Galeria */
 
     .imagen-port{
