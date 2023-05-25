@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 .title {
   font-family: "Poppins";
-  font-size: 24px;
+  font-size: 24 px;
   font-weight: 700;
   color: #5d4037;
   text-align: center;
@@ -103,7 +103,7 @@
   pointer-events: none;
 }
 .cards-bg-tree{
-  background-image: url('../../assets/categorias-4.jpg');
+  background-image: url('../../assets/categorias14.jpg');
   opacity: 0.5;
   position: absolute;
   width: 100%;
@@ -117,7 +117,7 @@
   pointer-events: none;
 }
 .cards-bg-for {
-  background-image: url('../../assets/categorias-5.jpg');
+  background-image: url('../../assets/categorias15.jpg');
   opacity: 0.5;
   position: absolute;
   width: 100%;
@@ -136,12 +136,14 @@
   position: absolute;
   bottom: 0;
   color: #fff;
-  transform: translateY(40%);
+  transform: translateY(60%);
   transition: 0.3s 0.4s cubic-bezier(0.211, 0.51, 0.300, 1);
 }
 .cards-info p {
   opacity: 0;
-  text-shadow: black 0 2px 3px;
+  height: 220px;
+  font-size: 12px;
+  text-shadow: black 0 10px 13px;
   transition: 0.4s 0.4s cubic-bezier(0.211, 0.51, 0.300, 1);
 }
 .cards-info * {

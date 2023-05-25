@@ -1,29 +1,109 @@
 import React, { useEffect } from "react";
 import { Formik, Form, Field } from "formik";
-import "./SobreNosotros.css";
+import "./SobreNosotros.css"
+import { DropDown } from "../DropDown/DropDown";
+
 import swal from "sweetalert2";
 import imgRegistro from "../../assets/registro-1.svg";
 import { Link } from "react-router-dom";
 import imgBrallan from "../../assets/Brallan.jpg";
 import search from "../../assets/arrow.svg";
 import img123 from "../../assets/arrowI.svg"
+import Cards from "../Card_Categorias/Cards";
+
+
 export const SobreNosotros = () => {
+  let user = localStorage.getItem("user");
+  let company = window.localStorage.getItem("company");
+
+  const closedToken = () => {
+    if (user) {
+      localStorage.removeItem("user");
+      localStorage.removeItem("auth");
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 0.5);
+    }
+  };
+  // Aui va la logica de javascript
 
   return (
     <>
       <header className="header-SobreNosotros" id="inicio">
-        <img src="https://res.cloudinary.com/dlfn93ikw/image/upload/v1685016494/YourEvent/log_blanco_mezgdr.png" alt="Logo" />
-
         <nav>
-          <div className="contenedor head-SobreNosotros"></div>
+          <nav className="nav-index">
+          <img
+            src="https://res.cloudinary.com/dlfn93ikw/image/upload/v1685016494/YourEvent/log_blanco_mezgdr.png"
+            id="img-logo"
+            alt=""
+          />
+
+          <div class="content-nav">
+            <Link to="/">Inicio </Link>
+            <Link to="/SobreNosotros  ">Sobre Nosotros </Link>
+            
+            {user ? (
+              <>
+              <Link to=""><i className="fa fa-solid fa-bell" /></Link>
+              <div className="dropDown"> 
+              <p to="" id="enter1">
+                  {user.charAt(0).toUpperCase() + user.slice(1)}
+                </p>
+                <DropDown />
+              </div>
+              
+              
+              </>
+            ) : (
+              <>
+                {company ? (
+                  <>
+                <Link to=""><i className="fa fa-solid fa-bell" /></Link>
+                <div className="dropDown">
+                <p to="" id="enter1">
+                  {company.charAt(0).toUpperCase() + company.slice(1)}
+                </p>
+                  <DropDown />
+                </div>
+                  </>
+                ) : (
+                  <>
+                    <Link to="/login" id="log">
+                      Ingresa Aquí <hr></hr>
+                    </Link>
+                    <Link to="/registro" id="register">
+                      Registrate{" "}
+                    </Link>
+                  </>
+                )}
+              </>
+            )}
+
+            </div>
+            
+            </nav>
         </nav>
       </header>
 
-      <section id="centro">
+      <section id="centro-CONT">
+      <h1 id="centro-h1">Sobre Nosotros</h1>
+        
         <div className="centro-box-SobreNosotros">
-          <div className="centro-SobreNosotros"></div>
+        
+        
         </div>
       </section>
+
+
+      <section id="centro">
+      <h1 id="centro-h1">Conoce los valores y objetivos que nos mueven para construir una mejor comunidad </h1>
+        
+        <div className="centro-box-SobreNosotros">
+        
+        <Cards/>
+        </div>
+      </section>
+    
 
       <section className="slider-SobreNosotros">
         <div className="slider__container container-SobreNosotros">

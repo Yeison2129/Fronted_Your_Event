@@ -7,6 +7,7 @@
 
 body{
     font-family: "Poppins", sans-serif; 
+    
 }
 
 
@@ -151,6 +152,12 @@ padding-bottom: 0.1px;
     background: rgb(221, 221, 221);
 
 }
+#centro-CONT{
+    width: 100% ;
+    padding: 227px 0;
+    background: rgb(255, 255, 255);
+
+}
 
 .titulo-texto{
     text-align: center;
@@ -196,26 +203,44 @@ border-bottom-right-radius: 35px;
     direction: rtl;
 }
 
-.centro{
-    flex-basis: 50%;
-}
 
-.centro-img{
+
+#centro-img{
 flex-basis: 50%;
 margin: auto; 
 }
 
-.centro-img img{
+#centro-img img{
     width: 70%;
     border-radius: 10px;
 }
-.centro h1{
-    text-align: left;
+#centro-h1{
+    text-align: center;
+    width: 100%;
     margin-bottom: 10px ;
-    font-weight: 100;
-    color: #640e12;
+    font-weight: 100%;
+    color: #000000;
+}
+#centro-CONT{
+    flex-basis: 60%;
 }
 
+#centro-img{
+flex-basis: 50%;
+margin: auto; 
+}
+
+#centro-img img{
+    width: 70%;
+    border-radius: 10px;
+}
+#centro-CONT-h1{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px ;
+    font-weight: 100%;
+    color: #000000;
+}
 .centro-desc{
     display:flex ;
     align-items: center;
@@ -224,15 +249,6 @@ margin: auto;
     
 }
 
-.centro-icon .bx{
-   width: 50px;
-   height: 50px;
-   font-size: 30px;
-   line-height: 50px;
-   border-radius: 8px;
-   color: #6b0101;
-   border: 1px solid #6b0101;
-}
 
 .centro-text p{
    padding: 0 20px; 
