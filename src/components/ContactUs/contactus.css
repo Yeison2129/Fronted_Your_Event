@@ -173,8 +173,30 @@
     /* transition: 0.2s; */
 }
 
-@media (max-width: 1224px) {
-    .contus2 {
-        height: 70vh;
+@media (max-width: 870px) {
+    .big-content{
+        display: flex;
+        flex-direction: column;
     }
+    .contus1 {
+        padding-top: 40px;
+        font-size: 20px;
+        height: 100%;
+        width: 100%;
+        padding-bottom: 40px;
+    }
+    .form-contactus{
+        height: 50%;
+        justify-content: center;
+       
+    }
+    .contus2{
+        font-size: 15px;
+        height: 500px;
+        width: 100%;
+        padding-bottom: 40px;
+        
+    }
+
+   
 }
