@@ -20,7 +20,7 @@ import { PaginaCard } from "./components/PaginaCard/PaginaCard"
 import MapView from "./components/Mapa/MapView"
 import { Dashc } from './components/Configuracion/Dashconfig/Dashc'
 import { Editinfo } from "./components/Configuracion/Editinfo/Editinf"
-
+import  {SobreNosotros} from "./components/SobreNosotros/SobreNosotros.jsx"
 
 export default function App() {
     return (
@@ -46,7 +46,7 @@ export default function App() {
             <Route path='/Mapa' element={<MapView/>}/>
             <Route path='/dashconfig' element={<Dashc/>}/>
             <Route path='/editap' element={<Editinfo/>}/>
-
+            <Route path='/SobreNosostros' element={<SobreNosotros/>}/>
         </Routes>
     )
 }
