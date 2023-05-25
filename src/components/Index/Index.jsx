@@ -73,8 +73,7 @@ export const Index = () => {
 
           <div class="content-nav">
             <Link to="#">Inicio </Link>
-            <Link to="#">Acerca de </Link>
-            <Link to="#categorias">Categorias </Link>
+            <Link to="/SobreNosotros  ">Sobre Nosotros </Link>
             
             {user ? (
               <>
