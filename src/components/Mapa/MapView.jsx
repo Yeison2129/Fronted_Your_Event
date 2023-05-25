@@ -17,6 +17,7 @@ const MapView = (props) => {
   return (
     <MapContainer
       className="mapView"
+      style={{ zIndex: 0 }}
       center={state.currentLocation}
       zoom={state.zoom}
       dragging={false}
