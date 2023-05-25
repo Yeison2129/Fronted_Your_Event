@@ -9,7 +9,7 @@
 
 .container-category {
   display: flex;
-  flex-wrap: wrap;
+  
   justify-content: center;
 }
 

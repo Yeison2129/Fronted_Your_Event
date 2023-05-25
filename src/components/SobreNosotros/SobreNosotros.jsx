@@ -86,11 +86,22 @@ export const SobreNosotros = () => {
       </header>
 
       <section id="centro-CONT">
-      <h1 id="centro-h1">Sobre Nosotros</h1>
-        
+      
+    
+     
         <div className="centro-box-SobreNosotros">
+        <h1 id="centro-h1">Sobre Nosotros</h1>
+        <p>
+        En YourEvent nos apasiona conectar a las personas con experiencias
+        inolvidables. Sabemos que la plubicacion creacion  y participación 
+        en eventos puede ser un desafío, pero estamos aquí para hacerlo 
+        más fácil, emocionante y personalizado para ti.
+            </p>
         
-        
+        </div>
+
+        <div className="section-derecha">
+          <img className="img-SobreNosotros" src="https://res.cloudinary.com/dlfn93ikw/image/upload/v1685051115/YourEvent/IMG-20230523-WA0017_vjny3k.jpg" alt="" />
         </div>
       </section>
 
