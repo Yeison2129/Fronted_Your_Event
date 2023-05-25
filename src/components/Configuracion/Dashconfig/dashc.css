@@ -6,8 +6,7 @@
     flex-direction: row;
     width:100%;
     height: 100vh;
-    background:linear-gradient(rgba(171, 171, 171, 0.6), rgba(175, 131, 184, 0.6));   
-
+    background:linear-gradient(rgba(171, 171, 171, 0.6),rgba(128, 0, 128, 0.308));   
     font-family: "Poppins", sans-serif;
 
 }
@@ -30,8 +29,10 @@ padding:13px 0px 66px 0px;
 padding:10px 27px ;
 
 }
-.li-style-dash a{
-    color: rgb(98 98 98);
+.fa.fa-gear:before {
+height: 24px;}
+.li-style-dash {
+    color: rgb(0, 0, 0);
     }
 .li-style-dash i{
 padding: 0 10px;
@@ -39,6 +40,7 @@ padding: 0 10px;
 .li-style-dash:hover{
 background-color:rgb(169, 169, 169);
 transform: .10s;
+color: rgb(232, 232, 232);
 }
 .ti-dashconfig{
     display: flex;
@@ -47,6 +49,7 @@ transform: .10s;
     padding:40px 0px 0px;
     overflow: hidden;
     width: 100%;
+    height: 100px;
 }
 .ti-dashconfig i{
     padding: 0 20px;
@@ -65,7 +68,7 @@ transform: .10s;
     height: 100vh;
 }
 .contain{
-    background: linear-gradient(rgba(171, 171, 171, 0.6), rgba(175, 131, 184, 0.6));
+    background: linear-gradient(rgba(171, 171, 171, 0.6), rgba(175, 131, 184, 0.308));
     height: 100vh;
     width: 82%;
     left: 18%;

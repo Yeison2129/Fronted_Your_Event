@@ -51,8 +51,13 @@ export const Editinfo = () => {
                 <Field
                   type="text"
                   className="styles-dashi"
+
                   placeholder="correo"
                 />
+                <div id="icon-pencil">
+                  
+                  <i class="fa fa-solid fa-envelope"></i>
+                </div>
               </label>
               <button className="btn-updatei">Actualizar</button>
             </Form>

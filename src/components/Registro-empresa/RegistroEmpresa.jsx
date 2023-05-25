@@ -90,6 +90,7 @@ export const RegistroEmpresa = () => {
             <div className="input-field-RegistroEmpresa">
               <i> </i>
               <Field
+                autocomplete="off"
                 type="text"
                 id="nom_empresa"
                 name="nom_empresa"
@@ -101,6 +102,7 @@ export const RegistroEmpresa = () => {
             <div className="input-field-RegistroEmpresa">
               <i> </i>
               <Field
+                autocomplete="off"
                 type="number"
                 id="telefono_empresa"
                 name="telefono_empresa"
@@ -111,6 +113,7 @@ export const RegistroEmpresa = () => {
             <div className="input-field-RegistroEmpresa">
               <i> </i>
               <Field
+                autocomplete="off"
                 type="email"
                 id="mail_empresa"
                 name="mail_empresa"
@@ -122,6 +125,7 @@ export const RegistroEmpresa = () => {
             <div className="input-field-RegistroEmpresa">
               <i> </i>
               <Field
+                autocomplete="off"
                 type="password"
                 id="password_empresa"
                 name="password_empresa"
