@@ -77,11 +77,7 @@ export const create_event = async (crudEventos) =>
 
 //Admin
 export const getEvents = async () =>
-    await axios.get(`http://localhost:4000/getEvents`, {
-        headers: {
-            token: token
-        }
-    })
+    await axios.get(`http://localhost:4000/getEvents`)
 
 export const deleteAdminAsist = async (id) =>
     await axios.delete(`http://localhost:4000/DeleteEventAdmin/${id}`, {
