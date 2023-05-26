@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Formik, Form, Field } from "formik";
 import "./SobreNosotros.css"
 import { DropDown } from "../DropDown/DropDown";
@@ -7,14 +7,35 @@ import swal from "sweetalert2";
 import imgRegistro from "../../assets/registro-1.svg";
 import { Link } from "react-router-dom";
 import imgBrallan from "../../assets/Brallan.jpg";
+import imgKevin from "../../assets/Kevin.jpg";
+import imgMariana from "../../assets/Mariana.jpg";
+import imgValentina from "../../assets/Valentina.jpg";
+import imgYeison from "../../assets/Yeison.jpg";
 import search from "../../assets/arrow.svg";
 import img123 from "../../assets/arrowI.svg"
 import Cards from "../Card_Categorias/Cards";
 
+function changePosition(sliders, currentElement, change) {
+  console.log(sliders)
+  if (currentElement) {
+    console.log(currentElement)
+    const currentElementId = Number(currentElement.dataset.id);
+    let newValue = currentElementId + change;
+
+    if (newValue === 0 || newValue > sliders.length) {
+      newValue = newValue === 0 ? sliders.length : 1;
+    }
+
+    sliders[currentElementId - 1].classList.toggle('slider__body--show-SobreNosotros');
+    sliders[newValue - 1].classList.toggle('slider__body--show-SobreNosotros');
+    
+  }
+};
 
 export const SobreNosotros = () => {
   let user = localStorage.getItem("user");
   let company = window.localStorage.getItem("company");
+  // const sliders =[...document.querySelectorAll('.slider__body')];
 
   const closedToken = () => {
     if (user) {
@@ -26,6 +47,18 @@ export const SobreNosotros = () => {
     }
   };
   // Aui va la logica de javascript
+  const handleNext = () => {
+  const sliders = [...document.querySelectorAll('.slider__body')];
+  const currentElement = document.querySelector('.slider__body--show-SobreNosotros');
+  changePosition(sliders, currentElement,1);
+};
+
+const handlePrevious = () => {
+    const sliders = [...document.querySelectorAll('.slider__body')];
+    const currentElement = document.querySelector('.slider__body--show-SobreNosotros');
+    changePosition(sliders, currentElement, -1);
+  };
+
 
   return (
     <>
@@ -38,7 +71,7 @@ export const SobreNosotros = () => {
             alt=""
           />
 
-          <div class="content-nav">
+          <div className="content-nav">
             <Link to="/">Inicio </Link>
             <Link to="/SobreNosotros  ">Sobre Nosotros </Link>
             
@@ -88,7 +121,7 @@ export const SobreNosotros = () => {
       <section id="centro-CONT">
       
     
-     
+    
         <div className="centro-box-SobreNosotros">
         <h1 id="centro-h1">Sobre Nosotros</h1>
         <p>
@@ -118,11 +151,11 @@ export const SobreNosotros = () => {
 
       <section className="slider-SobreNosotros">
         <div className="slider__container container-SobreNosotros">
-          <img src= {search} className="slider__arrow-SobreNosotros" id="before" />
+          <img src= {search} className="slider__arrow-SobreNosotros" id="before" onClick={()=> handlePrevious()} />
 
           <section className="slider__body slider__body--show-SobreNosotros" data-id="1">
             <div className="slider__texts-SobreNosotros">
-              <h2 className="subtitulo-SobreNosotros">hola mi nombre es Brallan Gonzalez</h2>
+              <h2 className="subtitulo-SobreNosotros">Hola mi nombre es Brallan Gonzalez</h2>
               <p className="slider__reviw-SobreNosotros">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Delectus reiciendis qui odio animi sequi veniam repudiandae
@@ -135,9 +168,68 @@ export const SobreNosotros = () => {
             </div>
           </section>
 
-         
+          <section className="slider__body" data-id="2">
+            <div className="slider__texts-SobreNosotros">
+              <h2 className="subtitulo-SobreNosotros">Hola mi nombre es Kevin Herrera</h2>
+              <p className="slider__reviw-SobreNosotros">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Delectus reiciendis qui odio animi sequi veniam repudiandae
+                corrupti asperiores, accusantium modi excepturi voluptas totam
+                labore! Maiores ducimus dolorem delectus iure impedit!
+              </p>
+            </div>
+            <div className="slider__picture-SobreNosotros">
+              <img src={imgKevin} alt="Brallan" className="slider__img-SobreNosotros" />
+            </div>
+          </section>
 
-          <img src={img123} className="slider__arrow-SobreNosotros" id="next" />
+          <section className="slider__body" data-id="3">
+            <div className="slider__texts-SobreNosotros">
+              <h2 className="subtitulo-SobreNosotros">Hola mi nombre es Mariana Valencia</h2>
+              <p className="slider__reviw-SobreNosotros">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Delectus reiciendis qui odio animi sequi veniam repudiandae
+                corrupti asperiores, accusantium modi excepturi voluptas totam
+                labore! Maiores ducimus dolorem delectus iure impedit!
+              </p>
+            </div>
+            <div className="slider__picture-SobreNosotros">
+              <img src={imgMariana} alt="Brallan" className="slider__img-SobreNosotros" />
+            </div>
+          </section>
+          
+          <section className="slider__body" data-id="4">
+            <div className="slider__texts-SobreNosotros">
+              <h2 className="subtitulo-SobreNosotros">Hola mi nombre es Valentina andrade</h2>
+              <p className="slider__reviw-SobreNosotros">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Delectus reiciendis qui odio animi sequi veniam repudiandae
+                corrupti asperiores, accusantium modi excepturi voluptas totam
+                labore! Maiores ducimus dolorem delectus iure impedit!
+              </p>
+            </div>
+            <div className="slider__picture-SobreNosotros">
+              <img src={imgValentina} alt="Brallan" className="slider__img-SobreNosotros" />
+            </div>
+          </section>
+          
+          <section className="slider__body" data-id="5">
+            <div className="slider__texts-SobreNosotros">
+              <h2 className="subtitulo-SobreNosotros">Hola mi nombre es Yeison david Castiblanco</h2>
+              <p className="slider__reviw-SobreNosotros">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Delectus reiciendis qui odio animi sequi veniam repudiandae
+                corrupti asperiores, accusantium modi excepturi voluptas totam
+                labore! Maiores ducimus dolorem delectus iure impedit!
+              </p>
+            </div>
+            <div className="slider__picture-SobreNosotros">
+              <img src={imgYeison} alt="Brallan" className="slider__img-SobreNosotros" />
+            </div>
+          </section>
+
+
+          <img src={img123} className="slider__arrow-SobreNosotros" onClick={ ()=> handleNext() } id="next" />
         </div>
       </section>
 
