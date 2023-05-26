@@ -1,8 +1,10 @@
 import axios from 'axios'
 
 let token = localStorage.getItem("token")
+let token_company = localStorage.getItem("token_company")
 let email = localStorage.getItem("email")
 let id = localStorage.getItem("id")
+let id_empresa = localStorage.getItem("id_empresa")
 
 //Users
 export const registerUser = async (newUser) =>
@@ -52,7 +54,6 @@ export const registerCompany = async (RegisterCompany) => {
         const response = await axios.post('http://localhost:4000/RegisterCompany', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
-                token: token
             }
         });
 
@@ -64,12 +65,29 @@ export const registerCompany = async (RegisterCompany) => {
 };
 
 
-export const create_event = async (createEvent) =>
-    await axios.post(`http://localhost:4000/registerEvent/${id}`, createEvent, {
+export const createEvent = async (registerEvent) =>{
+    const formData = new FormData();
+    formData.append('nom_event', registerEvent.nom_event);
+    formData.append('image', registerEvent.img_event);
+    formData.append('tipo_event', registerEvent.tipo_event);
+    formData.append('description_event', registerEvent.description_event);
+    formData.append('fecha', registerEvent.fecha);
+    formData.append('hora', registerEvent.hora);
+    formData.append('precio_entrada', registerEvent.precio_entrada);
+
+    try {
+       const response = await axios.post(`http://localhost:4000/registerEvent/${id_empresa}`, formData,{
         headers: {
-            token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtYWlsIjoieWVpc29uZGF2aWRjYXN0aWJsYW5jbzExQGdtYWlsLmNvbSIsImlhdCI6MTY4MjEzNDMyMCwiZXhwIjoxNjgyMjIwNzIwfQ.rxhyl4SuHu9Cc2oK0sje4NnxUGAiosqKA-Eg1rLHgVU"
+         'Content-Type': 'multipart/form-data',
+          token_company:token_company
         }
-    })
+    });
+    return response.data;
+    } catch (error) {
+        console.log(error);
+    }
+}
+    
 
 
 

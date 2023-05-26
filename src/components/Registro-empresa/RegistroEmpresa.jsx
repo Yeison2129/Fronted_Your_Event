@@ -34,12 +34,12 @@ export const RegistroEmpresa = () => {
           nom_empresa: "",
           mail_empresa: "",
           telefono_empresa: "",
-          password_empresa: "",
-          image:null,
+          password_empresa: ""
         }}
         onSubmit={async (values) => {
 
           try {
+            console.log("hola",values);
             const users = await registerCompany(values);
             console.log(users);
 

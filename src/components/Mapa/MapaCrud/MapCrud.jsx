@@ -12,8 +12,9 @@ const MapCrud = (props) => {
 
   const [markerPosition, setMarkerPosition] = useState([4.45, -75.607]);
 
-  const [Latitud, setLatitud] = useState()
-  const [Longitud, setLongitud] = useState()
+  const [Latitud, setLatitud] = useState(0)
+  const [Longitud, setLongitud] = useState(0)
+
 
 
   useEffect(() => {
@@ -34,12 +35,9 @@ const MapCrud = (props) => {
       setMarkerPosition([lat, lng]);
       setLatitud(lat)
       setLongitud(lng)
-
-      console.log("Latitud:", Latitud);
-      console.log("Longitud:", Longitud);
     }
   };
-  <Crud_eventos Latitud={Latitud} setLatitud={setLatitud} Longitud={Longitud} setLongitud={setLongitud}/>
+
   
   const MapEvents = () => {
     useMapEvents({
@@ -50,6 +48,8 @@ const MapCrud = (props) => {
   };
 
   return (
+    <>
+    {/* <Crud_eventos Latitud={Latitud}  Longitud={Longitud} /> */}
     <MapContainer
       className="mapView"
       center={[4.45, -75.607]}
@@ -67,6 +67,7 @@ const MapCrud = (props) => {
       <MapEvents />
       {markerPosition && <Marker position={markerPosition} />}
     </MapContainer>
+    </>
   );
 };
 

@@ -9,7 +9,6 @@ import { Footdash } from './Footdash';
 
 export const  Dashboard = () => {
     let company = window.localStorage.getItem("company");
-    console.log(company);
     const [isContainerActive, setIsContainerActive] = useState(false)
     const [ImagenPopup, setImagenPopup] = useState("")
     const [TextPopup, setTextPopup] = useState("")

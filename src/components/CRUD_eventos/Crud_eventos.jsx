@@ -1,41 +1,33 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
 import { Formik, Form, Field } from "formik";
-import swal from "sweetalert2";
+import Swal from "sweetalert2";
 import "./crud_eventos.css";
 import { Link } from "react-router-dom";
-import { create_event } from "../../api/App";
+import { createEvent} from "../../api/App";
 import { Dashboard } from "../dashboard_empresa/Dashboard_Empresa";
 import MapCrud from "../Mapa/MapaCrud/MapCrud";
 
-export const Crud_eventos = (props) => {
-  const setLatitud = (event) => {
-    props.setLatitud(event.target.value);
-  };
-  const setLongitud = (event)=>{
-    props.setLongitud(event.target.value);
-  }
+export const Crud_eventos = () => {
   return (
     <>
       <Formik
         initialValues={{
           nom_event: "",
-          image: null,
           tipo_event: "",
           description_event: "",
           fecha: "",
           hora: "",
-          lugar_latitud: setLatitud(),
-          lugar_longitud: setLongitud(),
           precio_entrada: "",
         }}
-        onSubmit={async (value, e) => {
-          const respons = await create_event(value);
-          console.log(respons);
+        onSubmit={async (values) => { 
+          const users = await createEvent(values);
+          console.log("------------\n");
+          console.log(users);
+          
 
           try {
-            if (respons.data.data == "INSERT_OK") {
-              swal.fire({
+            if (users.data == "INSERT_OK") {
+              Swal.fire({
                 title: "Evento Creado Exitosamente",
                 text: "",
                 icon: "success",
@@ -49,8 +41,8 @@ export const Crud_eventos = (props) => {
               };
               timeout();
             }
-            if (users.data.data == "INSERT_ERROR") {
-              swal.fire({
+            if (users.data == "INSERT_ERROR") {
+              Swal.fire({
                 title: " Error Al crear al evento",
                 text: "",
                 icon: "warning",
@@ -58,12 +50,12 @@ export const Crud_eventos = (props) => {
                 time: 1500,
               });
             }
-            if (users.data.data == "ERROR 404") {
-              swal.fire("Error desconocido");
+            if (users.data == "ERROR_404") {
+              Swal.fire("Error desconocido");
             }
           } catch (error) {
             console.log(error);
-            swal.fire({
+            Swal.fire({
               title: "Error interno en el servidor",
               text: "Intenta de nuevo más tarde",
               icon: "error",
@@ -85,19 +77,6 @@ export const Crud_eventos = (props) => {
 
                 <div className="components-crud">
                   <Form onSubmit={handleSubmit} className="form-crud">
-                    <div className="img-crud  ">
-                      <label className="selec-cert" htmlFor="">
-                        <input
-                          type="file"
-                          id="image"
-                          name="img_certificado"
-                          onChange={(event) => {
-                            const file = event.target.files[0];
-                            setFieldValue("img_certificado", file);
-                          }}
-                        />
-                      </label>
-                    </div>
 
                     <Field
                       id="nom_event"
@@ -143,29 +122,53 @@ export const Crud_eventos = (props) => {
                     <Field
                       id="description_event"
                       type="text"
+                      name="description_event"
                       placeholder="Descripcion"
                       className="description-event"
                       required
-                      OnChange={handleChange}
+                      onChange={handleChange}
                     />
-                  </Form>
-                </div>
-                <div className="mapCrud">
+
+                    <div className="img-crud  ">
+                      <label className="selec-cert" htmlFor="">
+                        <input
+                          type="file"
+                          id="image"
+                          name="img_event"
+                          onChange={(event) => {
+                            const file = event.target.files[0];
+                            setFieldValue("img_event", file);
+                          }}
+                        />
+                      </label>
+                    </div>
+                    
+                    <div className="mapCrud">
                   <h2>Ingresa el lugar</h2>
                   <MapCrud />
                 </div>
                 <div className="end">
                   {/* <div className="content-end"> */}
                   <div className="botones-crud">
-                    <button className="btn-crud" id="btn-cancel">
-                      Limpiar
-                    </button>
-                    <button className="btn-crud" id="btn-accept">
-                      Aceptar
-                    </button>
+                    <Field 
+                    className="btn-crud" 
+                    type="submit" 
+                    value="Limpiar" 
+                    id="btn-cancel"/>
+                    
+                    <Field 
+                    className="btn-crud"
+                    type="submit" 
+                    id="btn-accept"
+                    value="Crear"/>
+                    <button type="submit">Crear</button>
+    
                     {/* </div> */}
                   </div>
                 </div>
+                  </Form>
+                </div>
+                
               </div>
             </div>
           </div>
