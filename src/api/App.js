@@ -49,6 +49,7 @@ export const registerCompany = async (RegisterCompany) => {
     formData.append('telefono_empresa', RegisterCompany.telefono_empresa);
     formData.append('password_empresa', RegisterCompany.password_empresa);
     formData.append('image', RegisterCompany.img_certificado);
+
     
     try {
         const response = await axios.post('http://localhost:4000/RegisterCompany', formData, {
@@ -66,27 +67,25 @@ export const registerCompany = async (RegisterCompany) => {
 
 
 export const createEvent = async (registerEvent) =>{
-    const formData = new FormData();
-    formData.append('nom_event', registerEvent.nom_event);
-    formData.append('image', registerEvent.img_event);
-    formData.append('tipo_event', registerEvent.tipo_event);
-    formData.append('description_event', registerEvent.description_event);
-    formData.append('fecha', registerEvent.fecha);
-    formData.append('hora', registerEvent.hora);
-    formData.append('precio_entrada', registerEvent.precio_entrada);
-
-    try {
-       const response = await axios.post(`http://localhost:4000/registerEvent/${id_empresa}`, formData,{
+    const formData= new FormData();
+    formData.append('nom_event',registerEvent.nom_event)
+    formData.append('image',registerEvent.img_event)
+    formData.append('tipo_event',registerEvent.tipo_event)
+    formData.append('description_event',registerEvent.description_event)
+    formData.append('fecha',registerEvent.fecha)
+    formData.append('hora',registerEvent.hora)
+    formData.append('precio_entrada',registerEvent.precio_entrada)
+    const events = await axios.post(`http://localhost:4000/registerEvent/${id_empresa}`, formData, {
         headers: {
-         'Content-Type': 'multipart/form-data',
-          token_company:token_company
+        token_company: token_company,
+        'Content-Type': 'multipart/form-data',
         }
     });
-    return response.data;
-    } catch (error) {
-        console.log(error);
-    }
+    return events.data
+
 }
+         
+
     
 
 

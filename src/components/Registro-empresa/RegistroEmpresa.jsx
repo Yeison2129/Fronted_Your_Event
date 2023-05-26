@@ -41,7 +41,6 @@ export const RegistroEmpresa = () => {
           try {
             console.log("hola",values);
             const users = await registerCompany(values);
-            console.log(users);
 
             if (users.data === "INSERT_OK") {
               Swal.fire({
@@ -77,7 +76,7 @@ export const RegistroEmpresa = () => {
             Swal.fire({
               title: "Error interno en el servidor",
               text: "Intenta de nuevo más tarde",
-              icon: "error",
+              icon: "warning",
               boton: "Ok",
               time: 1500,
             });
@@ -142,7 +141,7 @@ export const RegistroEmpresa = () => {
                 id="image"
                 name="img_certificado"
                 onChange={(event) => {
-                  const file = event.target.files[0];
+                  const file = event.currentTarget.files[0];
                   setFieldValue("img_certificado", file);
                 }}
               />

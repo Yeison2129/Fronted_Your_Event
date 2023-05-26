@@ -10,64 +10,59 @@ import MapCrud from "../Mapa/MapaCrud/MapCrud";
 export const Crud_eventos = () => {
   return (
     <>
-      <Formik
-        initialValues={{
-          nom_event: "",
-          tipo_event: "",
-          description_event: "",
-          fecha: "",
-          hora: "",
-          lugar_latitud: "",
-          lugar_longitud: "",
-          precio_entrada: "",
-        }}
-        onSubmit={async (values) => { 
-          const users = await createEvent(values);
-          console.log("------------\n");
-          console.log(users);
-          
+    <Formik
+    initialValues={{
+      nom_event:"",
+      image:"",
+      tipo_event:"",
+      description_event:"",
+      fecha:"",
+      hora:"",
+      precio_entrada:""
 
-          try {
-            if (users.data == "INSERT_OK") {
-              Swal.fire({
-                title: "Evento Creado Exitosamente",
-                text: "",
-                icon: "success",
-                boton: "Ok",
-                time: 1500,
-              });
-              const timeout = () => {
-                setTimeout(function () {
-                  window.location.href = "/cardCrud";
-                }, 2000);
-              };
-              timeout();
-            }
-            if (users.data == "INSERT_ERROR") {
-              Swal.fire({
-                title: " Error Al crear al evento",
-                text: "",
-                icon: "warning",
-                boton: "Ok",
-                time: 1500,
-              });
-            }
-            if (users.data == "ERROR_404") {
-              Swal.fire("Error desconocido");
-            }
-          } catch (error) {
-            console.log(error);
-            Swal.fire({
-              title: "Error interno en el servidor",
-              text: "Intenta de nuevo más tarde",
-              icon: "error",
-              boton: "Ok",
-              time: 1500,
-            });
-          }
-        }}
-      >
-        {({ handleChange, setFieldValue, handleSubmit }) => (
+    }}
+    onSubmit={async(values)=>{
+      try {
+        const events = await createEvent(values);
+        console.log(events);
+        if(events.data == "INSERT_OK"){
+          Swal.fire({
+            title:"Evento Creado Exitosamente",
+            text:"",
+            icon:"success",
+            boton:"Ok",
+            time:1500,
+          });
+          const timeout = () => {
+            setTimeout(function(){
+              window.location.href="/cardCrud"
+            },2000);
+          };
+          timeout();
+        }
+        if(events.data.data =="INSERT_ERROR"){
+          Swal.fire({
+            title:"Error al crear el evento",
+            text:"Intenta mas tarde",
+            icon:"warning",
+            boton:"Ok",
+            time:1500
+          });
+        }
+        if(events.data.data == "ERROR_404"){
+          Swal.fire({
+            title:"Error interno del servidor",
+            icon:"warning",
+            boton:"ok",
+            time:1500
+          })
+        }
+      } catch (error) {
+        
+      }
+    }}
+    >
+        {({ handleChange,setFieldValue,handleSubmit }) => (
           <div className="">
             <Dashboard />
 
@@ -107,16 +102,19 @@ export const Crud_eventos = () => {
                       type="double"
                       name="precio_entrada"
                       placeholder="Precio"
+                      required
+                      onChange={handleChange}
                     />
                     <Field
                       id="tipo_event"
                       className="select-crud"
+                      type="text"
                       name="tipo_event"
                       as="select"
                       required
                       onChange={handleChange}
                     >
-                      <option value="categoria">categoria...</option>
+                      <option value="">Selecciona tu categoria</option>
                       <option value="admin">admin</option>
                       <option value="user">user</option>
                       <option value="empresa">empresa</option>
@@ -138,7 +136,7 @@ export const Crud_eventos = () => {
                           id="image"
                           name="img_event"
                           onChange={(event) => {
-                            const file = event.target.files[0];
+                            const file = event.currentTarget.files[0];
                             setFieldValue("img_event", file);
                           }}
                         />

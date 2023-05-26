@@ -29,7 +29,7 @@ export const F_registro = () => {
                 text: "Gracias por registrarte con nosotros",
                 icon: "success",
                 boton: "Ok",
-                time: 1500,
+                time: 1500
               });
               //sirve para definir una funcion de tiempo
               const timeout = () => {
@@ -45,7 +45,7 @@ export const F_registro = () => {
                 text: "Inicia sesion",
                 icon: "warning",
                 boton: "Ok",
-                time: 1500,
+                time: 1500
               });
             }
             if (users.data.data == "INSERT_ERROR") {
@@ -57,7 +57,7 @@ export const F_registro = () => {
               text: "Intenta de nuevo más tarde",
               icon: "error",
               boton: "Ok",
-              time: 1500,
+              time: 1500
             });
           }
         }}
