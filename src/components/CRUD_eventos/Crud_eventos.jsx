@@ -17,6 +17,8 @@ export const Crud_eventos = () => {
           description_event: "",
           fecha: "",
           hora: "",
+          lugar_latitud: "",
+          lugar_longitud: "",
           precio_entrada: "",
         }}
         onSubmit={async (values) => { 

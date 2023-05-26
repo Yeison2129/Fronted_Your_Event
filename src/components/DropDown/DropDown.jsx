@@ -12,6 +12,8 @@ export const DropDown = () => {
         localStorage.removeItem("auth")
         setTimeout(() => {
             window.location.href = "/"
+            // window.location.href = "/password"
+            
         }, 0.500);
         }if(company){
             localStorage.removeItem("company")
@@ -70,7 +72,7 @@ export const DropDown = () => {
 
                         <hr color='#eee'/>
                         <li className='li-style-drop'>
-                            <Link className='a-style-dropp' to="password" > Configuracion </Link>
+                            <Link className='a-style-dropp' to="/editap" > Configuracion </Link>
                         </li>
                             
                         <hr color='#eee'/>

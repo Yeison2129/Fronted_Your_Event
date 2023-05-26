@@ -97,7 +97,7 @@ export const LoginEmpresa = () => {
                   <img src={male} alt="img" title="male" />
                   <h2 className="loginEmpresa-title">Bienvenido</h2>
 
-                  <div className="input-field">
+                  <div className="input-field-LE">
                     <i className="fas fa-user"></i>
                     <Field
                       autocomplete="off"
@@ -110,7 +110,7 @@ export const LoginEmpresa = () => {
                     />
                   </div>
 
-                  <div className="input-field">
+                  <div className="input-field-LE">
                     <i className="fas fa-lock"></i>
                     <Field
                       autocomplete="off"
