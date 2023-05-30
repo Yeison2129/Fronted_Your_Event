@@ -74,6 +74,8 @@ export const createEvent = async (registerEvent) =>{
     formData.append('description_event',registerEvent.description_event)
     formData.append('fecha',registerEvent.fecha)
     formData.append('hora',registerEvent.hora)
+    formData.append('lugar_latitud',registerEvent.lugar_latitud)
+    formData.append('lugar_longitud',registerEvent.lugar_longitud)
     formData.append('precio_entrada',registerEvent.precio_entrada)
     const events = await axios.post(`http://localhost:4000/registerEvent/${id_empresa}`, formData, {
         headers: {

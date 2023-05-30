@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
 import data from "./assets/data.json";
 import Markers from "./VenueMarkers";
@@ -7,21 +7,37 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import "leaflet/dist/leaflet.css";
 
+
 const MapView = (props) => {
-  const [state, setState] = useState({
+  const [ state, setState] = useState({
     currentLocation: { lat: 4.45, lng: -75.487 },
-    zoom: 10,
-    data,
-  });
+    data
+  })
+  const mapRef = useRef(null);
+  const limitesQuindio = [
+    [3.995, -76.218], // Coordenada del límite superior izquierdo del Quindío
+    [4.862, -75.307] // Coordenada del límite inferior derecho del Quindío
+  ]
+  
+  useEffect(() => {
+    const leafletMap = mapRef.current;
+
+    if (leafletMap) {
+      leafletMap.setMaxBounds(limitesQuindio);
+      leafletMap.whenReady(() => {
+        leafletMap.fitBounds(limitesQuindio);
+      });
+    }
+  }, []);
 
   return (
     <MapContainer
       className="mapView"
       style={{ zIndex: 0 }}
-      center={state.currentLocation}
-      zoom={state.zoom}
-      dragging={false}
-      scrollWheelZoom={false}
+      zoom={11}
+      center={[4.45, -75.607]}
+      ref={mapRef}
+      maxBounds={limitesQuindio}
       minZoom={11}
       doubleClickZoom={false}
     >

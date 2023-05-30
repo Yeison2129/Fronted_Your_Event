@@ -1,13 +1,28 @@
-import React from "react";
+import React, {useContext, useEffect} from "react";
 import { Formik, Form, Field } from "formik";
 import Swal from "sweetalert2";
 import "./crud_eventos.css";
 import { Link } from "react-router-dom";
 import { createEvent} from "../../api/App";
 import { Dashboard } from "../dashboard_empresa/Dashboard_Empresa";
-import MapCrud from "../Mapa/MapaCrud/MapCrud";
+import MapCrud, { EnvioLatLng } from "../Mapa/MapaCrud/MapCrud"; 
 
-export const Crud_eventos = () => {
+
+const Crud_eventos = () => {
+  const { markerPosition, setMarkerPosition, setValues } = useContext(EnvioLatLng);
+
+
+
+  useEffect(() => {
+    setValues((prevValues) => ({
+      ...prevValues,
+      lugar_latitud: markerPosition[0],
+      lugar_longitud: markerPosition[1],
+    }));
+  }, [markerPosition, setValues]);
+  
+  console.log("Latitud", markerPosition[0]);
+  console.log("longitud", markerPosition[1]);
   return (
     <>
     <Formik
@@ -18,6 +33,8 @@ export const Crud_eventos = () => {
       description_event:"",
       fecha:"",
       hora:"",
+      lugar_latitud: markerPosition[0],
+      lugar_longitud: markerPosition[1],
       precio_entrada:""
 
     }}
@@ -143,10 +160,8 @@ export const Crud_eventos = () => {
                       </label>
                     </div>
                     
-                    <div className="mapCrud">
-                  <h2>Ingresa el lugar</h2>
-                  <MapCrud />
-                </div>
+                    
+                
                 <div className="end">
                   {/* <div className="content-end"> */}
                   <div className="botones-crud">
@@ -161,11 +176,11 @@ export const Crud_eventos = () => {
                     type="submit" 
                     id="btn-accept"
                     value="Crear"/>
-                    <button type="submit">Crear</button>
     
                     {/* </div> */}
                   </div>
                 </div>
+                  <h2>Ingresa el lugar</h2>
                   </Form>
                 </div>
                 
@@ -177,3 +192,5 @@ export const Crud_eventos = () => {
     </>
   );
 };
+
+export default Crud_eventos
