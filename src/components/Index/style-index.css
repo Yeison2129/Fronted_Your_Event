@@ -439,6 +439,7 @@ main .sobre-nosotros{
         height: 170px;
         padding: 0px 50px  ;
         font-size: 25px;
+        padding-top: 20px;
     }
     #search-icon{
             position: absolute;
@@ -451,8 +452,14 @@ main .sobre-nosotros{
     #img-logo{
         height: 8rem;
     }
+    .bar-nav    {
+        width: 100%;
+        padding-bottom: 30px;
+        
+    }
     .bar-nav .input-nav{
-        width: 12rem;
+        height: 3rem;
+    
     }
     .content-nav{
         width:100%;

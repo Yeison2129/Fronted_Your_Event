@@ -2,8 +2,10 @@ import React from "react";
 import "./dashc.css";
 import { Link } from "react-router-dom";
 
+
 export const Dashc = () => {
   return (
+      
     <div className="dash-config">
       <div className="aside-config">
         <div className="ti-dashconfig">

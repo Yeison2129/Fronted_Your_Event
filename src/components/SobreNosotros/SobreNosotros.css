@@ -346,3 +346,36 @@ text-align: initial;
 .slider__arrow-SobreNosotros:nth-of-type(2){
     justify-self:end ;
 }
+
+@media (max-width:870px){
+    .container-SobreNosotros{
+        min-height: 0;
+     
+    }
+    .slider__container{
+        font-size: 30px;
+    }
+    #centro-CONT{
+        display: flex;
+        flex-direction: column-reverse;
+        height: 80vh;
+        font-size: 25px;
+       
+    }
+    .section-izq{
+        width: 100%;
+    }
+    .section-derecha img{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    #centro-h1{
+        font-size: 20px;
+    }
+    .footer-content-SobreNosotros{
+        font-size: 20px;
+    }
+    
+}
