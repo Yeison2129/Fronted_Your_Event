@@ -93,7 +93,7 @@ export const LoginEmpresa = () => {
                 <img src={empresa} alt="img" title="empresa" />
               </div>
               <div className="loginEmpresa-login-content">
-                <Form action="#" onSubmit={handleSubmit} className="login-form">
+                <Form action="#" onSubmit={handleSubmit} className="login-form-E">
                   <img src={male} alt="img" title="male" />
                   <h2 className="loginEmpresa-title">Bienvenido</h2>
 

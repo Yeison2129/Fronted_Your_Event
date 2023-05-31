@@ -173,7 +173,7 @@ Field.loginEmpresa-btn:hover {
 }
 
 .input-field-LE{
-	max-width: 380px;
+	
     width: 100%;
     background-color: #f0f0f0;
     margin: 10px 0;
@@ -195,19 +195,27 @@ Field.loginEmpresa-btn:hover {
 	.loginEmpresa-wave{
 		display: none;
 	}
+	div.input-field-LE{
+		width: 50%;
+
+	}
 	form.login-form-E{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		height: 100%;
+		justify-content: center;
 		width:100%;
 		
 	}
-	.in
+	.loginEmpresa-login-content{
+		width: 100%;
+		height: 100%
+	}
 	div.loginEmpresa-container{
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		
 	}
+	
 }

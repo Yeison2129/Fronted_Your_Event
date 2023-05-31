@@ -77,3 +77,14 @@ color: rgb(232, 232, 232);
     justify-content: center;
     align-items: center;
 }
+@media (max-width: 870px) {
+    .aside-config{
+        width: 33%;
+    }
+    .ti-dashconfig{
+        font-size: 20px;
+    }
+    .contain{
+        background: none;
+    }
+}
