@@ -9,6 +9,23 @@
    flex-wrap: wrap;
 }
 
+.cards-index {
+   position: relative;
+   flex: 0 0 240px;
+   width: 240px;
+   height: 320px;
+   background-color: #3d003f;
+   overflow: hidden;
+   border-radius: 10px;
+   box-shadow: rgba(92, 92, 92, 0.66) 0 10px 20px 0, inset #7a7a7a 0 0 0 5px,
+     inset rgba(209, 209, 209, 0.5) 0 0 0 5px;
+   transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+   background-position: center;
+   background-repeat: no-repeat;
+ }
+
+ 
+
 .product {
    height: 350px;
    width: 250px;

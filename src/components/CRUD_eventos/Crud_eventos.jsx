@@ -1,11 +1,11 @@
-import React, {useContext, useEffect} from "react";
+import React, { useContext, useEffect } from "react";
 import { Formik, Form, Field } from "formik";
 import Swal from "sweetalert2";
 import "./crud_eventos.css";
 import { Link } from "react-router-dom";
-import { createEvent} from "../../api/App";
+import { createEvent } from "../../api/App";
 import { Dashboard } from "../dashboard_empresa/Dashboard_Empresa";
-import MapCrud, { EnvioLatLng } from "../Mapa/MapaCrud/MapCrud"; 
+import MapCrud, { EnvioLatLng } from "../Mapa/MapaCrud/MapCrud";
 
 
 const Crud_eventos = () => {
@@ -20,66 +20,66 @@ const Crud_eventos = () => {
       lugar_longitud: markerPosition[1],
     }));
   }, [markerPosition, setValues]);
-  
+
   console.log("Latitud", markerPosition[0]);
   console.log("longitud", markerPosition[1]);
   return (
     <>
-    <Formik
-    initialValues={{
-      nom_event:"",
-      image:"",
-      tipo_event:"",
-      description_event:"",
-      fecha:"",
-      hora:"",
-      lugar_latitud: markerPosition[0],
-      lugar_longitud: markerPosition[1],
-      precio_entrada:""
+      <Formik
+        initialValues={{
+          nom_event: "",
+          image: "",
+          tipo_event: "",
+          description_event: "",
+          fecha: "",
+          hora: "",
+          lugar_latitud: markerPosition[0],
+          lugar_longitud: markerPosition[1],
+          precio_entrada: ""
 
-    }}
-    onSubmit={async(values)=>{
-      try {
-        const events = await createEvent(values);
-        console.log(events);
-        if(events.data == "INSERT_OK"){
-          Swal.fire({
-            title:"Evento Creado Exitosamente",
-            text:"",
-            icon:"success",
-            boton:"Ok",
-            time:1500,
-          });
-          const timeout = () => {
-            setTimeout(function(){
-              window.location.href="/cardCrud"
-            },2000);
-          };
-          timeout();
-        }
-        if(events.data.data =="INSERT_ERROR"){
-          Swal.fire({
-            title:"Error al crear el evento",
-            text:"Intenta mas tarde",
-            icon:"warning",
-            boton:"Ok",
-            time:1500
-          });
-        }
-        if(events.data.data == "ERROR_404"){
-          Swal.fire({
-            title:"Error interno del servidor",
-            icon:"warning",
-            boton:"ok",
-            time:1500
-          })
-        }
-      } catch (error) {
-        
-      }
-    }}
-    >
-        {({ handleChange,setFieldValue,handleSubmit }) => (
+        }}
+        onSubmit={async (values) => {
+          try {
+            const events = await createEvent(values);
+            console.log(events);
+            if (events.data == "INSERT_OK") {
+              Swal.fire({
+                title: "Evento Creado Exitosamente",
+                text: "",
+                icon: "success",
+                boton: "Ok",
+                time: 1500,
+              });
+              const timeout = () => {
+                setTimeout(function () {
+                  window.location.href = "/cardCrud"
+                }, 2000);
+              };
+              timeout();
+            }
+            if (events.data.data == "INSERT_ERROR") {
+              Swal.fire({
+                title: "Error al crear el evento",
+                text: "Intenta mas tarde",
+                icon: "warning",
+                boton: "Ok",
+                time: 1500
+              });
+            }
+            if (events.data.data == "ERROR_404") {
+              Swal.fire({
+                title: "Error interno del servidor",
+                icon: "warning",
+                boton: "ok",
+                time: 1500
+              })
+            }
+          } catch (error) {
+
+          }
+        }}
+      >
+        {({ handleChange, setFieldValue, handleSubmit }) => (
           <div className="">
             <Dashboard />
 
@@ -100,20 +100,20 @@ const Crud_eventos = () => {
                       required
                       onChange={handleChange}
                     />
-                    <Field 
-                    id="fecha" 
-                    type="date" 
-                    name="fecha"
-                    required
-                    onChange={handleChange}
+                    <Field
+                      id="fecha"
+                      type="date"
+                      name="fecha"
+                      required
+                      onChange={handleChange}
                     />
-                    
-                    <Field 
-                    id="hora" 
-                    type="time" 
-                    name="hora"
-                    required
-                    onChange={handleChange} />
+
+                    <Field
+                      id="hora"
+                      type="time"
+                      name="hora"
+                      required
+                      onChange={handleChange} />
                     <Field
                       id="precio_entrada"
                       type="double"
@@ -159,31 +159,30 @@ const Crud_eventos = () => {
                         />
                       </label>
                     </div>
-                    
-                    
-                
-                <div className="end">
-                  {/* <div className="content-end"> */}
-                  <div className="botones-crud">
-                    <Field 
-                    className="btn-crud" 
-                    type="submit" 
-                    value="Limpiar" 
-                    id="btn-cancel"/>
-                    
-                    <Field 
-                    className="btn-crud"
-                    type="submit" 
-                    id="btn-accept"
-                    value="Crear"/>
-    
-                    {/* </div> */}
-                  </div>
-                </div>
-                  <h2>Ingresa el lugar</h2>
+
+
+
+                    <div className="end">
+                      {/* <div className="content-end"> */}
+                      <div className="botones-crud">
+                        <Field
+                          className="btn-crud"
+                          type="submit"
+                          value="Limpiar"
+                          id="btn-cancel" />
+
+                        <Field
+                          className="btn-crud"
+                          type="submit"
+                          id="btn-accept"
+                          value="Crear" />
+
+                        {/* </div> */}
+                      </div>
+                    </div>
                   </Form>
                 </div>
-                
+
               </div>
             </div>
           </div>

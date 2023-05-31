@@ -419,7 +419,6 @@ main .sobre-nosotros{
 
 .categorias{
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     padding: 10px;
     height: 36rem;
