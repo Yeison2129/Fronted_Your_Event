@@ -23,7 +23,6 @@ import { Editinfo } from "./components/Configuracion/Editinfo/Editinf"
 import  {SobreNosotros} from "./components/SobreNosotros/SobreNosotros.jsx"
 import { DeleteAcc } from "./components/Configuracion/DeleteA/DeleteAcc"
 
-
 export default function App() {
     return (
         <Routes>
@@ -50,6 +49,7 @@ export default function App() {
             <Route path='/DeleteAccount' element={<DeleteAcc/>}/>
             <Route path='/editap' element={<Editinfo/>}/>
             <Route path='/SobreNosotros' element={<SobreNosotros/>}/>
+
         </Routes>
     )
 }

@@ -15,6 +15,7 @@ import search from "../../assets/arrow.svg";
 import img123 from "../../assets/arrowI.svg"
 import Cards from "../Card_Categorias/Cards";
 
+
 function changePosition(sliders, currentElement, change) {
   console.log(sliders)
   if (currentElement) {
