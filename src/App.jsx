@@ -9,7 +9,6 @@ import { CardPassword } from "./components/RecuperacionContrasena/CardPassword/C
 import {DropDown} from './components/DropDown/DropDown';
 import { CardEvento } from "./components/Card_evento/Card_evento"
 import { Card_evento_admin } from "./components/Card_evento/Card_evento_admin"
-import { Crud_eventos } from "./components/CRUD_eventos/Crud_eventos"
 import { LoginEmpresa  } from  "./components/Login-Empresa/loginEmpresa"
 import { Card_crud  } from  "./components/Card_crud/card_evento_empresa/Card"
 import {  Homedash } from  "./components/Home/HomeDash" 
@@ -22,6 +21,7 @@ import { Dashc } from './components/Configuracion/Dashconfig/Dashc'
 import { Editinfo } from "./components/Configuracion/Editinfo/Editinf"
 import  {SobreNosotros} from "./components/SobreNosotros/SobreNosotros.jsx"
 import { DeleteAcc } from "./components/Configuracion/DeleteA/DeleteAcc"
+import Crud_eventos from "./components/CRUD_eventos/Crud_eventos"
 
 export default function App() {
     return (
