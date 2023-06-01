@@ -162,10 +162,9 @@ const handlePrevious = () => {
             <div className="slider__texts-SobreNosotros">
               <h2 className="subtitulo-SobreNosotros">Hola mi nombre es Brallan Gonzalez</h2>
               <p className="slider__reviw-SobreNosotros">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Delectus reiciendis qui odio animi sequi veniam repudiandae
-                corrupti asperiores, accusantium modi excepturi voluptas totam
-                labore! Maiores ducimus dolorem delectus iure impedit!
+              Tengo 20 años y actualmente vivo en Calará. Soy desarrollador backend y QA en el 
+              equipo de YourEvent, 
+              donde me encargo de asegurar la calidad y funcionalidad de nuestros aplicativo.
               </p>
             </div>
             <div className="slider__picture-SobreNosotros">
@@ -177,10 +176,7 @@ const handlePrevious = () => {
             <div className="slider__texts-SobreNosotros">
               <h2 className="subtitulo-SobreNosotros">Hola mi nombre es Kevin Herrera</h2>
               <p className="slider__reviw-SobreNosotros">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Delectus reiciendis qui odio animi sequi veniam repudiandae
-                corrupti asperiores, accusantium modi excepturi voluptas totam
-                labore! Maiores ducimus dolorem delectus iure impedit!
+                Tengo 19 años y vivo en Montenegro. Me apasiona el desarrollo frontend y me encargo de adecuar la pagina a diferentes dispositivos. Además de mi experiencia en desarrollo, también me especializo en la documentación del proyecto, lo cual me permite comunicar eficientemente los detalles técnicos y las funcionalidades del software que desarrollamos.
               </p>
             </div>
             <div className="slider__picture-SobreNosotros">
@@ -192,10 +188,7 @@ const handlePrevious = () => {
             <div className="slider__texts-SobreNosotros">
               <h2 className="subtitulo-SobreNosotros">Hola mi nombre es Mariana Valencia</h2>
               <p className="slider__reviw-SobreNosotros">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Delectus reiciendis qui odio animi sequi veniam repudiandae
-                corrupti asperiores, accusantium modi excepturi voluptas totam
-                labore! Maiores ducimus dolorem delectus iure impedit!
+                Tengo 18 años y resido en Calarcá. Me apasiona el diseño y desarrollo de interfaces gráficas en el ámbito del frontend. Como jefa en frontend, me dedico a liderar y coordinar equipos de trabajo para crear experiencias visuales atractivas y funcionales. Además, tengo habilidades sólidas en el diseño de interfaces intuitivas y amigables.
               </p>
             </div>
             <div className="slider__picture-SobreNosotros">
@@ -207,10 +200,7 @@ const handlePrevious = () => {
             <div className="slider__texts-SobreNosotros">
               <h2 className="subtitulo-SobreNosotros">Hola mi nombre es Valentina andrade</h2>
               <p className="slider__reviw-SobreNosotros">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Delectus reiciendis qui odio animi sequi veniam repudiandae
-                corrupti asperiores, accusantium modi excepturi voluptas totam
-                labore! Maiores ducimus dolorem delectus iure impedit!
+                Tengo 18 años y vivo en Calarcá. Me desempeño como Scrum Master y también tengo experiencia en el desarrollo frontend. Como Scrum Master, mi rol principal es asegurar que los equipos de desarrollo sigan las prácticas ágiles de Scrum y alcancen sus objetivos de manera eficiente.
               </p>
             </div>
             <div className="slider__picture-SobreNosotros">
@@ -222,10 +212,7 @@ const handlePrevious = () => {
             <div className="slider__texts-SobreNosotros">
               <h2 className="subtitulo-SobreNosotros">Hola mi nombre es Yeison david Castiblanco</h2>
               <p className="slider__reviw-SobreNosotros">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Delectus reiciendis qui odio animi sequi veniam repudiandae
-                corrupti asperiores, accusantium modi excepturi voluptas totam
-                labore! Maiores ducimus dolorem delectus iure impedit!
+                Tengo 18 años y resido en Calarcá. Me especializo como Jefe en el área de Backend y Bases de Datos. Mi rol principal es liderar y supervisar el desarrollo en la creación de la lógica y funcionalidad detrás del aplicativo. Tengo amplios conocimientos en el desarrollo de servidores, APIs y en el manejo de bases de datos, asegurando un almacenamiento y gestión eficiente de la información.
               </p>
             </div>
             <div className="slider__picture-SobreNosotros">

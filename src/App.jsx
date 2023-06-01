@@ -22,6 +22,7 @@ import { Editinfo } from "./components/Configuracion/Editinfo/Editinf"
 import  {SobreNosotros} from "./components/SobreNosotros/SobreNosotros.jsx"
 import { DeleteAcc } from "./components/Configuracion/DeleteA/DeleteAcc"
 import Crud_eventos from "./components/CRUD_eventos/Crud_eventos"
+// import { Ayuda } from "./components/Configuracion/Ayuda/Ayuda"
 
 export default function App() {
     return (
@@ -49,7 +50,7 @@ export default function App() {
             <Route path='/DeleteAccount' element={<DeleteAcc/>}/>
             <Route path='/editap' element={<Editinfo/>}/>
             <Route path='/SobreNosotros' element={<SobreNosotros/>}/>
-
+            {/* <Route path='/Ayuda' element={<Ayuda/>}/> */}
         </Routes>
     )
 }
