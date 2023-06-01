@@ -358,17 +358,18 @@ text-align: initial;
     #centro-CONT{
         display: flex;
         flex-direction: column-reverse;
-        height: 80vh;
+        height: 100%;
         font-size: 25px;
        
     }
     .section-izq{
         width: 100%;
     }
-    .section-derecha img{
+    .section-derecha {
+        display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        width: 80%;
     }
 
     #centro-h1{
