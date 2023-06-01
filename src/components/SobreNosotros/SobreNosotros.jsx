@@ -64,7 +64,7 @@ const handlePrevious = () => {
   return (
     <>
       <header className="header-SobreNosotros" id="inicio">
-        <nav>
+        
           <nav className="nav-index">
           <img
             src="https://res.cloudinary.com/dlfn93ikw/image/upload/v1685016494/YourEvent/log_blanco_mezgdr.png"
@@ -116,7 +116,7 @@ const handlePrevious = () => {
             </div>
             
             </nav>
-        </nav>
+       
       </header>
 
       <section id="centro-CONT">

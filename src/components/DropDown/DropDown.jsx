@@ -36,7 +36,7 @@ export const DropDown = () => {
                     
                     <ul className='ul-drop' >
                         <li className='li-style-drop'>
-                            <Link className='a-style-dropp' to=""> Inicio </Link>
+                            <Link className='a-style-dropp' to="/"> Inicio </Link>
                         </li>
                         <hr color='#eee'/>
                         <li className='li-style-drop'>
@@ -45,7 +45,7 @@ export const DropDown = () => {
 
                         <hr color='#eee'/>
                         <li className='li-style-drop'>
-                            <Link className='a-style-dropp' to="password" > Configuracion </Link>
+                            <Link className='a-style-dropp' to="/password" > Configuracion </Link>
                         </li>
                             
                         <hr color='#eee'/>
@@ -63,11 +63,11 @@ export const DropDown = () => {
                     
                     <ul className='ul-drop' >
                         <li className='li-style-drop'>
-                            <Link className='a-style-dropp' to=""> Inicio </Link>
+                            <Link className='a-style-dropp' to="/"> Inicio </Link>
                         </li>
                         <hr color='#eee'/>
                         <li className='li-style-drop'>
-                            <Link className='a-style-dropp' to="" > Contactos </Link>
+                            <Link className='a-style-dropp' to="/asistir" > Mis reservas </Link>
                         </li>
 
                         <hr color='#eee'/>
