@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react'
 import './cardview.css'
 import { useState } from 'react'
 import { getEvents } from '../../api/App'
-import MapEvento from '../Mapa/MapaEvento/MapEvento'
 
 export const CardView = () => {
 
@@ -97,7 +96,6 @@ export const CardView = () => {
                   <div className="time"><i className='bx bx-time'></i><b>Hora:</b> {event.hora} </div>
                   <div className="time"><i className='bx bx-time'></i><b>Tipo:</b> {event.tipo_event} </div>
                   <div className="price"><i className='bx bx-purchase-tag-alt' ></i> <b>Precio:</b>{event.precio_entrada}</div>
-                  <div className="place"><i className='bx bx-map' ></i><b>Lugar:</b><MapEvento /></div>
                 </div>
                 <div className="buttons">
                   <button className='reserv'>¡Reserva ya!</button>
