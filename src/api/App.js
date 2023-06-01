@@ -3,7 +3,7 @@ import axios from 'axios'
 let token = localStorage.getItem("token")
 let token_company = localStorage.getItem("token_company")
 let email = localStorage.getItem("email")
-let id = localStorage.getItem("id")
+let id_user = localStorage.getItem("id_user")
 let id_empresa = localStorage.getItem("id_empresa")
 
 //Users
@@ -20,6 +20,14 @@ export const update = async (update) =>
             token: token
         }
     })
+
+export const updateUser = async(updateUser  )=>
+     await axios.put(`http://localhost:4000/updateUser/${id_user}`, updateUser , {
+            headers: {
+                token: token
+            }
+        });
+
 
 //Recuperation_Password_User
 export const CompareEmailUser = async (emailsUser) => {
@@ -80,7 +88,7 @@ export const createEvent = async (registerEvent) =>{
     const events = await axios.post(`http://localhost:4000/registerEvent/${id_empresa}`, formData, {
         headers: {
         token_company: token_company,
-        'Content-Type': 'multipart/form-data',
+        'Content-Type': 'multipart/form-data'
         }
     });
     return events.data
