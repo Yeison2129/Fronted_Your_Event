@@ -150,6 +150,7 @@
   position: relative;
   z-index: 1;
 }
+
 .cards-info:after {
   content: "";
   position: absolute;

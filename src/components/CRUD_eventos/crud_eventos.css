@@ -16,7 +16,7 @@
 .components-crud{
     display: flex;
     justify-content: space-evenly;
-    height: 50%;
+    height: 100%;
     width: 100%;
 }
 #icon-edit{
@@ -26,9 +26,6 @@
 .img-crud{
     display: flex;
     align-items: flex-end;
-    justify-content: end;
-    height: 100%;
-    width: 30%;
     border-radius: 20px;
     background-color: #e5e5e5;
 }
@@ -39,7 +36,7 @@
 }
 .form-crud{
     display: flex;
-    width: 15rem ;
+    width: 50%;
     flex-direction: column;
     justify-content: space-around;
 }
@@ -65,14 +62,12 @@
     width: 100%;
     justify-content:space-evenly ;
     align-items: center;
-    height: 30% ;
 }
 
 .botones-crud{
     display: flex;
     justify-content: space-between;
     width: 16rem;
-    height: 15%;
 }
 .btn-crud{
     display: flex;
@@ -86,7 +81,6 @@
     border: #000000 1px ; 
     transition: all 0.3s;
     font-family: "Poppins", sans-serif;
-
 }
 
 button#btn-accept.btn-crud:hover{

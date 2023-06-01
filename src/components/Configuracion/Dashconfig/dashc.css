@@ -77,3 +77,18 @@ color: rgb(232, 232, 232);
     justify-content: center;
     align-items: center;
 }
+.aside-config.hidden {
+    display: none;
+  }
+@media (max-width: 870px) {
+    .aside-config{
+        width: 45%;
+    }
+    .ti-dashconfig{
+        font-size: 20px;
+    }
+    .contain{
+        background: none;
+    }
+
+}

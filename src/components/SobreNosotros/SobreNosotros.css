@@ -12,7 +12,7 @@ body{
 
 
 .header-SobreNosotros{
-    height: 30vh;
+    height: 18vh;
     background: -webkit-linear-gradient(to right, hsla(0, 2%, 11%, 0.459), hsla(0, 3%, 7%, 0.664)), url(https://res.cloudinary.com/dozodtdvl/image/upload/v1680050771/hin_rjd9bs.jpg);
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, hsla(339, 27%, 19%, 0.459), hsla(0, 0%, 9%, 0.664)), url(https://res.cloudinary.com/dozodtdvl/image/upload/v1680050771/hin_rjd9bs.jpg);
@@ -47,9 +47,15 @@ padding-bottom: 0.1px;
 }
 
 
-
-.social-media-SobreNosotros{
+.section-derecha{
     width: 50%;
+
+}
+.section-derecha img{ 
+    width: 50%;
+}
+.social-media-SobreNosotros{
+    /* width: 50%; */
     display: flex;
     justify-content: flex-end;
 }
@@ -122,20 +128,28 @@ padding-bottom: 0.1px;
 /*--centro--*/
 
 .centro-box-SobreNosotros {
-    width: 50%;
+    width: 70%;
     height: auto;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    padding-left: 130px;
 }
-.img-SobreNosotros{
-    width: 50%;
-    
+.section-izq{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
 }
+.section-izq p{
+    width: 80%;
+    text-align: center;
+
+}
+
 #centro{
     width: 100% ;
     padding: 70px 0;
-    background: rgb(221, 221, 221);
+    background: rgb(234, 234, 234);
     display: flex;
     flex-wrap: wrap;
     justify-content: center ;
@@ -143,7 +157,7 @@ padding-bottom: 0.1px;
 }
 #centro-CONT{
     width: 100% ;
-    height: 30%;
+    height: 60vh;
     background: rgb(255, 255, 255);
     display: flex;    
     align-items: center;
@@ -331,4 +345,38 @@ text-align: initial;
 
 .slider__arrow-SobreNosotros:nth-of-type(2){
     justify-self:end ;
+}
+
+@media (max-width:870px){
+    .container-SobreNosotros{
+        min-height: 0;
+     
+    }
+    .slider__container{
+        font-size: 30px;
+    }
+    #centro-CONT{
+        display: flex;
+        flex-direction: column-reverse;
+        height: 100%;
+        font-size: 25px;
+       
+    }
+    .section-izq{
+        width: 100%;
+    }
+    .section-derecha {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
+
+    #centro-h1{
+        font-size: 20px;
+    }
+    .footer-content-SobreNosotros{
+        font-size: 20px;
+    }
+    
 }

@@ -57,3 +57,9 @@ ul.ul-drop > li.li-style-drop > a {
 ul.ul-drop > button.li-style-drop > a {
   color: black !important;
 }
+
+@media(max-width:870px) {
+  .ul-drop{
+    width: 190px;
+  }
+}

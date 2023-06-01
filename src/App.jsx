@@ -21,8 +21,9 @@ import { Dashc } from './components/Configuracion/Dashconfig/Dashc'
 import { Editinfo } from "./components/Configuracion/Editinfo/Editinf"
 import  {SobreNosotros} from "./components/SobreNosotros/SobreNosotros.jsx"
 import { DeleteAcc } from "./components/Configuracion/DeleteA/DeleteAcc"
-import ViewCrudEventos   from "./components/CRUD_eventos/View-Crud_eventos"
-
+import Crud_eventos from "./components/CRUD_eventos/Crud_eventos"
+// import { Ayuda } from "./components/Configuracion/Ayuda/Ayuda"
+import {Asistir} from "./components/Index/Asistir/Asistir"
 
 export default function App() {
     return (
@@ -38,7 +39,7 @@ export default function App() {
             <Route path='/cardEvento' element={<CardEvento/>}/>
             <Route path='/cardCrud' element={<Card_crud/>}/>
             <Route path='/cardEventoAdmin' element={<Card_evento_admin/>}/>
-            <Route path="/crud_eventos" element={<ViewCrudEventos/>}/>
+            <Route path="/crud_eventos" element={<Crud_eventos/>}/>
             <Route path='/loginEmpresa' element={<LoginEmpresa/>}/>
             <Route path='/home' element={<Homedash/>}/>
             <Route path='/home' element={<Cards/>}/>
@@ -50,6 +51,9 @@ export default function App() {
             <Route path='/DeleteAccount' element={<DeleteAcc/>}/>
             <Route path='/editap' element={<Editinfo/>}/>
             <Route path='/SobreNosotros' element={<SobreNosotros/>}/>
+            {/* <Route path='/Ayuda' element={<Ayuda/>}/> */}
+            <Route path='/asistir' element={<Asistir/>}/>
+
         </Routes>
     )
 }
