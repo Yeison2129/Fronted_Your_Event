@@ -54,7 +54,6 @@ export const CardView = () => {
   const events = async () => {
     const response = await getEvents()
     setAllEvents(response.data.data.map(event => ({ ...event, previewActive: false })))
-    console.log(response);
   }
 
   useEffect(() => {

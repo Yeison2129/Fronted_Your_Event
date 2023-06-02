@@ -3,7 +3,7 @@ import axios from 'axios'
 let token = localStorage.getItem("token")
 let token_company = localStorage.getItem("token_company")
 let email = localStorage.getItem("email")
-let id = localStorage.getItem("id")
+let id_user = localStorage.getItem("id_user")
 let id_empresa = localStorage.getItem("id_empresa")
 
 //Users
@@ -20,6 +20,14 @@ export const update = async (update) =>
             token: token
         }
     })
+
+export const updateUser = async (updateUser) =>
+    await axios.put(`http://localhost:4000/updateUser/${id_user}`, updateUser, {
+        headers: {
+            token: token
+        }
+    });
+
 
 //Recuperation_Password_User
 export const CompareEmailUser = async (emailsUser) => {
@@ -39,8 +47,8 @@ export const RecuperationPasswordUser = async (recuperationUser, email1) =>
 //Enterprise
 
 
-export const loginCompany = async (loginCompany)=>
-    await axios.post('http://localhost:4000/loginCompany',loginCompany)
+export const loginCompany = async (loginCompany) =>
+    await axios.post('http://localhost:4000/loginCompany', loginCompany)
 
 export const registerCompany = async (RegisterCompany) => {
     const formData = new FormData();
@@ -50,7 +58,7 @@ export const registerCompany = async (RegisterCompany) => {
     formData.append('password_empresa', RegisterCompany.password_empresa);
     formData.append('image', RegisterCompany.img_certificado);
 
-    
+
     try {
         const response = await axios.post('http://localhost:4000/RegisterCompany', formData, {
             headers: {
@@ -66,29 +74,29 @@ export const registerCompany = async (RegisterCompany) => {
 };
 
 
-export const createEvent = async (registerEvent) =>{
-    const formData= new FormData();
-    formData.append('nom_event',registerEvent.nom_event)
-    formData.append('image',registerEvent.img_event)
-    formData.append('tipo_event',registerEvent.tipo_event)
-    formData.append('description_event',registerEvent.description_event)
-    formData.append('fecha',registerEvent.fecha)
-    formData.append('hora',registerEvent.hora)
-    formData.append('lugar_latitud',registerEvent.lugar_latitud)
-    formData.append('lugar_longitud',registerEvent.lugar_longitud)
-    formData.append('precio_entrada',registerEvent.precio_entrada)
+export const createEvent = async (registerEvent) => {
+    const formData = new FormData();
+    formData.append('nom_event', registerEvent.nom_event)
+    formData.append('image', registerEvent.img_event)
+    formData.append('tipo_event', registerEvent.tipo_event)
+    formData.append('description_event', registerEvent.description_event)
+    formData.append('fecha', registerEvent.fecha)
+    formData.append('hora', registerEvent.hora)
+    formData.append('lugar_latitud', registerEvent.lugar_latitud)
+    formData.append('lugar_longitud', registerEvent.lugar_longitud)
+    formData.append('precio_entrada', registerEvent.precio_entrada)
     const events = await axios.post(`http://localhost:4000/registerEvent/${id_empresa}`, formData, {
         headers: {
-        token_company: token_company,
-        'Content-Type': 'multipart/form-data',
+            token_company: token_company,
+            'Content-Type': 'multipart/form-data'
         }
     });
     return events.data
 
 }
-         
 
-    
+
+
 
 
 
@@ -105,3 +113,5 @@ export const deleteAdminAsist = async (id) =>
         }
     })
 
+export const getUser = async () =>
+    await axios.get(`http://localhost:4000/getUser/${id_user}`)
