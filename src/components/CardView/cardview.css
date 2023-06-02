@@ -154,34 +154,13 @@
 }
 
 
-
-
-@media (max-width:991px) {
-
-   html {
-      font-size: 55%;
-   }
-
-}
-
-@media (max-width:768px) {
-
-   .products-preview .preview img {
-      height: 25rem;
-   }
-
-}
-
-@media (max-width:450px) {
-
-   html {
-      font-size: 50%;
-   }
-
-}
-
 @media (max-width:870px){
    .preview{
+      font-size: 30px;
       width: 70%;
+      height: 60%;
+   }
+   .reserv{
+      font-size: 28px;
    }
 }

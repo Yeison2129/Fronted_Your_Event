@@ -136,19 +136,8 @@ export const Index = () => {
         </div>
       </header>
       <main>
-        <section className="statas">
-          <h2 className="h2-title"> Estadisticas</h2>
-          <div className=" estadist">
-            <div className="grafico">
-              <Stats />
-            </div>
-            <div className="map">
-              <MapView />
-            </div>
-          </div>
-        </section>
-
-        <section className="categorias" id="categorias">
+        
+          <section className="categorias" id="categorias">
           <div className="titulo_bar">
             <h2 className="h2-title">
               {" "}
@@ -165,6 +154,20 @@ export const Index = () => {
           </div>{" "}
           <CardView />
         </section>
+
+        <section className="statas">
+          <h2 className="h2-title"> Estadisticas</h2>
+          <div className=" estadist">
+            <div className="grafico">
+              <Stats />
+            </div>
+            <div className="map">
+              <MapView />
+            </div>
+          </div>
+        </section>
+
+      
       </main>
       <section>
         <div className="content-link-register">
