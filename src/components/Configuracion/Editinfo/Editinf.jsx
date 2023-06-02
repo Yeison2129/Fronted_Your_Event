@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react'
 import { Formik, Form, Field } from "formik";
 import "./editinfo.css";
 import { Dashc } from "../Dashconfig/Dashc";
@@ -5,11 +6,23 @@ import { Footdash } from "../../dashboard_empresa/Footdash";
 import userIcon from "../../../assets/userIcon.svg";
 import Swal from "sweetalert2";
 import { updateUser } from "../../../api/App";
+import { getUser } from '../../api/App'
+
 export const Editinfo = () => {
-  let user = localStorage.getItem("user");
-  let documento = localStorage.getItem("documento");
-  let email = localStorage.getItem("email");
-  let telefono = localStorage.getItem("telefono");
+
+  const [allUser, setAllUser] = useState([])
+
+
+  const user = async () => {
+    const response = await getUser()
+    setAllUser(response.data.data.map(user => ({ ...user })))
+  }
+
+  useEffect(() => {
+    console.log(allUser);
+    user()
+  }, [])
+
   return (
     <>
       {user ? (

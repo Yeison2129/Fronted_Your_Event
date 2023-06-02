@@ -113,3 +113,5 @@ export const deleteAdminAsist = async (id) =>
         }
     })
 
+export const getUser = async ()=>
+ await axios.get(`http://localhost:4000/updateUser/${id_user}`)
