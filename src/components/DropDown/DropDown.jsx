@@ -45,7 +45,7 @@ export const DropDown = () => {
 
                         <hr color='#eee'/>
                         <li className='li-style-drop'>
-                            <Link className='a-style-dropp' to="password" > Configuracion </Link>
+                            <Link className='a-style-dropp' to="/password" > Configuracion </Link>
                         </li>
                             
                         <hr color='#eee'/>

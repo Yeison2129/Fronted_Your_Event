@@ -134,6 +134,7 @@
 .cards-info {
   padding: 20px;
   position: absolute;
+  width: 100%;
   bottom: 0;
   color: #fff;
   transform: translateY(60%);
@@ -142,6 +143,7 @@
 .cards-info p {
   opacity: 0;
   height: 220px;
+  width: 100%;
   font-size: 12px;
   text-shadow: black 0 10px 13px;
   transition: 0.4s 0.4s cubic-bezier(0.211, 0.51, 0.300, 1);
