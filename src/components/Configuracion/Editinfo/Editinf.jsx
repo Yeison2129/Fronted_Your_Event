@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Formik, Form, Field } from "formik";
 import "./editinfo.css";
 import { Dashc } from "../Dashconfig/Dashc";
@@ -6,7 +6,7 @@ import { Footdash } from "../../dashboard_empresa/Footdash";
 import userIcon from "../../../assets/userIcon.svg";
 import Swal from "sweetalert2";
 import { updateUser } from "../../../api/App";
-import { getUser } from '../../api/App'
+import { getUser } from '../../../api/App'
 
 export const Editinfo = () => {
 
@@ -15,25 +15,29 @@ export const Editinfo = () => {
 
   const user = async () => {
     const response = await getUser()
-    setAllUser(response.data.data.map(user => ({ ...user })))
+    console.log(response.data.rows);
+    setAllUser(response.data.rows)
   }
 
-  useEffect(() => {
-    console.log(allUser);
+  useEffect(() => { 
     user()
   }, [])
 
+
+
+  
   return (
     <>
       {user ? (
         <>
+        {allUser.map((user) => (
         <Formik 
           initialValues={{
-            document_user:"",
-            nom_user:"",
-            mail_user:"",
-            password_user:"",
-            phone_user:""
+            document_user: `${user.document_user}`,
+            nom_user: `${user.nom_user}`,
+            mail_user: `${user.mail_user}`,
+            password_user: `${user.password_user}`,
+            phone_user: `${user.phone_user}`,
           }}
           onSubmit={async(values)=>{
             try {
@@ -76,7 +80,7 @@ export const Editinfo = () => {
           }}
           >
           {({ handleChange, handleSubmit }) => (
-            <div className="">
+            <div className="edit-info-all">
               <Dashc />
               <div className="edit-info">
                 <div className="content-editi">
@@ -93,7 +97,7 @@ export const Editinfo = () => {
                         type="text"
                         className="styles-dashi"
                         placeholder={
-                          user.charAt(0).toUpperCase() + user.slice(1)
+                          user.nom_user
                         }
                         onChange={handleChange}
                       />
@@ -108,7 +112,7 @@ export const Editinfo = () => {
                         type="text"
                         className="styles-dashi"
                         placeholder={
-                          documento.charAt(0).toUpperCase() + documento.slice(1)
+                          user.document_user
                         }
                         onChange={handleChange}
                       />
@@ -123,7 +127,7 @@ export const Editinfo = () => {
                         type="text"
                         className="styles-dashi"
                         placeholder={
-                          telefono.charAt(0).toUpperCase() + telefono.slice(1)
+                          user.phone_user
                         }
                         onChange={handleChange}
                       />
@@ -137,7 +141,7 @@ export const Editinfo = () => {
                         name="mail_user"
                         type="text"
                         className="styles-dashi"
-                        placeholder={email.slice()}
+                        placeholder={user.mail_user}
                         onChange={handleChange}
                       />
                       <div id="icon-pencil">
@@ -156,6 +160,7 @@ export const Editinfo = () => {
           )}
           
           </Formik>
+      ))}
         </>
       ) : null}
     </>
