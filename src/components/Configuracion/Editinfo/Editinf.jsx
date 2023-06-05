@@ -15,7 +15,7 @@ export const Editinfo = () => {
 
   const user = async () => {
     const response = await getUser()
-    console.log(response.data.rows);
+    console.log(response.data.rows[0].img_perfil);
     setAllUser(response.data.rows)
   }
 
@@ -87,7 +87,12 @@ export const Editinfo = () => {
                   <Form className="info-dash" action="" onSubmit={handleSubmit}>
                     <div className="imgUpdate">
                       <label className="selec-cert" htmlFor="">
-                        <img src={userIcon} alt="" />
+                    
+                      <div id="icon-pencil">
+                      <i class="fa fa-solid fa-pen"></i>
+                      </div>
+                        <img  src={user.img_perfil} alt=""  />
+                  
                       </label>
                     </div>
                     <label className="label-info">
