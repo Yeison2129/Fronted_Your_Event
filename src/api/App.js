@@ -82,8 +82,8 @@ export const createEvent = async (registerEvent) => {
     formData.append('description_event', registerEvent.description_event)
     formData.append('fecha', registerEvent.fecha)
     formData.append('hora', registerEvent.hora)
-    formData.append('lugar_latitud', registerEvent.lugar_latitud)
-    formData.append('lugar_longitud', registerEvent.lugar_longitud)
+    formData.append('municipio', registerEvent.municipio)
+    formData.append('direccion', registerEvent.direccion)
     formData.append('precio_entrada', registerEvent.precio_entrada)
     const events = await axios.post(`http://localhost:4000/registerEvent/${id_empresa}`, formData, {
         headers: {
@@ -102,10 +102,17 @@ export const createEvent = async (registerEvent) => {
 
 
 
-//Admin
+//Admin o Company
 export const getEvents = async () =>
     await axios.get(`http://localhost:4000/getEvents`)
 
+export const getEventsCompany = async ()=>
+    await axios.get(`http://localhost:4000/DeleteEventAdmin/${id_empresa}`,{
+        headers:{
+            token_company:token_company
+        }
+    })
+        
 export const deleteAdminAsist = async (id) =>
     await axios.delete(`http://localhost:4000/DeleteEventAdmin/${id}`, {
         headers: {

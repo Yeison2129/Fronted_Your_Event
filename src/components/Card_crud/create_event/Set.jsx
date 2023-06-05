@@ -26,9 +26,6 @@ export const Set = ({closeModal}) => {
           <Field id="placeholder" type="double" name='precio_evento' placeholder="Precio"/>
           <Field id="placeholder" className="select-crud" name="" as="select">
             <option value="categoria">categoria...</option>
-            <option value="admin">admin</option>
-            <option value="user">user</option>
-            <option value="empresa">empresa</option>
           </Field>
 
         </Form>

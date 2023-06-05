@@ -5,24 +5,8 @@ import "./crud_eventos.css";
 import { Link } from "react-router-dom";
 import { createEvent } from "../../api/App";
 import { Dashboard } from "../dashboard_empresa/Dashboard_Empresa";
-import MapCrud, { EnvioLatLng } from "../Mapa/MapaCrud/MapCrud";
-
 
 const Crud_eventos = () => {
-  const { markerPosition, setMarkerPosition, setValues } = useContext(EnvioLatLng);
-
-
-
-  useEffect(() => {
-    setValues((prevValues) => ({
-      ...prevValues,
-      lugar_latitud: markerPosition[0],
-      lugar_longitud: markerPosition[1],
-    }));
-  }, [markerPosition, setValues]);
-
-  console.log("Latitud", markerPosition[0]);
-  console.log("longitud", markerPosition[1]);
   return (
     <>
       <Formik
@@ -33,10 +17,9 @@ const Crud_eventos = () => {
           description_event: "",
           fecha: "",
           hora: "",
-          lugar_latitud: markerPosition[0],
-          lugar_longitud: markerPosition[1],
-          precio_entrada: ""
-
+          municipio:"",
+          direccion:"",
+          precio_entrada: "",
         }}
         onSubmit={async (values) => {
           try {
@@ -52,7 +35,7 @@ const Crud_eventos = () => {
               });
               const timeout = () => {
                 setTimeout(function () {
-                  window.location.href = "/cardCrud"
+                  window.location.href = "/cardCrud";
                 }, 2000);
               };
               timeout();
@@ -63,7 +46,7 @@ const Crud_eventos = () => {
                 text: "Intenta mas tarde",
                 icon: "warning",
                 boton: "Ok",
-                time: 1500
+                time: 1500,
               });
             }
             if (events.data.data == "ERROR_404") {
@@ -71,12 +54,10 @@ const Crud_eventos = () => {
                 title: "Error interno del servidor",
                 icon: "warning",
                 boton: "ok",
-                time: 1500
-              })
+                time: 1500,
+              });
             }
-          } catch (error) {
-
-          }
+          } catch (error) {}
         }}
       >
         {({ handleChange, setFieldValue, handleSubmit }) => (
@@ -91,7 +72,6 @@ const Crud_eventos = () => {
 
                 <div className="components-crud">
                   <Form onSubmit={handleSubmit} className="form-crud">
-
                     <Field
                       id="nom_event"
                       type="text"
@@ -113,7 +93,8 @@ const Crud_eventos = () => {
                       type="time"
                       name="hora"
                       required
-                      onChange={handleChange} />
+                      onChange={handleChange}
+                    />
                     <Field
                       id="precio_entrada"
                       type="double"
@@ -132,9 +113,20 @@ const Crud_eventos = () => {
                       onChange={handleChange}
                     >
                       <option value="">Selecciona tu categoria</option>
-                      <option value="admin">admin</option>
-                      <option value="user">user</option>
-                      <option value="empresa">empresa</option>
+                      <option value="Seminarios">Seminarios</option>
+                      <option value="Talleres">Talleres</option>
+                      <option value="Convenciones">Convenciones</option>
+                      <option value="Exposiciones">Exposiciones</option>
+                      <option value="Ferias comerciales">Ferias comerciales</option>
+                      <option value="Eventos deportivos">Deportivos</option>
+                      <option value="Conciertos">Conciertos</option>
+                      <option value="Festivales">Festivales</option>
+                      <option value="Caridad">Caridad </option>
+                      <option value="Moda">Moda</option>
+                      <option value="Culturales">Culturales</option>
+                      <option value="Gastronómicos">Gastronómicos</option>
+                      <option value="Tecnológicos">Tecnológicos</option>
+                      <option value="Arte">Arte</option>
                     </Field>
                     <Field
                       id="description_event"
@@ -142,6 +134,37 @@ const Crud_eventos = () => {
                       name="description_event"
                       placeholder="Descripcion"
                       className="description-event"
+                      required
+                      onChange={handleChange}
+                    />
+                     <Field
+                      id="municipio"
+                      className="select-crud"
+                      type="text"
+                      name="municipio"
+                      as="select"
+                      required
+                      onChange={handleChange}
+                    >
+                      <option value="">Selecciona tu Municipio</option>
+                      <option value="Filandia">Filandia</option>
+                      <option value="Salento">Salento</option>
+                      <option value="Circasia">Circasia</option>
+                      <option value="Quimbaya">Quimbaya</option>
+                      <option value="Montenegro">Montenegro</option>
+                      <option value="Armenia">Armenia</option>
+                      <option value="Calarcá">Calarcá</option>
+                      <option value="Tebaida">Tebaida</option>
+                      <option value="Cordoba">Cordoba</option>
+                      <option value="Buenavista">Buenavista</option>
+                      <option value="Pijao">Pijao</option>
+                      <option value="Genova">Genova</option>
+                    </Field>                      
+                      <Field
+                      id="direccion"
+                      type="text"
+                      name="direccion"
+                      placeholder="Direccion"
                       required
                       onChange={handleChange}
                     />
@@ -160,8 +183,6 @@ const Crud_eventos = () => {
                       </label>
                     </div>
 
-
-
                     <div className="end">
                       {/* <div className="content-end"> */}
                       <div className="botones-crud">
@@ -169,20 +190,21 @@ const Crud_eventos = () => {
                           className="btn-crud"
                           type="submit"
                           value="Limpiar"
-                          id="btn-cancel" />
+                          id="btn-cancel"
+                        />
 
                         <Field
                           className="btn-crud"
                           type="submit"
                           id="btn-accept"
-                          value="Crear" />
+                          value="Crear"
+                        />
 
                         {/* </div> */}
                       </div>
                     </div>
                   </Form>
                 </div>
-
               </div>
             </div>
           </div>
@@ -192,4 +214,4 @@ const Crud_eventos = () => {
   );
 };
 
-export default Crud_eventos
+export default Crud_eventos;
