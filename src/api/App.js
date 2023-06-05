@@ -5,6 +5,7 @@ let token_company = localStorage.getItem("token_company")
 let email = localStorage.getItem("email")
 let id_user = localStorage.getItem("id_user")
 let id_empresa = localStorage.getItem("id_empresa")
+let id_empresa1 = localStorage.getItem("id_empresa")
 
 //Users
 export const registerUser = async (newUser) =>
@@ -85,7 +86,7 @@ export const createEvent = async (registerEvent) => {
     formData.append('municipio', registerEvent.municipio)
     formData.append('direccion', registerEvent.direccion)
     formData.append('precio_entrada', registerEvent.precio_entrada)
-    const events = await axios.post(`http://localhost:4000/registerEvent/${id_empresa}`, formData, {
+    const events = await axios.post(`http://localhost:4000/registerEvent/${id_empresa1}`, formData, {
         headers: {
             token_company: token_company,
             'Content-Type': 'multipart/form-data'
@@ -107,7 +108,7 @@ export const getEvents = async () =>
     await axios.get(`http://localhost:4000/getEvents`)
 
 export const getEventsCompany = async ()=>
-    await axios.get(`http://localhost:4000/DeleteEventAdmin/${id_empresa}`,{
+    await axios.get(`http://localhost:4000/getEventsCompany/${id_empresa}`,{
         headers:{
             token_company:token_company
         }
