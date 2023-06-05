@@ -1,9 +1,14 @@
-import React from "react";
+
+import React, { useState } from "react";
 import "./dashc.css";
 import { Link } from "react-router-dom";
 
 
 export const Dashc = () => {
+  const [asideVisible, setAsideVisible] = useState(true);
+
+  const toggleAside = () => {
+    setAsideVisible(!asideVisible);}
   return (
       
     <div className="dash-config">
