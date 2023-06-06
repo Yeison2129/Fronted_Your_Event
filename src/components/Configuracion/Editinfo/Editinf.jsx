@@ -19,29 +19,29 @@ export const Editinfo = () => {
     setAllUser(response.data.rows)
   }
 
-  useEffect(() => { 
+  useEffect(() => {
     user()
   }, [])
 
 
 
-  
+
   return (
     <>
       {user ? (
         <>
-        {allUser.map((user) => (
-        <Formik 
-          initialValues={{
-            document_user: `${user.document_user}`,
-            nom_user: `${user.nom_user}`,
-            mail_user: `${user.mail_user}`,
-            password_user: `${user.password_user}`,
-            phone_user: `${user.phone_user}`,
-          }}
-          onSubmit={async(values)=>{
-            try {
-              const users = await updateUser(values)
+          {allUser.map((user) => (
+            <Formik
+              initialValues={{
+                document_user: `${user.document_user}`,
+                nom_user: `${user.nom_user}`,
+                mail_user: `${user.mail_user}`,
+                password_user: `${user.password_user}`,
+                phone_user: `${user.phone_user}`,
+              }}
+              onSubmit={async (values) => {
+                try {
+                  const users = await updateUser(values)
 
               if(users.data.data == "Cambio_Exitoso"){
                 Swal.fire({
@@ -87,12 +87,7 @@ export const Editinfo = () => {
                   <Form className="info-dash" action="" onSubmit={handleSubmit}>
                     <div className="imgUpdate">
                       <label className="selec-cert" htmlFor="">
-                    
-                      <div id="icon-pencil">
-                      <i class="fa fa-solid fa-pen"></i>
-                      </div>
-                        <img  src={user.img_perfil} alt=""  />
-                  
+                        <img src={userIcon} alt="" />
                       </label>
                     </div>
                     <label className="label-info">
