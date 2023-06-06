@@ -9,8 +9,12 @@
 }
 
 #h1-cardEvent{
-    margin: 20px 30px;
-    font-family: montserrat;
+    position: relative;
+    left: 220px;
+    padding: 10px 40px;
+    width: 25%;
+    height: 10vh ;
+    justify-content: center;
 
 }
 #h1-cardEvent hr{
@@ -46,11 +50,16 @@
     position: absolute;
   }
 .imagen-card{
-    background-image: url('../../../assets/code.jpg');
+    
+    width: 100%;
     height: 60%;    
     background-size: cover;
     background-repeat: no-repeat;
 
+}
+.imagen-card img{
+    width: 100%;
+    height: 100%;
 }
 .icon-card{
     display: flex;
@@ -78,3 +87,12 @@
     height: 4rem;
     opacity: 0.6;
 }
+
+.events-card-all {
+    position: relative;
+    left: 220px;
+    padding: 10px 40px;
+    width: 80%;
+    height: 40vh ;
+    justify-content: center;
+  }

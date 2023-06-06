@@ -15,33 +15,33 @@ export const Editinfo = () => {
 
   const user = async () => {
     const response = await getUser()
-    console.log(response.data.rows);
+    console.log(response.data.rows[0].img_perfil);
     setAllUser(response.data.rows)
   }
 
-  useEffect(() => { 
+  useEffect(() => {
     user()
   }, [])
 
 
 
-  
+
   return (
     <>
       {user ? (
         <>
-        {allUser.map((user) => (
-        <Formik 
-          initialValues={{
-            document_user: `${user.document_user}`,
-            nom_user: `${user.nom_user}`,
-            mail_user: `${user.mail_user}`,
-            password_user: `${user.password_user}`,
-            phone_user: `${user.phone_user}`,
-          }}
-          onSubmit={async(values)=>{
-            try {
-              const users = await updateUser(values)
+          {allUser.map((user) => (
+            <Formik
+              initialValues={{
+                document_user: `${user.document_user}`,
+                nom_user: `${user.nom_user}`,
+                mail_user: `${user.mail_user}`,
+                password_user: `${user.password_user}`,
+                phone_user: `${user.phone_user}`,
+              }}
+              onSubmit={async (values) => {
+                try {
+                  const users = await updateUser(values)
 
               if(users.data.data == "Cambio_Exitoso"){
                 Swal.fire({
