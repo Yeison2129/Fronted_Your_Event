@@ -22,12 +22,28 @@ export const update = async (update) =>
         }
     })
 
-export const updateUser = async (updateUser) =>
-    await axios.put(`http://localhost:4000/updateUser/${id_user}`, updateUser, {
-        headers: {
-            token: token
-        }
-    });
+export const updateUser = async (updateUser) =>{
+    const formData = new FormData();
+    formData.append('document_user', updateUser.document_user);
+    formData.append('nom_user', updateUser.nom_user);
+    formData.append('telefono_empresa', updateUser.phone_user);
+    formData.append('mail_user',updateUser.mail_user)
+    formData.append('password_empresa', updateUser.password_user);
+    formData.append('image', updateUser.img_perfil);
+    try {
+        const response = await axios.put(`http://localhost:4000/updateUser/${id_user}`, formData, {
+            headers: {
+                token: token,
+                'Content-Type': 'multipart/form-data',
+            }
+        }); 
+        return response.data   
+    } catch (error) {
+        
+    }
+    
+}
+    
 
 
 //Recuperation_Password_User
