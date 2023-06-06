@@ -5,40 +5,51 @@ import { Dashc } from "../Dashconfig/Dashc";
 import { Footdash } from "../../dashboard_empresa/Footdash";
 import userIcon from "../../../assets/userIcon.svg";
 import Swal from "sweetalert2";
-import { updateUser } from "../../../api/App";
+import { getCompany, updateUser } from "../../../api/App";
 import { getUser } from '../../../api/App'
 
 export const Editinfo = () => {
 
+  let user = localStorage.getItem("user");
+  let company = localStorage.getItem("company");
+
   const [allUser, setAllUser] = useState([])
+  const [allCompany,setAllCompany]=useState([])
 
-
-  const user = async () => {
+  const user1 = async () => {
     const response = await getUser()
-    console.log(response.data.rows[0].img_perfil);
     setAllUser(response.data.rows)
   }
 
+  const company1 = async ()=>{
+    const response = await getCompany()
+    setAllCompany(response.data.rows)
+  }
+
   useEffect(() => {
-    user()
+    user1()
   }, [])
+
+  useEffect(()=>{
+    company1()
+  })
 
 
 
 
   return (
     <>
-      {user ? (
+      { user ? (
         <>
-          {allUser.map((user) => (
+          {allUser.map((user1) => (
             <Formik
               initialValues={{
-                document_user: `${user.document_user}`,
-                nom_user: `${user.nom_user}`,
-                mail_user: `${user.mail_user}`,
-                password_user: `${user.password_user}`,
-                phone_user: `${user.phone_user}`,
-                img_perfil:`${user.img_perfil}`
+                document_user: `${user1.document_user}`,
+                nom_user: `${user1.nom_user}`,
+                mail_user: `${user1.mail_user}`,
+                password_user: `${user1.password_user}`,
+                phone_user: `${user1.phone_user}`,
+                img_perfil:`${user1.img_perfil}`
               }}
               onSubmit={async (values) => {
                 try {
@@ -91,6 +102,11 @@ export const Editinfo = () => {
                      
                       <div className="img-crud  ">
                       <label className="selec-cert" htmlFor="">
+                      <div id="icon-pencil">
+                        <i class="fa fa-solid fa-pen" onClick={()=>{
+                          document.getElementById('image').click()
+                        }}></i>
+                      </div>
                         <input
                           type="file"
                           id="image"
@@ -99,11 +115,12 @@ export const Editinfo = () => {
                             const file = event.currentTarget.files[0];
                             setFieldValue("img_perfil", file);
                           }}
+                          style={{display:'none'}}
                         />
                       </label>
                     </div>
                         
-                        <img src={user.img_perfil} alt="" />
+                        <img src={user1.img_perfil} alt="" />
                       </label>
                     </div>
                     <label className="label-info">
@@ -113,7 +130,7 @@ export const Editinfo = () => {
                         type="text"
                         className="styles-dashi"
                         placeholder={
-                          user.nom_user
+                          user1.nom_user
                         }
                         onChange={handleChange}
                       />
@@ -128,7 +145,7 @@ export const Editinfo = () => {
                         type="text"
                         className="styles-dashi"
                         placeholder={
-                          user.document_user
+                          user1.document_user
                         }
                         onChange={handleChange}
                       />
@@ -143,7 +160,7 @@ export const Editinfo = () => {
                         type="text"
                         className="styles-dashi"
                         placeholder={
-                          user.phone_user
+                          user1.phone_user
                         }
                         onChange={handleChange}
                       />
@@ -157,7 +174,7 @@ export const Editinfo = () => {
                         name="mail_user"
                         type="text"
                         className="styles-dashi"
-                        placeholder={user.mail_user}
+                        placeholder={user1.mail_user}
                         onChange={handleChange}
                       />
                       <div id="icon-pencil">
@@ -180,15 +197,13 @@ export const Editinfo = () => {
         </>
       ) : company ? (
         <>
-        {allUser.map((user) => (
+        {allCompany.map((company1) => (
           <Formik
             initialValues={{
-              document_user: `${user.document_user}`,
-              nom_user: `${user.nom_user}`,
-              mail_user: `${user.mail_user}`,
-              password_user: `${user.password_user}`,
-              phone_user: `${user.phone_user}`,
-              img_perfil:`${user.img_perfil}`
+              nom_empresa: `${company1.nom_empresa}`,
+              mail_empresa: `${company1.mail_empresa}`,
+              telefono_empresa: `${company1.telefono_empresa}`,
+              img_empresa:`${company1.img_empresa}`
             }}
             onSubmit={async (values) => {
               try {
@@ -244,26 +259,25 @@ export const Editinfo = () => {
                       <input
                         type="file"
                         id="image"
-                        name="img_perfil"
+                        name="img_empresa"
                         onChange={(event) => {
                           const file = event.currentTarget.files[0];
-                          setFieldValue("img_perfil", file);
+                          setFieldValue("img_empresa", file);
                         }}
                       />
                     </label>
                   </div>
-                      
-                      <img src={user.img_perfil} alt="" />
+                      <img src={company1.img_empresa} alt="" />
                     </label>
                   </div>
                   <label className="label-info">
                     <Field
-                      id="nom_user"
-                      name="nom_user"
+                      id="nom_empresa"
+                      name="nom_empresa"
                       type="text"
                       className="styles-dashi"
                       placeholder={
-                        user.nom_user
+                        company1.nom_empresa
                       }
                       onChange={handleChange}
                     />
@@ -273,12 +287,12 @@ export const Editinfo = () => {
                   </label>
                   <label className="label-info">
                     <Field
-                      id="document_user"
-                      name="document_user"
+                      id="mail_empresa"
+                      name="mail_empresa"
                       type="text"
                       className="styles-dashi"
                       placeholder={
-                        user.document_user
+                        company1.mail_empresa
                       }
                       onChange={handleChange}
                     />
@@ -288,30 +302,17 @@ export const Editinfo = () => {
                   </label>
                   <label className="label-info">
                     <Field
-                      id="phone_user"
-                      name="phone_user"
+                      id="telefono_empresa"
+                      name="telefono_empresa"
                       type="text"
                       className="styles-dashi"
                       placeholder={
-                        user.phone_user
+                        company1  .telefono_empresa
                       }
                       onChange={handleChange}
                     />
                     <div id="icon-pencil">
                       <i class="fa fa-solid fa-pen"></i>
-                    </div>
-                  </label>
-                  <label className="label-info">
-                    <Field
-                      id="mail_user"
-                      name="mail_user"
-                      type="text"
-                      className="styles-dashi"
-                      placeholder={user.mail_user}
-                      onChange={handleChange}
-                    />
-                    <div id="icon-pencil">
-                      <i class="fa fa-solid fa-envelope"></i>
                     </div>
                   </label>
                   <button type="submit" className="btn-updatei">
