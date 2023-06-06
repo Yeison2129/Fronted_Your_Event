@@ -27,10 +27,10 @@ export const Card_crud = () => {
       <Dashboard />
       
       <h1 id='h1-cardEvent'>Tus eventos<hr /> </h1>
+      <section className="events-card-all">
           {allEventsCompany.map((eventEmpresa) => (
 
              
-            <section className="events-card-all">
 
               <div className='component-card'>
 
@@ -57,12 +57,12 @@ export const Card_crud = () => {
                 <div className="shadow">
                   <p>{eventEmpresa.nom_event}</p>
                 </div>
-              </div>
 
               {open && <Set closeModal={setOpen} />}
+              </div>
 
-            </section>
-          ))}
+              ))}
+              </section>
         </>
   );
 };
