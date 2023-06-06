@@ -11,7 +11,6 @@
 
 }
 .aside-config{
-    width: 18%;
     display:flex;
     display: block;
     background-color: #ebebebe6;
@@ -24,6 +23,7 @@ justify-content:space-around;
 flex-direction:column;
 height: 60%;
 padding:13px 0px 66px 0px;
+
 }
 .aside-config li{
 padding:10px 27px ;
@@ -80,6 +80,14 @@ color: rgb(232, 232, 232);
 .aside-config.hidden {
     display: none;
   }
+
+.toggle-button{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+}
 @media (max-width: 870px) {
     .aside-config{
         width: 45%;
@@ -90,5 +98,6 @@ color: rgb(232, 232, 232);
     .contain{
         background: none;
     }
+    
 
 }
