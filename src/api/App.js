@@ -139,3 +139,6 @@ export const deleteAdminAsist = async (id) =>
 
 export const getUser = async () =>
     await axios.get(`http://localhost:4000/getUser/${id_user}`)
+
+export const getCompany = async()=>
+    await axios.get(`http://localhost:4000/getCompany/${id_empresa}`)
