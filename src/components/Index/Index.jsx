@@ -31,7 +31,7 @@ import "swiper/css/scrollbar";
 
 export const Index = () => {
   let user = localStorage.getItem("user");
-  let company = window.localStorage.getItem("company");
+  let company = localStorage.getItem("company");
   let [isContainerActive, setIsContainerActive] = useState(false);
   let [imagenPopup, setImagenPopup] = useState("");
   let [textPopup, setTextPopup] = useState("");
@@ -40,6 +40,11 @@ export const Index = () => {
     if (user) {
       localStorage.removeItem("user");
       localStorage.removeItem("auth");
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 0.5);
+    } else if (company) {
+      localStorage.removeItem("company");
       setTimeout(() => {
         window.location.href = "/";
       }, 0.5);
@@ -119,180 +124,240 @@ export const Index = () => {
             Donde la magia de los eventos <br></br>cobra vida cobra vida en el Quindio 
           </h2>
         </section>
-        <div className="wave" style={{ height: "150px", overflow: "hidden" }}>
-          <svg
-            viewBox="0 0 500 150"
-            preserveAspectRatio="none"
-            style={{
-              height: "100%",
-              width: "100%",
-            }}
-          >
-            <path
-              d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-              style={{ stroke: "none", fill: "#fff" }}
-            ></path>
-          </svg>
-        </div>
+            <div className="wave" style={{ height: "150px", overflow: "hidden" }}>
+              <svg
+                viewBox="0 0 500 150"
+                preserveAspectRatio="none"
+                style={{
+                  height: "100%",
+                  width: "100%",
+                }}
+              >
+                <path
+                  d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                  style={{ stroke: "none", fill: "#fff" }}
+                ></path>
+              </svg>
+            </div>
       </header>
       <main>
-        
-          <section className="categorias" id="categorias">
-          <div className="titulo_bar">
+            <section className="categorias" id="categorias">
+            <div className="titulo_bar">
+              <h2 className="h2-title">
+                {" "}
+                Eventos <hr />
+              </h2>
+              <div class="bar-nav">
+                
+              </div>
+            </div>{" "}
+            <CardView />
+          </section>
+            <section className="statas">
+              <h2 className="h2-title"> Estadisticas</h2>
+              <div className=" estadist">
+                <div className="grafico">
+                  <Stats />
+                </div>
+                <div className="map">
+                  <MapView />
+                </div>
+              </div>
+            </section>
+          </main>
+
+      {user || company ? ( 
+        <>
+          <section className="slider" id="slider">
             <h2 className="h2-title">
-              {" "}
-              Categorías <hr />
+              Eventos Destacados <hr></hr>
             </h2>
-            <div class="bar-nav">
-              <input
-                type="text"
-                className="input-nav"
-                placeholder="Buscar..."
+
+            <div className="swiper-container home-slider">
+              <div className="swiper-wrapper">
+                <Swiper
+                  modules={[A11y, Autoplay]}
+                  effect={"coverflow"}
+                  grabCursor={true}
+                  centeredSlides={true}
+                  slidesPerView={1}
+                  coverflowEffect={{
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 2,
+                    slideShadows: true,
+                  }}
+                  spaceBetween={0}
+                  loop={true}
+                  breakpoints={{
+                    100: {
+                      slidesPerView: 1,
+                    },
+                    700: {
+                      slidesPerView: 2,
+                    },
+                    1050: {
+                      slidesPerView: 3,
+                    },
+                  }}
+                  autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                  }}
+                >
+                  <SwiperSlide className="swiper-slide">
+                    <img src={logoUno} alt="" width="400px" />
+                  </SwiperSlide>
+                  <SwiperSlide className="swiper-slide">
+                    <img src={logoDos} alt="" width="400px" />
+                  </SwiperSlide>
+                  <SwiperSlide className="swiper-slide">
+                    <img src={logoTres} alt="" width="400px" />
+                  </SwiperSlide>
+                  <SwiperSlide className="swiper-slide">
+                    <img src={logoCuatro} alt="" width="400px" />
+                  </SwiperSlide>
+                  <SwiperSlide className="swiper-slide">
+                    <img src={logoCinco} alt="" width="400px" />
+                  </SwiperSlide>
+                  <SwiperSlide className="swiper-slide">
+                    <img src={logoSeis} alt="" width="400px" />
+                  </SwiperSlide>
+                </Swiper>
+              </div>
+            </div>
+          </section>
+
+          <br />
+        </>
+      ):(
+      <>
+         <section>
+            <div className="content-link-register">
+              <Link to="/RegistroEmpresa" id="log">
+                SI TIENES UN EMPRENDIMIENTO, INGRESA AQUÍ! <hr></hr>
+              </Link>
+            </div>
+          </section>
+          <section className="slider" id="slider">
+            <h2 className="h2-title">
+              Eventos Destacados <hr></hr>
+            </h2>
+
+            <div className="swiper-container home-slider">
+              <div className="swiper-wrapper">
+                <Swiper
+                  modules={[A11y, Autoplay]}
+                  effect={"coverflow"}
+                  grabCursor={true}
+                  centeredSlides={true}
+                  slidesPerView={1}
+                  coverflowEffect={{
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 2,
+                    slideShadows: true,
+                  }}
+                  spaceBetween={0}
+                  loop={true}
+                  breakpoints={{
+                    100: {
+                      slidesPerView: 1,
+                    },
+                    700: {
+                      slidesPerView: 2,
+                    },
+                    1050: {
+                      slidesPerView: 3,
+                    },
+                  }}
+                  autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                  }}
+                >
+                  <SwiperSlide className="swiper-slide">
+                    <img src={logoUno} alt="" width="400px" />
+                  </SwiperSlide>
+                  <SwiperSlide className="swiper-slide">
+                    <img src={logoDos} alt="" width="400px" />
+                  </SwiperSlide>
+                  <SwiperSlide className="swiper-slide">
+                    <img src={logoTres} alt="" width="400px" />
+                  </SwiperSlide>
+                  <SwiperSlide className="swiper-slide">
+                    <img src={logoCuatro} alt="" width="400px" />
+                  </SwiperSlide>
+                  <SwiperSlide className="swiper-slide">
+                    <img src={logoCinco} alt="" width="400px" />
+                  </SwiperSlide>
+                  <SwiperSlide className="swiper-slide">
+                    <img src={logoSeis} alt="" width="400px" />
+                  </SwiperSlide>
+                </Swiper>
+              </div>
+            </div>
+          </section>
+
+          <br />
+          <section className="contenedor sobre-nosotros">
+            <h2 className="titulo">
+              Nuestro Producto <hr />
+            </h2>
+            <div className="contenedor-sobre-nosotros">
+              <img
+                src="https://res.cloudinary.com/dlfn93ikw/image/upload/v1685017660/YourEvent/homePage_pwgqcc.png"
+                alt=""
+                className="imagen-about-us"
               />
-              <img id="search-icon" src="https://res.cloudinary.com/dlfn93ikw/image/upload/v1685017828/YourEvent/search11_bk6yp9.png" />
+              <div className="contenido-textos">
+                <h3>
+                  <span>1</span>Vive una nueva experiencia!
+                </h3>
+                <p>
+                  YourEvent es una innovadora aplicación web diseñada para
+                  simplificar la creación y búsqueda de eventos en la hermosa región
+                  del Quindío. esta plataforma ofrece a los usuarios una forma
+                  conveniente de descubrir y participar en diversos eventos que
+                  tienen lugar en la zona.
+                </p>
+
+                <h3>
+                  <span>2</span>Conoce mejor
+                </h3>
+                <p>
+                  Al utilizar YourEvent, los organizadores de eventos también se
+                  benefician de una herramienta poderosa para promover sus
+                  actividades. Con solo unos pocos clics, pueden crear y
+                  personalizar anuncios detallados de sus eventos, que se mostrarán
+                  en la aplicación para que los usuarios interesados puedan
+                  encontrarlos fácilmente.
+                </p>
+
+                <h3>
+                  <span>3</span>Explora y dejate llevar
+                </h3>
+                <p>
+                  Ya sea que seas un amante de la cultura, un ávido asistente a
+                  conciertos o simplemente busques actividades emocionantes en el
+                  Quindío.
+                </p>
+
+                <h3>
+                  <span>4</span>Recuerda siempre estaremos contigo
+                </h3>
+                <p>
+                  YourEvent es tu compañero ideal. Descubre la diversidad de eventos
+                  disponibles, organiza tus propias actividades y forma parte de una
+                  comunidad en crecimiento que celebra y disfruta de todo lo que
+                  esta hermosa región tiene para ofrecer.
+                </p>
+              </div>
             </div>
-          </div>{" "}
-          <CardView />
-        </section>
-
-        <section className="statas">
-          <h2 className="h2-title"> Estadisticas</h2>
-          <div className=" estadist">
-            <div className="grafico">
-              <Stats />
-            </div>
-            <div className="map">
-              <MapView />
-            </div>
-          </div>
-        </section>
-
-      
-      </main>
-      <section>
-        <div className="content-link-register">
-          <Link to="/RegistroEmpresa" id="log">
-            SI TIENES UN EMPRENDIMIENTO, INGRESA AQUÍ! <hr></hr>
-          </Link>
-        </div>
-      </section>
-      <section className="slider" id="slider">
-        <h2 className="h2-title">
-          Eventos Destacados <hr></hr>
-        </h2>
-
-        <div className="swiper-container home-slider">
-          <div className="swiper-wrapper">
-            <Swiper
-              modules={[A11y, Autoplay]}
-              effect={"coverflow"}
-              grabCursor={true}
-              centeredSlides={true}
-              slidesPerView={1}
-              coverflowEffect={{
-                rotate: 0,
-                stretch: 0,
-                depth: 100,
-                modifier: 2,
-                slideShadows: true,
-              }}
-              spaceBetween={0}
-              loop={true}
-              breakpoints={{
-                100: {
-                  slidesPerView: 1,
-                },
-                700: {
-                  slidesPerView: 2,
-                },
-                1050: {
-                  slidesPerView: 3,
-                },
-              }}
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-              }}
-            >
-              <SwiperSlide className="swiper-slide">
-                <img src={logoUno} alt="" width="400px" />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <img src={logoDos} alt="" width="400px" />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <img src={logoTres} alt="" width="400px" />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <img src={logoCuatro} alt="" width="400px" />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <img src={logoCinco} alt="" width="400px" />
-              </SwiperSlide>
-              <SwiperSlide className="swiper-slide">
-                <img src={logoSeis} alt="" width="400px" />
-              </SwiperSlide>
-            </Swiper>
-          </div>
-        </div>
-      </section>
-
-      <br />
-      <section className="contenedor sobre-nosotros">
-        <h2 className="titulo">
-          Nuestro Producto <hr />
-        </h2>
-        <div className="contenedor-sobre-nosotros">
-          <img
-            src="https://res.cloudinary.com/dlfn93ikw/image/upload/v1685017660/YourEvent/homePage_pwgqcc.png"
-            alt=""
-            className="imagen-about-us"
-          />
-          <div className="contenido-textos">
-            <h3>
-              <span>1</span>Vive una nueva experiencia!
-            </h3>
-            <p>
-              YourEvent es una innovadora aplicación web diseñada para
-              simplificar la creación y búsqueda de eventos en la hermosa región
-              del Quindío. esta plataforma ofrece a los usuarios una forma
-              conveniente de descubrir y participar en diversos eventos que
-              tienen lugar en la zona.
-            </p>
-
-            <h3>
-              <span>2</span>Conoce mejor
-            </h3>
-            <p>
-              Al utilizar YourEvent, los organizadores de eventos también se
-              benefician de una herramienta poderosa para promover sus
-              actividades. Con solo unos pocos clics, pueden crear y
-              personalizar anuncios detallados de sus eventos, que se mostrarán
-              en la aplicación para que los usuarios interesados puedan
-              encontrarlos fácilmente.
-            </p>
-
-            <h3>
-              <span>3</span>Explora y dejate llevar
-            </h3>
-            <p>
-              Ya sea que seas un amante de la cultura, un ávido asistente a
-              conciertos o simplemente busques actividades emocionantes en el
-              Quindío.
-            </p>
-
-            <h3>
-              <span>4</span>Recuerda siempre estaremos contigo
-            </h3>
-            <p>
-              YourEvent es tu compañero ideal. Descubre la diversidad de eventos
-              disponibles, organiza tus propias actividades y forma parte de una
-              comunidad en crecimiento que celebra y disfruta de todo lo que
-              esta hermosa región tiene para ofrecer.
-            </p>
-          </div>
-        </div>
-      </section>
+          </section>  
+      </>)}
 
       <footer className="foo-index">
         <ContactUs />

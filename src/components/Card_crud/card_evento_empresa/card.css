@@ -93,6 +93,13 @@
     left: 220px;
     padding: 10px 40px;
     width: 80%;
-    height: 40vh ;
+    height: 50vh ;
     justify-content: center;
   }
+
+.cardedit {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+}

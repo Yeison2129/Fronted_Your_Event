@@ -1,10 +1,15 @@
 import React, { useEffect, useRef } from 'react'
 import './cardview.css'
 import { useState } from 'react'
+import swal from "sweetalert2";
 import { getEvents } from '../../api/App'
 
 export const CardView = () => {
 
+
+
+
+  
     const cardRef = useRef(null);
     const [width, setWidth] = useState(0);
     const [height, setHeight] = useState(0);
@@ -98,7 +103,7 @@ export const CardView = () => {
                 </div>
                 <div className="buttons">
                   <button className='reserv'>¡Reserva ya!</button>
-                  <button className='buy'>¡Compra ahora!</button>
+                  
                 </div>
               </div>
             </div>

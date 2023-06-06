@@ -87,7 +87,7 @@ export const Editinfo = () => {
                   <Form className="info-dash" action="" onSubmit={handleSubmit}>
                     <div className="imgUpdate">
                       <label className="selec-cert" htmlFor="">
-                        <img src={userIcon} alt="" />
+                        <img src={user.img_perfil || userIcon} alt="" />
                       </label>
                     </div>
                     <label className="label-info">
