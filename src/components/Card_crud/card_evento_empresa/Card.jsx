@@ -26,9 +26,10 @@ export const Card_crud = () => {
     <>
       <Dashboard />
       <h1 id='h1-cardEvent'>Tus eventos<hr /> </h1>
-      {allEventsCompany.map((eventEmpresa) => (
+      <section className="events-card-all">
+          {allEventsCompany.map((eventEmpresa) => (
 
-          <div className="cardedit">
+             
 
         <div className="events-card-all">
 
@@ -60,7 +61,7 @@ export const Card_crud = () => {
 
         </div>
           </div>
-      ))}
+      ))
     </>
   );
 };

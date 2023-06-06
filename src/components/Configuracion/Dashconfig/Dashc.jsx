@@ -1,13 +1,21 @@
-import React from "react";
+
+import React, { useState } from "react";
 import "./dashc.css";
 import { Link } from "react-router-dom";
 
 
 export const Dashc = () => {
+  const [asideVisible, setAsideVisible] = useState(true);
+
+  const toggleAside = () => {
+    setAsideVisible(!asideVisible);}
   return (
       
     <div className="dash-config">
-      <div className="aside-config">
+      <button className="toggle-button" onClick={toggleAside}>
+      <i className="fa fa-regular fa-sliders"/>
+      </button>
+      <div className={`aside-config ${asideVisible ? "" : "hidden"}`}>
         <div className="ti-dashconfig">
           <i className="fa fa-solid fa-gear fa-spin fa-2xl" />
           <h3>CONFIGURACIONES</h3>

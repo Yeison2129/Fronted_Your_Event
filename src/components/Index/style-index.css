@@ -6,7 +6,6 @@
 .contenedor {
     padding: 60px 0;
     width: 90%;
-    max-width: 1100px;
     margin: auto;
     overflow: hidden;
 }
@@ -154,7 +153,7 @@ main .sobre-nosotros{
 }
 .contenedor-sobre-nosotros{
     display: flex;
-    width: 87rem;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
 }
