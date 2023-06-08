@@ -33,7 +33,7 @@ export const Set = ({closeModal}) => {
       <div className="end-set">
         {/* <div className="content-end"> */}
         <Form action="" className="form-set">
-          <Field id="placeholder" type="text" placeholder="Descripcion" className="description" />
+          <Field id="placeholder" type="text" placeholder="Descripción" className="description" />
         </Form>
         <div className="botones-set">
           <button className='btn-set' id='btn-cancel'
