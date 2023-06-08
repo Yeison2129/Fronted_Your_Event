@@ -30,7 +30,7 @@
      font-family: montserrat;
      width: 13rem;
      border-radius: 20px;
-     position: absolute;
+     position: relative;
     border: 1px inset #fff;
      z-index: 1;
     }
@@ -93,7 +93,11 @@
     padding: 10px 40px;
     width: 80%;
     height: 50vh ;
-    justify-content: center;
+    display: grid;
+    gap: 20px;
+    flex-wrap: wrap;
+    grid-template-areas: "ca1 ca2 ca3 ca4 ca5";
+    justify-content: space-evenly;
   }
 
 .cardedit {

@@ -5,6 +5,9 @@
     border-radius: 20px;
     width:800px;
     height:66vh;
+    position: fixed;
+    top: 20%;
+    left: 28%;
     z-index: 1;
     float: left ;
     font-family: montserrat;
