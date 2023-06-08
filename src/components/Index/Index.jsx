@@ -147,14 +147,15 @@ export const Index = () => {
                 {" "}
                 Eventos <hr />
               </h2>
-              <div class="bar-nav">
-                
-              </div>
             </div>{" "}
             <CardView />
           </section>
             <section className="statas">
-              <h2 className="h2-title"> Estadisticas</h2>
+            <div className="titulo_bar">
+            <h2 className="h2-title"> Estadisticas
+            <hr />
+            </h2>
+            </div>
               <div className=" estadist">
                 <div className="grafico">
                   <Stats />
@@ -169,9 +170,11 @@ export const Index = () => {
       {user || company ? ( 
         <>
           <section className="slider" id="slider">
-            <h2 className="h2-title">
-              Eventos Destacados <hr></hr>
+          <div className="titulo_bar">
+            <h2 className="h2-title"> Eventos destacados
+            <hr />
             </h2>
+            </div>
 
             <div className="swiper-container home-slider">
               <div className="swiper-wrapper">
@@ -241,9 +244,11 @@ export const Index = () => {
             </div>
           </section>
           <section className="slider" id="slider">
-            <h2 className="h2-title">
-              Eventos Destacados <hr></hr>
+          <div className="titulo_bar">
+            <h2 className="h2-title"> Eventos destacados
+            <hr />
             </h2>
+            </div>
 
             <div className="swiper-container home-slider">
               <div className="swiper-wrapper">
@@ -303,9 +308,11 @@ export const Index = () => {
 
           <br />
           <section className="contenedor sobre-nosotros">
-            <h2 className="titulo">
-              Nuestro Producto <hr />
+          <div className="titulo_bar">
+            <h2 className="h2-title"> Nuestros productos
+            <hr />
             </h2>
+            </div>
             <div className="contenedor-sobre-nosotros">
               <img
                 src="https://res.cloudinary.com/dlfn93ikw/image/upload/v1685017660/YourEvent/homePage_pwgqcc.png"

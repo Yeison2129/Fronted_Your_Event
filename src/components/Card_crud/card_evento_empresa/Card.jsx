@@ -34,7 +34,7 @@ export const Card_crud = () => {
 
               <div className='component-card'>
 
-                <div className="fondo"></div>
+                <div className="fondo" style={{backgroundImage: `url(${eventEmpresa.img_event})`}}></div>
                 <div className="head-card">
                   <div className="icon-card">
                     <button >

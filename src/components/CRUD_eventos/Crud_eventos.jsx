@@ -112,7 +112,7 @@ const Crud_eventos = () => {
                       required
                       onChange={handleChange}
                     >
-                      <option value="">Selecciona tu categoria</option>
+                      <option value="">Selecciona tu categoría</option>
                       <option value="Seminarios">Seminarios</option>
                       <option value="Talleres">Talleres</option>
                       <option value="Convenciones">Convenciones</option>
@@ -132,7 +132,7 @@ const Crud_eventos = () => {
                       id="description_event"
                       type="text"
                       name="description_event"
-                      placeholder="Descripcion"
+                      placeholder="Descripción"
                       className="description-event"
                       required
                       onChange={handleChange}
@@ -164,7 +164,7 @@ const Crud_eventos = () => {
                       id="direccion"
                       type="text"
                       name="direccion"
-                      placeholder="Direccion"
+                      placeholder="Dirección"
                       required
                       onChange={handleChange}
                     />

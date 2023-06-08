@@ -59,7 +59,7 @@
 
 .titulo_bar{
     display:flex ;
-    
+    width: 80%;
 }
 
 .dropDown{
@@ -392,13 +392,14 @@ main .sobre-nosotros{
 .h2-title{
     color: #000000;
     font-size: 40px;
-    width: 53%;
+    width: 100%;
     text-align: start;
     margin-bottom: 60px;
 }
 
 .categorias{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     padding: 10px;
     align-items: center;
