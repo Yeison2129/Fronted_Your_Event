@@ -46,7 +46,7 @@ export const Inicio_Sesion = () => {
                 time: 1500,
               });
             }
-            if (response.data.data == "error desconocido") {
+            if (response.data.data == "Usuario no existe") {
               swal.fire({
                 title: "El usuario no existe",
                 text: "Registrate",

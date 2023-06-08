@@ -91,8 +91,8 @@ export const CardView = () => {
           {event.previewActive && (
             <div className={`products-preview active`} key={`preview-${event.id_event}`}>
               <div className="preview" data-target="p-1">
-                <i className="fas fa-times" onClick={() => closePreview(event)} id="cierre-ventana"></i>
                 <img id='img-cardview' className='cardBig' src={event.img_event} alt="" />
+              <i className="fas fa-times" onClick={() => closePreview(event)} id="cierre-ventana"></i>
                 <h2>{event.nom_event}</h2>
                 <div className="info">
                   <p>{event.description_event}</p>
