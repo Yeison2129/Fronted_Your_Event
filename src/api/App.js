@@ -11,6 +11,9 @@ let id_empresa1 = localStorage.getItem("id_empresa")
 export const registerUser = async (newUser) =>
     await axios.post('http://localhost:4000/registerUser', newUser)
 
+    export const getUser = async () =>
+    await axios.get(`http://localhost:4000/getUser/${id_user}`)
+
 export const loginUser = async (loginUser) =>
     await axios.post('http://localhost:4000/loginUser', loginUser)
 
@@ -26,7 +29,7 @@ export const updateUser = async (updateUser) =>{
     const formData = new FormData();
     formData.append('document_user', updateUser.document_user);
     formData.append('nom_user', updateUser.nom_user);
-    formData.append('telefono_empresa', updateUser.phone_user);
+    formData.append('phone_user', updateUser.phone_user);
     formData.append('mail_user',updateUser.mail_user)
     formData.append('password_empresa', updateUser.password_user);
     formData.append('image', updateUser.img_perfil);
@@ -43,8 +46,6 @@ export const updateUser = async (updateUser) =>{
     }
     
 }
-    
-
 
 //Recuperation_Password_User
 export const CompareEmailUser = async (emailsUser) => {
@@ -62,8 +63,6 @@ export const RecuperationPasswordUser = async (recuperationUser, email1) =>
 
 
 //Enterprise
-
-
 export const loginCompany = async (loginCompany) =>
     await axios.post('http://localhost:4000/loginCompany', loginCompany)
 
@@ -90,6 +89,38 @@ export const registerCompany = async (RegisterCompany) => {
     }
 };
 
+export const updateCompany = async (updateCompany) =>{
+    const formData = new FormData();
+    formData.append('nom_empresa', updateCompany.nom_empresa);
+    formData.append('mail_empresa',updateCompany.mail_empresa)
+    formData.append('telefono_empresa', updateCompany.telefono_empresa);
+    formData.append('password_empresa', updateCompany.password_empresa);
+    formData.append('image', updateCompany.img_empresa);
+    try {
+        const response = await axios.put(`http://localhost:4000/updateCompany/${id_empresa}`, formData, {
+            headers: {
+                token_company: token_company,
+                'Content-Type': 'multipart/form-data',
+            }
+        }); 
+        return response.data   
+    } catch (error) {
+        
+    }
+    
+}
+
+export const getCompany = async()=>
+    await axios.get(`http://localhost:4000/getCompany/${id_empresa}`)
+
+
+
+
+
+
+
+
+//Events
 
 export const createEvent = async (registerEvent) => {
     const formData = new FormData();
@@ -113,13 +144,6 @@ export const createEvent = async (registerEvent) => {
 }
 
 
-
-
-
-
-
-
-//Admin o Company
 export const getEvents = async () =>
     await axios.get(`http://localhost:4000/getEvents`)
 
@@ -137,8 +161,4 @@ export const deleteAdminAsist = async (id) =>
         }
     })
 
-export const getUser = async () =>
-    await axios.get(`http://localhost:4000/getUser/${id_user}`)
 
-export const getCompany = async()=>
-    await axios.get(`http://localhost:4000/getCompany/${id_empresa}`)

@@ -5,7 +5,7 @@ import { Dashc } from "../Dashconfig/Dashc";
 import { Footdash } from "../../dashboard_empresa/Footdash";
 import userIcon from "../../../assets/userIcon.svg";
 import Swal from "sweetalert2";
-import { getCompany, updateUser } from "../../../api/App";
+import { getCompany, updateCompany, updateUser } from "../../../api/App";
 import { getUser } from '../../../api/App'
 
 export const Editinfo = () => {
@@ -100,7 +100,7 @@ export const Editinfo = () => {
                     <div className="imgUpdate">
                       <label className="selec-cert" htmlFor="">
                      
-                      <div className="img-crud  ">
+                      <div className="img-crud">
                       <label className="selec-cert" htmlFor="">
                       <div id="icon-pencil">
                         <i class="fa fa-solid fa-pen" onClick={()=>{
@@ -130,8 +130,9 @@ export const Editinfo = () => {
                         type="text"
                         className="styles-dashi"
                         placeholder={
-                          user1.nom_user
+                          "Nombre"
                         }
+                        required
                         onChange={handleChange}
                       />
                       <div id="icon-pencil">
@@ -144,9 +145,9 @@ export const Editinfo = () => {
                         name="document_user"
                         type="text"
                         className="styles-dashi"
-                        placeholder={
-                          user1.document_user
+                        placeholder={"Documento"
                         }
+                        required
                         onChange={handleChange}
                       />
                       <div id="icon-pencil">
@@ -159,9 +160,9 @@ export const Editinfo = () => {
                         name="phone_user"
                         type="text"
                         className="styles-dashi"
-                        placeholder={
-                          user1.phone_user
+                        placeholder={"Telefono"
                         }
+                        required
                         onChange={handleChange}
                       />
                       <div id="icon-pencil">
@@ -174,7 +175,8 @@ export const Editinfo = () => {
                         name="mail_user"
                         type="text"
                         className="styles-dashi"
-                        placeholder={user1.mail_user}
+                        placeholder={"Correo"}
+                        required
                         onChange={handleChange}
                       />
                       <div id="icon-pencil">
@@ -203,13 +205,15 @@ export const Editinfo = () => {
               nom_empresa: `${company1.nom_empresa}`,
               mail_empresa: `${company1.mail_empresa}`,
               telefono_empresa: `${company1.telefono_empresa}`,
-              img_empresa:`${company1.img_empresa}`
+              img_empresa:`${company1.img_empresa}`,
+              password_empresa:`${company1.password_empresa}`,
+              img_certificado:`${company1.img_certificado}`
             }}
             onSubmit={async (values) => {
               try {
-                const users = await updateUser(values)
+                const company2 = await updateCompany(values)
 
-            if(users.data == "Cambio_Exitoso"){
+            if(company2.data == "Cambio_Exitoso"){
               Swal.fire({
                 title:"Actualizacion exitoso",
                 text:"",
@@ -224,7 +228,7 @@ export const Editinfo = () => {
               }
               timeout()
             }
-            if(users.data == "Error_al_actualizar"){
+            if(company2.data == "Error_al_actualizar"){
               Swal.fire({
                 title:"Error al actualizar",
                 text:"intenta de nuevo mas tarde",
@@ -255,18 +259,24 @@ export const Editinfo = () => {
                     <label className="selec-cert" htmlFor="">
                    
                     <div className="img-crud  ">
-                    <label className="selec-cert" htmlFor="">
-                      <input
-                        type="file"
-                        id="image"
-                        name="img_empresa"
-                        onChange={(event) => {
-                          const file = event.currentTarget.files[0];
-                          setFieldValue("img_empresa", file);
-                        }}
-                      />
-                    </label>
-                  </div>
+                      <label className="selec-cert" htmlFor="">
+                      <div id="icon-pencil">
+                        <i class="fa fa-solid fa-pen" onClick={()=>{
+                          document.getElementById('image').click()
+                        }}></i>
+                      </div>
+                        <input
+                          type="file"
+                          id="image"
+                          name="img_empresa"
+                          onChange={(event) => {
+                            const file = event.currentTarget.files[0];
+                            setFieldValue("img_empresa", file);
+                          }}
+                          style={{display:'none'}}
+                        />
+                      </label>
+                    </div>
                       <img src={company1.img_empresa} alt="" />
                     </label>
                   </div>
@@ -277,8 +287,9 @@ export const Editinfo = () => {
                       type="text"
                       className="styles-dashi"
                       placeholder={
-                        company1.nom_empresa
+                        "Nombre"
                       }
+                      required
                       onChange={handleChange}
                     />
                     <div id="icon-pencil">
@@ -292,8 +303,9 @@ export const Editinfo = () => {
                       type="text"
                       className="styles-dashi"
                       placeholder={
-                        company1.mail_empresa
+                        "Correo"
                       }
+                      required
                       onChange={handleChange}
                     />
                     <div id="icon-pencil">
@@ -307,8 +319,9 @@ export const Editinfo = () => {
                       type="text"
                       className="styles-dashi"
                       placeholder={
-                        company1  .telefono_empresa
+                        "Telefono"
                       }
+                      required
                       onChange={handleChange}
                     />
                     <div id="icon-pencil">
