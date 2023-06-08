@@ -40,7 +40,7 @@ export const Dashc = () => {
               Eliminar cuenta
             </li>
           </Link>
-          <Link to="">
+          <Link to="/Ayuda">
             <li className="li-style-dash">
               <i className=" fa fa-solid fa-info" />
               Ayuda
