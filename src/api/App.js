@@ -6,6 +6,7 @@ let email = localStorage.getItem("email")
 let id_user = localStorage.getItem("id_user")
 let id_empresa = localStorage.getItem("id_empresa")
 let id_empresa1 = localStorage.getItem("id_empresa")
+let id_event = localStorage.getItem("id_event")
 
 //Users
 export const registerUser = async (newUser) =>
@@ -110,6 +111,7 @@ export const updateCompany = async (updateCompany) =>{
     
 }
 
+
 export const getCompany = async()=>
     await axios.get(`http://localhost:4000/getCompany/${id_empresa}`)
 
@@ -144,6 +146,31 @@ export const createEvent = async (registerEvent) => {
 }
 
 
+export const updateEvent = async (updateEvent,id_event) =>{
+    const formData = new FormData();
+    formData.append('nom_event', updateEvent.nom_event);
+    formData.append('image',updateEvent.img_event)
+    formData.append('tipo_event', updateEvent.tipo_event);
+    formData.append('description_event', updateEvent.description_event);
+    formData.append('fecha', updateEvent.fecha);
+    formData.append('hora', updateEvent.hora);
+    formData.append('municipio', updateEvent.municipio);
+    formData.append('direccion', updateEvent.direccion);
+    formData.append('precio_entrada', updateEvent.precio_entrada);
+    try {
+        const response = await axios.put(`http://localhost:4000/updateEvent/${id_event}`, formData, {
+            headers: {
+                token_company: token_company,
+                'Content-Type': 'multipart/form-data',
+            }
+        }); 
+        return response.data   
+    } catch (error) {
+        
+    }
+    
+}
+
 export const getEvents = async () =>
     await axios.get(`http://localhost:4000/getEvents`)
 
@@ -161,4 +188,10 @@ export const deleteAdminAsist = async (id) =>
         }
     })
 
-
+export const getEventsIdEvent = async (values) =>
+    await axios.post(`http://localhost:4000/consultEvent`,values,{
+        headers: {
+            token: token
+        }
+    })
+    
