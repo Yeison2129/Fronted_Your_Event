@@ -92,14 +92,26 @@ export const CardView = () => {
             <div className={`products-preview active`} key={`preview-${event.id_event}`}>
               <div className="preview" data-target="p-1">
                 <i className="fas fa-times" onClick={() => closePreview(event)} id="cierre-ventana"></i>
+                <div className="bigImg">
                 <img id='img-cardview' className='cardBig' src={event.img_event} alt="" />
-                <h2>{event.nom_event}</h2>
+
+                </div>
                 <div className="info">
-                  <p>{event.description_event}</p>
-                  <div className="date"><i className='bx bx-calendar'></i><b>Fecha:</b> {event.fecha}</div>
-                  <div className="time"><i className='bx bx-time'></i><b>Hora:</b> {event.hora} </div>
-                  <div className="time"><i className='bx bx-time'></i><b>Tipo:</b> {event.tipo_event} </div>
-                  <div className="price"><i className='bx bx-purchase-tag-alt' ></i> <b>Precio:</b>{event.precio_entrada}</div>
+                  <div className="title-infcard">
+                  <h2 >{event.nom_event}</h2>
+                  <p> <i className="fa fa-light fa-map-pin" />{event.municipio}</p>
+                  </div>
+
+                  <div className="dates"><i className='bx bx-calendar'/><p>Fecha:</p> {event.fecha}</div>
+                  <div className="dates"><i className='bx bx-time'/><p>Hora:</p> {event.hora} </div>
+                  <div className="dates"><i className='bx bx-time'></i><p>Categoria:</p> {event.tipo_event} </div>
+                  <div className="dates"><i className='bx bx-time'></i><p>Lugar:</p> {event.direccion } </div>
+                  <div className="dates"><i className='bx bx-purchase-tag-alt' ></i> <p>Precio:</p>{event.precio_entrada}</div>
+
+                  <div className="dates" id='descripcion-cardview'><i className='bx bx-purchase-tag-alt' ></i>    <p >Descripcion:</p>{event.description_event}</div>
+
+               
+
                 </div>
                 <div className="buttons">
                   <button className='reserv'>¡Reserva ya!</button>

@@ -1,0 +1,30 @@
+#h1-cardEvent i{
+padding: 0 20px;
+}
+.info-help{
+    display: flex;
+    flex-direction: row;
+}
+.info-help li{
+    list-style: none;
+}
+.info-help p{
+   
+    width: 55rem;
+}
+
+.help{
+    width: 60%;
+}
+.aside-help{
+    width: 35%;
+}
+.aside-help i{
+    background-color: #80008067;
+    padding: 9px;
+    margin: 0 10px;
+    border-radius: 20px;
+}
+.aside-help li{
+padding: 10px;
+}

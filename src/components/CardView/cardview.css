@@ -7,6 +7,7 @@
    justify-content: center;
    align-items: center;
    flex-wrap: wrap;
+   width: 80%;
 }
 
 .cards-index {
@@ -22,6 +23,7 @@
    transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
    background-position: center;
    background-repeat: no-repeat;
+   background-size: cover
  }
 
  
@@ -60,26 +62,62 @@
    left: 50%;
    transform: translate(-50%, -50%);
    background-color: rgb(255, 255, 255);
-   border: .5px solid black;
    border-radius: 20px;
-   width: 30%;
-   height: 90%;
+   box-shadow: -1px 0px 11px 1px gray;
+   width: 25%;
+   height: 80%;
    z-index: 10;
 }
 
 .cardBig {
-   height: 30%;
+   height: 90%;
+   width: 45%;
+   margin: 20px 0;
+   border-radius: 20px ;   
+}
+.bigImg{
+   display: flex;
    width: 100%;
-   border-radius: 20px 20px 0px 0px;
+   height: 32%;
+   justify-content: center;
 }
 
 .info{
    display: flex;
    align-items: center;
    flex-direction: column;
-   padding: 20px;
+   padding: 20px 0 0 0;
+   
 }
-
+.title-infcard {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.title-infcard i{
+   padding: 0 10px;
+}
+ .dates{
+   display: flex;
+   width: 75%;
+   padding: 7px;
+   align-items:center ;
+   border-radius: 18px;
+   background-color: rgb(232, 232, 232);
+   margin: 5px;
+}
+.dates p{
+   display: flex;
+   justify-content: center;
+   width: 25%;
+}
+ #descripcion-cardview{
+   height: 80px;
+   padding: 10px ;
+   display: flex;
+align-items: flex-start;
+flex-wrap: wrap;
+}
 .buttons {
    display: flex;
    align-items: center;
@@ -88,8 +126,8 @@
 }
 
 .reserv {
-   background-color: #69affa;
-   border-radius: 7px;
+   background-color: #800080;
+   border-radius: 26px;
    height: 50%;
    color: white;
    border: none;
@@ -104,7 +142,8 @@
 }
 
 .reserv:hover {
-   background-color: #014288;
+   background-color: #80008077;
+   color: #000000;
  }
  
 .buy {

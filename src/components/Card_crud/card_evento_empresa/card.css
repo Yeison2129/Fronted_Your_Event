@@ -9,10 +9,10 @@
 }
 
 #h1-cardEvent{
-    position: relative;
     left: 220px;
     padding: 10px 40px;
-    width: 25%;
+    width: 35%;
+    position: relative;
     height: 10vh ;
     justify-content: center;
 
