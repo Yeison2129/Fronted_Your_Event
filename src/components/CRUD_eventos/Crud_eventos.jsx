@@ -40,7 +40,7 @@ const Crud_eventos = () => {
               };
               timeout();
             }
-            if (events.data.data == "INSERT_ERROR") {
+            if (events.data == "INSERT_ERROR") {
               Swal.fire({
                 title: "Error al crear el evento",
                 text: "Intenta mas tarde",
@@ -49,7 +49,7 @@ const Crud_eventos = () => {
                 time: 1500,
               });
             }
-            if (events.data.data == "ERROR_404") {
+            if (events.data == "ERROR_404") {
               Swal.fire({
                 title: "Error interno del servidor",
                 icon: "warning",

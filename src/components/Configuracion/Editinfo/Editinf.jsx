@@ -102,11 +102,6 @@ export const Editinfo = () => {
                      
                       <div className="img-crud">
                       <label className="selec-cert" htmlFor="">
-                      <div id="icon-pencil">
-                        <i class="fa fa-solid fa-pen" onClick={()=>{
-                          document.getElementById('image').click()
-                        }}></i>
-                      </div>
                         <input
                           type="file"
                           id="image"
@@ -120,7 +115,9 @@ export const Editinfo = () => {
                       </label>
                     </div>
                         
-                        <img src={user1.img_perfil} alt="" />
+                        <img src={user1.img_perfil}  onClick={()=>{
+                          document.getElementById('image').click()
+                        }} ></img>
                       </label>
                     </div>
                     <label className="label-info">
@@ -260,11 +257,6 @@ export const Editinfo = () => {
                    
                     <div className="img-crud  ">
                       <label className="selec-cert" htmlFor="">
-                      <div id="icon-pencil">
-                        <i class="fa fa-solid fa-pen" onClick={()=>{
-                          document.getElementById('image').click()
-                        }}></i>
-                      </div>
                         <input
                           type="file"
                           id="image"
@@ -277,7 +269,9 @@ export const Editinfo = () => {
                         />
                       </label>
                     </div>
-                      <img src={company1.img_empresa} alt="" />
+                      <img src={company1.img_empresa} alt=""onClick={()=>{
+                          document.getElementById('image').click()
+                        }} ></img>
                     </label>
                   </div>
                   <label className="label-info">
