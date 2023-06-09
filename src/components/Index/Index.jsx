@@ -16,6 +16,18 @@ import face from "../../assets/SocialMedia/face-w.svg";
 import insta from "../../assets/SocialMedia/insta-w.svg";
 import twit from "../../assets/SocialMedia/twitter-w.svg";
 import {Link} from 'react-router-dom'
+import LogoUno from "../../assets/armenia.jpg";
+import LogoDos from "../../assets/pijao.jpg";
+import LogoTres from "../../assets/quimbaya.jpg";
+import LogoCuatro from "../../assets/calarca.png";
+import LogoCinco from "../../assets/genova.jpg";
+import LogoSeis from "../../assets/montenegro.jpg";
+import LogoSiete from "../../assets/buenavista.jpg";
+import LogoOcho from "../../assets/circasia.jpg";
+import LogoNueve from "../../assets/cordoba.jpg";
+import LogoDiez from "../../assets/filandia.jpg";
+import LogoOnce from "../../assets/latebaida.jpg";
+import LogoDoce from "../../assets/salento.jpg";
 
 // import Swiper core and required modules
 import { A11y, Autoplay } from "swiper";
@@ -166,6 +178,41 @@ export const Index = () => {
               </div>
             </section>
           </main>
+          <div className="slider">
+           <div className="titulo_bar">
+            <h2 className="h2-title"> Establecimientos que encontraras en el Quindio
+            <hr />
+            </h2>
+            </div>
+            <div className="slider-track">
+              <div className="slide"><img src={LogoUno} alt="" /></div>
+              <div className="slide"><img src={LogoDos} alt="" /></div>
+              <div className="slide"><img src={LogoTres} alt="" /></div>
+              <div className="slide"><img src={LogoCuatro} alt="" /></div>
+              <div className="slide"><img src={LogoCinco} alt="" /></div>
+              <div className="slide"><img src={LogoSeis} alt="" /></div>
+              <div className="slide"><img src={LogoSiete} alt="" /></div>
+              <div className="slide"><img src={LogoOcho} alt="" /></div>
+              <div className="slide"><img src={LogoNueve} alt="" /></div>
+              <div className="slide"><img src={LogoDiez} alt="" /></div>
+              <div className="slide"><img src={LogoOnce} alt="" /></div>
+              <div className="slide"><img src={LogoDoce} alt="" /></div>
+
+              <div className="slide"><img src={LogoUno} alt="" /></div>
+              <div className="slide"><img src={LogoDos} alt="" /></div>
+              <div className="slide"><img src={LogoTres} alt="" /></div>
+              <div className="slide"><img src={LogoCuatro} alt="" /></div>
+              <div className="slide"><img src={LogoCinco} alt="" /></div>
+              <div className="slide"><img src={LogoSeis} alt="" /></div>
+              <div className="slide"><img src={LogoSiete} alt="" /></div>
+              <div className="slide"><img src={LogoOcho} alt="" /></div>
+              <div className="slide"><img src={LogoNueve} alt="" /></div>
+              <div className="slide"><img src={LogoDiez} alt="" /></div>
+              <div className="slide"><img src={LogoOnce} alt="" /></div>
+              <div className="slide"><img src={LogoDoce} alt="" /></div>
+            
+            </div>
+           </div>  
 
       {user || company ? ( 
         <>
@@ -236,7 +283,7 @@ export const Index = () => {
         </>
       ):(
       <>
-         <section>
+        <section>
             <div className="content-link-register">
               <Link to="/RegistroEmpresa" id="log">
                 SI TIENES UN EMPRENDIMIENTO, INGRESA AQUÍ! <hr></hr>
@@ -365,6 +412,7 @@ export const Index = () => {
             </div>
           </section>  
       </>)}
+      
 
       <footer className="foo-index">
         <ContactUs />
