@@ -3,14 +3,12 @@ import "./set.css";
 import { Card_crud } from "../card_evento_empresa/Card";
 import { Formik, Form, Field } from "formik";
 import { Modal } from "bootstrap";
-import { getEventsCompany } from "../../../api/App";
+import { getEventsCompany,getEventsIdEvent, updateEvent } from "../../../api/App";
 
 export const Set = ({ closeModal }) => {
   const [allEventsCompany, setAllEventsCompany] = useState([]);
-
   const eventEmpresa = async () => {
     const response = await getEventsCompany();
-    console.log(response.data.rows);
     setAllEventsCompany(response.data.rows);
   };
 
@@ -19,25 +17,25 @@ export const Set = ({ closeModal }) => {
   }, []);
   return (
     <>
-      {allEventsCompany.map((eventEmpresa) => (
+      {closeModal.evento.map((eventEmpresa) => (
         <Formik
           initialValues={{
-            nom_event: `${eventEmpresa.nom_event}`,
-            image: `${eventEmpresa.img_event}`,
-            tipo_event: `${eventEmpresa.tipo_event}`,
-            description_event: `${eventEmpresa.description_event}`,
-            fecha: `${eventEmpresa.fecha}`,
-            hora: `${eventEmpresa.hora}`,
-            municipio: `${eventEmpresa.municipio}`,
-            direccion: `${eventEmpresa.direccion}`,
-            precio_entrada: `${eventEmpresa.precio_entrada}`,
+            nom_event: eventEmpresa.nom_event,
+            image: eventEmpresa.img_event,
+            tipo_event: eventEmpresa.tipo_event,
+            description_event: eventEmpresa.description_event,
+            fecha: eventEmpresa.fecha,
+            hora: eventEmpresa.hora,
+            municipio: eventEmpresa.municipio,
+            direccion: eventEmpresa.direccion,
+            precio_entrada: eventEmpresa.precio_entrada,
           }}
           onSubmit={async (values) => {
             try {
-              const eventsU = await UpdateEvent(values);
-              if (eventsU.data == "INSERT_OK") {
+              const eventsU = await updateEvent(values);
+              if (eventsU.data == "Update ok") {
                 Swal.fire({
-                  title: "Evento Creado Exitosamente",
+                  title: "Evento Actualizado",
                   text: "",
                   icon: "success",
                   boton: "Ok",
@@ -50,16 +48,16 @@ export const Set = ({ closeModal }) => {
                 };
                 timeout();
               }
-              if (eventsU.data == "INSERT_ERROR") {
+              if (eventsU.data == "Update error") {
                 Swal.fire({
-                  title: "Error al crear el evento",
+                  title: "Error al actualizar el evento",
                   text: "Intenta mas tarde",
                   icon: "warning",
                   boton: "Ok",
                   time: 1500,
                 });
               }
-              if (eventsU.data == "ERROR_404") {
+              if (eventsU.data == "Error 404") {
                 Swal.fire({
                   title: "Error interno del servidor",
                   icon: "warning",
@@ -69,7 +67,7 @@ export const Set = ({ closeModal }) => {
               }
             } catch (error) {}
           }}
-        >
+          >
           {({ handleChange, setFieldValue, handleSubmit }) => (
             <div className="page-set">
               <div className="body-set">
@@ -81,13 +79,11 @@ export const Set = ({ closeModal }) => {
                   <Form onSubmit={handleSubmit} className="form-set">
                     <div
                       className="img-set"
-                      style={{
-                        backgroundImage: `${eventEmpresa.img_event}`,
-                      }}
                       onClick={() => {
                         document.getElementById("image").click();
                       }}
-                    >
+                      >
+                        <img src={eventEmpresa.img_event} alt="" />
                       <label className="selec-cert" htmlFor="">
                         <input
                           type="file"
@@ -98,32 +94,31 @@ export const Set = ({ closeModal }) => {
                             setFieldValue("img_event", file);
                           }}
                           style={{ display: "none" }}
-                        />
+                          />
                       </label>
                     </div>
                     <Field
                       id="nom_event"
                       type="text"
-                      name="nom_evento"
-                      placeholder="Nombre Evento"
+                      name="nom_event"
+                      placeholder="Nombre del evento"
                       required
-                      value={eventEmpresa.nom_event}
                       onChange={handleChange}
-                    />
+                      />
                     <Field 
                     id="fecha" 
                     type="date" 
                     name="fecha" 
-                    value={eventEmpresa.fecha}
-                    required />
+                    required 
+                    onChange={handleChange}
+                    />
                     <Field
                       id="hora"
                       type="time"
-                    value={eventEmpresa.hora}
-                    name="hora"
+                      name="hora"
                       required
                       onChange={handleChange}
-                    />
+                      />
                     <Field
                       id="precio_entrada"
                       type="double"
@@ -131,7 +126,7 @@ export const Set = ({ closeModal }) => {
                       placeholder="precio"
                       required
                       onChange={handleChange}
-                    />  
+                      />  
                     <Field
                       id="tipo_event"
                       className="select-set"
@@ -140,15 +135,13 @@ export const Set = ({ closeModal }) => {
                       as="select"
                       required
                       onChange={handleChange}
-                    >
+                      >
                       <option value="">Selecciona tu categoría</option>
                       <option value="Seminarios">Seminarios</option>
                       <option value="Talleres">Talleres</option>
                       <option value="Convenciones">Convenciones</option>
                       <option value="Exposiciones">Exposiciones</option>
-                      <option value="Ferias comerciales">
-                        Ferias comerciales
-                      </option>
+                      <option value="Ferias comerciales">Ferias comerciales</option>
                       <option value="Eventos deportivos">Deportivos</option>
                       <option value="Conciertos">Conciertos</option>
                       <option value="Festivales">Festivales</option>
@@ -162,12 +155,12 @@ export const Set = ({ closeModal }) => {
                     <Field
                       id="description_event"
                       type="text"
-                      name="description_event "
+                      name="description_event"
                       placeholder="Descripcion"
                       required
                       className="description-event"
                       onChange={handleChange}
-                    />
+                      />
                     <Field
                       id="municipio"
                       className="select-set"
@@ -175,7 +168,7 @@ export const Set = ({ closeModal }) => {
                       as="select"
                       required
                       onChange={handleChange}
-                    >
+                      >
                       <option value="">Selecciona tu Municipio</option>
                       <option value="Filandia">Filandia</option>
                       <option value="Salento">Salento</option>
@@ -196,7 +189,7 @@ export const Set = ({ closeModal }) => {
                       placeholder="Direccion"
                       required
                       onChange={handleChange}
-                    />
+                      />
                     <div className="end-set">
                       {/* <div className="content-end"> */}
 
@@ -206,14 +199,15 @@ export const Set = ({ closeModal }) => {
                           type="submit"
                           value="Cancelar"
                           className="btn-set"
-                          onClick={() => closeModal(false)}
-                        />
+                          onClick={() => closeModal.setOpen(false)}
+                          />
                         <Field
                           className="btn-set"
                           id="btn-accept"
                           type="submit"
-                          value="Aceptar"
-                        />
+                          value="Aceptar
+                          "
+                          />
                         {/* </div> */}
                       </div>
                     </div>
@@ -223,7 +217,7 @@ export const Set = ({ closeModal }) => {
             </div>
           )}
         </Formik>
-      ))}
+    ))}
     </>
   );
 };
