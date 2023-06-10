@@ -17,3 +17,7 @@
 #form-delete p{
     text-align: center;
 }
+
+.button_eliminar_account{
+    background-color: rgb(224, 27, 182);
+}

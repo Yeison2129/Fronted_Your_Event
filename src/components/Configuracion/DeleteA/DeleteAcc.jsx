@@ -1,29 +1,31 @@
 import { Formik, Form, Field } from "formik";
 import React from "react";
 import swal from "sweetalert2";
-import { update } from "../../../api/App";
 import "../Editar/Password.css";
 import "./deletea.css";
 import {Link} from 'react-router-dom'
 import { Footdash } from "../../dashboard_empresa/Footdash";
+import { deleteUser } from "../../../api/App";
 
 import { Dashc } from "../Dashconfig/Dashc";
 
 export const DeleteAcc = () => {
-  let token = localStorage.getItem("token");
+  let company = localStorage.getItem("company");
+  let user = localStorage.getItem("user");
   return (
     <>
-      {token ? (
+    {user ? (
         <Formik
           initialValues={{
-            password_user: "",
+            password_user:""
           }}
           onSubmit={async (values) => {
-            let response = await update(values);
-            if (response.data.data == "Cambio exitoso") {
+            let response = await deleteUser(values);
+            console.log(response);
+            if (response.data.data == "Cuenta_Eliminada") {
                 swal.fire({
-                  title: "Cambio exitoso",
-                  text: "inicie su sesion de nuevo",
+                  title: "Cuenta eliminada",
+                  text: "tu cuenta a sido eliminada exitosamente",
                   icon: "success",
                   boton: "Ok",
                   time: 1500,
@@ -44,7 +46,7 @@ export const DeleteAcc = () => {
                 <p>Ingresa tu contraseña para eliminar tu cuenta en YourEvent.</p>
 
                 <Form
-                  action="#"
+                  action=""
                   onSubmit={handleSubmit}
                   className="contain-form-f"
                 >
@@ -55,7 +57,7 @@ export const DeleteAcc = () => {
                     name="password_user"
                     id="password_user"
                   />
-                  <button type="su" id="btn-updatep" >
+                  <button type="submit" id="btn-updatep" >
                     Eliminar
                   </button>
                 </Form>
@@ -63,10 +65,9 @@ export const DeleteAcc = () => {
             </section>
             <Footdash/> 
             </div>
-            
           )}
         </Formik>
-      ) : null}
+      ) : company ? (<></>):null}
     </>
   );
 };

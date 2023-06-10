@@ -8,16 +8,14 @@ export const DropDown = () => {
     let company = localStorage.getItem("company")
     const closedToken = () => {
         if (user) {
-        localStorage.removeItem("user")
-        localStorage.removeItem("auth")
+        localStorage.clear()
         setTimeout(() => {
             window.location.href = "/"
             // window.location.href = "/password"
             
         }, 0.500);
         }if(company){
-            localStorage.removeItem("company")
-            localStorage.removeItem("auth")
+          localStorage.clear()
             setTimeout(()=>{
                 window.location.href ="/"
             },0.500);

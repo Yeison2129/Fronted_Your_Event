@@ -54,7 +54,7 @@ export const Password = () => {
                     name="password_user"
                     id="password_user"
                   />
-                  <button type="su" id="btn-updatep" >
+                  <button type="submit" id="btn-updatep" >
                     Enviar
                   </button>
                 </Form>

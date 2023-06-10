@@ -3,7 +3,6 @@ import { Formik, Form, Field } from "formik";
 import "./editinfo.css";
 import { Dashc } from "../Dashconfig/Dashc";
 import { Footdash } from "../../dashboard_empresa/Footdash";
-import userIcon from "../../../assets/userIcon.svg";
 import Swal from "sweetalert2";
 import { getCompany, updateCompany, updateUser } from "../../../api/App";
 import { getUser } from '../../../api/App'
@@ -91,7 +90,7 @@ export const Editinfo = () => {
             }
           }}
           >
-          {({ handleChange,setFieldValue ,handleSubmit }) => (
+          {({ handleChange, setFieldValue, handleSubmit }) => (
             <div className="edit-info-all">
               <Dashc />
               <div className="edit-info">
@@ -126,9 +125,7 @@ export const Editinfo = () => {
                         name="nom_user"
                         type="text"
                         className="styles-dashi"
-                        placeholder={
-                          "Nombre"
-                        }
+                        placeholder={"Nombre"}
                         required
                         onChange={handleChange}
                       />
