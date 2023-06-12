@@ -4,10 +4,10 @@ let token = localStorage.getItem("token")
 let token_company = localStorage.getItem("token_company")
 let email = localStorage.getItem("email")
 let id_user = localStorage.getItem("id_user")
+let id_user1 = localStorage.getItem("id_user")
 let id_empresa = localStorage.getItem("id_empresa")
 let id_empresa1 = localStorage.getItem("id_empresa")
 let id_event = localStorage.getItem("id_event")
-let mail_empresa = localStorage.getItem("mail_empresa")
 
 //Users
 export const registerUser = async (newUser) =>
@@ -230,3 +230,25 @@ export const getEventsIdEvent = async (values) =>
         }
     })
 
+//ASISTS 
+
+export const asistEvents = async(id_event1,asistEvent)=>
+    await axios.post(`http://localhost:4000/asistEvent/${id_user1}/${id_event1}`,asistEvent, {
+        headers:{
+            token: token
+        }
+    })
+
+export const consultAsist = async()=>
+    await axios.get(`http://localhost:4000/ConsultAsistEvent/${id_user1}`,{
+        headers:{
+            token: token
+        }
+    })
+
+export const DeleteAsist = async(id)=>
+    await axios.delete(`http://localhost:4000/DeleteAsist/${id_user1}/${id}`,{
+        headers:{
+            token: token
+        }
+    })

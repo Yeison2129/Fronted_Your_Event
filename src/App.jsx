@@ -24,6 +24,7 @@ import { DeleteAcc } from "./components/Configuracion/DeleteA/DeleteAcc"
 import Crud_eventos from "./components/CRUD_eventos/Crud_eventos"
 import {Asistir} from "./components/Index/Asistir/Asistir"
 import {Ayuda} from "./components/Configuracion/Ayuda/Ayuda"
+import { CardViewA } from "./components/Index/Asistir/Card-viewA/Card-viewA"
 
 
 export default function App() {
@@ -46,6 +47,7 @@ export default function App() {
             <Route path='/home' element={<Cards/>}/>
             <Route path='/Estadisticas' element={<Stats/>}/>
             <Route path='/CardCompra' element={<CardView/>}/>
+            <Route path='/CardReserva' element={<CardViewA/>}/>
             <Route path='/PaginaCard' element={<PaginaCard/>}/>
             <Route path='/Mapa' element={<MapView/>}/>
             <Route path='/dashconfig' element={<Dashc/>}/>
