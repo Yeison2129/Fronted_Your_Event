@@ -6,10 +6,12 @@ img.loginEmpresa-wave {
 	z-index: -1;
 }
 #a-black{
-	color: black;
+	color: rgb(0, 0, 0);
 }#a-black:hover{
+	color: rgb(115, 17, 145);
+
 	text-decoration: underline;
-	transition:.3s;
+	transition:.4s;
 }
 div.loginEmpresa-container {
     width: 100vw;
@@ -171,7 +173,13 @@ Field.loginEmpresa-btn {
 Field.loginEmpresa-btn:hover {
 	background-position: right;
 }
+.input-loginE{
+    background-color: #f0f0f0;
+	width:90%;
+	border: none;
+	outline: none;
 
+}
 .input-field-LE{
 	
     width: 100%;
@@ -180,10 +188,12 @@ Field.loginEmpresa-btn:hover {
     height: 55px;
     border-radius: 55px;
     display: grid;
+	align-items: center;
     grid-template-columns: 15% 85%;
     padding: 0 0.4rem;
     position: relative;
 }
+
 
 
 

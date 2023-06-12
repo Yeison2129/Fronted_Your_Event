@@ -63,7 +63,7 @@ form.sign-in-form-RegistroEmpresa {
   height: 45px;
   border-radius: 55px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   grid-template-columns: 15% 85%;
   padding: 0 0.3rem;
@@ -92,6 +92,7 @@ form.sign-in-form-RegistroEmpresa {
   background: none;
   outline: none;
   border: none;
+  
   font-weight: 600;
   font-size: 16px;
   height: 30px;
@@ -146,8 +147,19 @@ form.sign-in-form-RegistroEmpresa {
 }
 
 .left-panel-RegistroEmpresa {
+  height: 90%;
   pointer-events: all;
   padding: 3rem 17% 2rem 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.content-RegistroEmpresa{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+color: white;
 }
 
 
@@ -176,6 +188,9 @@ form.sign-in-form-RegistroEmpresa {
   height: 41px;
   font-weight: 600;
   font-size: 0.8rem;
+}
+.image-RegistroEmpresa{
+  width: 90%;
 }
 
 .right-panel .image-RegistroEmpresa,
