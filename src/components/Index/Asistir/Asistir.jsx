@@ -2,6 +2,7 @@ import React from 'react'
 import { DropDown } from "../../DropDown/DropDown";
 import { Link } from "react-router-dom";
 import './asistir.css'
+import { CardViewA } from './Card-viewA/Card-viewA';
 export const Asistir = () => {
         let user = localStorage.getItem("user");
         const closedToken = () => {
@@ -52,6 +53,7 @@ export const Asistir = () => {
                     <h1>EVENTOS A LOS QUE ASISTIRÁS </h1>
                 </div>
             </section>
+            <CardViewA/>
    
     </div>
     
