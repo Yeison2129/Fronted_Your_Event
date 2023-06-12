@@ -71,7 +71,8 @@ export const F_registro = () => {
                 <Form onSubmit={handleSubmit} className="sign-in-form">
                   <h2 className="title-r">Registrate</h2>
                   <div className="input-field">
-                    <i className="fas fa-user"></i>
+                  <i className="fa fa-solid fa-id-card" />
+                
                     <Field
                       autocomplete="off"
                       type="text"
@@ -91,6 +92,18 @@ export const F_registro = () => {
                       name="nom_user"
                       required
                       placeholder="Nombre de usuario"
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="input-field">
+                  <i className="fa fa-solid fa-phone "  />
+
+                    <Field
+                      autocomplete="off"
+                      type="phone"
+                      name="phone_user"
+                      required
+                      placeholder="Telefono"
                       onChange={handleChange}
                     />
                   </div>
@@ -118,17 +131,7 @@ export const F_registro = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  <div className="input-field">
-                    <i className="fas fa-lock"></i>
-                    <Field
-                      autocomplete="off"
-                      type="phone"
-                      name="phone_user"
-                      required
-                      placeholder="Telefono"
-                      onChange={handleChange}
-                    />
-                  </div>
+                 
                   <button type="submit" className="btn solid">
                     Registrarse
                   </button>
@@ -153,7 +156,10 @@ export const F_registro = () => {
                     <Link id="a-white" to="/login">
                       Ya tengo una cuenta
                     </Link>
-                  </u>
+                  </u> <br /> <br /> <br />
+                  <h4 >¿Tienes una empresa?</h4>
+                  <p>Resgistrate  <Link id="a-white" to="/RegistroEmpresa"> AQUÍ</Link>  para subir eventos</p>
+
                 </div>
 
                 <img src={imgRegistro} className="image" alt="" />

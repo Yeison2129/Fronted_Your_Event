@@ -100,6 +100,7 @@ export const LoginEmpresa = () => {
                   <div className="input-field-LE">
                     <i className="fas fa-user"></i>
                     <Field
+                      className="input-loginE"
                       autocomplete="off"
                       type="text"
                       id="mail_empresa"
@@ -113,6 +114,7 @@ export const LoginEmpresa = () => {
                   <div className="input-field-LE">
                     <i className="fas fa-lock"></i>
                     <Field
+                      className="input-loginE"
                       autocomplete="off"
                       type="password"
                       id="password_empresa"
@@ -127,8 +129,9 @@ export const LoginEmpresa = () => {
                     type="submit"
                     className="boton-morado btn solid"
                     value="Iniciar Sesión"
-                  />
-                  <Link id="a-black" to="/">Volver al inicio</Link>
+                  /> <br />
+                  <Link id="a-black" to="/RegistroEmpresa"> Necesitas una cuenta?</Link> <br />
+                  <Link id="a-black" to="/">Volver al inicio</Link><br />
                 </Form>
               </div>
             </div>

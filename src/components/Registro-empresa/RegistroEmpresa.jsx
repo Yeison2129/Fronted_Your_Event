@@ -22,7 +22,7 @@ export const RegistroEmpresa = () => {
                 Únete a nuestra familia para subir tus eventos y no te pierdas
                 de los servicios que brindamos.
               </p>
-              <Link id="a-white" to="/loginEmpresa">Ya tengo una cuenta</Link>
+              <Link  id="a-black" to="/loginEmpresa">Ya tengo una cuenta</Link>
 
             </div>
             <img src={registroEmpresa1} className="image-RegistroEmpresa" alt="" />
@@ -87,7 +87,7 @@ export const RegistroEmpresa = () => {
           <Form onSubmit={handleSubmit} className="sign-in-form-RegistroEmpresa">
             <h2 className="title">Registra tu empresa</h2>
             <div className="input-field-RegistroEmpresa">
-              <i> </i>
+            <i className="fa fa-solid fa-building" />
               <Field
                 autocomplete="off"
                 type="text"
@@ -99,7 +99,7 @@ export const RegistroEmpresa = () => {
               />
             </div>
             <div className="input-field-RegistroEmpresa">
-              <i> </i>
+            <i className="fa fa-solid fa-phone "  />
               <Field
                 autocomplete="off"
                 type="number"
@@ -110,8 +110,8 @@ export const RegistroEmpresa = () => {
               />
             </div>
             <div className="input-field-RegistroEmpresa">
-              <i> </i>
-              <Field
+            <i className="fa fa-solid fa-envelope" />
+                <Field
                 autocomplete="off"
                 type="email"
                 id="mail_empresa"
@@ -122,7 +122,7 @@ export const RegistroEmpresa = () => {
               />
             </div>
             <div className="input-field-RegistroEmpresa">
-              <i> </i>
+            <i className="fa fa-solid fa-lock" />
               <Field
                 autocomplete="off"
                 type="password"

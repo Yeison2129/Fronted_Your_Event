@@ -11,8 +11,12 @@ input {
   font-family: "Poppins", sans-serif;
 }
 #a-white{
-  color: white;
+  color: rgb(236, 236, 236);
   text-decoration:underline;
+}
+#a-white:hover{
+  color: rgb(148, 16, 148);
+  transition: .4s;
 }
 .container {
   position: relative;
@@ -181,7 +185,7 @@ a{
   text-decoration: none;
 }
 .image {
-  width: 100%;
+  width: 90%;
   transition: transform 1.1s ease-in-out;
   transition-delay: 0.4s;
 }
