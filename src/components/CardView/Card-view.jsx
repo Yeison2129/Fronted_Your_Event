@@ -8,8 +8,9 @@ export const CardView = () => {
 
 
 
-
-  
+    let user = localStorage.getItem("user")
+    let company = localStorage.getItem("company")
+    
     const cardRef = useRef(null);
     const [width, setWidth] = useState(0);
     const [height, setHeight] = useState(0);
@@ -56,6 +57,8 @@ export const CardView = () => {
     setAllEvents([...allEvents]);
   }
 
+
+
   const events = async () => {
     const response = await getEvents()
     setAllEvents(response.data.data.map(event => ({ ...event, previewActive: false })))
@@ -65,6 +68,16 @@ export const CardView = () => {
     console.log(allEvents);
     events()
   }, [])
+
+  const iniciaSesion = ()=>{
+    swal.fire({
+      title: "Por favor inicia Sesion o Registrate",
+      text: "",
+      icon: "warning",
+      boton: "Ok",
+      time: 1500,
+    })
+  }
 
   return (
     <>
@@ -114,7 +127,7 @@ export const CardView = () => {
 
                 </div>
                 <div className="buttons">
-                  <button className='reserv'>¡Reserva ya!</button>
+                  <button className='reserv' onClick={()=>iniciaSesion()}>¡Reserva ya!</button>
                   
                 </div>
               </div>
@@ -123,6 +136,123 @@ export const CardView = () => {
         </div>
       ))}
     </div>
+    {user ? (
+    <>
+      <div className="all-cards-events">
+
+{allEvents.map((event) => (
+  <div className="cardsEventos" key={event.id_event}>
+    <div
+          className="cards-wrap"
+          onMouseMove={handleMouseMove}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          ref={cardRef}
+          onClick={() =>handleClick(event)}
+      >
+      <div className="cards-index" style={{'transform': `rotateY(${rX}deg) rotateX(${rY}deg)`, backgroundImage: `url(${event.img_event})`}} >
+          <div className="cards-bg-index" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
+          <div className="cards-info">
+              <h1 slot="header"> {event.nom_event} </h1>
+              <p slot="content"> {event.description_event} </p>
+          </div>
+          </div>
+      </div>
+    {event.previewActive && (
+      <div className={`products-preview active`} key={`preview-${event.id_event}`}>
+        <div className="preview" data-target="p-1">
+          <i className="fas fa-times" onClick={() => closePreview(event)} id="cierre-ventana"></i>
+          <div className="bigImg">
+          <img id='img-cardview' className='cardBig' src={event.img_event} alt="" />
+
+          </div>
+          <div className="info">
+            <div className="title-infcard">
+            <h2 >{event.nom_event}</h2>
+            <p> <i className="fa fa-light fa-map-pin" />{event.municipio}</p>
+            </div>
+
+            <div className="dates"><i className='bx bx-calendar'/><p>Fecha:</p> {event.fecha}</div>
+            <div className="dates"><i className='bx bx-time'/><p>Hora:</p> {event.hora} </div>
+            <div className="dates"><i className='bx bx-time'></i><p>Categoria:</p> {event.tipo_event} </div>
+            <div className="dates"><i className='bx bx-time'></i><p>Lugar:</p> {event.direccion } </div>
+            <div className="dates"><i className='bx bx-purchase-tag-alt' ></i> <p>Precio:</p>{event.precio_entrada}</div>
+
+            <div className="dates" id='descripcion-cardview'><i className='bx bx-purchase-tag-alt' ></i>    <p >Descripcion:</p>{event.description_event}</div>
+
+         
+
+          </div>
+          <div className="buttons">
+            <button className='reserv'>¡Reserva ya!</button>
+            
+          </div>
+        </div>
+      </div>
+    )}
+  </div>
+))}
+</div>
+
+    </>): company ? (
+    <>
+      <div className="all-cards-events">
+
+{allEvents.map((event) => (
+  <div className="cardsEventos" key={event.id_event}>
+    <div
+          className="cards-wrap"
+          onMouseMove={handleMouseMove}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          ref={cardRef}
+          onClick={() =>handleClick(event)}
+      >
+      <div className="cards-index" style={{'transform': `rotateY(${rX}deg) rotateX(${rY}deg)`, backgroundImage: `url(${event.img_event})`}} >
+          <div className="cards-bg-index" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
+          <div className="cards-info">
+              <h1 slot="header"> {event.nom_event} </h1>
+              <p slot="content"> {event.description_event} </p>
+          </div>
+          </div>
+      </div>
+    {event.previewActive && (
+      <div className={`products-preview active`} key={`preview-${event.id_event}`}>
+        <div className="preview" data-target="p-1">
+          <i className="fas fa-times" onClick={() => closePreview(event)} id="cierre-ventana"></i>
+          <div className="bigImg">
+          <img id='img-cardview' className='cardBig' src={event.img_event} alt="" />
+
+          </div>
+          <div className="info">
+            <div className="title-infcard">
+            <h2 >{event.nom_event}</h2>
+            <p> <i className="fa fa-light fa-map-pin" />{event.municipio}</p>
+            </div>
+
+            <div className="dates"><i className='bx bx-calendar'/><p>Fecha:</p> {event.fecha}</div>
+            <div className="dates"><i className='bx bx-time'/><p>Hora:</p> {event.hora} </div>
+            <div className="dates"><i className='bx bx-time'></i><p>Categoria:</p> {event.tipo_event} </div>
+            <div className="dates"><i className='bx bx-time'></i><p>Lugar:</p> {event.direccion } </div>
+            <div className="dates"><i className='bx bx-purchase-tag-alt' ></i> <p>Precio:</p>{event.precio_entrada}</div>
+
+            <div className="dates" id='descripcion-cardview'><i className='bx bx-purchase-tag-alt' ></i>    <p >Descripcion:</p>{event.description_event}</div>
+
+         
+
+          </div>
+          <div className="buttons">
+            <button className='reserv'>¡Reserva ya!</button>
+            
+          </div>
+        </div>
+      </div>
+    )}
+  </div>
+))}
+</div>
+
+    </>): null }
     </>
   )
 }

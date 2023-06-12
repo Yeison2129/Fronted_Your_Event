@@ -36,7 +36,7 @@ export const updateUser = async (updateUser) => {
     formData.append('password_empresa', updateUser.password_user);
     formData.append('image', updateUser.img_perfil);
     try {
-        const response = await axios.put(`http://localhost:4000/updateUser/${email}`, formData, {
+        const response = await axios.put(`http://localhost:4000/updateUser/${id_user}`, formData, {
             headers: {
                 token: token,
                 'Content-Type': 'multipart/form-data',
