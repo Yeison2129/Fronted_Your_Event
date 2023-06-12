@@ -50,7 +50,7 @@ export const updateUser = async (updateUser) => {
 
 
 export const deleteUser = async (DeleteUser) =>
-    await axios.delete(`http://localhost:4000/DeleteUser/${email}`, DeleteUser, {
+    await axios.delete(`http://localhost:4000/DeleteUser/${id_user}`, DeleteUser, {
         headers:{
             token:token
         }
@@ -124,7 +124,12 @@ export const getCompany = async () =>
     await axios.get(`http://localhost:4000/getCompany/${id_empresa}`)
 
 
-
+export const deleteCompany = async ()=>
+    await axios.delete(`http://localhost:4000/deleteCompany/${id_empresa}`,{
+        headers:{
+            token_company:token_company
+        }
+    })
 
 
 
@@ -185,6 +190,14 @@ export const deleteEvents = async (id) =>
             token_company: token_company
         }
     })
+
+export const DeleteEventsCompany = async()=>
+    await axios.delete(`http://localhost:4000/deleteEventsCompany/${id_empresa1}`,{
+        headers:{
+            token_company:token_company
+        }
+    })
+
 
 export const getEvents = async () =>
     await axios.get(`http://localhost:4000/getEvents`)

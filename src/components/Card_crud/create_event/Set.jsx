@@ -20,7 +20,7 @@ export const Set = ({ closeModal }) => {
         <Formik
           initialValues={{
             nom_event: eventEmpresa.nom_event,
-            img_event: `${eventEmpresa.img_event}`,
+            img_event: eventEmpresa.img_event,
             tipo_event: eventEmpresa.tipo_event,
             description_event: eventEmpresa.description_event,
             fecha: eventEmpresa.fecha,
@@ -33,7 +33,7 @@ export const Set = ({ closeModal }) => {
             try {
               const eventsU = await updateEvent(values);
 
-              if (eventsU.data == "Update_Ok") {
+              if (eventsU.data == "Update_OK") {
                 Swal.fire({
                   title: "Evento Actualizado",
                   text: "",
@@ -81,7 +81,13 @@ export const Set = ({ closeModal }) => {
                   <div className="imgUpdate">
                       <label className="selec-cert" htmlFor="">
                      
-                      <div className="img-crud">
+                        
+                        <img src={eventEmpresa.img_event}  onClick={()=>{
+                          document.getElementById('image').click()
+                        }} ></img>
+                      </label>
+                    </div>
+                    <div className="img-crud  ">
                       <label className="selec-cert" htmlFor="">
                         <input
                           type="file"
@@ -91,14 +97,8 @@ export const Set = ({ closeModal }) => {
                             const file = event.currentTarget.files[0];
                             setFieldValue("img_event", file);
                           }}
-                          style={{display:'none'}}
+                         
                         />
-                      </label>
-                    </div>
-                        
-                        <img src={eventEmpresa.img_event}  onClick={()=>{
-                          document.getElementById('image').click()
-                        }} ></img>
                       </label>
                     </div>
                     <Field

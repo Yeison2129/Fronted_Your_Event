@@ -23,6 +23,24 @@ export const Card_crud = () => {
     setAllEventsCompany(response.data.rows);
   };
 
+
+
+  
+  const pregunta = async (id) => {
+    Swal.fire({
+    title: '¿Seguro que deseas eliminar este evento?',
+    text: 'Dale OK para confirmar',
+    icon: 'question',
+    showCancelButton: true,
+    botonAcept: 'Sí',
+    botonCancel: 'No',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        deleteEvent(id); // Llama a la función handleYes() cuando se presiona el botón "Sí"
+      } 
+    });
+  };
+
   const deleteEvent = async (id) => {
     try {
       const response = await deleteEvents(id);
@@ -34,12 +52,10 @@ export const Card_crud = () => {
           boton: "Ok",
           time: 1500,
         });
-        const timeout = () => {
-          setTimeout(function () {
-            window.location.href = "/cardCrud";
-          }, 2000);
-        };
-        timeout();
+        setTimeout(() => {
+            window.location.href = "/cardCrud"
+        }, 1500);
+        
       }
       if (response.data.data == "error_al_eliminar") {
         Swal.fire({
@@ -89,7 +105,7 @@ export const Card_crud = () => {
               <div className="icon-card">
                 <button>
                   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAPNJREFUWEftmOERwiAMRl9HcQIdxREcQSdQN3AUN3GFuomH195xlJIE2rvqhZ9tCF9fAiTt2NjoNqaHnxd0BK7AQUm2By7AU2lvIhREvLSOE7sdEMSJwxKy20BHdJoxCJQemom1gu5AEFga8Qdo7L++XJAUthyhllyR1kvfT0LpghJEKkLxnKqdkomb2o+0y9SOljoC/kbQHDnr8wnYWkLWhdWhd0FA8V5zQk4oKuLiXPFdNlaP1vPJD0aJ3GKErJXh6kntgkYCaxT8xaZRusta2ue5sBbbaklQcHoCzsDemjiJ/XvwU/zxoBHUqMM23QVJvD4tFJglZPGVZgAAAABJRU5ErkJggg==" onClick={() => {
-                    deleteEvent(eventEmpresa.id_event);
+                    pregunta(eventEmpresa.id_event);
                   }}/>
                 </button>
               </div>

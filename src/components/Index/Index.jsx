@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback,useEffect} from "react";
 import { ContactUs } from "../ContactUs/ContactUs";
 import { Popup } from "../Popup";
 import Stats from "../Estadisticas/stats";
@@ -93,15 +93,16 @@ export const Index = () => {
             <Link to="/SobreNosotros  ">Sobre Nosotros </Link>
             
             {user ? (
-              <>
+              <>  
               <Link to=""><i className="fa fa-solid fa-bell" /></Link>
               <div className="dropDown"> 
+              
               <p to="" id="enter1">
                   {user.charAt(0).toUpperCase() + user.slice(1)}
                 </p>
+                
                 <DropDown />
               </div>
-              
               
               </>
             ) : (

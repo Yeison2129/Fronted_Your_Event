@@ -113,7 +113,6 @@ export const Editinfo = () => {
                         />
                       </label>
                     </div>
-                        
                         <img src={user1.img_perfil}  onClick={()=>{
                           document.getElementById('image').click()
                         }} ></img>
