@@ -36,7 +36,7 @@ export const LoginEmpresa = () => {
                   localStorage.setItem("id_empresa", respons.data.rows[0].id_empresa);
                   localStorage.setItem("company", respons.data.rows[0].nom_empresa);
                   localStorage.setItem("token_company", respons.data.token_company);
-                  localStorage.setItem("mail_admin", respons.data.rows[0].mail_empresa)
+                  localStorage.setItem("mail_empresa", respons.data.rows[0].mail_empresa)
                 }, 2000);
               };
               timeout();

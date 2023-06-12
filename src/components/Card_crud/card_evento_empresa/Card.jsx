@@ -78,7 +78,6 @@ export const Card_crud = () => {
       setOpen(true);
     }
     const response = await getEventsIdEvent({ id_event: id });
-    localStorage.setItem("id_event", response.data.rows[0].id_event);
     setEvent(response.data.rows);
   };
 

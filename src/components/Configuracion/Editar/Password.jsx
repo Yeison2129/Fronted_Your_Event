@@ -1,7 +1,7 @@
 import { Formik, Form, Field } from "formik";
 import React from "react";
 import swal from "sweetalert2";
-import { update } from "../../../api/App";
+import { update, updatePassEmpresa} from "../../../api/App";
 import "./Password.css";
 import {Link} from 'react-router-dom'
 import { Footdash } from "../../dashboard_empresa/Footdash";
@@ -72,8 +72,8 @@ export const Password = () => {
           password_empresa: "",
         }}
         onSubmit={async (values) => {
-          let response = await update(values);
-          if (response.data.data == "Cambio exitoso") {
+          let response = await updatePassEmpresa(values);
+          if (response.data.data == "Cambio_exitoso") {
               swal.fire({
                 title: "Cambio exitoso",
                 text: "inicie su sesion de nuevo",
@@ -105,8 +105,8 @@ export const Password = () => {
                   onChange={handleChange}
                   type="password"
                   placeholder="Ingrese su nueva contraseña"
-                  name="password_user"
-                  id="password_user"
+                  name="password_empresa"
+                  id="password_empresa"
                 />
                 <button type="submit" id="btn-updatep" >
                   Enviar

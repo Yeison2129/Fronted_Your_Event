@@ -7,6 +7,7 @@ let id_user = localStorage.getItem("id_user")
 let id_empresa = localStorage.getItem("id_empresa")
 let id_empresa1 = localStorage.getItem("id_empresa")
 let id_event = localStorage.getItem("id_event")
+let mail_empresa = localStorage.getItem("mail_empresa")
 
 //Users
 export const registerUser = async (newUser) =>
@@ -131,6 +132,12 @@ export const deleteCompany = async ()=>
         }
     })
 
+export const updatePassEmpresa = async(updatePass)=>
+    await axios.put(`http://localhost:4000/updatePass/${id_empresa}`,updatePass,{
+        headers:{
+            token_company:token_company
+        }
+    })
 
 
 
