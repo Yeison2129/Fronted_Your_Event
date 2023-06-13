@@ -68,12 +68,12 @@
 .dropDown{
 display: flex;
 align-items: center;
-width: 30%;
+width: 20%;
 justify-content: space-around;
 }
 
 .dropDown p{
-color: white;
+color: rgb(184, 85, 217);
 }
 
 #register{
@@ -464,17 +464,35 @@ main .sobre-nosotros{
     align-items: center;
     justify-content: center;
 }
-
+.content-filter{
+    display: flex;
+    justify-content: space-evenly;
+    width: 77%;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50px;
+    background-color: #cbcbcb;
+    padding:34px 0;
+    z-index: 1;
+    position: relative;
+}
+.content-filter input{
+    outline: none;
+    border: none;
+    width: 30%;
+    border-radius:20px ;
+    padding:10px;
+}
 .buscadorEventos{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    padding: 10px;
+    padding: 45px;
+    overflow: scroll;
     align-items: center;
-    background-color: #0112;
+    background-color: #c9c8c822;
     border-radius: 70px;
-    width: 70%;
-    height: 200vh;
+    width: 76%;
+    height: 133vh;
 }
 
 @media (max-width: 1366px) {

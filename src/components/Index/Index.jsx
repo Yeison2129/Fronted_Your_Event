@@ -152,6 +152,7 @@ export const Index = () => {
             </div>
       </header>
       <main>
+
             <section className="categorias" id="categorias">
             <div className="titulo_bar">
               <h2 className="h2-title">
@@ -159,7 +160,7 @@ export const Index = () => {
                 Eventos <hr />
               </h2>
             </div>{" "}
-              <div className="buscadorEventos">
+              <div className="buscadorEventos ">
             <CardView/>
               </div>
           </section>
