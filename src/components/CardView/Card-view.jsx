@@ -73,7 +73,7 @@ export const CardView = () => {
     setAllEvents([...allEvents]);
   };
 
- 
+
 
   const createAsistUser = async(id_event1)=>{
     const response = await asistEvents(id_event1)
@@ -120,7 +120,7 @@ export const CardView = () => {
   return (
     <>
     <Formik>
-       <Field
+      <Field
                       id="tipo_event"
                       className="select-crud"
                       type="text"
