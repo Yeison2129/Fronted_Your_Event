@@ -89,11 +89,12 @@ export const Card_crud = () => {
     <>
       <Dashboard />
 
+   
+      <section className="events-card-all">
       <h1 id="h1-cardEvent">
-        Tus eventos
+        TUS EVENTOS
         <hr />{" "}
       </h1>
-      <section className="events-card-all">
         {allEventsCompany.map((eventEmpresa) => (
           <div className="component-card">
             <div

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import "./cardviewA.css";
+import "../../../../components/CardView/cardview.css";
 import { useState } from "react";
 import swal from "sweetalert2";
 import { DeleteAsist, consultAsist } from "../../../../api/App";
@@ -162,7 +162,7 @@ export const CardViewA = () => {
                           alt=""
                         />
                       </div>
-                      <div className="info">
+                      <div className="info"> 
                         <div className="title-infcard">
                           <h2>{event.nom_event}</h2>
                           <p>

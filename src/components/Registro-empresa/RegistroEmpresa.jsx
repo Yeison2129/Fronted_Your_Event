@@ -22,7 +22,7 @@ export const RegistroEmpresa = () => {
                 Únete a nuestra familia para subir tus eventos y no te pierdas
                 de los servicios que brindamos.
               </p>
-              <Link  id="a-black" to="/loginEmpresa">Ya tengo una cuenta</Link>
+              <Link  id="a-white" to="/loginEmpresa">Ya tengo una cuenta</Link>
 
             </div>
             <img src={registroEmpresa1} className="image-RegistroEmpresa" alt="" />

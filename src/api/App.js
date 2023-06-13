@@ -144,6 +144,10 @@ export const updatePassEmpresa = async(updatePass)=>
 
 //Events
 
+export const CountEvents = async()=>{
+   return await axios.get(`http://localhost:4000/CountEvents`)
+}
+
 export const createEvent = async (registerEvent) => {
     const formData = new FormData();
     formData.append('nom_event', registerEvent.nom_event)
