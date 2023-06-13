@@ -13,6 +13,11 @@ let id_event = localStorage.getItem("id_event")
 export const registerUser = async (newUser) =>
     await axios.post('http://localhost:4000/registerUser', newUser)
 
+
+export const CountUser = async () => {
+    return await axios.get(`http://localhost:4000/CountUsers`)
+}
+
 export const getUser = async () =>
     await axios.get(`http://localhost:4000/getUser/${id_user}`)
 
@@ -52,8 +57,8 @@ export const updateUser = async (updateUser) => {
 
 export const deleteUser = async (DeleteUser) =>
     await axios.delete(`http://localhost:4000/DeleteUser/${id_user}`, DeleteUser, {
-        headers:{
-            token:token
+        headers: {
+            token: token
         }
     })
 
@@ -73,6 +78,11 @@ export const RecuperationPasswordUser = async (recuperationUser, email1) =>
 
 
 //Enterprise
+
+export const CountCompany = async () => {
+    return await axios.get(`http://localhost:4000/CountCompany`)
+}
+
 export const loginCompany = async (loginCompany) =>
     await axios.post('http://localhost:4000/loginCompany', loginCompany)
 
@@ -125,17 +135,17 @@ export const getCompany = async () =>
     await axios.get(`http://localhost:4000/getCompany/${id_empresa}`)
 
 
-export const deleteCompany = async ()=>
-    await axios.delete(`http://localhost:4000/deleteCompany/${id_empresa}`,{
-        headers:{
-            token_company:token_company
+export const deleteCompany = async () =>
+    await axios.delete(`http://localhost:4000/deleteCompany/${id_empresa}`, {
+        headers: {
+            token_company: token_company
         }
     })
 
-export const updatePassEmpresa = async(updatePass)=>
-    await axios.put(`http://localhost:4000/updatePass/${id_empresa}`,updatePass,{
-        headers:{
-            token_company:token_company
+export const updatePassEmpresa = async (updatePass) =>
+    await axios.put(`http://localhost:4000/updatePass/${id_empresa}`, updatePass, {
+        headers: {
+            token_company: token_company
         }
     })
 
@@ -144,8 +154,8 @@ export const updatePassEmpresa = async(updatePass)=>
 
 //Events
 
-export const CountEvents = async()=>{
-   return await axios.get(`http://localhost:4000/CountEvents`)
+export const CountEvents = async () => {
+    return await axios.get(`http://localhost:4000/CountEvents`)
 }
 
 export const createEvent = async (registerEvent) => {
@@ -202,10 +212,10 @@ export const deleteEvents = async (id) =>
         }
     })
 
-export const DeleteEventsCompany = async()=>
-    await axios.delete(`http://localhost:4000/deleteEventsCompany/${id_empresa1}`,{
-        headers:{
-            token_company:token_company
+export const DeleteEventsCompany = async () =>
+    await axios.delete(`http://localhost:4000/deleteEventsCompany/${id_empresa1}`, {
+        headers: {
+            token_company: token_company
         }
     })
 
@@ -236,23 +246,23 @@ export const getEventsIdEvent = async (values) =>
 
 //ASISTS 
 
-export const asistEvents = async(id_event1,asistEvent)=>
-    await axios.post(`http://localhost:4000/asistEvent/${id_user1}/${id_event1}`,asistEvent, {
-        headers:{
+export const asistEvents = async (id_event1, asistEvent) =>
+    await axios.post(`http://localhost:4000/asistEvent/${id_user1}/${id_event1}`, asistEvent, {
+        headers: {
             token: token
         }
     })
 
-export const consultAsist = async()=>
-    await axios.get(`http://localhost:4000/ConsultAsistEvent/${id_user1}`,{
-        headers:{
+export const consultAsist = async () =>
+    await axios.get(`http://localhost:4000/ConsultAsistEvent/${id_user1}`, {
+        headers: {
             token: token
         }
     })
 
-export const DeleteAsist = async(id)=>
-    await axios.delete(`http://localhost:4000/DeleteAsist/${id_user1}/${id}`,{
-        headers:{
+export const DeleteAsist = async (id) =>
+    await axios.delete(`http://localhost:4000/DeleteAsist/${id_user1}/${id}`, {
+        headers: {
             token: token
         }
     })
