@@ -250,6 +250,7 @@ export const Editinfo = () => {
                 <Form className="info-dash" action="" onSubmit={handleSubmit}>
                   <div className="imgUpdate">
                     <label className="selec-cert" htmlFor="">
+            <p id='texto-selec'><b>Click para cambiar la imagen</b></p>
                    
                     <div className="img-crud  ">
                       <label className="selec-cert" htmlFor="">
@@ -265,9 +266,9 @@ export const Editinfo = () => {
                         />
                       </label>
                     </div>
-                      <img src={company1.img_empresa || userIcon} alt=""onClick={()=>{
-                          document.getElementById('image').click()
-                        }}></img> 
+                      <img id="imghover" src={company1.img_empresa || userIcon} alt=""onClick={()=>{
+                        document.getElementById('image').click()
+                      }}></img> 
 
                     </label>
 

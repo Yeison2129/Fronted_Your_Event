@@ -97,12 +97,12 @@ const cerrarPopup = useCallback((valor) => {
                     </li>
                 
                     <li>
-                        <a href="#0">
+                        <Link to="/asistenciasCompany">
                         <svg className="svg-dash" >
                             <use href="#comments"></use>
                         </svg>
                         <span className='span-dash' >Asistencia</span>
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         <a href="#0">

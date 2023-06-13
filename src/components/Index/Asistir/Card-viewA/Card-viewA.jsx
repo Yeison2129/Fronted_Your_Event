@@ -93,7 +93,7 @@ export const CardViewA = () => {
     }
 
     if (response.data.data == "DeleteError") {
-      Swal.fire({
+      swal.fire({
         title: "Error al eliminar asistencia",
         text: "Intenta de nuevo mas tarde",
         icon: "warning",

@@ -39,11 +39,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { getUser } from "../../api/App";
+import { getCompany, getUser } from "../../api/App";
 
 
 export const Index = () => {
   const [traerUser, setTraerUser] = useState([]);
+  const [traerCompany, setTraerCompany] = useState([]);
 
   let user = localStorage.getItem("user");
   let company = localStorage.getItem("company");
@@ -56,8 +57,17 @@ export const Index = () => {
     setTraerUser(userData);
   };
 
+  const companys = async () => {
+    const response = await getCompany();
+    const companyData = response.data.rows.map((company) => ({
+      ...company,
+    }));
+    setTraerCompany(companyData);
+  };
+
   useEffect(() => {
     users();
+    companys();
   }, []);
 
   return (
@@ -98,7 +108,9 @@ export const Index = () => {
                 <Link to=""><i className="fa fa-solid fa-bell" /></Link>
                 <div className="dropDown">
                 <p to="" id="enter1">
-                  {company.charAt(0).toUpperCase() + company.slice(1)}
+              {traerCompany.map((company) => (
+                  `${company.nom_empresa}`
+                  ))}
                 </p>
                   <DropDown />
                 </div>
@@ -140,6 +152,7 @@ export const Index = () => {
             </div>
       </header>
       <main>
+
             <section className="categorias" id="categorias">
             <div className="titulo_bar">
               <h2 className="h2-title">
@@ -147,7 +160,9 @@ export const Index = () => {
                 Eventos <hr />
               </h2>
             </div>{" "}
+              <div className="buscadorEventos ">
             <CardView/>
+              </div>
           </section>
             <section className="statas">
             <div className="titulo_bar">
