@@ -465,6 +465,18 @@ main .sobre-nosotros{
     justify-content: center;
 }
 
+.buscadorEventos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+    align-items: center;
+    background-color: #0112;
+    border-radius: 70px;
+    width: 70%;
+    height: 200vh;
+}
+
 @media (max-width: 1366px) {
     .content-nav{
         width: 55%;
