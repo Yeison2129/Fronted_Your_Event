@@ -39,43 +39,25 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { getUser } from "../../api/App";
 
 
 export const Index = () => {
+  const [traerUser, setTraerUser] = useState([]);
+
   let user = localStorage.getItem("user");
   let company = localStorage.getItem("company");
-  let [isContainerActive, setIsContainerActive] = useState(false);
-  let [imagenPopup, setImagenPopup] = useState("");
-  let [textPopup, setTextPopup] = useState("");
 
-  const closedToken = () => {
-    if (user) {
-      localStorage.removeItem("user");
-      localStorage.removeItem("auth");
-      setTimeout(() => {
-        window.location.href = "/";
-      }, 0.5);
-    } else if (company) {
-      localStorage.removeItem("company");
-      setTimeout(() => {
-        window.location.href = "/";
-      }, 0.5);
-    }
+  const users = async () => {
+    const response = await getUser();
+    const userData = response.data.rows.map((user) => ({
+      ...user,
+    }));
+    setTraerUser(userData);
   };
 
-  const tarjetaAbrir = (imagen, commit) => {
-    console.log("Entra a la funcion!", imagen);
-    setIsContainerActive(true);
-    setImagenPopup(imagen);
-    setTextPopup(commit);
-    console.log(isContainerActive);
-    console.log(commit);
-    // overlay.classList.add('active');
-    // popup.classList.add('active');
-  };
-
-  const cerrarPopup = useCallback((valor) => {
-    setIsContainerActive(valor);
+  useEffect(() => {
+    users();
   }, []);
 
   return (
@@ -94,16 +76,20 @@ export const Index = () => {
             
             {user ? (
               <>  
-              <Link to=""><i className="fa fa-solid fa-bell" /></Link>
+              <Link to="">
+                <i className="fa fa-solid fa-bell" />
+                
+                </Link>
               <div className="dropDown"> 
               
               <p to="" id="enter1">
-                  {user.charAt(0).toUpperCase() + user.slice(1)}
+              {traerUser.map((user) => (
+                  `${user.nom_user}`
+                  ))}
                 </p>
-                
+
                 <DropDown />
               </div>
-              
               </>
             ) : (
               <>

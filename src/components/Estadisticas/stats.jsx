@@ -1,4 +1,4 @@
-import { CountEvents } from "../../api/App";
+import { CountCompany, CountEvents, CountUser } from "../../api/App";
 import {
   LineChart,
   ResponsiveContainer,
@@ -12,12 +12,15 @@ import {
 
 
 const Events = await CountEvents()
-console.log(Events.data.rows[0].eventos);
+
+const Company = await CountCompany()
+console.log(Company.data.rows[0].empresas);
+const Users = await CountUser()
 
 
 const pdata = [
   {
-    name: "X",
+    name: "",
     Total: 0,
   },
   {
@@ -26,19 +29,20 @@ const pdata = [
   },
   {
     name: "Usuarios",
-    Total: 4,
+    Total: `${Users.data.rows[0].users}`,
   },
   {
     name: "Empresas",
-    Total: 5,
+    Total: `${Company.data.rows[0].empresas}`,
   },
+  
 ];
 
 
 function stats() {
   return (
     <>
-      <ResponsiveContainer width="100%" aspect={3}>
+      <ResponsiveContainer width="100%" aspect={1.5}>
         <LineChart data={pdata}>
           <CartesianGrid />
           <XAxis dataKey="name" interval={"preserveStartEnd"} />
@@ -50,7 +54,7 @@ function stats() {
             type="monotone"
             stroke="#8884d8"
             strokeWidth="6"
-            activeDot={{ r: 8 }}
+            activeDot={{ r: 8}}
           />
         </LineChart>
       </ResponsiveContainer>
