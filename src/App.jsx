@@ -25,7 +25,7 @@ import Crud_eventos from "./components/CRUD_eventos/Crud_eventos"
 import {Asistir} from "./components/Index/Asistir/Asistir"
 import {Ayuda} from "./components/Configuracion/Ayuda/Ayuda"
 import { CardViewA } from "./components/Index/Asistir/Card-viewA/Card-viewA"
-
+import { CardAsist } from "./components/Card-Asist/Card_Asist.jsx"
 
 export default function App() {
     return (
@@ -56,6 +56,7 @@ export default function App() {
             <Route path='/SobreNosotros' element={<SobreNosotros/>}/>
             <Route path='/Ayuda' element={<Ayuda/>}/>
             <Route path='/asistir' element={<Asistir/>}/>
+            <Route path='/asistenciasCompany' element={<CardAsist/>}/>
 
         </Routes>
     )

@@ -120,10 +120,12 @@ export const CardView = () => {
 
   return (
     <>
+    <div className="content-filter">
     <Formik>
        <Field
-                      id="tipo_event"
-                      className="select-crud"
+                      id="tipo_event "
+                
+                      className="select-crud "
                       type="text"
                       name="tipo_event"
                       as="select"
@@ -147,11 +149,13 @@ export const CardView = () => {
                       <option value="Arte">Arte</option>
                     </Field>
     </Formik>
-    <input
+    <input id="content-filter"
         type="text"
         placeholder="Buscar eventos..."
         onChange={(e) => filterEvents(e.target.value)}
       />
+    </div>
+    
       {user ? (
         <>
           <div className="all-cards-events">

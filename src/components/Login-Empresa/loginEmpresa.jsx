@@ -41,7 +41,7 @@ export const LoginEmpresa = () => {
               };
               timeout();
             }
-            if (respons.data.data == "usuario No existe") {
+            if (respons.data.data == "Usuario_No_existe") {
               swal.fire({
                 title: "Usuario No existe",
                 text: "por favor Registrate",
