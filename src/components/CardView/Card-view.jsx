@@ -58,7 +58,8 @@ export const CardView = () => {
 
   const filterEvents = (searchText) => {
     const filtered = allEvents.filter((event) => {
-      return event.tipo_event.toLowerCase().includes(searchText.toLowerCase());
+
+      return event.tipo_event.toLowerCase().includes(searchText.toLowerCase()) || event.nom_event.toLowerCase().includes(searchText.toLowerCase());
     });
     setFilteredEvents(filtered);
   };
@@ -146,6 +147,11 @@ export const CardView = () => {
                       <option value="Arte">Arte</option>
                     </Field>
     </Formik>
+    <input
+        type="text"
+        placeholder="Buscar eventos..."
+        onChange={(e) => filterEvents(e.target.value)}
+      />
       {user ? (
         <>
           <div className="all-cards-events">
