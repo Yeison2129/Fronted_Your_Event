@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from "react";
+  import React, { useEffect, useRef } from "react";
 import "./cardview.css";
 import { useState } from "react";
 import swal from "sweetalert2";
 import { asistEvents, getEvents } from "../../api/App";
+import { Formik, Field } from "formik";
 
 export const CardView = () => {
   let user = localStorage.getItem("user");
@@ -43,6 +44,24 @@ export const CardView = () => {
   const tY = mousePY * -40;
 
   const [allEvents, setAllEvents] = useState([]);
+  const [filteredEvents, setFilteredEvents] = useState([]);
+
+  const events = async () => {
+    const response = await getEvents();
+    const eventsData = response.data.data.map((event) => ({
+      ...event,
+      previewActive: false,
+    }));
+    setAllEvents(eventsData);
+    setFilteredEvents(eventsData);
+  };
+
+  const filterEvents = (searchText) => {
+    const filtered = allEvents.filter((event) => {
+      return event.tipo_event.toLowerCase().includes(searchText.toLowerCase());
+    });
+    setFilteredEvents(filtered);
+  };
 
   const handleClick = (event) => {
     event.previewActive = !event.previewActive;
@@ -54,12 +73,7 @@ export const CardView = () => {
     setAllEvents([...allEvents]);
   };
 
-  const events = async () => {
-    const response = await getEvents();
-    setAllEvents(
-      response.data.data.map((event) => ({ ...event, previewActive: false }))
-    );
-  };
+ 
 
   const createAsistUser = async(id_event1)=>{
     const response = await asistEvents(id_event1)
@@ -105,10 +119,37 @@ export const CardView = () => {
 
   return (
     <>
+    <Formik>
+       <Field
+                      id="tipo_event"
+                      className="select-crud"
+                      type="text"
+                      name="tipo_event"
+                      as="select"
+                      required
+                      onChange={(e) => filterEvents(e.target.value)}
+                    >
+                      <option value="">Todas las categorias</option>
+                      <option value="Seminarios">Seminarios</option>
+                      <option value="Talleres">Talleres</option>
+                      <option value="Convenciones">Convenciones</option>
+                      <option value="Exposiciones">Exposiciones</option>
+                      <option value="Ferias comerciales">Ferias comerciales</option>
+                      <option value="Eventos deportivos">Deportivos</option>
+                      <option value="Conciertos">Conciertos</option>
+                      <option value="Festivales">Festivales</option>
+                      <option value="Caridad">Caridad </option>
+                      <option value="Moda">Moda</option>
+                      <option value="Culturales">Culturales</option>
+                      <option value="Gastronómicos">Gastronómicos</option>
+                      <option value="Tecnológicos">Tecnológicos</option>
+                      <option value="Arte">Arte</option>
+                    </Field>
+    </Formik>
       {user ? (
         <>
           <div className="all-cards-events">
-            {allEvents.map((event) => (
+          {filteredEvents.map((event) => (
               <div className="cardsEventos" key={event.id_event}>
                 <div
                   className="cards-wrap"
@@ -208,7 +249,7 @@ export const CardView = () => {
       ) : company ? (
         <>
           <div className="all-cards-events">
-            {allEvents.map((event) => (
+          {filteredEvents.map((event) => (
               <div className="cardsEventos" key={event.id_event}>
                 <div
                   className="cards-wrap"
@@ -306,7 +347,7 @@ export const CardView = () => {
         </>
       ) : (<>
         <div className="all-cards-events">
-        {allEvents.map((event) => (
+        {filteredEvents.map((event) => (
           <div className="cardsEventos" key={event.id_event}>
             <div
               className="cards-wrap"
