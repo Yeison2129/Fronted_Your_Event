@@ -149,6 +149,12 @@ export const updatePassEmpresa = async (updatePass) =>
         }
     })
 
+    export const AsistEventCompany = async (id) =>
+    await axios.get(`http://localhost:4000/AsistEventCompany/${id}`, {
+        headers: {
+            token_company: token_company
+        }
+    })
 
 
 
