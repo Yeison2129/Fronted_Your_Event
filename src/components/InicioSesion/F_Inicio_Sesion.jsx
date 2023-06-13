@@ -109,11 +109,13 @@ export const Inicio_Sesion = () => {
                       value="Iniciar Sesión"
                       className="btn-login"
                     />
-                    <Link id="a-black" to="/">Volver al inicio</Link>
                   </Form>
                   <div className="recuperation">
-                    <Link to="/CardPassword">Olvidaste tu contraseña?</Link>
+                    <Link to="/CardPassword">¿Olvidaste tu contraseña?</Link>
                   </div>
+                  <Link  id="a-black" to="/loginEmpresa">¿Eres una empresa?</Link> <br />
+                  <Link id="a-black" to="/">Volver al inicio</Link>
+
                   <p>
 
                   </p>
