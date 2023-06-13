@@ -6,7 +6,7 @@ import { Footdash } from "../../dashboard_empresa/Footdash";
 import Swal from "sweetalert2";
 import { getCompany, updateCompany, updateUser } from "../../../api/App";
 import { getUser } from '../../../api/App'
-
+import userIcon from '../../../assets/userIcon.svg';
 export const Editinfo = () => {
 
   let user = localStorage.getItem("user");
@@ -113,7 +113,7 @@ export const Editinfo = () => {
                         />
                       </label>
                     </div>
-                        <img src={user1.img_perfil}  onClick={()=>{
+                        <img src={user1.img_perfil || userIcon}  onClick={()=>{
                           document.getElementById('image').click()
                         }} ></img>
                       </label>
@@ -265,10 +265,12 @@ export const Editinfo = () => {
                         />
                       </label>
                     </div>
-                      <img src={company1.img_empresa} alt=""onClick={()=>{
+                      <img src={company1.img_empresa || userIcon} alt=""onClick={()=>{
                           document.getElementById('image').click()
-                        }} ></img>
+                        }}></img> 
+
                     </label>
+
                   </div>
                   <label className="label-info">
                     <Field
