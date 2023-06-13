@@ -72,7 +72,7 @@
 
 .cardBig {
    height: 90%;
-   width: 45%;
+   width: 38%;
    margin: 20px 0;
    border-radius: 1100px;
 }
@@ -88,7 +88,7 @@
    align-items: center;
    overflow : scroll;
    flex-direction: column;
-   height: 270px;
+   height:57%;
    padding: 20px 0 0 0;
 }
 
@@ -124,8 +124,8 @@ flex-wrap: wrap;
 .buttons {
    display: flex;
    align-items: center;
-   justify-content: space-evenly;
-   height: 96px;
+   justify-content: center;
+   height: 12%;
 }
 
 .reserv {
@@ -194,10 +194,9 @@ flex-wrap: wrap;
    font-size: 2rem;
    padding-top: 20px;
 }
-@media (max-width:3677px) {
-   .cardBig{
-      width: 39%;
-   }
+@media (max-width:1377px) {
+
+
 }
 
 
