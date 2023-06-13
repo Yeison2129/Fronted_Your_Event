@@ -157,6 +157,7 @@ export const CardView = () => {
                         />
                       </div>
                       <div className="info">
+
                         <div className="title-infcard">
                           <h2>{event.nom_event}</h2>
                           <p>
