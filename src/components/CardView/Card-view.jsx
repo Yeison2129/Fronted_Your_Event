@@ -90,7 +90,6 @@ export const CardView = () => {
 }}
 
   useEffect(() => {
-    console.log(allEvents);
     events();
   }, []);
 
