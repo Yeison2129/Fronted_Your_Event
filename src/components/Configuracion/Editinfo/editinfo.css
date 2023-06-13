@@ -12,18 +12,36 @@
     font-family: "Poppins", sans-serif;
 
 }
+
 .imgUpdate{
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    
-}
-.imgUpdate img{
-    width: 167px;
+    width: 30%;
+    height: 25%;
+    justify-content: space-evenly;
     background-color: gray;
     border-radius: 141px;
-    height: 176px;
+    color: white;
+    font-size: 10px;
 }
+.selec-cert img{
+    height: 100%;
+    width:100%;
+    background-size: cover;
+    border-radius: 10px;
+    border-radius: 100%;
+}
+
+.selec-cert{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
 .info-dash{
-    
     display: flex;
     flex-direction: column;
     background-color:rgb(244, 244, 244);
