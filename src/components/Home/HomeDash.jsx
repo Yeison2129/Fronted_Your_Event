@@ -16,10 +16,11 @@ export const Homedash = () => {
           <h1 id='h1-cardEvent'> MI PERFIL <hr /> </h1>
           <div className='content-dash'>
             <div className="box1-home">
+            <div className="datosUser">
+        
               <div className="miFoto">
               <img src={userIcon} alt="" />
               </div>
-              <div className="datosUser">
               <Link>
                 <p>BIENVENIDO DE NUEVO </p> 
                 <p>{company.charAt(0).toUpperCase() + company.slice(1)}</p>  
@@ -27,11 +28,24 @@ export const Homedash = () => {
               </div>
              
              <div className="estado">
+             <div className="point "></div>
               <p>Activo</p>
              </div>
+           
             </div>
             <div className="box2-home">
-             
+             <div className="contadores">
+              <p>10+</p>
+              <h3>Eventos creados</h3>
+             </div>
+             <div className="contadores">
+              <p>10+</p>
+              <h3>Asistencias</h3>
+             </div>
+             <div className="contadores">
+              <p>10+</p>
+              <h3>Views</h3>
+             </div>
             </div>
 
           </div>
