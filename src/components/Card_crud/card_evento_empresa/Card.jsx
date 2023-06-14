@@ -89,13 +89,14 @@ export const Card_crud = () => {
     <>
       <Dashboard />
 
-   
-      <section className="events-card-all">
+      
+      <section className="events-card-all-page">
       <h1 id="h1-cardEvent">
         TUS EVENTOS
         <hr />{" "}
       </h1>
-        {allEventsCompany.map((eventEmpresa) => (
+     <div className="events-card-all">
+     {allEventsCompany.map((eventEmpresa) => (
           <div className="component-card">
             <div
               className="fondo"
@@ -127,6 +128,8 @@ export const Card_crud = () => {
             {open && <Set closeModal={{ setOpen, evento: event }} />}
           </div>
         ))}
+     </div>
+    
       </section>
     </>
   );

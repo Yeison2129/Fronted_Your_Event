@@ -82,7 +82,7 @@ export const CardView = () => {
     setAllEvents([...allEvents]);
   };
 
- 
+
 
   const createAsistUser = async(id_event1)=>{
     const response = await asistEvents(id_event1)
