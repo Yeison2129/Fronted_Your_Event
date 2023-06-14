@@ -52,8 +52,8 @@ export const Asistir = () => {
                 <div className="title-asist">
                     <h1>EVENTOS A LOS QUE ASISTIRÁS </h1>
                 </div>
-            </section>
             <CardViewA/>
+            </section>
    
     </div>
     
