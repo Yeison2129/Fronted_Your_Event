@@ -96,12 +96,15 @@ export const Dashc = () => {
                     Cambiar Contraseña
                   </li>
                 </Link>
-                <button onClick={deleteUser}>
-                  <li className="li-style-dash">
+                {/* <button onClick={deleteUser}> */}
+                <Link to="/DeleteAccount">
+                 <li className="li-style-dash">
                     <i className="fa fa-solid fa-trash" />
                     Eliminar cuenta
                   </li>
-                </button>
+                </Link>
+                 
+                {/* </button> */}
                 <Link to="/Ayuda">
                   <li className="li-style-dash">
                     <i className=" fa fa-solid fa-info" />
@@ -141,12 +144,15 @@ export const Dashc = () => {
                     Cambiar Contraseña
                   </li>
                 </Link>
-                <button onClick={DeleteCompany}>
+                {/* <button onClick={DeleteCompany}> */}
+                <Link to="/DeleteAccount">
+
                   <li className="li-style-dash">
                     <i className="fa fa-solid fa-trash" />
                     Eliminar cuenta
                   </li>
-                </button>
+                  </Link>
+                {/* </button> */}
                 <Link to="/Ayuda">
                   <li className="li-style-dash">
                     <i className=" fa fa-solid fa-info" />

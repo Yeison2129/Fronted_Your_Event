@@ -56,10 +56,18 @@ export const CardView = () => {
     setFilteredEvents(eventsData);
   };
 
-  const filterEvents = (searchText) => {
+  const filterEventsType = (searchText) => {
     const filtered = allEvents.filter((event) => {
 
-      return event.tipo_event.toLowerCase().includes(searchText.toLowerCase()) || event.nom_event.toLowerCase().includes(searchText.toLowerCase());
+      return event.tipo_event.toLowerCase().includes(searchText.toLowerCase());
+    });
+    setFilteredEvents(filtered);
+  };
+
+  const filterEventsNom = (searchText) => {
+    const filtered = allEvents.filter((event) => {
+
+      return event.nom_event.toLowerCase().includes(searchText.toLowerCase());
     });
     setFilteredEvents(filtered);
   };
@@ -130,7 +138,7 @@ export const CardView = () => {
                       name="tipo_event"
                       as="select"
                       required
-                      onChange={(e) => filterEvents(e.target.value)}
+                      onChange={(e) => filterEventsType(e.target.value)}
                     >
                       <option value="">Todas las categorias</option>
                       <option value="Seminarios">Seminarios</option>
@@ -152,7 +160,7 @@ export const CardView = () => {
     <input id="content-filter"
         type="text"
         placeholder="Buscar eventos..."
-        onChange={(e) => filterEvents(e.target.value)}
+        onChange={(e) => filterEventsNom(e.target.value)}
       />
     </div>
     

@@ -5,7 +5,7 @@ import "../Editar/Password.css";
 import "./deletea.css";
 import {Link} from 'react-router-dom'
 import { Footdash } from "../../dashboard_empresa/Footdash";
-import { deleteUser } from "../../../api/App";
+// import { deleteUser } from "../../../api/App";
 
 import { Dashc } from "../Dashconfig/Dashc";
 
@@ -38,30 +38,10 @@ export const DeleteAcc = () => {
           }}
         >
           {({ handleChange, handleSubmit }) => (
-            <div className="">
+            <div className="containDelete">
               <Dashc/>
-            <section className="contain">
-              <div id="form-deleteA" >
-                <h2>¿Quieres eliminar tu cuenta?</h2>
-                <p>Ingresa tu contraseña para eliminar tu cuenta en YourEvent.</p>
-
-                <Form
-                  action=""
-                  onSubmit={handleSubmit}
-                  className="contain-form-f"
-                >
-                  <input
-                    onChange={handleChange}
-                    type="password"
-                    placeholder="Ingrese contraseña"
-                    name="password_user"
-                    id="password_user"
-                  />
-                  <button type="submit" id="btn-updatep" >
-                    Eliminar
-                  </button>
-                </Form>
-              </div>
+            <section className="">
+             
             </section>
             <Footdash/> 
             </div>

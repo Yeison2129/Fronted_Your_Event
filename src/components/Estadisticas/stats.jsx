@@ -17,6 +17,9 @@ const Company = await CountCompany()
 console.log(Company.data.rows[0].empresas);
 const Users = await CountUser()
 
+let eventos = Events.data.rows[0].eventos
+let empresas = Company.data.rows[0].empresas
+let usuarios = Users.data.rows[0].users
 
 const pdata = [
   {
@@ -24,16 +27,17 @@ const pdata = [
     Total: 0,
   },
   {
-    name: "Eventos",
-    Total:`${Events.data.rows[0].eventos}`,
-  },
-  {
     name: "Usuarios",
-    Total: `${Users.data.rows[0].users}`,
+    Total: usuarios,
   },
   {
     name: "Empresas",
-    Total: `${Company.data.rows[0].empresas}`,
+    Total: empresas,
+  },
+ 
+  {
+    name: "Eventos",
+    Total: eventos,
   },
   
 ];

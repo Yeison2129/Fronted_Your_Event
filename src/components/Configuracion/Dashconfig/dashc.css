@@ -78,7 +78,17 @@ color: rgb(232, 232, 232);
     width: 80%;
     height: 100vh;
 }
+
 .contain{
+    height: 100vh;
+    width: 82%;
+    left: 18%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.containDelete{
     height: 100vh;
     width: 82%;
     left: 18%;

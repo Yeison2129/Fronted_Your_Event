@@ -55,6 +55,7 @@ border-radius: 20px;
   width: 100%;
   margin-top: 50px;
   transition: 0.5s ease-out;
+  position: absolute;
 }
 
 ul.ul-drop > li.li-style-drop > a {

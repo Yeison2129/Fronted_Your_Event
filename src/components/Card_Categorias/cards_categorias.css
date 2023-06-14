@@ -30,7 +30,7 @@
   transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 .cards-wrap:hover .cards-info:after {
-  transition: 5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: .5s cubic-bezier(0.23, 1, 0.32, 1);
   opacity: 1;
   transform: translateY(0);
 }
@@ -137,7 +137,7 @@
   width: 100%;
   bottom: 0;
   color: #fff;
-  transform: translateY(53%);
+  transform: translateY(50%);
   transition: 0.3s 0.4s cubic-bezier(0.211, 0.51, 0.300, 1);
 }
 .cards-info p {
