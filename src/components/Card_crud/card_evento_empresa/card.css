@@ -86,17 +86,20 @@
     height: 4rem;
     opacity: 0.6;
 }
-
-.events-card-all {
-    position: relative;
-    left: 220px;
-    padding: 10px 40px;
-    width: 80%;
-    height: 50vh ;
+.events-card-all{
     display: grid;
     gap: 20px;
     flex-wrap: wrap;
     grid-template-areas: "ca1 ca2 ca3 ca4 ca5";
+}
+.events-card-all-page {
+    position: relative;
+    left: 220px;
+    padding: 10px 98px;
+    width: 80%;
+    height: 90vh ;
+    overflow: scroll;
+
     justify-content: space-evenly;
   }
 
