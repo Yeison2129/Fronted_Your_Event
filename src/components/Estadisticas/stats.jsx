@@ -10,16 +10,15 @@ import {
   CartesianGrid,
 } from "recharts";
 
+const Events = await CountEvents();
+const Company = await CountCompany();
+const Users = await CountUser();
 
-const Events = await CountEvents()
+console.log(Events.data.data[0].eventos);
 
-const Company = await CountCompany()
-console.log(Company.data.rows[0].empresas);
-const Users = await CountUser()
-
-let eventos = Events.data.rows[0].eventos
-let empresas = Company.data.rows[0].empresas
-let usuarios = Users.data.rows[0].users
+let eventos = Events.data.data[0].eventos;
+let empresas = Company.data.respons[0].empresas
+let usuarios = Users.data.data[0].users
 
 const pdata = [
   {
@@ -34,14 +33,12 @@ const pdata = [
     name: "Empresas",
     Total: empresas,
   },
- 
+
   {
     name: "Eventos",
     Total: eventos,
   },
-  
 ];
-
 
 function stats() {
   return (
@@ -58,7 +55,7 @@ function stats() {
             type="monotone"
             stroke="#8884d8"
             strokeWidth="6"
-            activeDot={{ r: 8}}
+            activeDot={{ r: 8 }}
           />
         </LineChart>
       </ResponsiveContainer>

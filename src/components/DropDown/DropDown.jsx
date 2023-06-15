@@ -13,7 +13,7 @@ export const DropDown = () => {
 
   const users = async () => {
     const response = await getUser();
-    const userData = response.data.rows.map((user) => ({
+    const userData = response.data.data.map((user) => ({
       ...user,
     }));
     setTraerUser(userData);
@@ -21,7 +21,7 @@ export const DropDown = () => {
 
   const companys = async () => {
     const response = await getCompany();
-    const companyData = response.data.rows.map((company) => ({
+    const companyData = response.data.data.map((company) => ({
       ...company,
     }));
     setTraerCompany(companyData);

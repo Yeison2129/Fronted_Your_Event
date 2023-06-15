@@ -51,7 +51,8 @@ export const Index = () => {
 
   const users = async () => {
     const response = await getUser();
-    const userData = response.data.rows.map((user) => ({
+    console.log(response);
+    const userData = response.data.data.map((user) => ({
       ...user,
     }));
     setTraerUser(userData);
@@ -59,7 +60,7 @@ export const Index = () => {
 
   const companys = async () => {
     const response = await getCompany();
-    const companyData = response.data.rows.map((company) => ({
+    const companyData = response.data.data.map((company) => ({
       ...company,
     }));
     setTraerCompany(companyData);

@@ -27,11 +27,11 @@ export const Inicio_Sesion = () => {
                 boton: "Ok",
                 time: 1500,
               });
-              localStorage.setItem("id_user",response.data.rows[0].id_user)
-              localStorage.setItem("documento", response.data.rows[0].document_user);
-              localStorage.setItem("user", response.data.rows[0].nom_user);
-              localStorage.setItem("telefono", response.data.rows[0].phone_user);
-              localStorage.setItem("email", response.data.rows[0].mail_user)
+              localStorage.setItem("id_user",response.data.respons[0].id_user)
+              localStorage.setItem("documento", response.data.respons[0].document_user);
+              localStorage.setItem("user", response.data.respons[0].nom_user);
+              localStorage.setItem("telefono", response.data.respons[0].phone_user);
+              localStorage.setItem("email", response.data.respons[0].mail_user)
               localStorage.setItem("token", response.data.token);
               setTimeout(() => {
                 window.location.href = "/"

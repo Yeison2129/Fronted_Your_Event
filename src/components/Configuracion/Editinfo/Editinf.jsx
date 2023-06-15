@@ -17,12 +17,12 @@ export const Editinfo = () => {
 
   const user1 = async () => {
     const response = await getUser()
-    setAllUser(response.data.rows)
+    setAllUser(response.data.data)
   }
 
   const company1 = async ()=>{
     const response = await getCompany()
-    setAllCompany(response.data.rows)
+    setAllCompany(response.data.data)
   }
 
   useEffect(() => {

@@ -96,8 +96,7 @@ export const Dashc = () => {
                     Cambiar Contraseña
                   </li>
                 </Link>
-                {/* <button onClick={deleteUser}> */}
-                <Link to="/DeleteAccount">
+                <Link to="/DeleteAccount" onClick={deleteUser}>
                  <li className="li-style-dash">
                     <i className="fa fa-solid fa-trash" />
                     Eliminar cuenta
