@@ -56,7 +56,7 @@ export const updateUser = async (updateUser) => {
 
 
 export const deleteUser = async (DeleteUser) =>
-    await axios.delete(`${url}/DeleteUser/${id_user}`, DeleteUser, {
+    await axios.delete(`${url}/DeleteUser/${id_user}/${id_user1}`, DeleteUser, {
         headers: {
             token: token
         }
@@ -86,28 +86,8 @@ export const CountCompany = async () => {
 export const loginCompany = async (loginCompany) =>
     await axios.post(`${url}/loginCompany`, loginCompany)
 
-export const registerCompany = async (RegisterCompany) => {
-    const formData = new FormData();
-    formData.append('nom_empresa', RegisterCompany.nom_empresa);
-    formData.append('mail_empresa', RegisterCompany.mail_empresa);
-    formData.append('telefono_empresa', RegisterCompany.telefono_empresa);
-    formData.append('password_empresa', RegisterCompany.password_empresa);
-    formData.append('image', RegisterCompany.img_certificado);
-
-
-    try {
-        const response = await axios.post(`${url}/RegisterCompany`, formData, {
-            headers: {
-                'Content-Type': 'multipart/form-data',
-            }
-        });
-
-        return response.data;
-    } catch (error) {
-        console.error(error);
-        throw error;
-    }
-};
+    export const registerCompany = async (newCompany) =>
+    await axios.post(`${url}/registerCompany`, newCompany)
 
 export const updateCompany = async (updateCompany) => {
     const formData = new FormData();

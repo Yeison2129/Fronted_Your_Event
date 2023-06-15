@@ -115,7 +115,7 @@ export const Editinfo = () => {
                     </div>
                         <img src={user1.img_perfil || userIcon}  onClick={()=>{
                           document.getElementById('image').click()
-                        }} ></img>
+                        }} key={user1.id_user}></img>
                       </label>
                     </div>
                     <label className="label-info">
@@ -252,7 +252,7 @@ export const Editinfo = () => {
                     <label className="selec-cert" htmlFor="">
             <p id='texto-selec'><b>Click para cambiar la imagen</b></p>
                    
-                    <div className="img-crud  ">
+                    <div className="img-crud ">
                       <label className="selec-cert" htmlFor="">
                         <input
                           type="file"
@@ -268,7 +268,8 @@ export const Editinfo = () => {
                     </div>
                       <img id="imghover" src={company1.img_empresa || userIcon} alt=""onClick={()=>{
                         document.getElementById('image').click()
-                      }}></img> 
+                      }} key={company1.id_empresa}
+                      ></img> 
 
                     </label>
 

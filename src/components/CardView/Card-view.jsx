@@ -95,13 +95,6 @@ export const CardView = () => {
         boton:"Ok",
         time:1500
       });
-      const timeout = () =>{
-        setTimeout(function(){
-          window.location.href="/"
-        },2000)
-      }
-      timeout()
-      console.log(response);
   } if(response.data.data == "AsitenciaExist"){
     swal.fire({
       title:"Ya tienes una asistencia en este evento",

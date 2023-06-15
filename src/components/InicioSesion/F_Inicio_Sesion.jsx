@@ -18,6 +18,7 @@ export const Inicio_Sesion = () => {
         onSubmit={async (values) => {
           try {
             const response = await loginUser(values);
+            console.log(response);
 
             if (response.data.data == "logueado") {
               swal.fire({

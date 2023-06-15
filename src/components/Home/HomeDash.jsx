@@ -53,15 +53,15 @@ export const Homedash = () => {
                 </div>
                 <div className="box2-home">
                   <div className="contadores">
-                    <p>10+</p>
+                    <p>0</p>
                     <h3>Eventos creados</h3>
                   </div>
                   <div className="contadores">
-                    <p>10+</p>
+                    <p>0</p>
                     <h3>Asistencias</h3>
                   </div>
                   <div className="contadores">
-                    <p>10+</p>
+                    <p>0</p>
                     <h3>Views</h3>
                   </div>
                 </div>

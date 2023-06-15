@@ -39,7 +39,7 @@ export const F_registro = () => {
               };
               timeout();
             }
-            if (users.data.data == "user exist") {
+            if (users.data.data == "USER EXISTS") {
               swal.fire({
                 title: " El Usuario ya existe",
                 text: "Inicia sesion",

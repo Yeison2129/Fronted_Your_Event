@@ -193,7 +193,7 @@ const Crud_eventos = () => {
                           id="btn-cancel"
                         />
 
-                            <button id="btn-accept" className="btn-crud" type="submit"> {isSubmitting ? 'Submitting...' : 'Submit' }</button>
+                            <button id="btn-accept" className="btn-crud" type="submit"> {isSubmitting ? 'Creando....' : 'Crear' }</button>
                        
                         {/* <Field
                           className="btn-crud"

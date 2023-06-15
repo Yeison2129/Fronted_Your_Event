@@ -58,6 +58,7 @@ export const DropDown = () => {
                 src={user.img_empresa || userIcon}
                 alt=""
                 id="img-container-drop"
+                key={user.id_user}
                 onClick={() => setActive(!active)}
               />
             ))}
@@ -107,6 +108,7 @@ export const DropDown = () => {
                     src={user.img_perfil || userIcon}
                     alt=""
                     id="img-container-drop"
+                    key={user.id_user}
                     onClick={() => setActive(!active)}
                   />
                 ))}

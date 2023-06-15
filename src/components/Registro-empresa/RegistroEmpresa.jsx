@@ -39,10 +39,10 @@ export const RegistroEmpresa = () => {
         onSubmit={async (values) => {
 
           try {
-            console.log("hola",values);
+            console.log(values);
             const users = await registerCompany(values);
-
-            if (users.data === "INSERT_OK") {
+            console.log(users);
+            if (users.data.data === "INSERT_OK") {
               Swal.fire({
                 title: "Registro exitoso",
                 text: "Gracias por registrarte con nosotros",
@@ -59,7 +59,7 @@ export const RegistroEmpresa = () => {
               timeout()
               }
               
-            if (users.data == "company_exist") {
+            if (users.data.data == "company_exist") {
               Swal.fire({
                 title: "La compañia ya existe",
                 text: "Inicia sesion",
@@ -68,7 +68,7 @@ export const RegistroEmpresa = () => {
                 time: 1500,
               });
             }
-            if (users.data == "INSERT_ERROR") {
+            if (users.data.data == "INSERT_ERROR") {
               Swal.fire("error desconocido");
               
             }
@@ -83,7 +83,7 @@ export const RegistroEmpresa = () => {
           }
         }}
       >
-        {({ handleChange, setFieldValue,handleSubmit }) => (
+        {({ handleChange,handleSubmit }) => (
           <Form onSubmit={handleSubmit} className="sign-in-form-RegistroEmpresa">
             <h2 className="title">Registra tu empresa</h2>
             <div className="input-field-RegistroEmpresa">
@@ -133,21 +133,6 @@ export const RegistroEmpresa = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="input-field-RegistroEmpresa">
-              <i> </i>
-              <label className="selec-cert" htmlFor="">
-              <input
-                type="file"
-                id="image"
-                name="img_certificado"
-                onChange={(event) => {
-                  const file = event.currentTarget.files[0];
-                  setFieldValue("img_certificado", file);
-                }}
-              />
-              </label>
-            </div>
-
             <button type="submit" className="btn solid">
               Registrate
             </button>

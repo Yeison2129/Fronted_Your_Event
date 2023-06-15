@@ -43,7 +43,7 @@ export const LoginEmpresa = () => {
             }
             if (respons.data.data == "Usuario_No_existe") {
               swal.fire({
-                title: "Usuario No existe",
+                title: "Empresa No existe",
                 text: "por favor Registrate",
                 icon: "warning",
                 boton: "Ok",

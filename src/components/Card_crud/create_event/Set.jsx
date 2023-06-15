@@ -70,7 +70,7 @@ export const Set = ({ closeModal }) => {
             } catch (error) {}
           }}
         >
-          {({ handleChange, setFieldValue, handleSubmit }) => (
+          {({ handleChange, setFieldValue, handleSubmit, isSubmitting }) => (
             <div className="page-set">
               <div className="body-set">
                 <h1 id="hr-crud">
@@ -208,13 +208,7 @@ export const Set = ({ closeModal }) => {
                           className="btn-set"
                           onClick={() => closeModal.setOpen(false)}
                         />
-                        <Field
-                          className="btn-set"
-                          id="btn-accept"
-                          type="submit"
-                          value="Aceptar
-                          "
-                        />
+                          <button id="btn-accept" className="btn-crud" type="submit"> {isSubmitting ? 'Actualizando....' : 'Actualizar' }</button>
                         {/* </div> */}
                       </div>
                     </div>

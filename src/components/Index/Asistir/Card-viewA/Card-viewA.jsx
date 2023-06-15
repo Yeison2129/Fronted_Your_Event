@@ -88,7 +88,7 @@ export const CardViewA = () => {
       });
       setTimeout(() => {
           window.location.href = "/asistir"
-      }, 1500);
+      }, 1000);
       
     }
 
