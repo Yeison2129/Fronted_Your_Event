@@ -62,7 +62,7 @@ export const CardViewA = () => {
   const ButtonEliminar = async(id)=>{
 
     swal.fire({
-      title: '¿Seguro que deseas eliminar este evento?',
+      title: '¿Seguro que deseas eliminar tu reserva',
       text: 'Dale OK para confirmar',
       icon: 'question',
       showCancelButton: true,
@@ -80,7 +80,7 @@ export const CardViewA = () => {
 
     if (response.data.data == "DeleteAsistOk") {
       swal.fire({
-        title: "Asistencia Eliminada",
+        title: "reserva Eliminada",
         text: "",
         icon: "success",
         boton: "Ok",

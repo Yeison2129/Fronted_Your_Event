@@ -20,7 +20,7 @@ export const Card_crud = () => {
 
   const eventEmpresa = async () => {
     const response = await getEventsCompany();
-    setAllEventsCompany(response.data.rows);
+    setAllEventsCompany(response.data.data);
   };
 
 
@@ -78,7 +78,7 @@ export const Card_crud = () => {
       setOpen(true);
     }
     const response = await getEventsIdEvent({ id_event: id });
-    setEvent(response.data.rows);
+    setEvent(response.data.data);
   };
 
   useEffect(() => {

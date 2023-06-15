@@ -60,7 +60,7 @@ const Crud_eventos = () => {
           } catch (error) {}
         }}
       >
-        {({ handleChange, setFieldValue, handleSubmit }) => (
+        {({ handleChange, setFieldValue, handleSubmit,isSubmitting }) => (
           <div className="">
             <Dashboard />
 
@@ -193,12 +193,14 @@ const Crud_eventos = () => {
                           id="btn-cancel"
                         />
 
-                        <Field
+                            <button id="btn-accept" className="btn-crud" type="submit"> {isSubmitting ? 'Submitting...' : 'Submit' }</button>
+                       
+                        {/* <Field
                           className="btn-crud"
                           type="submit"
                           id="btn-accept"
                           value="Crear"
-                        />
+                        /> */}
 
                         {/* </div> */}
                       </div>

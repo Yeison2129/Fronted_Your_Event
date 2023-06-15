@@ -42,7 +42,10 @@ export const Dashboard = () => {
 
     const companys = async () => {
         const response = await getCompany();
-        const companyData = response.data.rows.map((company) => ({
+    
+
+        const companyData = response.data.data.map((company) => ({
+            
             ...company,
         }));
         setTraerCompany(companyData);
@@ -59,8 +62,8 @@ export const Dashboard = () => {
                     <div className="page-header">
                         <div className="user-icon">
 
-                            {traerCompany.map((company) => (
-                                <img id='user-icon' src={company.img_empresa || userIcon} alt="icon" />
+                            {traerCompany.map((company,i) => (
+                                <img id='user-icon' src={company.img_empresa || userIcon} alt="icon" key={`${i}Empresa`} />
                             ))}
                             <p id='nom-user'> {company.charAt(0).toUpperCase() + company.slice(1)} </p>
                         </div>

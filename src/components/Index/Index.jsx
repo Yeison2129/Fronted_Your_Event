@@ -51,7 +51,6 @@ export const Index = () => {
 
   const users = async () => {
     const response = await getUser();
-    console.log(response);
     const userData = response.data.data.map((user) => ({
       ...user,
     }));

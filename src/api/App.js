@@ -8,25 +8,25 @@ let id_user1 = localStorage.getItem("id_user")
 let id_empresa = localStorage.getItem("id_empresa")
 let id_empresa1 = localStorage.getItem("id_empresa")
 let id_event = localStorage.getItem("id_event")
-
+let url = 'http://localhost:4000'
 //Users
 export const registerUser = async (newUser) =>
-    await axios.post('http://localhost:4000/registerUser', newUser)
+    await axios.post(`${url}/registerUser`, newUser)
 
 
 export const CountUser = async () => {
-    return await axios.get(`http://localhost:4000/CountUsers`)
+    return await axios.get(`${url}/CountUsers`)
 }
 
 export const getUser = async () =>
-    await axios.get(`http://localhost:4000/getUser/${id_user}`)
+    await axios.get(`${url}/getUser/${id_user}`)
 
 export const loginUser = async (loginUser) =>
-    await axios.post('http://localhost:4000/loginUser', loginUser)
+    await axios.post(`${url}/loginUser`, loginUser)
 
 
 export const update = async (update) =>
-    await axios.put(`http://localhost:4000/update/${email}`, update, {
+    await axios.put(`${url}/update/${email}`, update, {
         headers: {
             token: token
         }
@@ -41,7 +41,7 @@ export const updateUser = async (updateUser) => {
     formData.append('password_empresa', updateUser.password_user);
     formData.append('image', updateUser.img_perfil);
     try {
-        const response = await axios.put(`http://localhost:4000/updateUser/${id_user}`, formData, {
+        const response = await axios.put(`${url}/updateUser/${id_user}`, formData, {
             headers: {
                 token: token,
                 'Content-Type': 'multipart/form-data',
@@ -56,7 +56,7 @@ export const updateUser = async (updateUser) => {
 
 
 export const deleteUser = async (DeleteUser) =>
-    await axios.delete(`http://localhost:4000/DeleteUser/${id_user}`, DeleteUser, {
+    await axios.delete(`${url}/DeleteUser/${id_user}`, DeleteUser, {
         headers: {
             token: token
         }
@@ -64,15 +64,15 @@ export const deleteUser = async (DeleteUser) =>
 
 //Recuperation_Password_User
 export const CompareEmailUser = async (emailsUser) => {
-    return await axios.post("http://localhost:4000/emailsUser", emailsUser)
+    return await axios.post(`${url}/emailsUser`, emailsUser)
 
 }
 
 export const CompareCodeUser = async (codigoUser, email1) =>
-    await axios.post(`http://localhost:4000/codigoUser/${email1}`, codigoUser)
+    await axios.post(`${url}/codigoUser/${email1}`, codigoUser)
 
 export const RecuperationPasswordUser = async (recuperationUser, email1) =>
-    await axios.put(`http://localhost:4000/recuperationUser/${email1}`, recuperationUser)
+    await axios.put(`${url}/recuperationUser/${email1}`, recuperationUser)
 
 
 
@@ -80,11 +80,11 @@ export const RecuperationPasswordUser = async (recuperationUser, email1) =>
 //Enterprise
 
 export const CountCompany = async () => {
-    return await axios.get(`http://localhost:4000/CountCompany`)
+    return await axios.get(`${url}/CountCompany`)
 }
 
 export const loginCompany = async (loginCompany) =>
-    await axios.post('http://localhost:4000/loginCompany', loginCompany)
+    await axios.post(`${url}/loginCompany`, loginCompany)
 
 export const registerCompany = async (RegisterCompany) => {
     const formData = new FormData();
@@ -96,7 +96,7 @@ export const registerCompany = async (RegisterCompany) => {
 
 
     try {
-        const response = await axios.post('http://localhost:4000/RegisterCompany', formData, {
+        const response = await axios.post(`${url}/RegisterCompany`, formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             }
@@ -117,7 +117,7 @@ export const updateCompany = async (updateCompany) => {
     formData.append('password_empresa', updateCompany.password_empresa);
     formData.append('image', updateCompany.img_empresa);
     try {
-        const response = await axios.put(`http://localhost:4000/updateCompany/${id_empresa}`, formData, {
+        const response = await axios.put(`${url}/updateCompany/${id_empresa}`, formData, {
             headers: {
                 token_company: token_company,
                 'Content-Type': 'multipart/form-data',
@@ -132,25 +132,25 @@ export const updateCompany = async (updateCompany) => {
 
 
 export const getCompany = async () =>
-    await axios.get(`http://localhost:4000/getCompany/${id_empresa}`)
+    await axios.get(`${url}/getCompany/${id_empresa}`)
 
 
 export const deleteCompany = async () =>
-    await axios.delete(`http://localhost:4000/deleteCompany/${id_empresa}`, {
+    await axios.delete(`${url}/deleteCompany/${id_empresa}`, {
         headers: {
             token_company: token_company
         }
     })
 
 export const updatePassEmpresa = async (updatePass) =>
-    await axios.put(`http://localhost:4000/updatePass/${id_empresa}`, updatePass, {
+    await axios.put(`${url}/updatePass/${id_empresa}`, updatePass, {
         headers: {
             token_company: token_company
         }
     })
 
     export const AsistEventCompany = async (id) =>
-    await axios.get(`http://localhost:4000/AsistEventCompany/${id}`, {
+    await axios.get(`${url}/AsistEventCompany/${id}`, {
         headers: {
             token_company: token_company
         }
@@ -161,7 +161,7 @@ export const updatePassEmpresa = async (updatePass) =>
 //Events
 
 export const CountEvents = async () => {
-    return await axios.get(`http://localhost:4000/CountEvents`)
+    return await axios.get(`${url}/CountEvents`)
 }
 
 export const createEvent = async (registerEvent) => {
@@ -175,7 +175,7 @@ export const createEvent = async (registerEvent) => {
     formData.append('municipio', registerEvent.municipio)
     formData.append('direccion', registerEvent.direccion)
     formData.append('precio_entrada', registerEvent.precio_entrada)
-    const events = await axios.post(`http://localhost:4000/registerEvent/${id_empresa1}`, formData, {
+    const events = await axios.post(`${url}/registerEvent/${id_empresa1}`, formData, {
         headers: {
             token_company: token_company,
             'Content-Type': 'multipart/form-data'
@@ -186,7 +186,7 @@ export const createEvent = async (registerEvent) => {
 }
 
 
-export const updateEvent = async (updateEvent) => {
+export const updateEvent = async (updateEvent,id) => {
     const formData = new FormData();
     formData.append('nom_event', updateEvent.nom_event);
     formData.append('image', updateEvent.img_event)
@@ -198,7 +198,7 @@ export const updateEvent = async (updateEvent) => {
     formData.append('direccion', updateEvent.direccion);
     formData.append('precio_entrada', updateEvent.precio_entrada);
     try {
-        const response = await axios.put(`http://localhost:4000/updateEvent/${id_event}`, formData, {
+        const response = await axios.put(`${url}/updateEvent/${id}`, formData, {
             headers: {
                 token_company: token_company,
                 'Content-Type': 'multipart/form-data'
@@ -212,14 +212,14 @@ export const updateEvent = async (updateEvent) => {
 }
 
 export const deleteEvents = async (id) =>
-    await axios.delete(`http://localhost:4000/deleteEvent/${id}`, {
+    await axios.delete(`${url}/deleteEvent/${id}`, {
         headers: {
             token_company: token_company
         }
     })
 
 export const DeleteEventsCompany = async () =>
-    await axios.delete(`http://localhost:4000/deleteEventsCompany/${id_empresa1}`, {
+    await axios.delete(`${url}/deleteEventsCompany/${id_empresa1}`, {
         headers: {
             token_company: token_company
         }
@@ -227,24 +227,24 @@ export const DeleteEventsCompany = async () =>
 
 
 export const getEvents = async () =>
-    await axios.get(`http://localhost:4000/getEvents`)
+    await axios.get(`${url}/getEvents`)
 
 export const getEventsCompany = async () =>
-    await axios.get(`http://localhost:4000/getEventsCompany/${id_empresa}`, {
+    await axios.get(`${url}/getEventsCompany/${id_empresa}`, {
         headers: {
             token_company: token_company
         }
     })
 
 export const deleteAdminAsist = async (id) =>
-    await axios.delete(`http://localhost:4000/DeleteEventAdmin/${id}`, {
+    await axios.delete(`${url}/DeleteEventAdmin/${id}`, {
         headers: {
             token: token
         }
     })
 
 export const getEventsIdEvent = async (values) =>
-    await axios.post(`http://localhost:4000/consultEvent`, values, {
+    await axios.post(`${url}/consultEvent`, values, {
         headers: {
             token: token
         }
@@ -253,21 +253,21 @@ export const getEventsIdEvent = async (values) =>
 //ASISTS 
 
 export const asistEvents = async (id_event1, asistEvent) =>
-    await axios.post(`http://localhost:4000/asistEvent/${id_user1}/${id_event1}`, asistEvent, {
+    await axios.post(`${url}/asistEvent/${id_user1}/${id_event1}`, asistEvent, {
         headers: {
             token: token
         }
     })
 
 export const consultAsist = async () =>
-    await axios.get(`http://localhost:4000/ConsultAsistEvent/${id_user1}`, {
+    await axios.get(`${url}/ConsultAsistEvent/${id_user1}`, {
         headers: {
             token: token
         }
     })
 
 export const DeleteAsist = async (id) =>
-    await axios.delete(`http://localhost:4000/DeleteAsist/${id_user1}/${id}`, {
+    await axios.delete(`${url}/DeleteAsist/${id_user1}/${id}`, {
         headers: {
             token: token
         }

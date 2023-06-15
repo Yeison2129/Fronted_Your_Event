@@ -22,6 +22,7 @@ export const CardPassword = () => {
             try {
               setInputEmail(values.mail_user);
               let response = await CompareEmailUser(values);
+              console.log(response);
               if (response.data.data == "CODE_ADD") {
                 swal.fire({
                   title: "Correo Enviado",

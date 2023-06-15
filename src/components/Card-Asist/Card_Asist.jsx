@@ -56,7 +56,7 @@ export const CardAsist = () => {
 
   const eventEmpresa = async () => {
     const response = await getEventsCompany();
-    setAllEventsCompany(response.data.rows);
+    setAllEventsCompany(response.data.data);
   };
 
   const AsistEventsCompany = async(id)=>{

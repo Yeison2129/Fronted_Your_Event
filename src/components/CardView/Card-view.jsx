@@ -86,6 +86,7 @@ export const CardView = () => {
 
   const createAsistUser = async(id_event1)=>{
     const response = await asistEvents(id_event1)
+    console.log(response);
     if(response.data.data == "AsistenciaCreada"){
       swal.fire({
         title:"Asistencia Exitosa",
@@ -96,10 +97,11 @@ export const CardView = () => {
       });
       const timeout = () =>{
         setTimeout(function(){
-          window.location.href="/asistir"
+          window.location.href="/"
         },2000)
       }
       timeout()
+      console.log(response);
   } if(response.data.data == "AsitenciaExist"){
     swal.fire({
       title:"Ya tienes una asistencia en este evento",
@@ -108,9 +110,8 @@ export const CardView = () => {
       boton:"Ok",
       time:1500
     });
-
-
 }}
+
 
   useEffect(() => {
     events();
@@ -352,9 +353,6 @@ export const CardView = () => {
                           <p>Descripcion:</p>
                           {event.description_event}
                         </div>
-                      </div>
-                      <div className="buttons">
-                        <button className="reserv">¡Reserva ya!</button>
                       </div>
                     </div>
                   </div>

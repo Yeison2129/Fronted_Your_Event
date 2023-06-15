@@ -8,7 +8,8 @@ export const Set = ({ closeModal }) => {
   const [allEventsCompany, setAllEventsCompany] = useState([]);
   const eventEmpresa = async () => {
     const response = await getEventsCompany();
-    setAllEventsCompany(response.data.rows);
+    console.log(response);
+    setAllEventsCompany(response.data.data);
   };
 
   useEffect(() => {
@@ -31,7 +32,7 @@ export const Set = ({ closeModal }) => {
           }}
           onSubmit={async (values) => {
             try {
-              const eventsU = await updateEvent(values);
+              const eventsU = await updateEvent(values,eventEmpresa.id_event);
 
               if (eventsU.data == "Update_OK") {
                 Swal.fire({
@@ -84,7 +85,7 @@ export const Set = ({ closeModal }) => {
                         
                         <img src={eventEmpresa.img_event}  onClick={()=>{
                           document.getElementById('image').click()
-                        }} ></img>
+                        key=`${i}`}} ></img>
                       </label>
                     </div>
                     <div className="img-crud  ">

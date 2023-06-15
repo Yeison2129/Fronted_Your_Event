@@ -21,7 +21,6 @@ export const DeleteAcc = () => {
           }}
           onSubmit={async (values) => {
             let response = await deleteUser(values);
-            console.log(response);
             if (response.data.data == "Cuenta_Eliminada") {
                 swal.fire({
                   title: "Cuenta eliminada",

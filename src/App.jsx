@@ -31,6 +31,7 @@ export default function App() {
     return (
         <Routes>
             <Route path='/' element={<Index/>} />
+            
             <Route path='/login' element={<Inicio_Sesion/>} />
             <Route element={<F_registro/>} path='/registro'/>
             <Route path='/password' element={<Password/>}/>
