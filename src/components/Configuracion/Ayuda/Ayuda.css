@@ -3,14 +3,17 @@ padding: 0 20px;
 }
 .info-help{
     display: flex;
+    justify-content: center;
     flex-direction: row;
+    width: 100%;
+    overflow: hidden;
 }
 .info-help li{
     list-style: none;
 }
 .info-help p{
-   
-    width: 55rem;
+   font-size: 14px;
+    width: 35rem;
 }
 
 .help{
