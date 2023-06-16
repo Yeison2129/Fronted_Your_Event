@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
 *{
     margin: 0;
@@ -13,21 +13,24 @@
     padding: 10px 40px;
     width:100%;
     position: relative;
-    height: 10vh ;
+    height: 10vh;
+    font-family: "Poppins";
+    font-size: 20px;
     justify-content: center;
 
 }
 #h1-cardEvent hr{
     width: 200px ;
     height:1px ;
+    
     border: #000 1px solid;
 }
 .component-card{
     display: flex;
     flex-direction: column;
+    font-family: "Poppins";
     justify-content: space-between;
      height: 20rem;
-     font-family: montserrat;
      width: 13rem;
      border-radius: 20px;
      position: relative;
@@ -55,6 +58,11 @@
     background-size: cover;
     background-repeat: no-repeat;
 
+}
+.button-delete{
+    display: flex;
+    justify-content: center;
+border-radius: 10px;
 }
 .imagen-card img{
     width: 100%;
@@ -108,4 +116,14 @@
     width: 100%;
     height: 100%;
     flex-direction: row;
+}
+@media (max-width:1377px){
+    .events-card-all{
+        grid-template-areas: "ca1 ca2 ca3 ca4 ";
+    }
+    .events-card-all-page {
+
+        height: 82vh;
+
+    }
 }

@@ -205,10 +205,10 @@ export const Set = ({ closeModal }) => {
                           id="btn-cancel"
                           type="submit"
                           value="Cancelar"
-                          className="btn-set"
+                          className="btn-delete"
                           onClick={() => closeModal.setOpen(false)}
                         />
-                          <button id="btn-accept" className="btn-crud" type="submit"> {isSubmitting ? 'Actualizando....' : 'Actualizar' }</button>
+                          <button id="btn-accept" className="btn-accept" type="submit"> {isSubmitting ? 'Actualizando....' : 'Actualizar' }</button>
                         {/* </div> */}
                       </div>
                     </div>
