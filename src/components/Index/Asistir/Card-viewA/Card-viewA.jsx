@@ -113,6 +113,7 @@ export const CardViewA = () => {
     <>
       {user ? (
         <>
+  
           <div className="all-cards-events">
             {allEvents.map((event) => (
               <div className="cardsEventos" key={event.id_event}>

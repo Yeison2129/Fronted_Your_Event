@@ -71,11 +71,13 @@ export const CardAsist = () => {
   return (
     <>
     <Dashboard/>
-    <section className="events-card-all">
+    <div className="events-card-all-page">
     <h1 id="h1-cardEvent">
-      TUS ASISTENCIAS
+       ASISTENCIAS
       <hr />{" "}
     </h1>
+    <section className="events-card-all">
+    
       {allEventsCompany.map((eventEmpresa) => (
         <div className="component-card">
           <div
@@ -93,6 +95,8 @@ export const CardAsist = () => {
         </div>
       ))}
     </section>
+    </div>
+   
   </>
 );
 };
