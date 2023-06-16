@@ -108,14 +108,14 @@ export const Dashboard = () => {
 
                                     </Link>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <a href="#0">
                                         <svg className="svg-dash">
                                             <use href="#trends"></use>
                                         </svg>
                                         <span className='span-dash' >Estadísticas</span>
                                     </a>
-                                </li>
+                                </li> */}
 
                                 <li>
                                     <Link to="/asistenciasCompany">
@@ -125,25 +125,18 @@ export const Dashboard = () => {
                                         <span className='span-dash' >Asistencia</span>
                                     </Link>
                                 </li>
-                                <li>
-                                    <a href="#0">
-                                        <svg className="svg-dash" >
-                                            <use href="#appearance"></use>
-                                        </svg>
-                                        <span className='span-dash' >Papelera  </span>
-                                    </a>
-                                </li>
+                                {/*  */}
                                 <li className="menu-heading">
                                     <h3>OPCIONES</h3>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <a href="#0">
                                         <svg className="svg-dash" >
                                             <use href="#settings"></use>
                                         </svg>
                                         <span className='span-dash'>Opciones</span>
                                     </a>
-                                </li>
+                                </li> */}
 
                                 <li>
                                     <a href="/">
