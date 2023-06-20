@@ -242,45 +242,35 @@ export const CardView = () => {
                         />
                       </div>
                       <div className="info">
-
-                        <div className="title-infcard">
-                          <h2>{event.nom_event}</h2>
-                          <p>
-                           
-                            
-                            
+                    <div className="title-infcard">
+                      <h2>{event.nom_event}</h2>
+                      <p id="p-info">
                             {" "}
                             <i className="fa fa-light fa-map-pin" />
-                            {event.direccion}    {" "}
-                            {/* {event.municipio} */}
+                            {event.direccion}{" "} , 
+                            {event.municipio} Quindío.
                           </p>
-                        </div>
+                        <p id="p-info">
+                        <i className="fa fa-solid fa-calendar"/> 
+                        {event.fecha} - <i className="fa fa-solid fa-clock" />{event.hora}{" "}
+                        </p>  
+                        <p id="p-info">
+                        <i className="fa fa-solid fa-dollar-sign" />
+                        {event.precio_entrada}
+                        </p>
+                    </div>
+                    <div className="dates">
+                      <i className="bx bx-time"></i>
+                      <p>Categoria: <br /></p>  {event.tipo_event}{" "} 
+                     
+                    </div>
 
-                        <div className="dates">
-                          <i className="bx bx-calendar" />
-                          <p>Fecha:</p> {event.fecha}
-                        </div>
-                        <div className="dates">
-                          <i className="bx bx-time" />
-                          <p>Hora:</p> {event.hora}{" "}
-                        </div>
-                        <div className="dates">
-                          <i className="bx bx-time"></i>
-                          <p>Categoria:</p> {event.tipo_event}{" "}
-                        </div>
-                       
-                        <div className="dates">
-                          <i className="bx bx-purchase-tag-alt"></i>{" "}
-                          <p>Precio:</p>
-                          {event.precio_entrada}
-                        </div>
-
-                        <div className="dates" id="descripcion-cardview">
-                          <i className="bx bx-purchase-tag-alt"></i>{" "}
-                          <p>Descripcion:</p>
-                          {event.description_event}
-                        </div>
-                      </div>
+                    <div className="" id="descripcion-cardview">
+                      <i className="bx bx-purchase-tag-alt"></i>{" "}
+                      <p>Descripcion:</p>
+                      {event.description_event}
+                    </div>
+                  </div>
                       <div className="buttons">
                         <button className="reserv" onClick={()=>{createAsistUser(event.id_event)}}>¡Reserva ya!</button>
                       </div>
@@ -343,41 +333,35 @@ export const CardView = () => {
                         />
                       </div>
                       <div className="info">
-                        <div className="title-infcard">
-                          <h2>{event.nom_event}</h2>
-                          <p>
+                    <div className="title-infcard">
+                      <h2>{event.nom_event}</h2>
+                      <p id="p-info">
                             {" "}
                             <i className="fa fa-light fa-map-pin" />
-                            {event.direccion}{" "} <p>,</p>
-                            {event.municipio} 
-                          </p><p>Quindío</p>
-                        </div>
+                            {event.direccion}{" "} , 
+                            {event.municipio} Quindío.
+                          </p>
+                        <p id="p-info">
+                        <i className="fa fa-solid fa-calendar"/> 
+                        {event.fecha} - <i className="fa fa-solid fa-clock" />{event.hora}{" "}
+                        </p>  
+                        <p id="p-info">
+                        <i className="fa fa-solid fa-dollar-sign" />
+                        {event.precio_entrada}
+                        </p>
+                    </div>
+                    <div className="dates">
+                      <i className="bx bx-time"></i>
+                      <p>Categoria: <br /></p>  {event.tipo_event}{" "} 
+                     
+                    </div>
 
-                        <div className="dates">
-                          <i className="bx bx-calendar" />
-                          <p>Fecha:</p> {event.fecha}
-                        </div>
-                        <div className="dates">
-                          <i className="bx bx-time" />
-                          <p>Hora:</p> {event.hora}{" "}
-                        </div>
-                        <div className="dates">
-                          <i className="bx bx-time"></i>
-                          <p>Categoria:</p> {event.tipo_event}{" "}
-                        </div>
-                       
-                        <div className="dates">
-                          <i className="bx bx-purchase-tag-alt"></i>{" "}
-                          <p>Precio:</p>
-                          {event.precio_entrada}
-                        </div>
-
-                        <div className="dates" id="descripcion-cardview">
-                          <i className="bx bx-purchase-tag-alt"></i>{" "}
-                          <p>Descripcion:</p>
-                          {event.description_event}
-                        </div>
-                      </div>
+                    <div className="" id="descripcion-cardview">
+                      <i className="bx bx-purchase-tag-alt"></i>{" "}
+                      <p>Descripcion:</p>
+                      {event.description_event}
+                    </div>
+                  </div>
                     </div>
                   </div>
                 )}
@@ -458,11 +442,6 @@ export const CardView = () => {
                       <p>Categoria: <br /></p>  {event.tipo_event}{" "} 
                      
                     </div>
-{/*                    
-                    <div className="dates">
-                      <i className="bx bx-purchase-tag-alt"></i> <p>Precio:</p>
-                      {event.precio_entrada}
-                    </div> */}
 
                     <div className="" id="descripcion-cardview">
                       <i className="bx bx-purchase-tag-alt"></i>{" "}
