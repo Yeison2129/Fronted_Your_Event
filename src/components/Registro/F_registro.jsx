@@ -131,6 +131,18 @@ export const F_registro = () => {
                       onChange={handleChange}
                     />
                   </div>
+                  <div className="input-field">
+                    <i className="fas fa-lock"></i>
+                    <Field
+                      autocomplete="off"
+                      type="password"
+                      id="password_user"
+                      name="password_user"
+                      required
+                      placeholder="Confirmar contraseña"
+                      onChange={handleChange}
+                    />
+                  </div>
                  
                   <button type="submit" className="btn solid">
                     Registrarse
