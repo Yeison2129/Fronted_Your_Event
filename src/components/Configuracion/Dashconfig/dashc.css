@@ -115,6 +115,16 @@ color: rgb(232, 232, 232);
     background-color: #bababae6;
     transition: .4s;
 }
+@media (max-width: 1366px){
+    .aside-config{
+        width: 21%;
+    }
+    .contenido-help{
+        padding-left: 50px;
+        padding-bottom: 10px
+    }
+
+}
 @media (max-width: 870px) {
     .aside-config{
         width: 45%;

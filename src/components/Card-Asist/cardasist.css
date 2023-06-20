@@ -211,4 +211,7 @@ flex-wrap: wrap;
    .reserv{
       font-size: 28px;
    }
+   .all-cards-events{
+      width: 100%;
+   }
 }
