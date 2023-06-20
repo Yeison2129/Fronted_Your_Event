@@ -1,16 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
 
-.all-cards-events {
-   font-family: 'Nunito', sans-serif;
-   text-decoration: none;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-wrap: wrap;
-   width: 90%;
-   padding: 10px;
-
-}
 
 .cards-index {
    position: relative;
@@ -56,7 +45,7 @@
    display: block;
 }
 
-/* -.-.-.-.-.-.-.-.-.-.-.-.-..-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-..-PREVIEW.-..-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. */
+ -.-.-.-.-.-.-.-.-.-.-.-.-..-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-..-PREVIEW.-..-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. 
 .preview {
    position: fixed;
    top: 50%;
@@ -84,93 +73,7 @@
    height: 32%;
    justify-content: center;
 }
-
-.info{
-   display: flex;
-   align-items: center;
-   overflow : scroll;
-   flex-direction: column;
-   height:57%;
-   padding: 20px 0 0 0;
-}
-
-.title-infcard {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-}
-.title-infcard i{
-   padding: 0 10px;
-}
-.dates{
-   display: flex;
-   width: 79%;
-   padding: 10px;
-   align-items:center ;
-   border-radius: 18px;
-   background-color: rgb(232, 232, 232);
-   margin: 7px;
-}
-.dates p{
-   display: flex;
-   justify-content: center;
-   width: 25%;
-}
-#descripcion-cardview{
-   height: 120%;
-   padding: 17px;
-   display: flex;
-align-items: flex-start;
-flex-wrap: wrap;
-}
-.buttons {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   height: 12%;
-}
-
-.reserv {
-   background-color: #800080;
-   border-radius: 26px;
-   height: 50%;
-   color: white;
-   border: none;
-   padding: 10px 20px;
-   text-align: center;
-   text-decoration: none;
-   display: inline-block;
-   font-size: 16px;
-   margin: 4px 2px;
-   cursor: pointer;
-   transition: background-color 0.3s ease;
-}
-
-.reserv:hover {
-   background-color: #80008077;
-   color: #000000;
-}
-
-.buy {
-   background-color: #983C59;
-   border-radius: 7px;
-   height: 50%;
-   color: white;
-   border: none;
-   padding: 10px 20px;
-   text-align: center;
-   text-decoration: none;
-   display: inline-block;
-   font-size: 16px;
-   margin: 4px 2px;
-   cursor: pointer;
-   transition: background-color 0.3s ease;
-}
-
-.buy:hover {
-   background-color: #55041e;
-}
-
+   
 
 #cierre-ventana {
    font-size: 30px;
@@ -181,11 +84,6 @@ flex-wrap: wrap;
    color: #a70000
 }
 
-.preview h2 {
-   display: flex;
-   font-size: 20px;
-   justify-content: center;
-}
 
 .products-preview .preview .fa-times {
    position: absolute;
@@ -214,4 +112,4 @@ flex-wrap: wrap;
    .all-cards-events{
       width: 100%;
    }
-}
+} */

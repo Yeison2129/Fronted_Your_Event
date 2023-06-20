@@ -471,7 +471,7 @@ main .sobre-nosotros{
     align-items: center;
     overflow: hidden;
     border-radius: 50px;
-    background-color: #cbcbcb;
+    background-color: #80008097;
     padding:34px 0;
     z-index: 1;
     position: relative;
@@ -489,9 +489,9 @@ main .sobre-nosotros{
     padding: 45px;
     overflow: scroll;
     align-items: center;
-    background-color: #c9c8c822;
+    background-color: #935d9336;
     border-radius: 70px;
-    width: 76%;
+    width: 86%;
     height: 97vh;
 }
 
