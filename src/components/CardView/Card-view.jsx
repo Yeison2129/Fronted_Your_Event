@@ -72,6 +72,14 @@ export const CardView = () => {
     setFilteredEvents(filtered);
   };
 
+  const filterEventsMuni = (searchText) => {
+    const filtered = allEvents.filter((event) => {
+
+      return event.municipio.toLowerCase().includes(searchText.toLowerCase());
+    });
+    setFilteredEvents(filtered);
+  };
+
   const handleClick = (event) => {
     event.previewActive = !event.previewActive;
     setAllEvents([...allEvents]);
@@ -149,6 +157,30 @@ export const CardView = () => {
                       <option value="Gastronómicos">Gastronómicos</option>
                       <option value="Tecnológicos">Tecnológicos</option>
                       <option value="Arte">Arte</option>
+                    </Field>
+    </Formik>
+    <Formik>
+    <Field
+                      id="municipio"
+                      className="select-crud"
+                      name="municipio"
+                      as="select"
+                      required
+                      onChange={(e) => filterEventsMuni(e.target.value)}
+                    >
+                      <option value="">Selecciona tu Municipio</option>
+                      <option value="Filandia">Filandia</option>
+                      <option value="Salento">Salento</option>
+                      <option value="Circasia">Circasia</option>
+                      <option value="Quimbaya">Quimbaya</option>
+                      <option value="Montenegro">Montenegro</option>
+                      <option value="Armenia">Armenia</option>
+                      <option value="Calarcá">Calarcá</option>
+                      <option value="Tebaida">Tebaida</option>
+                      <option value="Cordoba">Cordoba</option>
+                      <option value="Buenavista">Buenavista</option>
+                      <option value="Pijao">Pijao</option>
+                      <option value="Genova">Genova</option>
                     </Field>
     </Formik>
     <input id="content-filter"

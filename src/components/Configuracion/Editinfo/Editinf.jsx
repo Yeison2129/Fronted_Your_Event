@@ -26,12 +26,9 @@ export const Editinfo = () => {
   }
 
   useEffect(() => {
+    company1()
     user1()
   }, [])
-
-  useEffect(()=>{
-    company1()
-  })
 
 
 
@@ -90,7 +87,7 @@ export const Editinfo = () => {
             }
           }}
           >
-          {({ handleChange, setFieldValue, handleSubmit }) => (
+          {({ handleChange, setFieldValue, handleSubmit,isSubmitting }) => (
             <div className="edit-info-all">
               <Dashc />
               <div className="edit-info">
@@ -176,9 +173,7 @@ export const Editinfo = () => {
                         <i class="fa fa-solid fa-envelope"></i>
                       </div>
                     </label>
-                    <button type="submit" className="btn-updatei">
-                      Actualizar
-                    </button>
+                    <button id="btn-accept" className="btn-updatei" type="submit"> {isSubmitting ? 'Actualizando....' : 'Actualizar' }</button>
                   </Form>
                 </div>
               </div>
@@ -242,7 +237,7 @@ export const Editinfo = () => {
           }
         }}
         >
-        {({ handleChange,setFieldValue ,handleSubmit }) => (
+        {({ handleChange,setFieldValue ,handleSubmit,isSubmitting }) => (
           <div className="edit-info-all">
             <Dashc />
             <div className="edit-info">
@@ -322,9 +317,7 @@ export const Editinfo = () => {
                       <i class="fa fa-solid fa-pen"></i>
                     </div>
                   </label>
-                  <button type="submit" className="btn-updatei">
-                    Actualizar
-                  </button>
+                  <button id="btn-accept" className="btn-updatei" type="submit"> {isSubmitting ? 'Actualizando....' : 'Actualizar' }</button>
                 </Form>
               </div>
             </div>

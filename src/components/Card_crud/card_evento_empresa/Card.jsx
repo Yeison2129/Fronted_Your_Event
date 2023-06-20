@@ -44,6 +44,7 @@ export const Card_crud = () => {
   const deleteEvent = async (id) => {
     try {
       const response = await deleteEvents(id);
+      console.log(response);
       if (response.data.data == "Delete_ok") {
         Swal.fire({
           title: "Evento Eliminado",
@@ -57,7 +58,7 @@ export const Card_crud = () => {
         }, 1500);
         
       }
-      if (response.data.data == "error_al_eliminar") {
+      if (response.data.data == "ERROR 404") {
         Swal.fire({
           title: "Error al eliminar el evento",
           text: "",

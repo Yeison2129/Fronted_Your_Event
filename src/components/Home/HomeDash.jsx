@@ -12,7 +12,7 @@ export const Homedash = () => {
 
   const companys = async () => {
     const response = await getCompany();
-    const companyData = response.data.rows.map((company) => ({
+    const companyData = response.data.data.map((company) => ({
       ...company,
     }));
     setTraerCompany(companyData);
@@ -55,14 +55,6 @@ export const Homedash = () => {
                   <div className="contadores">
                     <p>0</p>
                     <h3>Eventos creados</h3>
-                  </div>
-                  <div className="contadores">
-                    <p>0</p>
-                    <h3>Asistencias</h3>
-                  </div>
-                  <div className="contadores">
-                    <p>0</p>
-                    <h3>Views</h3>
                   </div>
                 </div>
 
