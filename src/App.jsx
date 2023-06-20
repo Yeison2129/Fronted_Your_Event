@@ -26,6 +26,8 @@ import {Asistir} from "./components/Index/Asistir/Asistir"
 import {Ayuda} from "./components/Configuracion/Ayuda/Ayuda"
 import { CardViewA } from "./components/Index/Asistir/Card-viewA/Card-viewA"
 import { CardAsist } from "./components/Card-Asist/Card_Asist.jsx"
+import { HelpIndex } from "./components/Index/Help-index/HelpIndex"
+
 
 export default function App() {
     return (
@@ -58,6 +60,7 @@ export default function App() {
             <Route path='/Ayuda' element={<Ayuda/>}/>
             <Route path='/asistir' element={<Asistir/>}/>
             <Route path='/asistenciasCompany' element={<CardAsist/>}/>
+            <Route path='/Help' element={<HelpIndex/>}/>
 
         </Routes>
     )

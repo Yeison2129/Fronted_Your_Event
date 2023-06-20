@@ -1,0 +1,13 @@
+.contenido-helpIndex{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: center;
+}
+.section-helper{
+    display: flex;
+    justify-content: center;
+    
+}

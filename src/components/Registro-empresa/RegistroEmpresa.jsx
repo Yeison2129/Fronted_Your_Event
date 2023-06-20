@@ -133,7 +133,7 @@ export const RegistroEmpresa = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="input-field-RegistroEmpresa">
+            {/* <div className="input-field-RegistroEmpresa">
             <i className="fa fa-solid fa-lock" />
               <Field
                 autocomplete="off"
@@ -144,7 +144,7 @@ export const RegistroEmpresa = () => {
                 required
                 onChange={handleChange}
               />
-            </div>
+            </div> */}
             <button type="submit" className="btn solid">
               Registrate
             </button>

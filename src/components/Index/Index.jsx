@@ -83,13 +83,11 @@ export const Index = () => {
           <div class="content-nav">
             <Link to="#">Inicio </Link>
             <Link to="/SobreNosotros  ">Sobre Nosotros </Link>
+            <Link to="/Help  ">Ayuda</Link>
             
             {user ? (
               <>  
-              <Link to="">
-                <i className="fa fa-solid fa-bell" />
-                
-                </Link>
+             
               <div className="dropDown"> 
               
               <p to="" id="enter1">
@@ -105,7 +103,7 @@ export const Index = () => {
               <>
                 {company ? (
                   <>
-                <Link to=""><i className="fa fa-solid fa-bell" /></Link>
+                <Link to="/asistir">Mis reservas</Link>
                 <div className="dropDown">
                 <p to="" id="enter1">
               {traerCompany.map((company) => (

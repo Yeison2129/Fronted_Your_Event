@@ -131,7 +131,7 @@ export const F_registro = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  <div className="input-field">
+                  {/* <div className="input-field">
                     <i className="fas fa-lock"></i>
                     <Field
                       autocomplete="off"
@@ -142,7 +142,7 @@ export const F_registro = () => {
                       placeholder="Confirmar contraseña"
                       onChange={handleChange}
                     />
-                  </div>
+                  </div> */}
                  
                   <button type="submit" className="btn solid">
                     Registrarse
