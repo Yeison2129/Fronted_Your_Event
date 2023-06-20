@@ -92,7 +92,7 @@ color: #c2c1c1;
    display: flex;
    width: 35%;
    align-items: center;
-   justify-content: space-around;
+   justify-content: space-evenly;
 }
 .content-nav a{
     color: white;
@@ -464,6 +464,9 @@ main .sobre-nosotros{
     align-items: center;
     justify-content: center;
 }
+#enter1{
+    width: 200px;
+}
 .content-filter{
     display: flex;
     justify-content: space-evenly;
@@ -497,7 +500,7 @@ main .sobre-nosotros{
 
 @media (max-width: 1366px) {
     .content-nav{
-        width: 55%;
+        width: 70%;
     }
 }
 
