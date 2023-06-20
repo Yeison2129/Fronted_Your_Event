@@ -7,7 +7,7 @@ let id_user = localStorage.getItem("id_user")
 let id_user1 = localStorage.getItem("id_user")
 let id_empresa = localStorage.getItem("id_empresa")
 let id_empresa1 = localStorage.getItem("id_empresa")
-let id_event = localStorage.getItem("id_event")
+let id_event1 = localStorage.getItem("id_event")
 let url = 'http://localhost:4000'
 //Users
 export const registerUser = async (newUser) =>
@@ -144,6 +144,10 @@ export const CountEvents = async () => {
     return await axios.get(`${url}/CountEvents`)
 }
 
+export const CountEventsCompany = async () => {
+    return await axios.get(`${url}/CountEventsCompany/${id_empresa}`)
+}
+
 export const createEvent = async (registerEvent) => {
     const formData = new FormData();
     formData.append('nom_event', registerEvent.nom_event)
@@ -190,6 +194,10 @@ export const updateEvent = async (updateEvent,id) => {
     }
 
 }
+
+
+export const getEventsRandom = async () =>
+    await axios.get(`${url}/getEventsRandom`)
 
 export const deleteEvents = async (id) =>
     await axios.delete(`${url}/deleteEvent/${id}`, {

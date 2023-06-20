@@ -44,7 +44,6 @@ export const Card_crud = () => {
   const deleteEvent = async (id) => {
     try {
       const response = await deleteEvents(id);
-      console.log(response);
       if (response.data.data == "Delete_ok") {
         Swal.fire({
           title: "Evento Eliminado",
@@ -108,7 +107,7 @@ export const Card_crud = () => {
                 <div className="button-delete">
                   <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAPNJREFUWEftmOERwiAMRl9HcQIdxREcQSdQN3AUN3GFuomH195xlJIE2rvqhZ9tCF9fAiTt2NjoNqaHnxd0BK7AQUm2By7AU2lvIhREvLSOE7sdEMSJwxKy20BHdJoxCJQemom1gu5AEFga8Qdo7L++XJAUthyhllyR1kvfT0LpghJEKkLxnKqdkomb2o+0y9SOljoC/kbQHDnr8wnYWkLWhdWhd0FA8V5zQk4oKuLiXPFdNlaP1vPJD0aJ3GKErJXh6kntgkYCaxT8xaZRusta2ue5sBbbaklQcHoCzsDemjiJ/XvwU/zxoBHUqMM23QVJvD4tFJglZPGVZgAAAABJRU5ErkJggg==" onClick={() => {
                     pregunta(eventEmpresa.id_event);
-                  }}/>
+                  }}key={eventEmpresa.img_event}/>
                 </div>
               </div>
               <div className="icon-card">

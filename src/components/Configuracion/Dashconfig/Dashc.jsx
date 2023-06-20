@@ -62,12 +62,20 @@ export const Dashc = () => {
   
 
   const EliminarCompany = async () => {
-    deleteCompany();
-    DeleteEventsCompany();
+  const response = await deleteCompany();
+  console.log(response);
+    if (response.data.data == "Delete_ok") {
+      Swal.fire({
+        title: "Cuenta eliminada exitosamente",
+        text: "",
+        icon: "success",
+        botonAcept: "Ok",
+      })
+    }
     localStorage.clear();
     setTimeout(() => {
       window.location.href = "/";
-    }, 0.5);
+    }, 1500);
   };
 
   return (

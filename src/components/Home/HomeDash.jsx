@@ -2,11 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Dashboard } from '../dashboard_empresa/Dashboard_Empresa'
 import './homeDash.css'
 import { Link } from 'react-router-dom'
-import { getCompany } from "../../api/App";
+import { CountEventsCompany, getCompany } from "../../api/App";
 import userIcon from "../../assets/userIcon.svg";
 
+const EventsCompany = await CountEventsCompany();
 export const Homedash = () => {
   let company = window.localStorage.getItem("company");
+
+  let eventos = EventsCompany.data.data[0].eventos;
 
   const [traerCompany, setTraerCompany] = useState([]);
 
@@ -53,7 +56,7 @@ export const Homedash = () => {
                 </div>
                 <div className="box2-home">
                   <div className="contadores">
-                    <p>0</p>
+                    <p>{eventos}</p>
                     <h3>Eventos creados</h3>
                   </div>
                 </div>

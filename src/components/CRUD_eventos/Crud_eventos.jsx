@@ -49,6 +49,42 @@ const Crud_eventos = () => {
                 time: 1500,
               });
             }
+            if (events.data == "La fecha no puede ser pasada") {
+              Swal.fire({
+                title: "Ingrese una fecha valida",
+                text: "Vuelve a intentarlo",
+                icon: "warning",
+                boton: "Ok",
+                time: 1500,
+              });
+            }
+            if (events.data == "La hora no puede ser pasada") {
+              Swal.fire({
+                title: "Ingrese una hora valida",
+                text: "Vuelve a intentarlo",
+                icon: "warning",
+                boton: "Ok",
+                time: 1500,
+              });
+            }
+            if (events.data == "La hora no puede ser pasada") {
+              Swal.fire({
+                title: "Ingrese una hora valida",
+                text: "Vuelve a intentarlo",
+                icon: "warning",
+                boton: "Ok",
+                time: 1500,
+              });
+            }
+            if (events.data == "horaExacta") {
+              Swal.fire({
+                title: "Ingrese una hora valida",
+                text: "Vuelve a intentarlo",
+                icon: "warning",
+                boton: "Ok",
+                time: 1500,
+              });
+            }
             if (events.data == "ERROR_404") {
               Swal.fire({
                 title: "Error interno del servidor",

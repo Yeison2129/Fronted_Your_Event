@@ -14,7 +14,6 @@ const Events = await CountEvents();
 const Company = await CountCompany();
 const Users = await CountUser();
 
-console.log(Events.data.data[0].eventos);
 
 let eventos = Events.data.data[0].eventos;
 let empresas = Company.data.respons[0].empresas
