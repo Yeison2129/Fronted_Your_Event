@@ -362,6 +362,7 @@ export const CardView = () => {
                       {event.description_event}
                     </div>
                   </div>
+                  
                     </div>
                   </div>
                 )}

@@ -6,6 +6,7 @@ import userIcon from "../../assets/userIcon.svg";
 import { CardEvento } from '../Card_evento/Card_evento';
 import { getCompany } from "../../api/App";
 import { Footdash } from './Footdash';
+import { AiFillHome } from "react-icons/ai";
 
 export const Dashboard = () => {
     let company = window.localStorage.getItem("company");
@@ -63,10 +64,10 @@ export const Dashboard = () => {
                         <div className="user-icon">
 
                             {traerCompany.map((company,i) => (
-                                <img id='user-icon' src={company.img_empresa || userIcon} alt="icon" key={`${i}Empresa`} />
+                                <img className='icon2' id='user-icon' src={company.img_empresa || userIcon} alt="icon" key={`${i}Empresa`} />
                             ))}
-                            <p id='nom-user'> {company.charAt(0).toUpperCase() + company.slice(1)} </p>
                         </div>
+                        <p id='nom-user'> {company.charAt(0).toUpperCase() + company.slice(1)} </p>
 
                         <nav>
                             <button className="toggle-mob-menu" aria-expanded="false" aria-label="open menu">
@@ -78,10 +79,9 @@ export const Dashboard = () => {
                                 </li>
                                 <li>
                                     <Link to="/home">
-
-                                        <svg className="svg-dash">
-                                            <use href="#users"></use>
-                                        </svg>
+                                        <div className="icon-dash">
+                                        <i className="fa fa-solid fa-house-user" />
+                                        </div>
                                         <span className='span-dash'>Inicio</span>
 
                                     </Link>
@@ -89,10 +89,10 @@ export const Dashboard = () => {
                                 <li>
 
                                     <Link to="/cardCrud">
-
-                                        <svg className="svg-dash">
-                                            <use href="#pages"></use>
-                                        </svg>
+                              
+                                        <div className="icon-dash">
+                                        <i className="fa fa-solid fa-folder-plus" />
+                                        </div>
                                         <span className='span-dash' >Mis Eventos</span>
                                     </Link>
                                 </li>
@@ -101,9 +101,10 @@ export const Dashboard = () => {
                                 <li>
                                     <Link to="/crud_eventos">
 
-                                        <svg className="svg-dash">
-                                            <use href="#users"></use>
-                                        </svg>
+                                        <div className="icon-dash">
+                                        <i className="fa fa-solid fa-plus" />
+
+                                        </div>
                                         <span className='span-dash' >Crear evento</span>
 
                                     </Link>
@@ -119,9 +120,9 @@ export const Dashboard = () => {
 
                                 <li>
                                     <Link to="/asistenciasCompany">
-                                        <svg className="svg-dash" >
-                                            <use href="#comments"></use>
-                                        </svg>
+                                        <div className="icon-dash" >
+                                        <i className="fa fa-solid fa-check" />     
+                                        </div>
                                         <span className='span-dash' >Asistencia</span>
                                     </Link>
                                 </li>
@@ -140,9 +141,9 @@ export const Dashboard = () => {
 
                                 <li>
                                     <a href="/">
-                                        <svg className="svg-dash">
-                                            <use href="#charts"></use>
-                                        </svg>
+                                        <div className="icon-dash">
+                                        <i className="fa fa-solid fa-arrow-left" /> 
+                                        </div>
                                         <span className='span-dash' >Atras</span>
                                     </a>
                                 </li>

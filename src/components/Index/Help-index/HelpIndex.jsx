@@ -1,6 +1,6 @@
 import React from 'react'
 import "../../../components/SobreNosotros/SobreNosotros.css"
-import { DropDown } from "../../../components/DropDown/DropDown";
+import { DropDown } from "../../DropDown/DropDown";
 import { Link } from "react-router-dom";
 import './helpI.css'
 

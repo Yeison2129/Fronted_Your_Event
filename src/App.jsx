@@ -28,6 +28,8 @@ import { CardViewA } from "./components/Index/Asistir/Card-viewA/Card-viewA"
 import { CardAsist } from "./components/Card-Asist/Card_Asist.jsx"
 import { HelpIndex } from "./components/Index/Help-index/HelpIndex"
 import { Carrusel } from "./components/Carrusel/Carrusel"
+import { Drop } from "./components/DropDown/Drop2/Drop2"
+ 
 
 export default function App() {
     return (
@@ -62,6 +64,7 @@ export default function App() {
             <Route path='/asistenciasCompany' element={<CardAsist/>}/>
             <Route path='/Help' element={<HelpIndex/>}/>
             <Route path='/Carrusel' element={<Carrusel/>}/>
+            <Route path='/dropsecond' element={<Drop/>}/>
 
         </Routes>
     )
