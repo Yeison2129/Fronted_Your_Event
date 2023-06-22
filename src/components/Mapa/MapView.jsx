@@ -9,17 +9,6 @@ import "leaflet/dist/leaflet.css";
 
 
 const MapView = (props) => {
-<<<<<<< HEAD
-  const [state, setState] = useState({
-    currentLocation: { lat: 4.53390, lng: -75.58700 },
-    zoom: 11,
-    data,
-  });
-
-  const location = useLocation();
-  // const history = useNavigate();
-
-=======
   const [ state, setState] = useState({
     currentLocation: { lat: 4.45, lng: -75.487 },
     data
@@ -30,7 +19,6 @@ const MapView = (props) => {
     [4.862, -75.307] // Coordenada del límite inferior derecho del Quindío
   ]
   
->>>>>>> Developer
   useEffect(() => {
     const leafletMap = mapRef.current;
 
@@ -43,9 +31,6 @@ const MapView = (props) => {
   }, []);
 
   return (
-<<<<<<< HEAD
-    <MapContainer className="mapView" center={state.currentLocation} zoom={state.zoom} dragging={false} scrollWheelZoom={false}>
-=======
     <MapContainer
       className="mapView"
       style={{ zIndex: 0 }}
@@ -56,7 +41,6 @@ const MapView = (props) => {
       minZoom={11}
       doubleClickZoom={false}
     >
->>>>>>> Developer
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

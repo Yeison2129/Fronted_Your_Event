@@ -5,11 +5,7 @@ import face from '../../assets/SocialMedia/face.svg'
 import insta from '../../assets/SocialMedia/insta.svg'
 import twit from '../../assets/SocialMedia/twitter.svg'
 import logoY from '../../assets/logos/logo-your-event.svg'
-<<<<<<< HEAD
-
-=======
 import {Link} from 'react-router-dom'
->>>>>>> Developer
 
 export const ContactUs = () => {
   const refForm = useRef();

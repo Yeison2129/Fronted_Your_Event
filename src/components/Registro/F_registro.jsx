@@ -2,11 +2,8 @@ import { registerUser } from "../../api/App";
 import { Formik, Form, Field } from "formik";
 import "./F_registro.css";
 import swal from "sweetalert2";
-<<<<<<< HEAD
-=======
 import imgRegistro from "../../assets/registro-1.svg";
 import { Link } from "react-router-dom";
->>>>>>> Developer
 
 export const F_registro = () => {
   return (
@@ -32,11 +29,7 @@ export const F_registro = () => {
                 text: "Gracias por registrarte con nosotros",
                 icon: "success",
                 boton: "Ok",
-<<<<<<< HEAD
-                time: 1500,
-=======
                 time: 1500
->>>>>>> Developer
               });
               //sirve para definir una funcion de tiempo
               const timeout = () => {
@@ -46,21 +39,13 @@ export const F_registro = () => {
               };
               timeout();
             }
-<<<<<<< HEAD
-            if (users.data.data == "user exist") {
-=======
             if (users.data.data == "USER EXISTS") {
->>>>>>> Developer
               swal.fire({
                 title: " El Usuario ya existe",
                 text: "Inicia sesion",
                 icon: "warning",
                 boton: "Ok",
-<<<<<<< HEAD
-                time: 1500,
-=======
                 time: 1500
->>>>>>> Developer
               });
             }
             if (users.data.data == "INSERT_ERROR") {
@@ -72,11 +57,7 @@ export const F_registro = () => {
               text: "Intenta de nuevo más tarde",
               icon: "error",
               boton: "Ok",
-<<<<<<< HEAD
-              time: 1500,
-=======
               time: 1500
->>>>>>> Developer
             });
           }
         }}
@@ -88,19 +69,12 @@ export const F_registro = () => {
             <div className="forms-container">
               <div className="signin-signup">
                 <Form onSubmit={handleSubmit} className="sign-in-form">
-<<<<<<< HEAD
-                  <h2 className="title">Registrate</h2>
-                  <div className="input-field">
-                    <i className="fas fa-user"></i>
-                    <Field
-=======
                   <h2 className="title-r">Registrate</h2>
                   <div className="input-field">
                   <i className="fa fa-solid fa-id-card" />
                 
                     <Field
                       autocomplete="off"
->>>>>>> Developer
                       type="text"
                       id="document_user"
                       name="document_user"
@@ -112,10 +86,7 @@ export const F_registro = () => {
                   <div className="input-field">
                     <i className="fas fa-user"></i>
                     <Field
-<<<<<<< HEAD
-=======
                       autocomplete="off"
->>>>>>> Developer
                       type="text"
                       id="nom_user"
                       name="nom_user"
@@ -123,8 +94,6 @@ export const F_registro = () => {
                       placeholder="Nombre de usuario"
                       onChange={handleChange}
                     />
-<<<<<<< HEAD
-=======
                   </div>
                   <div className="input-field">
                   <i className="fa fa-solid fa-phone "  />
@@ -137,15 +106,11 @@ export const F_registro = () => {
                       placeholder="Telefono"
                       onChange={handleChange}
                     />
->>>>>>> Developer
                   </div>
                   <div className="input-field">
                     <i className="fas fa-envelope"></i>
                     <Field
-<<<<<<< HEAD
-=======
                       autocomplete="off"
->>>>>>> Developer
                       type="email"
                       id="mail_user"
                       name="mail_user"
@@ -157,10 +122,7 @@ export const F_registro = () => {
                   <div className="input-field">
                     <i className="fas fa-lock"></i>
                     <Field
-<<<<<<< HEAD
-=======
                       autocomplete="off"
->>>>>>> Developer
                       type="password"
                       id="password_user"
                       name="password_user"
@@ -172,19 +134,6 @@ export const F_registro = () => {
                   {/* <div className="input-field">
                     <i className="fas fa-lock"></i>
                     <Field
-<<<<<<< HEAD
-                      type="phone"
-                      name="phone_user"
-                      required
-                      placeholder="Telefono"
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <button type="submit" className="btn solid">
-                    Registrarse
-                  </button>
-                  <a href="/">Volver al inicio</a>
-=======
                       autocomplete="off"
                       type="password"
                       id="password_user"
@@ -201,7 +150,6 @@ export const F_registro = () => {
                   <Link id="a-black" to="/">
                     Volver al inicio
                   </Link>
->>>>>>> Developer
                 </Form>
               </div>
             </div>
@@ -217,13 +165,6 @@ export const F_registro = () => {
 
                   <u>
                     {" "}
-<<<<<<< HEAD
-                    <a href="/login">Ya tengo una cuenta</a>
-                  </u>
-                </div>
-
-                <img src={img} className="image" alt="" />
-=======
                     <Link id="a-white" to="/login">
                       Ya tengo una cuenta
                     </Link>
@@ -234,7 +175,6 @@ export const F_registro = () => {
                 </div>
 
                 <img src={imgRegistro} className="image" alt="" />
->>>>>>> Developer
               </div>
             </div>
           </div>
