@@ -10,9 +10,9 @@ import {
   CartesianGrid,
 } from "recharts";
 
-const Events = await CountEvents();
-const Company = await CountCompany();
-const Users = await CountUser();
+const Events =  CountEvents();
+const Company =  CountCompany();
+const Users =  CountUser();
 
 
 let eventos = Events.data.data[0].eventos;
