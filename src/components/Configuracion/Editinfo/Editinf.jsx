@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 import { getCompany, updateCompany, updateUser } from "../../../api/App";
 import { getUser } from '../../../api/App'
 import userIcon from '../../../assets/userIcon.svg';
+import { useNavigate } from 'react-router-dom';
 export const Editinfo = () => {
 
   let user = localStorage.getItem("user");
@@ -30,7 +31,7 @@ export const Editinfo = () => {
     user1()
   }, [])
 
-
+const navigate = useNavigate()
 
 
   return (
@@ -61,7 +62,7 @@ export const Editinfo = () => {
                 });
                 const timeout = () =>{
                   setTimeout(function(){
-                    window.location.href="/editap"
+                    navigate("/editap")
                   },2000)
                 }
                 timeout()
@@ -211,7 +212,7 @@ export const Editinfo = () => {
               });
               const timeout = () =>{
                 setTimeout(function(){
-                  window.location.href="/editap"
+                  navigate("/editap")
                 },2000)
               }
               timeout()

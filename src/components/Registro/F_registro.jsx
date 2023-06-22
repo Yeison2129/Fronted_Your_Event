@@ -3,9 +3,10 @@ import { Formik, Form, Field } from "formik";
 import "./F_registro.css";
 import swal from "sweetalert2";
 import imgRegistro from "../../assets/registro-1.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const F_registro = () => {
+  const navigate= useNavigate()
   return (
     <>
       <Formik
@@ -17,12 +18,8 @@ export const F_registro = () => {
           phone_user: "",
         }}
         onSubmit={async (values) => {
-          console.log("values-->", values);
-
           try {
             const users = await registerUser(values);
-            console.log(users);
-
             if (users.data.data == "INSERT_OK") {
               swal.fire({
                 title: "Registro exitoso",
@@ -34,7 +31,7 @@ export const F_registro = () => {
               //sirve para definir una funcion de tiempo
               const timeout = () => {
                 setTimeout(function () {
-                  window.location.href = "/login";
+                  navigate("/login");
                 }, 2000);
               };
               timeout();

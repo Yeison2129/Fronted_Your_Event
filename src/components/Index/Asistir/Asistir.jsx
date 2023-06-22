@@ -1,9 +1,10 @@
 import React from 'react'
 import { DropDown } from "../../DropDown/DropDown";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './asistir.css'
 import { CardViewA } from './Card-viewA/Card-viewA';
 export const Asistir = () => {
+  const navigate = useNavigate()
   let user = localStorage.getItem("user");
   let company = window.localStorage.getItem("company");
   // const sliders =[...document.querySelectorAll('.slider__body')];
@@ -13,7 +14,7 @@ export const Asistir = () => {
       localStorage.removeItem("user");
       localStorage.removeItem("auth");
       setTimeout(() => {
-        window.location.href = "/";
+        navigate("/");
       }, 0.5);
     }
   };

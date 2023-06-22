@@ -1,7 +1,7 @@
 import React, { useCallback, useState, useEffect } from 'react';
 import './dashboard.css';
 import { Homedash } from '../Home/HomeDash';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import userIcon from "../../assets/userIcon.svg";
 import { CardEvento } from '../Card_evento/Card_evento';
 import { getCompany } from "../../api/App";
@@ -9,6 +9,7 @@ import { Footdash } from './Footdash';
 import { AiFillHome } from "react-icons/ai";
 
 export const Dashboard = () => {
+    const navigate = useNavigate()
     let company = window.localStorage.getItem("company");
     const [isContainerActive, setIsContainerActive] = useState(false)
     const [ImagenPopup, setImagenPopup] = useState("")
@@ -19,7 +20,7 @@ export const Dashboard = () => {
             localStorage.removeItem("company")
             localStorage.removeItem("auth")
             setTimeout(() => {
-                window.location.href = "/"
+                navigate("/")
             }, 0.500);
         }
     }

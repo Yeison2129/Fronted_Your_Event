@@ -5,7 +5,7 @@ import { DropDown } from "../DropDown/DropDown";
 
 import swal from "sweetalert2";
 import imgRegistro from "../../assets/registro-1.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import imgBrallan from "../../assets/Brallan.jpg";
 import imgKevin from "../../assets/Kevin.jpg";
 import imgMariana from "../../assets/Mariana.jpg";
@@ -34,6 +34,7 @@ function changePosition(sliders, currentElement, change) {
 };
 
 export const SobreNosotros = () => {
+  const navigate= useNavigate()
   let user = localStorage.getItem("user");
   let company = window.localStorage.getItem("company");
   // const sliders =[...document.querySelectorAll('.slider__body')];
@@ -43,7 +44,7 @@ export const SobreNosotros = () => {
       localStorage.removeItem("user");
       localStorage.removeItem("auth");
       setTimeout(() => {
-        window.location.href = "/";
+        navigate("/");
       }, 0.5);
     }
   };

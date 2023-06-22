@@ -2,8 +2,10 @@ import React from "react";
 import { Formik, Form, Field } from "formik";
 import { registerCompany } from "../../api/App";
 import swal from "sweetalert2";
+import {useNavigate} from "react-router-dom"
 
 export const RegistroEmpresaFormulario = () => {
+  const navigate= useNavigate()
   return (
     <>
       <Formik
@@ -18,7 +20,6 @@ export const RegistroEmpresaFormulario = () => {
 
           try {
             const users = await registerCompany(values);
-            console.log(users.data);
 
             if (users.data == "INSERT_OK") {
               swal.fire({
@@ -31,7 +32,7 @@ export const RegistroEmpresaFormulario = () => {
               //sirve para definir una funcion de tiempo
               const timeout =()=>{
                 setTimeout(function () {
-                  window.location.href = "/loginEmpresa";
+                  navigate("/loginEmpresa");
                 }, 2000);
               } 
               timeout()

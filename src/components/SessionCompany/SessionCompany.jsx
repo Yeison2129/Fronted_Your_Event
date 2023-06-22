@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Formik, Form, Field } from "formik";
 import swal from "sweetalert2";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { create_event, loginCompany } from "../../api/App";
 
 export const Session_company = () => {
+  const navigate = useNavigate()
   return (
     <>
       <Formik
@@ -15,8 +16,6 @@ export const Session_company = () => {
         }}
         onSubmit={async (value, e) => {
           const respons = await loginCompany(value);
-          console.log(respons);
-
           try {
             if (respons.data.data == "logueado") {
               swal.fire({
@@ -28,7 +27,7 @@ export const Session_company = () => {
               });
               const timeout = () => {
                 setTimeout(function () {
-                  window.location.href = "/dashboard";
+                  navigate("/dashboard");
                   localStorage.setItem("token_company", respons.data.token_company);
                   localStorage.setItem("id_empresa", respons.data.rows[0].id_empresa);
                 }, 2000);

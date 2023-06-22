@@ -3,8 +3,13 @@ import "../../../../components/CardView/cardview.css";
 import { useState } from "react";
 import swal from "sweetalert2";
 import { DeleteAsist, consultAsist } from "../../../../api/App";
+import {useNavigate} from "react-router-dom"
 
 export const CardViewA = () => {
+
+  const navigate = useNavigate()
+
+
   let user = localStorage.getItem("user");
   const cardRef = useRef(null);
   const [width, setWidth] = useState(0);
@@ -87,8 +92,8 @@ export const CardViewA = () => {
         time: 1500,
       });
       setTimeout(() => {
-          window.location.href = "/asistir"
-      }, 1000);
+          navigate("/asistir")      
+        }, 1000);
       
     }
 

@@ -362,7 +362,9 @@ export const CardView = () => {
                       {event.description_event}
                     </div>
                   </div>
-                  
+                  <div className="buttons">
+                        <button className="reserv" onClick={()=>{createAsistUser(event.id_event)}}>¡Reserva ya!</button>
+                      </div>
                     </div>
                   </div>
                 )}

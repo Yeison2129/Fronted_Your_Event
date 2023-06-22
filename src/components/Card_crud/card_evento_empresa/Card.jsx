@@ -8,7 +8,7 @@ import {
   getEventsIdEvent,
   deleteEvents,
 } from "../../../api/App";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 // import image from '../../../assets/descarga.jpg'
 export const Card_crud = () => {
@@ -22,7 +22,7 @@ export const Card_crud = () => {
     const response = await getEventsCompany();
     setAllEventsCompany(response.data.data);
   };
-
+  const navigate = useNavigate();
 
 
   
@@ -53,7 +53,7 @@ export const Card_crud = () => {
           time: 1500,
         });
         setTimeout(() => {
-            window.location.href = "/cardCrud"
+            navigate("/cardCrud")
         }, 1500);
         
       }

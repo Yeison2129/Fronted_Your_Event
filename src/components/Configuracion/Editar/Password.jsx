@@ -3,7 +3,7 @@ import React from "react";
 import swal from "sweetalert2";
 import { update, updatePassEmpresa} from "../../../api/App";
 import "./Password.css";
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import { Footdash } from "../../dashboard_empresa/Footdash";
 
 import { Dashc } from "../Dashconfig/Dashc";
@@ -11,7 +11,7 @@ import { Dashc } from "../Dashconfig/Dashc";
 export const Password = () => {
   let user = localStorage.getItem("user");
   let company = localStorage.getItem("company") ;
-  
+  const navigate= useNavigate()
   return (
     <>
       {user ? (
@@ -31,7 +31,7 @@ export const Password = () => {
                 })
                 localStorage.clear()
                 setTimeout(() => {
-                  window.location.href = "/"
+                  navigate("/")
                 }, 1500);
             } 
           }}

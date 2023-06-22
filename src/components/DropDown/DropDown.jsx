@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import userIcon from "../../../src/assets/userIcon.svg";
 import "./dropDown.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getCompany, getUser } from "../../api/App";
 
 export const DropDown = () => {
+  const navigate = useNavigate()
   let user = localStorage.getItem("user");
   let company = localStorage.getItem("company");
 
@@ -36,14 +37,14 @@ export const DropDown = () => {
     if (user) {
       localStorage.clear();
       setTimeout(() => {
-        window.location.href = "/";
+        navigate("/")
         // window.location.href = "/password"
       }, 0.5);
     }
     if (company) {
       localStorage.clear();
       setTimeout(() => {
-        window.location.href = "/";
+        navigate("/")
       }, 0.5);
     }
   };

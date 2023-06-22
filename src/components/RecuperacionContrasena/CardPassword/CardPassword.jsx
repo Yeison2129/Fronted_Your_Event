@@ -3,13 +3,14 @@ import "./cardPassword.css";
 import { Formik, Field } from "formik";
 import swal from "sweetalert2";
 import { CompareCodeUser, CompareEmailUser, RecuperationPasswordUser } from "../../../api/App";
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 
 export const CardPassword = () => {
   const [inputEmail, setInputEmail] = useState("x");
   const [times, setTime] = useState(false)
   const [times2, settimes2] = useState(false)
+  const navigate= useNavigate()
   
   return (
     <>
@@ -190,7 +191,7 @@ export const CardPassword = () => {
               time: 1500,
             });
             setTimeout(() => {
-              window.location.href = "/";
+              navigate("/");
             }, 2000);
             
           }

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "./dashc.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { DeleteEventsCompany, deleteCompany, deleteUser } from "../../../api/App";
 import Swal from "sweetalert2";
 
 export const Dashc = () => {
+
+  const navigate = useNavigate();
   const [asideVisible, setAsideVisible] = useState(true);
   const toggleAside = () => {
     setAsideVisible(!asideVisible);
@@ -38,7 +40,7 @@ export const Dashc = () => {
     })
     localStorage.clear();
     setTimeout(() => {
-      window.location.href = "/";
+      navigate("/")
       // window.location.href = "/password"
     }, 2000);
   };
@@ -74,7 +76,7 @@ export const Dashc = () => {
     }
     localStorage.clear();
     setTimeout(() => {
-      window.location.href = "/";
+      navigate("/")
     }, 1500);
   };
 

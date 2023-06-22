@@ -2,11 +2,12 @@ import React, { useContext, useEffect } from "react";
 import { Formik, Form, Field } from "formik";
 import Swal from "sweetalert2";
 import "./crud_eventos.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { createEvent } from "../../api/App";
 import { Dashboard } from "../dashboard_empresa/Dashboard_Empresa";
 
 const Crud_eventos = () => {
+  const navigate = useNavigate()
   return (
     <>
       <Formik
@@ -35,7 +36,7 @@ const Crud_eventos = () => {
               });
               const timeout = () => {
                 setTimeout(function () {
-                  window.location.href = "/cardCrud";
+                  navigate("/cardCrud") 
                 }, 2000);
               };
               timeout();

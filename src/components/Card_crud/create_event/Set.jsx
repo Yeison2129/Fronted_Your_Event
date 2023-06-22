@@ -3,6 +3,7 @@ import "./set.css";
 import { Formik, Form, Field } from "formik";
 import {getEventsCompany,updateEvent} from "../../../api/App";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 export const Set = ({ closeModal }) => {
   const [allEventsCompany, setAllEventsCompany] = useState([]);
@@ -15,6 +16,8 @@ export const Set = ({ closeModal }) => {
   useEffect(() => {
     eventEmpresa();
   }, []);
+
+  const navigate = useNavigate();
   return (
     <>
       {closeModal.evento.map((eventEmpresa) => (
@@ -44,7 +47,7 @@ export const Set = ({ closeModal }) => {
                 });
                 const timeout = () => {
                   setTimeout(function () {
-                    window.location.href = "/cardCrud";
+                    navigate("/cardCrud")
                   }, 2000);
                 };
                 timeout();

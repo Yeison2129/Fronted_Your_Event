@@ -3,13 +3,14 @@ import React from "react";
 import swal from "sweetalert2";
 import "../Editar/Password.css";
 import "./deletea.css";
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import { Footdash } from "../../dashboard_empresa/Footdash";
 // import { deleteUser } from "../../../api/App";
 
 import { Dashc } from "../Dashconfig/Dashc";
 
 export const DeleteAcc = () => {
+  const navigate = useNavigate()
   let company = localStorage.getItem("company");
   let user = localStorage.getItem("user");
   return (
@@ -31,7 +32,7 @@ export const DeleteAcc = () => {
                 })
                 localStorage.clear()
                 setTimeout(() => {
-                  window.location.href = "/"
+                 navigate("/")
                 }, 1500);
             } 
           }}

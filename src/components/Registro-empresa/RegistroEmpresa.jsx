@@ -3,13 +3,14 @@ import "../Registro-empresa/registroEmpresa.css"
 import registroEmpresa1 from "../../assets/registroEmpresa-1.svg"
 import { Formik, Form, Field } from "formik";
 import { registerCompany } from "../../api/App";
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import Swal from "sweetalert2"
 
 
 
 
 export const RegistroEmpresa = () => {
+  const navigate = useNavigate()
   return (
     <>
       <div className="container-register-RegistroEmpresa">
@@ -39,7 +40,6 @@ export const RegistroEmpresa = () => {
         onSubmit={async (values) => {
 
           try {
-            console.log(values);
             const users = await registerCompany(values);
             console.log(users);
             if (users.data.data === "INSERT_OK") {
@@ -53,7 +53,7 @@ export const RegistroEmpresa = () => {
               //sirve para definir una funcion de tiempo
               const timeout =()=>{
                 setTimeout(function () {
-                  window.location.href = "/loginEmpresa";
+                  navigate("/loginEmpresa");
                 }, 2000);
               } 
               timeout()
