@@ -5,7 +5,14 @@ img.loginEmpresa-wave {
 	height: 100%;
 	z-index: -1;
 }
+#a-black{
+	color: rgb(0, 0, 0);
+}#a-black:hover{
+	color: rgb(115, 17, 145);
 
+	text-decoration: underline;
+	transition:.4s;
+}
 div.loginEmpresa-container {
     width: 100vw;
     height: 100vh;
@@ -166,43 +173,59 @@ Field.loginEmpresa-btn {
 Field.loginEmpresa-btn:hover {
 	background-position: right;
 }
+.input-loginE{
+    background-color: #f0f0f0;
+	width:90%;
+	border: none;
+	outline: none;
 
-
-@media screen and (max-width: 1050px){
-	.loginEmpresa-container{
-		grid-gap: 5rem;
-	}
+}
+.input-field-LE{
+	
+    width: 100%;
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    height: 55px;
+    border-radius: 55px;
+    display: grid;
+	align-items: center;
+    grid-template-columns: 15% 85%;
+    padding: 0 0.4rem;
+    position: relative;
 }
 
-@media screen and (max-width: 1000px){
-	.formulario-formik {
-		width: 290px;
-	}
 
-	.loginEmpresa-login-content h2{
-        font-size: 2.4rem;
-        margin: 8px 0;
-	}
 
-	.loginEmpresa-img img{
-		width: 400px;
-	}
-}
 
-@media screen and (max-width: 900px){
-	.loginEmpresa-container{
-		grid-template-columns: 1fr;
-	}
-
-	.loginEmpresa-img{
+@media (max-width: 870px){
+	
+	div.loginEmpresa-img{
 		display: none;
 	}
-
 	.loginEmpresa-wave{
 		display: none;
 	}
+	div.input-field-LE{
+		width: 50%;
 
-	.loginEmpresa-login-content{
-		justify-content: center;
 	}
+	form.login-form-E{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width:100%;
+		
+	}
+	.loginEmpresa-login-content{
+		width: 100%;
+		height: 100%
+	}
+	div.loginEmpresa-container{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+	}
+	
 }

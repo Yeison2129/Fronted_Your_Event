@@ -49,7 +49,7 @@ input {
   align-items: center;
 }
 
-.input-field {
+.input-field-log {
   max-width: 380px;
   width: 100%;
   background-color: #f0f0f0;
@@ -62,15 +62,15 @@ input {
   position: relative;
 }
 
-.input-field i {
+.input-field-log i {
   text-align: center;
   line-height: 55px;
   color: #acacac;
   transition: 1s;
-  font-size: 1.1rem;
+  
 }
 
-.input-field input {
+.input-field-log input {
   background: none;
   outline: none;
   border: none;
@@ -80,7 +80,7 @@ input {
   color: #333;
 }
 
-.input-field input::placeholder {
+.input-field-log input::placeholder {
   color: #aaa;
   font-weight: 500;
   
@@ -92,7 +92,7 @@ input {
   align-items: center;
 }
 
-.a1{
+.lll{
   text-decoration: none;
   color: #6c1aef
 }
@@ -116,4 +116,55 @@ input {
   background-color: #ffffff;
   color: #6c1aef;
 }
+@media(max-width:870px){
+  .login-design{
+    min-height: 800px;
+    height: 100vh;
+    font-size: 30px;
+  }
+  .login{
+    display: flex;
+    width: 100%;
+    
+  }
+  .login-design{
+    display: flex;
+    
+  }
+  .login-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 75vh;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .login-form{
+    width: 100%;
+    justify-content: space-between;
+    height: 50%;
+  }
+  .btn-login,  .input-field-log{
+    font-size: 30px;
+    width: 50%;
+    height: 15%;
+    
+  }
+  #password_user_log, #mail_user_log{
+    font-size: 30px;  
+  }  
 
+  .titleLogin{
+    font-size: 40px;
+  }
+  #loginpersonImg{
+    width: 200px;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.6s;
+    display: none;
+  }
+  .waves{
+    display: none;
+  }
+  
+}

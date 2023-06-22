@@ -4,9 +4,11 @@
 }
 
 .contenedor {
-    padding: 60px 0;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 90%;
-    max-width: 1100px;
     margin: auto;
     overflow: hidden;
 }
@@ -56,14 +58,14 @@
     width: 30%;
     text-align: center ;
 }
-#search-icon{
-    position: absolute;
-    width: 24px;
-    margin: 7px 0px 0px -40px;
-    height: 20px;
-    z-index: 1;
+
+
+.titulo_bar{
+    display:flex ;
+    width: 50%;
 }
 
+<<<<<<< HEAD
 .titulo_bar{
     display:flex ;
     
@@ -81,6 +83,17 @@
     -moz-border-radius: 2rem;
     -ms-border-radius: 2rem;
     -o-border-radius: 2rem;
+=======
+.dropDown{
+display: flex;
+align-items: center;
+width: 20%;
+justify-content: space-around;
+}
+
+.dropDown p{
+color: rgb(184, 85, 217);
+>>>>>>> Developer
 }
 
 #register{
@@ -99,7 +112,7 @@ color: #c2c1c1;
    display: flex;
    width: 35%;
    align-items: center;
-   justify-content: space-around;
+   justify-content: space-evenly;
 }
 .content-nav a{
     color: white;
@@ -128,7 +141,9 @@ color: #c2c1c1;
     -ms-transition: .2s;
     -o-transition: .2s;
 }
-
+#log{
+    color: white;
+}
 header .textos-header {
     display: flex;
     height: 342px;
@@ -164,12 +179,18 @@ main .sobre-nosotros{
 }
 .contenedor-sobre-nosotros{
     display: flex;
-    width: 87rem;
+    width: 100%;
     justify-content: space-between;
+    align-items: center;
 }
 
 .imagen-about-us{
+    display: flex;
     width: 40%;
+    height: 35%;
+    flex-direction: column;
+    justify-content: center;
+    
 }
 
 .sobre-nosotros .contenido-textos{
@@ -199,7 +220,60 @@ main .sobre-nosotros{
     width: 60%;
     text-align: justify;
 }
+/*----------Slider------------*/
 
+.slider{
+    display: flex;
+    height: auto;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    align-items: center;
+}
+.slider::before{
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    content: "";
+    width: 10%;
+    height: 568px;
+    background: #ffffff;
+}
+.slider::after{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    content: "";
+    width: 10%;
+    height: 568px;
+    background: #ffffff;
+}
+.slider .slider-track{
+    display: flex;
+    animation: scroll 35s linear infinite;
+    -webkit-animation: scroll 35s linear infinite;
+    width: calc(160px * 10);
+}
+.slider .slide img  {
+    width: 350px;
+    height: 350px;
+    padding: 10px;
+    background: #fff;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 50px;
+    box-shadow: rgba(50,50,93,0.25)0px 2px 5px -1px, rgba(0,0,0,0.3)0px 1px 3px -1px;
+}
+@keyframes scroll {
+    0%{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100%{
+        -webkit-transform: translateX(calc(-390px*12));
+        transform: translateX(calc(-390px*12));
+    }
+}
 /* Galeria */
 
 
@@ -385,6 +459,7 @@ main .sobre-nosotros{
     display: flex;
     justify-content:center;
     align-items: center;
+    padding-top: 2%;
 }
 .slider{ 
     display: flex;
@@ -397,7 +472,7 @@ main .sobre-nosotros{
 .h2-title{
     color: #000000;
     font-size: 40px;
-    width: 53%;
+    width: 100%;
     text-align: start;
     margin-bottom: 60px;
 }
@@ -407,94 +482,57 @@ main .sobre-nosotros{
     flex-direction: column;
     flex-wrap: wrap;
     padding: 10px;
-    height: 36rem;
     align-items: center;
     justify-content: center;
 }
+#enter1{
+    width: 200px;
+}
+.content-filter{
+    display: flex;
+    justify-content: space-evenly;
+    width: 77%;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50px;
+    background-color: #80008097;
+    padding:34px 0;
+    z-index: 1;
+    position: relative;
+}
+.content-filter input{
+    outline: none;
+    border: none;
+    width: 30%;
+    border-radius:20px ;
+    padding:10px;
+}
+.buscadorEventos{
+    display: flex;
+    flex-direction: column;
+    padding: 45px;
+    overflow: scroll;
+    align-items: center;
+    background-color: #935d9336;
+    border-radius: 70px;
+    width: 86%;
+    height: 97vh;
+}
 
-@media screen and (max-width:1200px){
-    header{
-        background-position: center;
-    }
-    .nav-index{
-        padding: 30px 50px  ;
-    }
-    
-    #register{
-        padding: 6px;
-    }
-    #img-logo{
-        height: 4rem;
-    }
-    .input-nav{
-        width:65%;
-    }
+@media (max-width: 1366px) {
     .content-nav{
-        width:60%
-    }
-    .contenedor-sobre-nosotros{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .sobre-nosotros .contenido-textos{
-        width: 90%;
-    }
-
-    .imagen-about-us{
-        width: 90%;
-    }
-
-    /* Galeria */
-
-    .imagen-port{
-        width: 44%;
-    }
-
-    /* Clientes */
-
-    .cards{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .cards .card{
-        width: 90%;
-    }
-
-    .cards .card:first-child{
-        margin-bottom: 30px;
-    }
-
-    /* servicios */
-
-    .servicio-cont{
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .servicio-ind{
-        width: 100%;
-        text-align: center;
-    }
-
-    .servicio-ind:nth-child(1), .servicio-ind:nth-child(2){
-        margin-bottom: 60px;
-    }
-
-    .servicio-ind img{
-        width: 90%;
+        width: 70%;
     }
 }
 
-@media screen and (max-width:711px){
+@media  (max-width:870px){
     .nav-index{
         display: flex;
         flex-wrap: wrap ;
         height: 170px;
-        padding: 30px 50px  ;
+        padding: 0px 50px  ;
+        font-size: 25px;
+        padding-top: 20px;
     }
     #search-icon{
             position: absolute;
@@ -505,16 +543,50 @@ main .sobre-nosotros{
         padding: 6px;
     }
     #img-logo{
-        height: 4rem;
+        height: 8rem;
+    }
+    .bar-nav    {
+        width: 100%;
+        padding-bottom: 30px;
+        
     }
     .bar-nav .input-nav{
-        width: 12rem;
+        height: 3rem;
+    
     }
     .content-nav{
         width:100%;
+        
     }
-    
-
+    .estadist{
+        display: flex;
+        flex-direction: column;
+      
+    }
+    .grafico{
+        width: 100%;
+     
+    }
+    .map{
+        display: flex;
+        justify-content: center;
+        width: 800px;
+        height: 300px;
+    }
+    .categorias{
+        width: 100%;
+        height: 100%;
+        padding-bottom: 50px;
+    }
+    .slider{
+        padding-top: 40px;
+        height: 100%;
+    }
+    .contenedor-sobre-nosotros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     .textos-header h1{
         font-size: 35px;
     }
@@ -531,9 +603,22 @@ main .sobre-nosotros{
     }
 
     .sobre-nosotros .contenido-textos{
-        width: 95%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-size: 30px ;
+        align-items: center;
     }
-
+    .contenido-textos p{
+        width: 100%;
+    }
+    .content-link-register{
+        height: 100px;
+        font-size: 25px;
+    }
+    .contus1{
+        height: 100%;
+    }
     /* Galeria */
 
     .imagen-port{
@@ -555,9 +640,11 @@ main .sobre-nosotros{
     }
 
     /* Footer */
-
- 
     .titulo-final{
         font-size: 20px;
     }
+    .content-filter{
+     width: 600px;   
+    }
+    
 }

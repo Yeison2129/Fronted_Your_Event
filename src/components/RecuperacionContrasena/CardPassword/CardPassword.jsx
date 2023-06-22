@@ -3,6 +3,8 @@ import "./cardPassword.css";
 import { Formik, Field } from "formik";
 import swal from "sweetalert2";
 import { CompareCodeUser, CompareEmailUser, RecuperationPasswordUser } from "../../../api/App";
+import {Link} from 'react-router-dom'
+
 
 export const CardPassword = () => {
   const [inputEmail, setInputEmail] = useState("x");
@@ -20,6 +22,7 @@ export const CardPassword = () => {
             try {
               setInputEmail(values.mail_user);
               let response = await CompareEmailUser(values);
+              console.log(response);
               if (response.data.data == "CODE_ADD") {
                 swal.fire({
                   title: "Correo Enviado",
@@ -83,9 +86,9 @@ export const CardPassword = () => {
                 </form>
 
                 <div className="btn-recover">
-                  <a href="/" id="hv">
+                  <Link to="/" id="hv">
                     Inicio
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -162,9 +165,9 @@ export const CardPassword = () => {
             <Field type="submit" value="Siguiente" className="btn-next"/>
             </form>
             <div className="btn-recover">
-                  <a href="/" id="hv">
+                  <Link to="/" id="hv">
                     Inicio
-                  </a>
+                  </Link>
                 </div>
           </div>
           
@@ -217,7 +220,7 @@ export const CardPassword = () => {
       <div className="contentCardPassword">
       <div className="cardPassword">
           <h2 id='title-recover'>Nueva contraseña!</h2>
-         
+        
           <p  className="text">
               Ingresa la nueva contraseña que deseas tener.
           </p>
@@ -236,9 +239,9 @@ export const CardPassword = () => {
           </div>
           </form>
           <div className="btn-recover">
-                  <a href="/" id="hv">
+                  <Link to="/" id="hv">
                     Inicio
-                  </a>
+                  </Link>
                 </div>
       </div>
       

@@ -6,6 +6,9 @@ import swal from "sweetalert2";
 import loginEmpresa3 from "../../assets/loginEmpresa-3.png"
 import empresa from "../../assets/loginEmpresa-2.svg"
 import male from "../../assets/loginEmpresa-1.svg"
+import {Link} from 'react-router-dom'
+
+
 export const LoginEmpresa = () => {
   return (
     <>
@@ -30,17 +33,17 @@ export const LoginEmpresa = () => {
               const timeout = () => {
                 setTimeout(function () {
                   window.location.href = "/";
-                  localStorage.setItem("id_empresa", respons.data.rows[0].id_empresa);
-                  localStorage.setItem("company", respons.data.rows[0].nom_empresa);
+                  localStorage.setItem("id_empresa", respons.data.respons[0].id_empresa);
+                  localStorage.setItem("company", respons.data.respons[0].nom_empresa);
                   localStorage.setItem("token_company", respons.data.token_company);
-                  localStorage.setItem("mail_admin", respons.data.rows[0].mail_empresa)
+                  localStorage.setItem("mail_empresa", respons.data.respons[0].mail_empresa)
                 }, 2000);
               };
               timeout();
             }
-            if (respons.data.data == "usuario No existe") {
+            if (respons.data.data == "Usuario_No_existe") {
               swal.fire({
-                title: "Usuario No existe",
+                title: "Empresa No existe",
                 text: "por favor Registrate",
                 icon: "warning",
                 boton: "Ok",
@@ -90,13 +93,15 @@ export const LoginEmpresa = () => {
                 <img src={empresa} alt="img" title="empresa" />
               </div>
               <div className="loginEmpresa-login-content">
-                <Form action="#" onSubmit={handleSubmit} className="login-form">
+                <Form action="#" onSubmit={handleSubmit} className="login-form-E">
                   <img src={male} alt="img" title="male" />
                   <h2 className="loginEmpresa-title">Bienvenido</h2>
 
-                  <div className="input-field">
+                  <div className="input-field-LE">
                     <i className="fas fa-user"></i>
                     <Field
+                      className="input-loginE"
+                      autocomplete="off"
                       type="text"
                       id="mail_empresa"
                       name="mail_empresa"
@@ -106,9 +111,11 @@ export const LoginEmpresa = () => {
                     />
                   </div>
 
-                  <div className="input-field">
+                  <div className="input-field-LE">
                     <i className="fas fa-lock"></i>
                     <Field
+                      className="input-loginE"
+                      autocomplete="off"
                       type="password"
                       id="password_empresa"
                       name="password_empresa"
@@ -118,10 +125,13 @@ export const LoginEmpresa = () => {
                     />
                   </div>
                   <Field
+                    autocomplete="off"
                     type="submit"
                     className="boton-morado btn solid"
                     value="Iniciar Sesión"
-                  />
+                  /> <br />
+                  <Link id="a-black" to="/RegistroEmpresa"> Necesitas una cuenta?</Link> <br />
+                  <Link id="a-black" to="/">Volver al inicio</Link><br />
                 </Form>
               </div>
             </div>

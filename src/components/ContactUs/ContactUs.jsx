@@ -5,7 +5,11 @@ import face from '../../assets/SocialMedia/face.svg'
 import insta from '../../assets/SocialMedia/insta.svg'
 import twit from '../../assets/SocialMedia/twitter.svg'
 import logoY from '../../assets/logos/logo-your-event.svg'
+<<<<<<< HEAD
 
+=======
+import {Link} from 'react-router-dom'
+>>>>>>> Developer
 
 export const ContactUs = () => {
   const refForm = useRef();
@@ -29,9 +33,9 @@ export const ContactUs = () => {
           <div className="Socialmedia">
             <p>Nuestras Redes Sociales</p>
             <div className="redes">
-            <a href=""> <img src={face} alt="" /></a> 
-            <a href=""><img src={insta} alt="" /></a>  
-             <a href=""><img src={twit} alt="" /></a>
+            <Link to="https://www.facebook.com/profile.php?id=100093102635509"> <img src={face} /></Link> 
+            <Link to="https://instagram.com/youreventvykmb?igshid=MmJiY2I4NDBkZg=="><img src={insta}  /></Link>  
+            <Link to="https://twitter.com/YourEvent152151"><img src={twit}  /></Link>
               </div>
           </div>
           <p>Gmail <br /> YourEvent@gmail.com</p>
@@ -44,20 +48,20 @@ export const ContactUs = () => {
         <form ref={refForm} action="" onSubmit={handleSubmit} className="form-contactus">
 
           <div className='input-contactus'>
-            <input className='input-contus2' name='username' type="text" placeholder='Nombre' required />
+            <input className='input-contus2' name='username' type="text" placeholder='ㅤ' required />
             <label htmlFor="" className='label'>Nombre</label>
           </div>
           <div className="input-contactus">
-            <input className='input-contus2' type="text" placeholder='Apellido' required />
+            <input className='input-contus2' type="text" placeholder='ㅤ' required />
             <label htmlFor="" className='label'>Apellido</label>
           </div>
 
           <div className="input-contactus">
-            <input className='input-contus2' id='width' type="email" name='email' placeholder='Correo Electronico' required />
+            <input className='input-contus2' id='width' type="email" name='email' placeholder='ㅤ' required />
             <label htmlFor="" className='label'>email</label>
           </div>
           <div className="input-contactus" id='message'>
-            <input className='input-contus2' name='message' type="text" placeholder='Mensaje' required />
+            <input className='input-contus2' name='message' type="text" placeholder='ㅤ' required />
             <label htmlFor="" className='label'>Mensaje</label>
           </div>
           <button className='btn-Send'>Enviar</button>

@@ -1,0 +1,115 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+
+
+.cards-index {
+   position: relative;
+   flex: 0 0 240px;
+   width: 240px;
+   height: 320px;
+   overflow: hidden;
+   border-radius: 10px;
+   box-shadow: rgba(27, 27, 27, 0.66) 0 10px 20px 0, inset #7a7a7a 0 0 0 5px,
+   inset rgba(45, 44, 44, 0.5) 0 0 0 5px;
+   transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover
+}
+
+
+
+.product {
+   height: 350px;
+   width: 250px;
+   margin: 50px;
+   box-shadow: 5px 5px 20px black;
+   overflow: hidden;
+   border-radius: 20px;
+   background-size: cover;
+}
+
+.product h1{
+   color: #fff;
+   text-align: center;
+}
+
+.product:hover {
+   cursor: pointer;
+}
+
+.products-preview {
+   display: none;
+}
+
+.products-preview.active {
+   display: block;
+}
+
+ -.-.-.-.-.-.-.-.-.-.-.-.-..-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-..-PREVIEW.-..-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-. 
+.preview {
+   position: fixed;
+   top: 50%;
+   left: 50%;  
+   transform: translate(-50%, -50%);
+   background-color: rgb(255, 255, 255);
+   border-radius: 20px;
+   box-shadow: -1px 0px 11px 1px gray;
+   width: 30%;
+   height: 80%;
+   z-index: 10;
+}
+
+
+
+.cardBig {
+   height: 90%;
+   width: 38%;
+   margin: 20px 0;
+   border-radius: 1100px;
+}
+.bigImg{
+   display: flex;
+   width: 100%;
+   height: 32%;
+   justify-content: center;
+}
+   
+
+#cierre-ventana {
+   font-size: 30px;
+   color: #000000;
+}
+
+#cierre-ventana:hover{
+   color: #a70000
+}
+
+
+.products-preview .preview .fa-times {
+   position: absolute;
+   top: 20;
+   right: 1.5rem;
+   cursor: pointer;
+   color: #444;
+   font-size: 2rem;
+   padding-top: 20px;
+}
+@media (max-width:1377px) {
+
+
+}
+
+
+@media (max-width:870px){
+   .preview{
+      font-size: 30px;
+      width: 70%;
+      height: 60%;
+   }
+   .reserv{
+      font-size: 28px;
+   }
+   .all-cards-events{
+      width: 100%;
+   }
+} */

@@ -50,43 +50,15 @@ export const Cards = ({dataImage}) => {
             <div className="cards" style={{'transform': `rotateY(${rX}deg) rotateX(${rY}deg)`}} >
                 <div className="cards-bg" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
                 <div className="cards-info">
-                    <h1 slot="header">Musica </h1>
-                    <p slot="content">Disfruta de artistas locales y nacionales.</p>
+                    <h1 slot="header">Mision </h1>
+                    <p slot="content">Nuestra misión es proporcionar una plataforma integral donde puedas encontrar y crear eventos únicos en el encantador departamento del Quindío. Ya sea que estés buscando una aventura en la naturaleza, una noche llena de música en vivo, una muestra gastronómica o cualquier otro tipo de evento, YourEvent es el lugar perfecto para comenzar.</p>
                 </div>
                 </div>
             </div>
             
-            <div
-                className="cards-wrap"
-                onMouseMove={handleMouseMove}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                ref={cardRef}
-            >
-                <div className="cards" style={{'transform': `rotateY(${rX}deg) rotateX(${rY}deg)`}} >
-                <div className="cards-bg-one" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
-                <div className="cards-info">
-                    <h1 slot="header">Cáterin</h1>
-                    <p slot="content">buffets y de mas sorpresas relacionadas con la comida.</p>
-                </div>
-                </div>
-            </div>
+            
 
-            <div
-                className="cards-wrap"
-                onMouseMove={handleMouseMove}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                ref={cardRef}
-            >
-                <div className="cards" style={{'transform': `rotateY(${rX}deg) rotateX(${rY}deg)`}} >
-                <div className="cards-bg-two" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
-                <div className="cards-info">
-                    <h1 slot="header">Concursos</h1>
-                    <p slot="content">Participa y unete a las comunidades.</p>
-                </div>
-                </div>
-            </div>
+            
 
             <div
                 className="cards-wrap"
@@ -98,8 +70,8 @@ export const Cards = ({dataImage}) => {
                 <div className="cards" style={{'transform': `rotateY(${rX}deg) rotateX(${rY}deg)`}} >
                 <div className="cards-bg-tree" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
                 <div className="cards-info">
-                    <h1 slot="header">Presentaciones</h1>
-                    <p slot="content">El mejor entretenimiento con los mejores.</p>
+                    <h1 slot="header">Vision</h1>
+                    <p slot="content">En YourEvent Nuestra visión es convertirnos en la plataforma líder en la creación y búsqueda de eventos en el Quindío. Queremos ser reconocidos como el referente confiable y de calidad para todas las personas que buscan vivir experiencias únicas y emocionantes en esta hermosa región.</p>
                 </div>
                 </div>
             </div>
@@ -114,8 +86,9 @@ export const Cards = ({dataImage}) => {
                 <div className="cards" style={{'transform': `rotateY(${rX}deg) rotateX(${rY}deg)`}} >
                 <div className="cards-bg-for" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
                 <div className="cards-info">
-                    <h1 slot="header">Lugares</h1>
-                    <p slot="content">Descubre y conoce sientete diferente.</p>
+                    <h1 slot="header">Objetivos</h1>
+                    <p slot="content">Crecimiento de usuarios <br /> Experiencia del usuario <br /> Ampliar la oferta de eventos <br /> Fomentar la interacción y la comunidad <br /> tener una mayor Expansión</p>
+                    
                 </div>
                 </div>
             </div>

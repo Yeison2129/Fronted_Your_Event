@@ -1,7 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
 .container-drop {
   display: flex;
   width: 40px;
+  font-family: "Poppins";
+
   height: 40px;
+  position: relative;
 }
 #img-container-drop {
   cursor: pointer;
@@ -9,12 +14,14 @@
   border-radius: 200px;
   display: flex;
   justify-content: center;
+  
 }
 .ul-drop {
   background: white;
   box-shadow: 0px 2px 6px #858585;
   width: 150px;
   border-radius: 14px;
+  
   margin: 8px 0px 0px -94px;
 }
 .li-style-drop {
@@ -23,13 +30,16 @@
   display: block;
 }
 #btn-logout {
-  font-family: sans-serif;
+  font-family: "Poppins";
   font-size: 17px;
+  background-color: white;
+  border: none;
+border-radius: 20px;  
 }
 .a-style-dropp {
   text-decoration: none;
-  font-family: sans-serif;
-  display: block;
+  font-family: "Poppins";
+    display: block;
   padding: 5px;
   color: black;
   border: #ccc 1px;
@@ -45,6 +55,7 @@
   width: 100%;
   margin-top: 50px;
   transition: 0.5s ease-out;
+  position: absolute;
 }
 
 ul.ul-drop > li.li-style-drop > a {
@@ -53,4 +64,10 @@ ul.ul-drop > li.li-style-drop > a {
 
 ul.ul-drop > button.li-style-drop > a {
   color: black !important;
+}
+
+@media(max-width:870px) {
+  .ul-drop{
+    width: 190px;
+  }
 }

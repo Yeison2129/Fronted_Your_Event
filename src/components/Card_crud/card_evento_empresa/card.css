@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
 *{
     margin: 0;
@@ -9,24 +9,31 @@
 }
 
 #h1-cardEvent{
-    margin: 20px 30px;
-    font-family: montserrat;
+    top: 10px;
+    padding: 10px 40px;
+    width:100%;
+    position: relative;
+    height: 10vh;
+    font-family: "Poppins";
+    font-size: 20px;
+    justify-content: center;
 
 }
 #h1-cardEvent hr{
     width: 200px ;
     height:1px ;
+    
     border: #000 1px solid;
 }
 .component-card{
     display: flex;
     flex-direction: column;
+    font-family: "Poppins";
     justify-content: space-between;
      height: 20rem;
-     font-family: montserrat;
      width: 13rem;
      border-radius: 20px;
-     position: absolute;
+     position: relative;
     border: 1px inset #fff;
      z-index: 1;
     }
@@ -37,7 +44,6 @@
     right: 0;
     border-radius: 20px;
     bottom: 0;
-    background-image: url('../../../assets/code.jpg');        
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
@@ -46,11 +52,21 @@
     position: absolute;
   }
 .imagen-card{
-    background-image: url('../../../assets/code.jpg');
+    
+    width: 100%;
     height: 60%;    
     background-size: cover;
     background-repeat: no-repeat;
 
+}
+.button-delete{
+    display: flex;
+    justify-content: center;
+border-radius: 10px;
+}
+.imagen-card img{
+    width: 100%;
+    height: 100%;
 }
 .icon-card{
     display: flex;
@@ -77,4 +93,37 @@
     background-color: rgb(255, 255, 255);
     height: 4rem;
     opacity: 0.6;
+}
+.events-card-all{
+    display: grid;
+    gap: 20px;
+    flex-wrap: wrap;
+    grid-template-areas: "ca1 ca2 ca3 ca4 ca5";
+}
+.events-card-all-page {
+    position: relative;
+    left: 220px;
+    padding: 10px 98px;
+    width: 80%;
+    height: 90vh ;
+    overflow: scroll;
+
+    justify-content: space-evenly;
+  }
+
+.cardedit {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+}
+@media (max-width:1377px){
+    .events-card-all{
+        grid-template-areas: "ca1 ca2 ca3 ca4 ";
+    }
+    .events-card-all-page {
+
+        height: 82vh;
+
+    }
 }

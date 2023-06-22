@@ -20,7 +20,7 @@
             "description": "Córdoba",
             "name": "Córdoba",
             "geometry": [
-                4.5058,
+                4.3898,
                 -75.6856
             ]
         },
@@ -28,8 +28,8 @@
             "description": "Buenavista",
             "name": "Buenavista",
             "geometry": [
-                4.3938,
-                -75.7682
+                4.3594,
+                -75.7382
             ]
         },
         {
@@ -37,31 +37,23 @@
             "name": "La Tebaida",
             "geometry": [
                 4.4544,
-                -75.8122
+                -75.7912
             ]
         },
         {
             "description": "Génova",
             "name": "Génova",
             "geometry": [
-                4.3157,
-                -75.8115
+                4.209,
+                -75.7895
             ]
         },
         {
             "description": "Pijao",
             "name": "Pijao",
             "geometry": [
-                52.535069,
-                13.452312
-            ]
-        },
-        {
-            "description": "The club is located in a former underground gay cruising toilet under the Yorckstrasse in Kreuzberg.",
-            "name": "Zur Klappe",
-            "geometry": [
                 4.3342,
-                -75.7127
+                -75.7037
             ]
         },
         {
@@ -69,7 +61,7 @@
             "name": "Circacia",
             "geometry": [
                 4.6204,
-                -75.6473
+                -75.6383
             ]
         },
         {
@@ -82,10 +74,10 @@
         },
         {
             "description": "despues lo pienso",
-            "name": "Monenegro",
+            "name": "Montenegro",
             "geometry": [
                 4.5631,
-                -75.7652
+                -75.7502
             ]
         },
         {
@@ -100,7 +92,7 @@
             "description": "Salento es un paraiso para los turistas",
             "name": "Salento",
             "geometry": [
-                4.633,
+                4.6393,
                 -75.567
             ]
         }
