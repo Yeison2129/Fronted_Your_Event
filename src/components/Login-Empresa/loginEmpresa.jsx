@@ -31,13 +31,13 @@ export const LoginEmpresa = () => {
                 boton: "Ok",
                 time: 1500,
               });
+              localStorage.setItem("id_empresa", respons.data.respons[0].id_empresa);
+              localStorage.setItem("company", respons.data.respons[0].nom_empresa);
+              localStorage.setItem("token_company", respons.data.token_company);
+              localStorage.setItem("mail_empresa", respons.data.respons[0].mail_empresa)
               const timeout = () => {
                 setTimeout(function () {
-                  navigate("/");
-                  localStorage.setItem("id_empresa", respons.data.respons[0].id_empresa);
-                  localStorage.setItem("company", respons.data.respons[0].nom_empresa);
-                  localStorage.setItem("token_company", respons.data.token_company);
-                  localStorage.setItem("mail_empresa", respons.data.respons[0].mail_empresa)
+                  window.location.href="/"
                 }, 2000);
               };
               timeout();

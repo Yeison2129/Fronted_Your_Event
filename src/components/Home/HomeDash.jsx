@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom'
 import { CountEventsCompany, getCompany } from "../../api/App";
 import userIcon from "../../assets/userIcon.svg";
 
+
 const EventsCompany = await CountEventsCompany();
 export const Homedash = () => {
   let company = window.localStorage.getItem("company");
-
   let eventos = EventsCompany.data.data[0].eventos;
-
+  console.log(eventos);
   const [traerCompany, setTraerCompany] = useState([]);
 
   const companys = async () => {

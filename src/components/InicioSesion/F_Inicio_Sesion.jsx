@@ -38,7 +38,7 @@ export const Inicio_Sesion = () => {
               localStorage.setItem("email", response.data.respons[0].mail_user)
               localStorage.setItem("token", response.data.token);
               setTimeout(() => {
-                navigate("/")
+                window.location.href="/"
               }, 1500);
             }
             if (response.data.data == "PASSWORD_ERROR") {

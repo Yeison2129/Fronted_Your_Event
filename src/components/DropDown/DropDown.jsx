@@ -35,16 +35,16 @@ export const DropDown = () => {
 
   const closedToken = () => {
     if (user) {
-      localStorage.clear();
-      setTimeout(() => {
-        navigate("/")
-        // window.location.href = "/password"
+    setTimeout(() => {
+        localStorage.clear();
+        window.location.href="/"
       }, 0.5);
     }
     if (company) {
-      localStorage.clear();
+      
       setTimeout(() => {
-        navigate("/")
+        localStorage.clear();
+        window.location.href="/"
       }, 0.5);
     }
   };
