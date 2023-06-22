@@ -8,7 +8,7 @@ let id_user1 = localStorage.getItem("id_user")
 let id_empresa = localStorage.getItem("id_empresa")
 let id_empresa1 = localStorage.getItem("id_empresa")
 let id_event1 = localStorage.getItem("id_event")
-let url = 'http://localhost:4000'
+let url = 'https://backend-your-event-vyaj.onrender.com'
 //Users
 export const registerUser = async (newUser) =>
     await axios.post(`${url}/registerUser`, newUser)
