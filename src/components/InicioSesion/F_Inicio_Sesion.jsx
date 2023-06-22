@@ -5,9 +5,12 @@ import loginperson from "../../assets/login-2.svg";
 
 import { loginUser } from "../../api/App";
 import swal from "sweetalert2";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Inicio_Sesion = () => {
+
+  const navigate = useNavigate();
+
   return (
     <>
       <Formik
@@ -35,7 +38,7 @@ export const Inicio_Sesion = () => {
               localStorage.setItem("email", response.data.respons[0].mail_user)
               localStorage.setItem("token", response.data.token);
               setTimeout(() => {
-                window.location.href = "/"
+                navigate("/Ayuda")
               }, 1500);
             }
             if (response.data.data == "PASSWORD_ERROR") {
