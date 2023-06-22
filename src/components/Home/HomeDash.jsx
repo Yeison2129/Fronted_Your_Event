@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { CountEventsCompany, getCompany } from "../../api/App";
 import userIcon from "../../assets/userIcon.svg";
 
-const EventsCompany = CountEventsCompany();
+const EventsCompany = await CountEventsCompany();
 export const Homedash = () => {
   let company = window.localStorage.getItem("company");
 
