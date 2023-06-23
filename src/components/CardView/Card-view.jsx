@@ -4,6 +4,7 @@ import { useState } from "react";
 import swal from "sweetalert2";
 import { asistEvents, getEvents } from "../../api/App";
 import { Formik, Field } from "formik";
+import { Carrusel } from "../Carrusel/Carrusel";
 
 export const CardView = () => {
   let user = localStorage.getItem("user");
@@ -234,12 +235,7 @@ export const CardView = () => {
                         id="cierre-ventana"
                       ></i>
                       <div className="bigImg">
-                        <img
-                          id="img-cardview"
-                          className="cardBig"
-                          src={event.img_event}
-                          alt=""
-                        />
+                        <Carrusel/>
                       </div>
                       <div className="info">
                     <div className="title-infcard">
