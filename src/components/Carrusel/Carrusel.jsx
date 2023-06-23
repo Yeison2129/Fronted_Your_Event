@@ -32,15 +32,6 @@ export const Carrusel = () => {
   let company = window.localStorage.getItem("company");
   // const sliders =[...document.querySelectorAll('.slider__body')];
 
-  const closedToken = () => {
-    if (user) {
-      localStorage.removeItem("user");
-      localStorage.removeItem("auth");
-      setTimeout(() => {
-        window.location.href = "/";
-      }, 0.5);
-    }
-  };
   // Aui va la logica de javascript
   const handleNext = () => {
   const sliders = [...document.querySelectorAll('.slider__body')];
@@ -52,12 +43,11 @@ const handlePrevious = () => {
     const sliders = [...document.querySelectorAll('.slider__body')];
     const currentElement = document.querySelector('.slider__body--show-SobreNosotros');
     changePosition(sliders, currentElement, -1);
-  };
+};
 
 
   return (
     <>
-
       <section className="slider-Carrusel">
         <div className="Carrusel__container container-Carrusel">
           <img src= {search} className="slider__arrow-SobreNosotros" id="before" onClick={()=> handlePrevious()} />
