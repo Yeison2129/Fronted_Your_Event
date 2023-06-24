@@ -21,6 +21,7 @@ export const CardAsist = () => {
     event.previewActive = false;
     setAllEvents([...allEvents]);
   };
+  const [isOpen, setIsOpen] = useState(false);
 
   const eventEmpresa = async () => {
     const response = await getEventsCompany();
@@ -96,7 +97,7 @@ export const CardAsist = () => {
                     <div className="icon-card">
 
 
-                      <i id="img-card-pointer" className="fa fa-solid fa-users" onClick={() => openForm(eventEmpresa.id_event)} />
+                      <i id="img-card-pointer" className="fa fa-solid fa-users "  onClick={() => setIsOpen(!isOpen)} />
 
                     </div>
                   </div>

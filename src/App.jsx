@@ -28,7 +28,7 @@ import { CardViewA } from "./components/Index/Asistir/Card-viewA/Card-viewA"
 import { CardAsist } from "./components/Card-Asist/Card_Asist.jsx"
 import { HelpIndex } from "./components/Index/Help-index/HelpIndex"
 import { Carrusel } from "./components/Carrusel/Carrusel"
-import { Drop } from "./components/DropDown/Drop2/Drop2"
+import { Drop2 } from "./components/DropDown/Drop2/Drop2"
 import { ImageUploadForm } from "./components/Upload_image/UploadImage.jsx"
  
 
@@ -65,7 +65,7 @@ export default function App() {
             <Route path='/asistenciasCompany' element={<CardAsist/>}/>
             <Route path='/Help' element={<HelpIndex/>}/>
             <Route path='/Carrusel' element={<Carrusel/>}/>
-            <Route path='/dropsecond' element={<Drop/>}/>
+            <Route path='/drop2' element={<Drop2/>}/>
             <Route path='/imagenes' element={<ImageUploadForm/>}/>
 
 
