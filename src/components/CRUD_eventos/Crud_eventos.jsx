@@ -108,7 +108,12 @@ const Crud_eventos = () => {
                 </h1>
 
                 <div className="components-crud">
-                  <Form onSubmit={handleSubmit} className="form-crud">
+                <div className="part2">
+                  
+                
+
+                    <Form onSubmit={handleSubmit} className="form-crud">
+
                     <Field
                       id="nom_event"
                       type="text"
@@ -140,7 +145,7 @@ const Crud_eventos = () => {
                       required
                       onChange={handleChange}
                     />
-                    <Field
+                     <Field
                       id="tipo_event"
                       className="select-crud"
                       type="text"
@@ -165,49 +170,64 @@ const Crud_eventos = () => {
                       <option value="Tecnológicos">Tecnológicos</option>
                       <option value="Arte">Arte</option>
                     </Field>
-                    <Field
-                      id="description_event"
-                      type="text"
-                      name="description_event"
-                      placeholder="Descripción"
-                      className="description-event"
-                      required
-                      onChange={handleChange}
-                    />
-                     <Field
-                      id="municipio"
-                      className="select-crud"
-                      type="text"
-                      name="municipio"
-                      as="select"
-                      required
-                      onChange={handleChange}
-                    >
-                      <option value="">Selecciona tu Municipio</option>
-                      <option value="Filandia">Filandia</option>
-                      <option value="Salento">Salento</option>
-                      <option value="Circasia">Circasia</option>
-                      <option value="Quimbaya">Quimbaya</option>
-                      <option value="Montenegro">Montenegro</option>
-                      <option value="Armenia">Armenia</option>
-                      <option value="Calarcá">Calarcá</option>
-                      <option value="Tebaida">Tebaida</option>
-                      <option value="Cordoba">Cordoba</option>
-                      <option value="Buenavista">Buenavista</option>
-                      <option value="Pijao">Pijao</option>
-                      <option value="Genova">Genova</option>
-                    </Field>                      
-                      <Field
-                      id="direccion"
-                      type="text"
-                      name="direccion"
-                      placeholder="Dirección"
-                      required
-                      onChange={handleChange}
-                    />
+                  </Form>
 
-                    <div className="img-crud  ">
-                      <label className="selec-cert" htmlFor="">
+                    </div>
+                    <div className="">
+                    <Form onSubmit={handleSubmit} className="form-crud">
+                   
+             
+                  <Field
+                   id="municipio"
+                   className="select-crud"
+                   type="text"
+                   name="municipio"
+                   as="select"
+                   required
+                   onChange={handleChange}
+                 >
+                   <option value="">Selecciona tu Municipio</option>
+                   <option value="Filandia">Filandia</option>
+                   <option value="Salento">Salento</option>
+                   <option value="Circasia">Circasia</option>
+                   <option value="Quimbaya">Quimbaya</option>
+                   <option value="Montenegro">Montenegro</option>
+                   <option value="Armenia">Armenia</option>
+                   <option value="Calarcá">Calarcá</option>
+                   <option value="Tebaida">Tebaida</option>
+                   <option value="Cordoba">Cordoba</option>
+                   <option value="Buenavista">Buenavista</option>
+                   <option value="Pijao">Pijao</option>
+                   <option value="Genova">Genova</option>
+                 </Field>                      
+                   <Field
+                   id="direccion"
+                   type="text"
+                   name="direccion"
+                   placeholder="Dirección"
+                   required
+                   onChange={handleChange}
+                 />                        
+                   <Field
+                   id="contacto"
+                   type="text"
+                   name="contecto"
+                  placeholder="telefono"
+                   required
+                   onChange={handleChange}
+                 />
+                     <Field
+                   id="description_event"
+                   type="text"
+                   name="description_event"
+                   placeholder="Descripción"
+                   className="description-event"
+                   required
+                   onChange={handleChange}
+                 />
+
+<div className="img-crud  ">
+                      <label className="selec-img" htmlFor="">
                         <input
                           type="file"
                           id="image"
@@ -219,31 +239,29 @@ const Crud_eventos = () => {
                         />
                       </label>
                     </div>
-
-                    <div className="end">
-                      {/* <div className="content-end"> */}
-                      <div className="botones-crud">
-                        <Field
-                          className="btn-crud"
-                          type="submit"
-                          value="Limpiar"
-                          id="btn-cancel"
-                        />
-
-                            <button id="btn-accept" className="btn-crud" type="submit"> {isSubmitting ? 'Creando....' : 'Crear' }</button>
-                       
-                        {/* <Field
-                          className="btn-crud"
-                          type="submit"
-                          id="btn-accept"
-                          value="Crear"
-                        /> */}
-
-                        {/* </div> */}
-                      </div>
-                    </div>
-                  </Form>
+                 <div className="end">
+                
+                 </div>
+               </Form>   {/* <div className="content-end"> */}
+            
+                    
+                   </div>
+                  
+                   
                 </div>
+                <div className="botonesss">
+                   <Form onSubmit={handleSubmit} className="form-crud botones-crud">
+                    
+                     <Field
+                       className="btn-crud"
+                       type="submit"
+                       value="Limpiar"
+                       id="btn-cancel"
+                     />
+
+                         <button id="btn-accept" className="btn-crud" type="submit"> {isSubmitting ? 'Creando....' : 'Crear' }</button>
+               </Form>   
+                    </div>
               </div>
             </div>
           </div>

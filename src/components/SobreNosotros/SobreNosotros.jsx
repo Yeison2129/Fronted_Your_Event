@@ -94,7 +94,6 @@ const handlePrevious = () => {
               <>
                 {company ? (
                   <>
-                <Link to="/asistir">Mis reservas</Link>
                 <div className="dropDown">
                 <p to="" id="enter1">
                   {company.charAt(0).toUpperCase() + company.slice(1)}
