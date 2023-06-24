@@ -89,7 +89,19 @@ export const Set = ({ closeModal }) => {
                       action=""
                       onSubmit={handleSubmit}
                     >
+                      <div className="other-class">
                       <div className="img-set  ">
+                         <div className="imgUpdate">
+                          <label className="selec-cert" htmlFor="">
+                            <img
+                              src={eventEmpresa.img_event}
+                              onClick={() => {
+                                document.getElementById("image").click();
+                                key = `${i}`;
+                              }}
+                            ></img>
+                          </label>
+                        </div>
                         <label className="selec-cert" htmlFor="">
                           <input
                             type="file"
@@ -101,20 +113,9 @@ export const Set = ({ closeModal }) => {
                             }}
                           />
                         </label>
-                        <div className="imgUpdate">
-                          <label className="selec-cert" htmlFor="">
-                            <img
-                              src={eventEmpresa.img_event}
-                              onClick={() => {
-                                document.getElementById("image").click();
-                                key = `${i}`;
-                              }}
-                            ></img>
-                          </label>
-                        </div>
+                       
                       </div>
-                      <div className="formtwo">
-                        <Field
+                      <Field
                           id="nom_event"
                           type="text"
                           name="nom_event"
@@ -122,6 +123,34 @@ export const Set = ({ closeModal }) => {
                           required
                           onChange={handleChange}
                         />
+                      <Field
+                          id="description_event"
+                          type="text"
+                          name="description_event"
+                          placeholder="Descripcion"
+                          required
+                          className="description-event"
+                          onChange={handleChange}
+                        />
+                           <Field
+                          id="direccion"
+                          name="direccion"
+                          placeholder="Direccion"
+                          required
+                          onChange={handleChange}
+                        />
+                        <Field
+                          id="aforo"
+                          type="number"
+                          name="aforo"
+                          placeholder="aforo"
+                          required
+                          onChange={handleChange}
+                        />
+                      </div>
+                    
+                      <div className="formtwo">
+                       
                         <Field
                           id="phone_event"
                           type="number"
@@ -178,15 +207,7 @@ export const Set = ({ closeModal }) => {
                           <option value="Tecnológicos">Tecnológicos</option>
                           <option value="Arte">Arte</option>
                         </Field>
-                        <Field
-                          id="description_event"
-                          type="text"
-                          name="description_event"
-                          placeholder="Descripcion"
-                          required
-                          className="description-event"
-                          onChange={handleChange}
-                        />
+                        
                         <Field
                           id="municipio"
                           className="select-set"
@@ -209,21 +230,7 @@ export const Set = ({ closeModal }) => {
                           <option value="Pijao">Pijao</option>
                           <option value="Genova">Genova</option>
                         </Field>
-                        <Field
-                          id="direccion"
-                          name="direccion"
-                          placeholder="Direccion"
-                          required
-                          onChange={handleChange}
-                        />
-                        <Field
-                          id="aforo"
-                          type="number"
-                          name="aforo"
-                          placeholder="aforo"
-                          required
-                          onChange={handleChange}
-                        />
+                     
                       </div>
                     </Form>
                   </div>

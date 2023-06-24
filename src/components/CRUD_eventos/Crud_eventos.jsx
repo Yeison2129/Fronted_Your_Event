@@ -119,13 +119,7 @@ const Crud_eventos = () => {
                         required
                         onChange={handleChange}
                       />
-                      <Field
-                        id="phone_event"
-                        type="number"
-                        name="phone_event"
-                        required
-                        onChange={handleChange}
-                      />
+            
                       <Field
                         id="fecha"
                         type="date"
@@ -145,7 +139,7 @@ const Crud_eventos = () => {
                         id="precio_entrada"
                         type="double"
                         name="precio_entrada"
-                        placeholder="Precio"
+                        placeholder="Precio de entrada"
                         required
                         onChange={handleChange}
                       />
@@ -158,7 +152,7 @@ const Crud_eventos = () => {
                         required
                         onChange={handleChange}
                       >
-                        <option value="">Selecciona tu categoría</option>
+                        <option value="">Selecciona la categoría</option>
                         <option value="Seminarios">Seminarios</option>
                         <option value="Talleres">Talleres</option>
                         <option value="Convenciones">Convenciones</option>
@@ -176,10 +170,6 @@ const Crud_eventos = () => {
                         <option value="Tecnológicos">Tecnológicos</option>
                         <option value="Arte">Arte</option>
                       </Field>
-                    </Form>
-                  </div>
-                  <div className="">
-                    <Form onSubmit={handleSubmit} className="form-crud">
                       <Field
                         id="municipio"
                         className="select-crud"
@@ -189,7 +179,7 @@ const Crud_eventos = () => {
                         required
                         onChange={handleChange}
                       >
-                        <option value="">Selecciona tu Municipio</option>
+                        <option value="">Selecciona el Municipio</option>
                         <option value="Filandia">Filandia</option>
                         <option value="Salento">Salento</option>
                         <option value="Circasia">Circasia</option>
@@ -203,6 +193,11 @@ const Crud_eventos = () => {
                         <option value="Pijao">Pijao</option>
                         <option value="Genova">Genova</option>
                       </Field>
+                    </Form>
+                  </div>
+                  <div className="">
+                    <Form onSubmit={handleSubmit} className="form-crud">
+
                       <Field
                         id="direccion"
                         type="text"
@@ -211,11 +206,11 @@ const Crud_eventos = () => {
                         required
                         onChange={handleChange}
                       />
-                      <Field
-                        id="contacto"
-                        type="text"
-                        name="contecto"
-                        placeholder="telefono"
+                              <Field
+                        id="phone_event"
+                        type="number"
+                        placeholder="Numero de contacto"
+                        name="phone_event"
                         required
                         onChange={handleChange}
                       />
