@@ -197,7 +197,7 @@ main .sobre-nosotros{
 .contenido-textos p{
     padding: 0px 0px 30px 15px;
     font-weight: 300;
-    width: 60%;
+    width: 97%;
     text-align: justify;
 }
 /*----------Slider------------*/
@@ -476,7 +476,7 @@ main .sobre-nosotros{
     overflow: hidden;
     border-radius: 50px;
     background-color: #800080;
-    padding:13px 0;
+    padding:27px 0;
     z-index: 1;
     position: relative;
 }
