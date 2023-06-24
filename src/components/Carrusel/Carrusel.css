@@ -67,8 +67,9 @@
 
 
 .container-Carrusel{
-    width:90%;
-    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-self: center;
     max-width: 463px;
     margin:0 auto;
     overflow: hidden;
