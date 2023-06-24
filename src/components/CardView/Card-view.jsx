@@ -338,6 +338,11 @@ export const CardView = () => {
                             {event.direccion} ,{event.municipio} Quindío.
                           </p>
                           <p id="p-info">
+                            {" "}
+                            <i className="fa fa-solid fa-address-book" />
+                             {event.phone_event} 
+                          </p>
+                          <p id="p-info">
                             <i className="fa fa-solid fa-calendar" />
                             {event.fecha} -{" "}
                             <i className="fa fa-solid fa-clock" />
@@ -345,7 +350,9 @@ export const CardView = () => {
                           </p>
                           <p id="p-info">
                             <i className="fa fa-solid fa-dollar-sign" />
-                            {event.precio_entrada}
+                            {event.precio_entrada}  -  {""}
+                            <i className="fa fa-solid fa-warehouse"/>
+                            Un máximo de {event.aforo}  {""} personas.
                           </p>
                         </div>
                         <div className="dates">

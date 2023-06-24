@@ -7,6 +7,9 @@ import { Link, useNavigate } from "react-router-dom";
 
 export const F_registro = () => {
   const navigate= useNavigate()
+
+
+
   return (
     <>
       <Formik
@@ -15,6 +18,7 @@ export const F_registro = () => {
           nom_user: "",
           mail_user: "",
           password_user: "",
+          password_user1:"",
           phone_user: "",
         }}
         onSubmit={async (values) => {
@@ -28,10 +32,9 @@ export const F_registro = () => {
                 boton: "Ok",
                 time: 1500
               });
-              //sirve para definir una funcion de tiempo
               const timeout = () => {
                 setTimeout(function () {
-                  navigate("/login");
+                navigate("/login");
                 }, 2000);
               };
               timeout();
@@ -48,6 +51,15 @@ export const F_registro = () => {
             if (users.data.data == "INSERT_ERROR") {
               swal.fire("error desconocido");
             }
+            if (users.data.data == "PasswordNotCoincide") {
+              swal.fire({
+                title: "Las Contraseñas No coinciden",
+                text: "Verifica Tu contraseña",
+                icon: "warning",
+                boton: "Ok",
+                time: 1500
+              });
+            }
           } catch (error) {
             swal.fire({
               title: "Error interno en el servidor",
@@ -58,8 +70,6 @@ export const F_registro = () => {
             });
           }
         }}
-
-        // handleReset = () => {}
       >
         {({ handleChange, handleSubmit }) => (
           <div className="container">
@@ -128,18 +138,18 @@ export const F_registro = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  {/* <div className="input-field">
+                  <div className="input-field">
                     <i className="fas fa-lock"></i>
                     <Field
                       autocomplete="off"
                       type="password"
-                      id="password_user"
-                      name="password_user"
+                      id="password_user1"
+                      name="password_user1"
                       required
                       placeholder="Confirmar contraseña"
                       onChange={handleChange}
                     />
-                  </div> */}
+                  </div>
                  
                   <button type="submit" className="btn solid">
                     Registrarse

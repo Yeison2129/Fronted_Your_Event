@@ -37,7 +37,8 @@ export const LoginEmpresa = () => {
               localStorage.setItem("mail_empresa", respons.data.respons[0].mail_empresa)
               const timeout = () => {
                 setTimeout(function () {
-                  window.location.href="/"
+                  navigate("/")
+                  window.location.reload()
                 }, 2000);
               };
               timeout();
