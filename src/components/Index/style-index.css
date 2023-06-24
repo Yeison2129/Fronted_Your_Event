@@ -475,8 +475,8 @@ main .sobre-nosotros{
     align-items: center;
     overflow: hidden;
     border-radius: 50px;
-    background-color: #80008097;
-    padding:34px 0;
+    background-color: #800080;
+    padding:13px 0;
     z-index: 1;
     position: relative;
 }

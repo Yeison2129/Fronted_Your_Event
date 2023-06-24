@@ -10,6 +10,7 @@
 
 #h1-cardEvent{
     top: 10px;
+    z-index: -1;
     padding: 10px 40px;
     width:100%;
     position: relative;
@@ -34,7 +35,7 @@
      width: 13rem;
      border-radius: 20px;
      position: relative;
-    border: 1px inset #fff;
+    border: 1px solid #bdbdbd;
      z-index: 1;
     }
 
@@ -74,6 +75,7 @@ border-radius: 10px;
     margin: auto 1.3rem;
     background-color: white;
     opacity: 0.4;
+    color: #000;
     border-radius: 8px;
 }
 
@@ -90,9 +92,13 @@ border-radius: 10px;
     justify-content: center;
     border-radius:0 0 20px 20px;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.447);
     height: 4rem;
     opacity: 0.6;
+}
+.shadow p{ 
+    color: #000;
+    font-size: 1.1rem;
 }
 .events-card-all{
     display: grid;

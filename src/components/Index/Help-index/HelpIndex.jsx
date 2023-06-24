@@ -36,7 +36,6 @@ export const HelpIndex = () => {
           
           {user ? (
             <>
-            <Link to=""><i className="fa fa-solid fa-bell" /></Link>
             <div className="dropDown"> 
             <p to="" id="enter1">
                 {user.charAt(0).toUpperCase() + user.slice(1)}
@@ -50,7 +49,6 @@ export const HelpIndex = () => {
             <>
               {company ? (
                 <>
-              <Link to="/asistir">Mis reservas</Link>
               <div className="dropDown">
               <p to="" id="enter1">
                 {company.charAt(0).toUpperCase() + company.slice(1)}

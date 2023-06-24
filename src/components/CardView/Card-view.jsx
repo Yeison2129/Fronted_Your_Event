@@ -117,7 +117,7 @@ export const CardView = () => {
 
   const iniciaSesion = () => {
     swal.fire({
-      title: "Por favor inicia Sesion o Registrate",
+      title: "Inicia Sesion o Registrate",
       text: "",
       icon: "warning",
       boton: "Ok",
@@ -273,7 +273,7 @@ export const CardView = () => {
                             createAsistUser(event.id_event);
                           }}
                         >
-                          ¡Reserva ya!
+                          Reserva
                         </button>
                       </div>
                     </div>
@@ -376,7 +376,7 @@ export const CardView = () => {
                             createAsistUser(event.id_event);
                           }}
                         >
-                          ¡Reserva ya!
+                          Reserva
                         </button>
                       </div>
                     </div>
@@ -470,7 +470,7 @@ export const CardView = () => {
                           className="reserv"
                           onClick={() => iniciaSesion()}
                         >
-                          ¡Reserva ya!
+                          Reserva
                         </button>
                       </div>
                     </div>
