@@ -114,6 +114,7 @@ export const CardAsist = () => {
                 </div>
               ))}
             </section>
+          {isOpen &&  <Set closeModal={{ setIsOpen, evento: event }} />}
           </div>
         </>
       ) : null}

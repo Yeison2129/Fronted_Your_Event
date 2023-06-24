@@ -35,9 +35,7 @@ export const Drop2 = () => {
   
     return (
       <div className="dropdown">
-        <button className="dropdown-button" onClick={() => setIsOpen(!isOpen)}>
-          Open Dropdown
-        </button>
+        
         {isOpen && (
           <div className="dropdown-content">
             <table {...getTableProps()} className="table">
