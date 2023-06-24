@@ -7,6 +7,7 @@ import { Formik, Field } from "formik";
 import { Dashboard } from "../dashboard_empresa/Dashboard_Empresa";
 
 export const CardAsist = () => {
+  let company = localStorage.getItem("company")
   let user = localStorage.getItem("user")
   const [allEvents, setAllEvents] = useState([]);
   const [allEventsCompany, setAllEventsCompany] = useState([]);

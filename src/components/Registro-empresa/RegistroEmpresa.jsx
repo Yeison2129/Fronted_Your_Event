@@ -6,9 +6,6 @@ import { registerCompany } from "../../api/App";
 import {Link, useNavigate} from 'react-router-dom'
 import Swal from "sweetalert2"
 
-
-
-
 export const RegistroEmpresa = () => {
   const navigate = useNavigate()
   return (
@@ -19,7 +16,6 @@ export const RegistroEmpresa = () => {
             <div className="content-RegistroEmpresa">
               <h3>¿Tienes un emprendimiento?</h3>
               <p>
-                
                 Únete a nuestra familia para subir tus eventos y no te pierdas
                 de los servicios que brindamos.
               </p>
@@ -35,7 +31,8 @@ export const RegistroEmpresa = () => {
           nom_empresa: "",
           mail_empresa: "",
           telefono_empresa: "",
-          password_empresa: ""
+          password_empresa: "",
+          password_empresa1:""
         }}
         onSubmit={async (values) => {
 
@@ -71,6 +68,15 @@ export const RegistroEmpresa = () => {
             if (users.data.data == "INSERT_ERROR") {
               Swal.fire("error desconocido");
               
+            }
+            if (users.data.data == "PasswordNotCoincide") {
+              Swal.fire({
+                title: "Las contraseñas no coinciden",
+                text: "Revisalas y intenta nuevamente",
+                icon: "warning",
+                boton: "Ok",
+                time: 1500,
+              });
             }
           } catch (error) {
             Swal.fire({
@@ -133,18 +139,18 @@ export const RegistroEmpresa = () => {
                 onChange={handleChange}
               />
             </div>
-            {/* <div className="input-field-RegistroEmpresa">
+            <div className="input-field-RegistroEmpresa">
             <i className="fa fa-solid fa-lock" />
               <Field
                 autocomplete="off"
                 type="password"
-                id="password_empresa"
-                name="password_empresa"
+                id="password_empresa1"
+                name="password_empresa1"
                 placeholder="Confirmar contraseña"
                 required
                 onChange={handleChange}
               />
-            </div> */}
+            </div>
             <button type="submit" className="btn solid">
               Registrate
             </button>

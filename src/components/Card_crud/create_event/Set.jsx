@@ -24,6 +24,7 @@ export const Set = ({ closeModal }) => {
         <Formik
           initialValues={{
             nom_event: eventEmpresa.nom_event,
+            phone_event:eventEmpresa.phone_event,
             img_event: eventEmpresa.img_event,
             tipo_event: eventEmpresa.tipo_event,
             description_event: eventEmpresa.description_event,
@@ -32,6 +33,7 @@ export const Set = ({ closeModal }) => {
             municipio: eventEmpresa.municipio,
             direccion: eventEmpresa.direccion,
             precio_entrada: eventEmpresa.precio_entrada,
+            aforo:eventEmpresa.aforo
           }}
           onSubmit={async (values) => {
             try {
@@ -48,6 +50,7 @@ export const Set = ({ closeModal }) => {
                 const timeout = () => {
                   setTimeout(function () {
                     navigate("/cardCrud")
+                    window.location.reload()
                   }, 2000);
                 };
                 timeout();
@@ -110,6 +113,14 @@ export const Set = ({ closeModal }) => {
                       type="text"
                       name="nom_event"
                       placeholder="Nombre del evento"
+                      required
+                      onChange={handleChange}
+                    />
+                    <Field
+                      id="phone_event"
+                      type="number"
+                      name="phone_event"
+                      placeholder="Telefono"
                       required
                       onChange={handleChange}
                     />
@@ -197,6 +208,14 @@ export const Set = ({ closeModal }) => {
                       id="direccion"
                       name="direccion"
                       placeholder="Direccion"
+                      required
+                      onChange={handleChange}
+                    />
+                    <Field
+                      id="aforo"
+                      type="number"
+                      name="aforo"
+                      placeholder="precio"
                       required
                       onChange={handleChange}
                     />

@@ -92,7 +92,8 @@ export const CardViewA = () => {
         time: 1500,
       });
       setTimeout(() => {
-          navigate("/asistir")      
+          navigate("/asistir")
+          window.location.reload()      
         }, 1000);
       
     }

@@ -13,6 +13,7 @@ const Crud_eventos = () => {
       <Formik
         initialValues={{
           nom_event: "",
+          phone_user:"",
           image: "",
           tipo_event: "",
           description_event: "",
@@ -21,11 +22,11 @@ const Crud_eventos = () => {
           municipio:"",
           direccion:"",
           precio_entrada: "",
+          aforo:""
         }}
         onSubmit={async (values) => {
           try {
             const events = await createEvent(values);
-            console.log(events);
             if (events.data == "INSERT_OK") {
               Swal.fire({
                 title: "Evento Creado Exitosamente",
@@ -118,6 +119,14 @@ const Crud_eventos = () => {
                       onChange={handleChange}
                     />
                     <Field
+                      id="phone_event"
+                      type="number"
+                      name="phone_event"
+                      placeholder="Telefono de Contacto"
+                      required
+                      onChange={handleChange}
+                    />
+                    <Field
                       id="fecha"
                       type="date"
                       name="fecha"
@@ -202,6 +211,14 @@ const Crud_eventos = () => {
                       type="text"
                       name="direccion"
                       placeholder="Dirección"
+                      required
+                      onChange={handleChange}
+                    />
+                    <Field
+                      id="aforo"
+                      type="number"
+                      name="aforo"
+                      placeholder="aforo"
                       required
                       onChange={handleChange}
                     />

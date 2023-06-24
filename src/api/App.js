@@ -150,6 +150,7 @@ export const CountEventsCompany = async () => {
 export const createEvent = async (registerEvent) => {
     const formData = new FormData();
     formData.append('nom_event', registerEvent.nom_event)
+    formData.append('phone_event',registerEvent.phone_event)
     formData.append('image', registerEvent.img_event)
     formData.append('tipo_event', registerEvent.tipo_event)
     formData.append('description_event', registerEvent.description_event)
@@ -158,6 +159,7 @@ export const createEvent = async (registerEvent) => {
     formData.append('municipio', registerEvent.municipio)
     formData.append('direccion', registerEvent.direccion)
     formData.append('precio_entrada', registerEvent.precio_entrada)
+    formData.append('aforo',registerEvent.aforo)
     const events = await axios.post(`${url}/registerEvent/${id_empresa1}`, formData, {
         headers: {
             token_company: token_company,
@@ -172,6 +174,7 @@ export const createEvent = async (registerEvent) => {
 export const updateEvent = async (updateEvent,id) => {
     const formData = new FormData();
     formData.append('nom_event', updateEvent.nom_event);
+    formData.append('phone_event',updateEvent.phone_event)
     formData.append('image', updateEvent.img_event)
     formData.append('tipo_event', updateEvent.tipo_event);
     formData.append('description_event', updateEvent.description_event);
@@ -180,6 +183,7 @@ export const updateEvent = async (updateEvent,id) => {
     formData.append('municipio', updateEvent.municipio);
     formData.append('direccion', updateEvent.direccion);
     formData.append('precio_entrada', updateEvent.precio_entrada);
+    formData.append('aforo',updateEvent.aforo)
     try {
         const response = await axios.put(`${url}/updateEvent/${id}`, formData, {
             headers: {
