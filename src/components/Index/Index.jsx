@@ -135,7 +135,7 @@ export const Index = () => {
         <section className="textos-header">
           <h1>YourEvent</h1>
           <h2>
-            Donde la magia de los eventos cobra vida en el
+            Donde la magia de los eventos <br /> cobra vida En el
             Quindio
           </h2>
         </section>
@@ -313,25 +313,13 @@ export const Index = () => {
                     delay: 3000,
                     disableOnInteraction: false,
                   }}
-                >
+                >{traerEvento.map((eventsRandom) => (
                   <SwiperSlide className="swiper-slide">
-                    <img src={logoUno} alt="" width="400px" />
+                    <div>
+                    <CardEventDest/>
+                    </div>
                   </SwiperSlide>
-                  <SwiperSlide className="swiper-slide">
-                    <img src={logoDos} alt="" width="400px" />
-                  </SwiperSlide>
-                  <SwiperSlide className="swiper-slide">
-                    <img src={logoTres} alt="" width="400px" />
-                  </SwiperSlide>
-                  <SwiperSlide className="swiper-slide">
-                    <img src={logoCuatro} alt="" width="400px" />
-                  </SwiperSlide>
-                  <SwiperSlide className="swiper-slide">
-                    <img src={logoCinco} alt="" width="400px" />
-                  </SwiperSlide>
-                  <SwiperSlide className="swiper-slide">
-                    <img src={logoSeis} alt="" width="400px" />
-                  </SwiperSlide>
+                ))}
                 </Swiper>
               </div>
             </div>
