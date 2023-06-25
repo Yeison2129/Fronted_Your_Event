@@ -196,9 +196,9 @@ Field.loginEmpresa-btn:hover {
 
 
 @media (max-width: 1366px) {
-	.loginEmpresa-login-content{
-		padding-left: 24%;
-	} 
+	.loginEmpresa-img{
+		padding-right: 10%;
+	}
 }
 
 @media (max-width: 870px){
