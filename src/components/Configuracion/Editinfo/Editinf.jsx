@@ -94,6 +94,7 @@ export const Editinfo = () => {
                 isSubmitting,
               }) => (
                 <div className="edit-info-all">
+                   <Dashc />
                   <div className="edit-info">
                     <div className="content-editi">
                       <Form
