@@ -395,6 +395,7 @@ main .sobre-nosotros{
 .swiper-container{
     display: flex;
     width: 70%;
+    height: 45%;
 }
 .cont img{
     width: 50px;
