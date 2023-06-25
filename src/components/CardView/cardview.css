@@ -217,17 +217,13 @@ flex-wrap: wrap;
    font-size: 2rem;
    padding-top: 20px;
 }
-@media (max-width:1377px) {
-
-
-}
 
 
 @media (max-width:870px){
    .preview{
       font-size: 30px;
-      width: 70%;
-      height: 60%;
+      width: 73%;
+
    }
    .reserv{
       font-size: 28px;

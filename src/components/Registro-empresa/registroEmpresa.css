@@ -253,6 +253,12 @@ color: white;
   .input-field-RegistroEmpresa input{
     font-size: 20px;
   }
+  .container-register-RegistroEmpresa:before{
+    height: 577px;
+    width: 1059px;
+    top: 48px;
+    right: -16px;
+  }
   #image{
     height: 100%;
     font-size: 25px;
