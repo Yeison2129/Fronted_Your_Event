@@ -96,9 +96,10 @@ export const CardAsist = () => {
 
                     </div>
                     <div className="icon-card">
+                      <button className="dropdown-button">
+                      {isOpen &&  <Drop2 closeModal={{setIsOpen}} />}
 
-
-                      <i id="img-card-pointer" className="fa fa-solid fa-users "  onClick={() => setIsOpen(!isOpen)} />
+                      </button>
 
                     </div>
                   </div>
@@ -115,7 +116,6 @@ export const CardAsist = () => {
                 </div>
               ))}
             </section>
-          {isOpen &&  <Drop2 closeModal={{setIsOpen}} />}
           </div>
         </>
       ) : null}
