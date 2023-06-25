@@ -87,8 +87,6 @@ export const CardAsist = () => {
                     </div>
                     <div className="icon-cardA">
                     <Drop2/>
-
-
                     </div>
                   </div>
                   <div className="imagen-card">

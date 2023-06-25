@@ -1,85 +1,39 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import { useTable } from 'react-table';
 import './drop.css';
-import { AsistEventsCompany } from '../../../api/App';
+import { AsistEventCompany } from '../../../api/App';
 
 export const Drop2 = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [user, setUser]= useState([])
+  
 
- 
   return (
-  <p>hola</p>
-//     <div className="dropdown">
-//     {/* //   <i id="img-card-pointer" className="fa fa-solid fa-users "  onClick={() => setIsOpen(!isOpen)} /> */}
+    <div className="dropdown">
+      <i id="img-card-pointer" className="fa fa-solid fa-users "  onClick={() => setIsOpen(!isOpen)} />
 
-//     //   {/* <button className="dropdown-button" onClick={() => setIsOpen(!isOpen)}>
-//     //     Open Dropdown
-//     //   </button> */}
-//     {/* //   {isOpen && ( */}
-//     //     <div className="dropdown-content">
-//     //       <table {...getTableProps()} className="table">
-//     //         <thead>
-//     //           {headerGroups.map((headerGroup) => (
-//     //             <tr {...headerGroup.getHeaderGroupProps()}>
-//     //               {headerGroup.headers.map((column) => (
-//     //                 <th {...column.getHeaderProps()}>{column.render('Header')}</th>
-//     //               ))}
-//     //             </tr> 
-//     //           ))}
-//     //         </thead>
-//     //         <tbody {...getTableBodyProps()}>
-//     //           {rows.map((row) => {
-//     //             prepareRow(row);
-//     //             return (
-//     //               <tr>
-//     //                 {row.cells.map((cell) => {
-//     //                   return (
-//     //                     <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
-//     //                   );
-//     //                 })}
-//     //               </tr>
-//     //             );
-//     //           })}
-//     //         </tbody>
-//     //       </table>
+      {isOpen && (
+        <div className="dropdown-content">
+         
 
-// {/* 
+<h1>Persona que asistiran a tu evento</h1>
+<table class="rwd-table">
+  <tr>
+    <th>Nombre</th>
+    <th>No. Documento</th>
+    <th>Teléfono</th>
+    <th >Correo</th>
+  </tr>
+  <tr >
+    <td data-th="Nombre">Mariana Valencia Henao</td>
+    <td data-th="No. Documento">1095178011</td>
+    <td data-th="Telefono">3232930273</td>
+    <td id='correo-style' data-th="Correo">marianavalenciahenao0@gmail.com</td>
+  </tr>
+</table>
 
-// <h1>RWD List to Table</h1>
-// <table class="rwd-table">
-//   <tr>
-//     <th>Movie Title</th>
-//     <th>Genre</th>
-//     <th>Year</th>
-//     <th>Gross</th>
-//   </tr>
-//   <tr>
-//     <td data-th="Movie Title">Star Wars</td>
-//     <td data-th="Genre">Adventure, Sci-fi</td>
-//     <td data-th="Year">1977</td>
-//     <td data-th="Gross">$460,935,665</td>
-//   </tr>
-//   <tr>
-//     <td data-th="Movie Title">Howard The Duck</td>
-//     <td data-th="Genre">"Comedy"</td>
-//     <td data-th="Year">1986</td>
-//     <td data-th="Gross">$16,295,774</td>
-//   </tr>
-//   <tr>
-//     <td data-th="Movie Title">American Graffiti</td>
-//     <td data-th="Genre">Comedy, Drama</td>
-//     <td data-th="Year">1973</td>
-//     <td data-th="Gross">$115,000,000</td>
-//   </tr>
-// </table>
-
-// <p>&larr; Drag window (in editor or full page view) to see the effect. &rarr;</p> */}
-//     //     </div>
-//     //   )}
-//     </div>
-  
-  )};
-  
-
-  
-  
+        </div>
+      )}
+    </div>
+  );
+}
