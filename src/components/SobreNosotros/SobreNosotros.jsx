@@ -130,7 +130,7 @@ const handlePrevious = () => {
 
           <p>
         En YourEvent nos apasiona conectar a las personas con experiencias
-        inolvidables. Sabemos que la plubicacion creacion  y participación 
+        inolvidables. Sabemos que la publicación, creación  y participación 
         en eventos puede ser un desafío, pero estamos aquí para hacerlo 
         más fácil, emocionante y personalizado para ti.
             </p>

@@ -87,7 +87,7 @@ export const Cards = ({dataImage}) => {
                 <div className="cards-bg-for" style={{'transform': `translateX(${tX}px) translateY(${tY}px)`}} ></div>
                 <div className="cards-info">
                     <h1 slot="header">Objetivos</h1>
-                    <p slot="content">Crecimiento de usuarios <br /> Experiencia del usuario <br /> Ampliar la oferta de eventos <br /> Fomentar la interacción y la comunidad <br /> tener una mayor Expansión</p>
+                    <p slot="content">- Crecimiento de usuarios. <br />- Experiencia del usuario. <br />- Ampliar la oferta de eventos. <br />- Fomentar la interacción y la comunidad. <br />- Tener una mayor Expansión.</p>
                     
                 </div>
                 </div>

@@ -171,7 +171,7 @@ export const Index = () => {
           <div className="titulo_bar">
             <h2 className="h2-title">
               {" "}
-              Estadisticas
+              Estadísticas
               <hr />
             </h2>
           </div>
@@ -189,7 +189,7 @@ export const Index = () => {
         <div className="titulo_bar">
           <h2 className="h2-title">
             {" "}
-            Establecimientos que encontraras en el Quindio
+            Establecimientos que encontrarás en el Quindío
             <hr />
           </h2>
         </div>
