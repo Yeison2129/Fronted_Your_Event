@@ -177,7 +177,7 @@ const handlePrevious = () => {
             <div className="slider__texts-SobreNosotros">
               <h2 className="subtitulo-SobreNosotros">Hola mi nombre es Kevin Herrera</h2>
               <p className="slider__reviw-SobreNosotros">
-                Tengo 19 años y vivo en Montenegro. Me apasiona el desarrollo frontend y me encargo de adecuar la pagina a diferentes dispositivos. Además de mi experiencia en desarrollo, también me especializo en la documentación del proyecto, lo cual me permite comunicar eficientemente los detalles técnicos y las funcionalidades del software que desarrollamos.
+                Tengo 19 años y vivo en Montenegro. Me apasiona el desarrollo frontend y me encargo de adecuar la página a diferentes dispositivos. Además de mi experiencia en desarrollo, también me especializo en la documentación del proyecto, lo cual me permite comunicar eficientemente los detalles técnicos y las funcionalidades del software que desarrollamos.
               </p>
             </div>
             <div className="slider__picture-SobreNosotros">
