@@ -4,6 +4,7 @@ import './homeDash.css'
 import { Link } from 'react-router-dom'
 import { CountEventsCompany, getCompany } from "../../api/App";
 import userIcon from "../../assets/userIcon.svg";
+import  imgHome  from '../../assets/homeI/img-home.png'
 
 
 const EventsCompany = await CountEventsCompany();
@@ -32,7 +33,7 @@ export const Homedash = () => {
           <Dashboard />
           <div className="home-dash">
             <section className="content-home1">
-              <h1 id='h1-cardEvent'> MI PERFIL <hr /> </h1>
+              <h1 id='h1-cardEvent'>INICIO <hr /> </h1>
               <div className='content-dash'>
                 <div className="box1-home">
                   <div className="datosUser">
@@ -49,13 +50,20 @@ export const Homedash = () => {
 
                     </Link>
                     <button className='button-crear'>
+                      <Link to="/crud_eventos">
                       Crea un evento
+
+                      </Link>
                     </button>
                   </div>
 
                   <div className="contadores">
+                    <div className="estado">
+                      <p>Tienes</p>
                     <p>{eventos}</p>
-                    <h3>Eventos creados</h3>
+                    <p>Eventos creados</p>
+                    </div> <div class="emoji">😊</div>
+                    
                   </div>
         
 

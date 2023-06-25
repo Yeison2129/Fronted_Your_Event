@@ -137,14 +137,31 @@ header .textos-header {
 .textos-header h1{
     font-size: 50px;
     color:#fff;
+    animation: fadeIn 2s linear;
+    
 }
 
 .textos-header h2{
     font-size: 30px;
     font-weight: 300;
     color:#fff;
+    overflow: hidden;
+    animation: fadeIn 2s linear;
     text-align: start;
 }
+
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 2;
+    }
+  }
+  
+
+
 
 .wave{
     position: absolute;

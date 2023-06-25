@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
   .content-home1{
     width: 100%;
@@ -8,22 +9,19 @@
 
   .box1-home p{
     width: 100%;
-    padding: 10px 0;
     color: #601a69;
   }
-  .estado{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
+ 
   #other-text{
     width: 100px;
+    padding: 10px 0;
     font-size: 1rem;
     color: #000;
     overflow: hidden;
     border-right: .15em solid rgb(82, 12, 85);
     white-space: nowrap;
-    animation: typing 4s steps(30) infinite, blink-caret .75s step-end infinite;
+    animation: typing 5s steps(40) infinite, blink-caret 1s step-end infinite;
   }
  
   @keyframes typing {
@@ -31,7 +29,7 @@
       width: 0;
     }
     to {
-      width: 65%;
+      width: 75%;
     }
   }
   
@@ -43,6 +41,7 @@
       border-color: rgb(143, 28, 127);
     }
   }
+  
   .miFoto{
     width: 70px;
     display: flex;
@@ -55,27 +54,90 @@
     width: 90%;
   }
   .datosUser {
-    width: 80%;
-
+    display: flex;
+    width: 68%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .imghome img{
+    width: 350px;
+    top: 240px;
+    right: 200px;
+    
+    position: absolute;
+    height: 300px;
   }
   .button-crear{
+      font-family: "Poppins";
+    width: 40%;
+    margin-top: 10px;
+    display: inline-block;
+    padding: 12px 24px;
+    background-color:   #242e42;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    z-index: 1;
+  }
+  .button-crear a{
+    color: #fff;
+  }
+  
+  .button-crear:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: -1;
+  }
+  
+  .button-crear:hover {
+    transform: scale(1.1);
+  }
+  
+  .button-crear:hover:before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+  /* .button-crear{
     width: 100px;
     height: 40px;
     margin:36px 0;
     border: none;
-  }
+  } */
   .datosUser #p-home{
     font-size: 2rem;
-    animation: fadeIn 2s linear;
+    animation: fadeIn 4s linear;
     text-shadow: 1px 2px 3px rgb(221, 221, 221);
     color: #000;
     font-weight: 300;
+    font-family: "Poppins";
     width: 100%;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 2;
+    }
   }
   .box1-home{
    display: flex;
     justify-content: space-around;
-    width: 85%;
+    width: 80%;
     box-shadow: 1px 1px 4px 1px #949494;
     background-color: #ffffff94;
     height: 400px;
@@ -99,15 +161,56 @@
   .contadores{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     font-size: 1.2rem;
   }
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  .estado{
+    z-index: 1;
+    top: 300px;
+    right: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 30px;
+    height: 150px;
   }
+  
+  .estado p{
+    font-family: "Poppins";
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 2px 3px rgb(219, 219, 219);
+   text-align: center;
+
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll-left 2s linear;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(30%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+/*----------------*/
+.emoji {
+  font-size: 5rem;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
