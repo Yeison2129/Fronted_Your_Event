@@ -1,34 +1,47 @@
 import React, { useEffect, useState } from "react";
 // import "./set.css";
 import { Formik, Form, Field } from "formik";
-import { getEventsCompany, insertImg } from "../../../api/App";
+import { getEventsCompany, insertImg,SelectImg } from "../../../api/App";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
 export const Images = ({ closeModal }) => {
   const [allEventsCompany, setAllEventsCompany] = useState([]);
+  const [allImg,setAllImg]= useState([])
+
+
+
   const eventEmpresa = async () => {
     const response = await getEventsCompany();
-    console.log(response);
     setAllEventsCompany(response.data.data);
   };
 
+  const EventImgs = async(id)=>{
+    const response= await SelectImg(id);
+    const eventsImg = response.data.data.map((event) => ({
+      ...event,
+      previewActive: false,
+    }));
+    setAllImg(eventsImg)
+  }
   useEffect(() => {
     eventEmpresa();
+    EventImgs();
   }, []);
 
   const navigate = useNavigate();
   return (
     <>
       {closeModal.evento.map((eventEmpresa) => (
+        
         <Formik
           initialValues={{
             img:"",
           }}
+          
           onSubmit={async (values) => {
             try {
               const img = await insertImg(values, eventEmpresa.id_event);
-
               if (img.data == "Exito") {
                 Swal.fire({
                   title: "Imagen Subida",
@@ -56,14 +69,18 @@ export const Images = ({ closeModal }) => {
             } catch (error) {}
           }}
         >
+          
           {({ handleChange, setFieldValue, handleSubmit, isSubmitting }) => (
+            
             <div className="page-images">
+              
               <div className="body-images">
                 <h1 id="hr-crud">
                   Agrega imagenes <hr />
                 </h1>
 
                 <div className="components-images">
+                  
                   <div className="comp-">
                     <Form
                       className="form-set"
@@ -111,9 +128,16 @@ export const Images = ({ closeModal }) => {
                           {isSubmitting ? "Subiendo...." : "Subir"}
                         </button>
                         {/* </div> */}
+                       
                       </div>
                     </Form>
                   </div>
+                  {allImg.map((event) => (
+                          <div>
+                            <img src={event.img}  />
+                          </div>
+                          
+                        ))}
                 </div>
               </div>
             </div>
