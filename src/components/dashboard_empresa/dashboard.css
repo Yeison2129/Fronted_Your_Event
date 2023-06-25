@@ -228,6 +228,13 @@
   padding: 0px 23px 0px 233px;
     justify-content: center;
 }
+.page-images{
+  right: 200px;
+  width: 90%;
+  display: flex;
+  padding: 0px 23px 0px 233px;
+    justify-content: center;
+}
 
 .search-and-user {
   display: grid;

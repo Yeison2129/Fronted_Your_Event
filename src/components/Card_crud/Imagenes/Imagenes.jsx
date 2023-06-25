@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import "./set.css";
+import "./images.css";
 import { Formik, Form, Field } from "formik";
 import { getEventsCompany, insertImg,SelectImg } from "../../../api/App";
 import Swal from "sweetalert2";
@@ -74,18 +74,18 @@ export const Images = ({ closeModal,x }) => {
               
               <div className="body-images">
                 <h1 id="hr-crud">
-                  Agrega imagenes <hr />
+                  Agrega más imagenes <hr />
                 </h1>
 
                 <div className="components-images">
                   
                   <div className="comp-">
                     <Form
-                      className="form-set"
+                      className="form-images"
                       action=""
                       onSubmit={handleSubmit}
                     >
-                      <div className="other-class">
+                      <div className="other-class-images">
                       <div className="img-set">
                         <label className="selec-cert" htmlFor="">
                           <input
@@ -97,19 +97,23 @@ export const Images = ({ closeModal,x }) => {
                               setFieldValue("img", file);
                             }}
                           />
+
                         </label>
+
                       </div>
+                      <p>agrega mas imagenes a tu evento Aquí</p>
+
                       </div>
-                    x
+                    
                     </Form>
                   </div>
                   <div className="end-set">
                     <Form
-                      className="form-set"
+                      className="form-images"
                       action=""
                       onSubmit={handleSubmit}
                     >
-                      <div className="botones-set">
+                      <div className="botones-images">
                         <Field
                           id="btn-cancel"
                           type="submit"
