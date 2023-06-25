@@ -30,7 +30,7 @@ import { HelpIndex } from "./components/Index/Help-index/HelpIndex"
 import { Carrusel } from "./components/Carrusel/Carrusel"
 import { Drop } from "./components/DropDown/Drop2/Drop2"
 import { ImageUploadForm } from "./components/Upload_image/UploadImage.jsx"
- 
+
 
 export default function App() {
     return (
