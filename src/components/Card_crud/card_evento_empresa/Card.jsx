@@ -64,6 +64,7 @@ export const Card_crud = () => {
         });
         setTimeout(() => {
             navigate("/cardCrud")
+            window.location.reload()
         }, 1500);
         
       }
