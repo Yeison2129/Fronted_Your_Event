@@ -87,7 +87,6 @@ export const CardAsist = () => {
                     </div>
                     <div className="icon-cardA">
                     <Drop2/>
-                    {/* {isOpen &&  <Drop2 closeModal={{setIsOpen}} />} */}
 
 
                     </div>
