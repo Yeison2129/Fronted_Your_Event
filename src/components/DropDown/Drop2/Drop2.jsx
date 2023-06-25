@@ -3,7 +3,7 @@ import { useTable } from 'react-table';
 import './drop.css';
 import { AsistEventCompany } from '../../../api/App';
 
-export const Drop2 = () => {
+export const Drop2 = ({id_event}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [user, setUser]= useState([])
   

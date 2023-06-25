@@ -21,6 +21,7 @@ export const CardAsist = () => {
 
   const asistEventsCompany = async (id) => {
     const response = await AsistEventCompany(id);
+    console.log(response);
   };
 
   useEffect(() => {
@@ -86,14 +87,14 @@ export const CardAsist = () => {
 
                     </div>
                     <div className="icon-cardA">
-                    <Drop2/>
+                    <Drop2 id_event={eventEmpresa.id_event}/>
                     </div>
                   </div>
                   <div className="imagen-card">
                     <img
                       src={eventEmpresa.img_event}
                       alt=""
-                      onClick={() => AsistEventsCompany(eventEmpresa.id_event)}
+                      onClick={() => asistEventsCompany(eventEmpresa.id_event)}
                     />
                   </div>
                   <div className="shadow">

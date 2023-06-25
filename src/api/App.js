@@ -271,8 +271,8 @@ export const asistEvents = async (id_event1, asistEvent) =>
         }
     })
 
-    export const AsistEventsCompany = async (id_event, asistEvent) =>
-    await axios.post(`${url}/AsistEventCompany/${id_event}`, asistEvent, {
+    export const AsistEventsCompany = async (id, asistEvent) =>
+    await axios.post(`${url}/AsistEventCompany/${id}`, asistEvent, {
         headers: {
             token_company: token_company
         }
