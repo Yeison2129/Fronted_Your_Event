@@ -106,7 +106,7 @@ export const CardEventDest = () => {
     <>
       {user ? (
         <>
-          <div className="all-cards-events">
+        <div className="all-cards-events">
             {filteredEvents.map((event) => (
               <div className="cardsEventos" key={event.id_event}>
                 <div
@@ -136,20 +136,7 @@ export const CardEventDest = () => {
                     </div>
                   </div>
                 </div>
-                {event.previewActive && (
-                  <div
-                    className={`products-preview active`}
-                    key={`preview-${event.id_event}`}
-                  >
-                    <div className="preview" data-target="p-1">
-                      <i
-                        className="fas fa-times"
-                        onClick={() => closePreview(event)}
-                        id="cierre-ventana"
-                      ></i>
-                      <div className="bigImg">
-                        <Carrusel />
-                      </div>
+                
                       <div className="info">
                         <div className="title-infcard">
                           <h2>{event.nom_event}</h2>
@@ -161,213 +148,7 @@ export const CardEventDest = () => {
                           <p id="p-info">
                             {" "}
                             <i className="fa fa-solid fa-address-book" />
-                             {event.phone_event} 
-                          </p>
-                          <p id="p-info">
-                            <i className="fa fa-solid fa-calendar" />
-                            {event.fecha} -{" "}
-                            <i className="fa fa-solid fa-clock" />
-                            {event.hora}{" "}
-                          </p>
-                          <p id="p-info">
-                            <i className="fa fa-solid fa-dollar-sign" />
-                            {event.precio_entrada}  -  {""}
-                            <i className="fa fa-solid fa-warehouse"/>
-                            Un máximo de {event.aforo}  {""} personas.
-                          </p>
-                        </div>
-                        <div className="dates">
-                          <i className="bx bx-time"></i>
-                          <p>
-                            Categoria: <br />
-                          </p>{" "}
-                          {event.tipo_event}{" "}
-                        </div>
-
-                        <div className="" id="descripcion-cardview">
-                          <i className="bx bx-purchase-tag-alt"></i>{" "}
-                          <p>Descripcion:</p>
-                          {event.description_event}
-                        </div>
-                      </div>
-                      <div className="buttons">
-                        <button
-                          className="reserv"
-                          onClick={() => {
-                            createAsistUser(event.id_event);
-                          }}
-                        >
-                          Reserva
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </>
-      ) : company ? (
-        <>
-          <div className="all-cards-events">
-            {filteredEvents.map((event) => (
-              <div className="cardsEventos" key={event.id_event}>
-                <div
-                  className="cards-wrap"
-                  onMouseMove={handleMouseMove}
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                  ref={cardRef}
-                  onClick={() => handleClick(event)}
-                >
-                  <div
-                    className="cards-index"
-                    style={{
-                      transform: `rotateY(${rX}deg) rotateX(${rY}deg)`,
-                      backgroundImage: `url(${event.img_event})`,
-                    }}
-                  >
-                    <div
-                      className="cards-bg-index"
-                      style={{
-                        transform: `translateX(${tX}px) translateY(${tY}px)`,
-                      }}
-                    ></div>
-                    <div className="cards-info">
-                      <h1 slot="header"> {event.nom_event} </h1>
-                      <p slot="content"> {event.description_event} </p>
-                    </div>
-                  </div>
-                </div>
-                {event.previewActive && (
-                  <div
-                    className={`products-preview active`}
-                    key={`preview-${event.id_event}`}
-                  >
-                    <div className="preview" data-target="p-1">
-                      <i
-                        className="fas fa-times"
-                        onClick={() => closePreview(event)}
-                        id="cierre-ventana"
-                      ></i>
-                      <div className="bigImg">
-                        <Carrusel />
-                      </div>
-                      <div className="info">
-                        <div className="title-infcard">
-                          <h2>{event.nom_event}</h2>
-                          <p id="p-info">
-                            {" "}
-                            <i className="fa fa-light fa-map-pin" />
-                            {event.direccion} ,{event.municipio} Quindío.
-                          </p>
-                          <p id="p-info">
-                            {" "}
-                            <i className="fa fa-solid fa-address-book" />
-                             {event.phone_event} 
-                          </p>
-                          <p id="p-info">
-                            <i className="fa fa-solid fa-calendar" />
-                            {event.fecha} -{" "}
-                            <i className="fa fa-solid fa-clock" />
-                            {event.hora}{" "}
-                          </p>
-                          <p id="p-info">
-                            <i className="fa fa-solid fa-dollar-sign" />
-                            {event.precio_entrada}  -  {""}
-                            <i className="fa fa-solid fa-warehouse"/>
-                            Un máximo de {event.aforo}  {""} personas.
-                          </p>
-                        </div>
-                        <div className="dates">
-                          <i className="bx bx-time"></i>
-                          <p>
-                            Categoria: <br />
-                          </p>{" "}
-                          {event.tipo_event}{" "}
-                        </div>
-
-                        <div className="" id="descripcion-cardview">
-                          <i className="bx bx-purchase-tag-alt"></i>{" "}
-                          <p>Descripcion:</p>
-                          {event.description_event}
-                        </div>
-                      </div>
-                      <div className="buttons">
-                        <button
-                          className="reserv"
-                          onClick={() => {
-                            createAsistUser(event.id_event);
-                          }}
-                        >
-                          Reserva
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </>
-      ) : (
-        <>
-          <div className="all-cards-events">
-            {filteredEvents.map((event) => (
-              <div className="cardsEventos" key={event.id_event}>
-                <div
-                  className="cards-wrap"
-                  onMouseMove={handleMouseMove}
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                  ref={cardRef}
-                  onClick={() => handleClick(event)}
-                >
-                  <div
-                    className="cards-index"
-                    style={{
-                      transform: `rotateY(${rX}deg) rotateX(${rY}deg)`,
-                      backgroundImage: `url(${event.img_event})`,
-                    }}
-                  >
-                    <div
-                      className="cards-bg-index"
-                      style={{
-                        transform: `translateX(${tX}px) translateY(${tY}px)`,
-                      }}
-                    ></div>
-                    <div className="cards-info">
-                      <h1 slot="header"> {event.nom_event} </h1>
-                      <p slot="content"> {event.description_event} </p>
-                    </div>
-                  </div>
-                </div>
-                {event.previewActive && (
-                  <div
-                    className={`products-preview active`}
-                    key={`preview-${event.id_event}`}
-                  >
-                    <div className="preview" data-target="p-1">
-                      <i
-                        className="fas fa-times"
-                        onClick={() => closePreview(event)}
-                        id="cierre-ventana"
-                      ></i>
-                      <div className="bigImg">
-                        <Carrusel />
-                      </div>
-                      <div className="info">
-                        <div className="title-infcard">
-                          <h2>{event.nom_event}</h2>
-                          <p id="p-info">
-                            {" "}
-                            <i className="fa fa-light fa-map-pin" />
-                            {event.direccion} ,{event.municipio} Quindío.
-                          </p>
-                          <p id="p-info">
-                            {" "}
-                            <i className="fa fa-solid fa-address-book" />
-                             {event.phone_event} 
+                            {event.phone_event} 
                           </p>
                           <p id="p-info">
                             <i className="fa fa-solid fa-calendar" />
@@ -405,9 +186,185 @@ export const CardEventDest = () => {
                         </button>
                       </div>
                     </div>
+                
+              
+              
+            ))}
+          </div>
+        </>
+      ) : company ? (
+        <>
+        <div className="all-cards-events">
+            {filteredEvents.map((event) => (
+              <div className="cardsEventos" key={event.id_event}>
+                <div
+                  className="cards-wrap"
+                  onMouseMove={handleMouseMove}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  ref={cardRef}
+                  onClick={() => handleClick(event)}
+                >
+                  <div
+                    className="cards-index"
+                    style={{
+                      transform: `rotateY(${rX}deg) rotateX(${rY}deg)`,
+                      backgroundImage: `url(${event.img_event})`,
+                    }}
+                  >
+                    <div
+                      className="cards-bg-index"
+                      style={{
+                        transform: `translateX(${tX}px) translateY(${tY}px)`,
+                      }}
+                    ></div>
+                    <div className="cards-info">
+                      <h1 slot="header"> {event.nom_event} </h1>
+                      <p slot="content"> {event.description_event} </p>
+                    </div>
                   </div>
-                )}
-              </div>
+                </div>
+                
+                      <div className="info">
+                        <div className="title-infcard">
+                          <h2>{event.nom_event}</h2>
+                          <p id="p-info">
+                            {" "}
+                            <i className="fa fa-light fa-map-pin" />
+                            {event.direccion} ,{event.municipio} Quindío.
+                          </p>
+                          <p id="p-info">
+                            {" "}
+                            <i className="fa fa-solid fa-address-book" />
+                            {event.phone_event} 
+                          </p>
+                          <p id="p-info">
+                            <i className="fa fa-solid fa-calendar" />
+                            {event.fecha} -{" "}
+                            <i className="fa fa-solid fa-clock" />
+                            {event.hora}{" "}
+                          </p>
+                          <p id="p-info">
+                            <i className="fa fa-solid fa-dollar-sign" />
+                            {event.precio_entrada}  -  {""}
+                            <i className="fa fa-solid fa-warehouse"/>
+                            Un máximo de {event.aforo}  {""} personas.
+                          </p>
+                        </div>
+                        <div className="dates">
+                          <i className="bx bx-time"></i>
+                          <p>
+                            Categoria: <br />
+                          </p>{" "}
+                          {event.tipo_event}{" "}
+                        </div>
+
+                        <div className="" id="descripcion-cardview">
+                          <i className="bx bx-purchase-tag-alt"></i>{" "}
+                          <p>Descripcion:</p>
+                          {event.description_event}
+                        </div>
+                      </div>
+                      <div className="buttons">
+                        <button
+                          className="reserv"
+                          onClick={() => iniciaSesion()}
+                        >
+                          Reserva
+                        </button>
+                      </div>
+                    </div>
+                
+              
+              
+            ))}
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="all-cards-events">
+            {filteredEvents.map((event) => (
+              <div className="cardsEventos" key={event.id_event}>
+                <div
+                  className="cards-wrap"
+                  onMouseMove={handleMouseMove}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  ref={cardRef}
+                  onClick={() => handleClick(event)}
+                >
+                  <div
+                    className="cards-index"
+                    style={{
+                      transform: `rotateY(${rX}deg) rotateX(${rY}deg)`,
+                      backgroundImage: `url(${event.img_event})`,
+                    }}
+                  >
+                    <div
+                      className="cards-bg-index"
+                      style={{
+                        transform: `translateX(${tX}px) translateY(${tY}px)`,
+                      }}
+                    ></div>
+                    <div className="cards-info">
+                      <h1 slot="header"> {event.nom_event} </h1>
+                      <p slot="content"> {event.description_event} </p>
+                    </div>
+                  </div>
+                </div>
+                
+                      <div className="info">
+                        <div className="title-infcard">
+                          <h2>{event.nom_event}</h2>
+                          <p id="p-info">
+                            {" "}
+                            <i className="fa fa-light fa-map-pin" />
+                            {event.direccion} ,{event.municipio} Quindío.
+                          </p>
+                          <p id="p-info">
+                            {" "}
+                            <i className="fa fa-solid fa-address-book" />
+                            {event.phone_event} 
+                          </p>
+                          <p id="p-info">
+                            <i className="fa fa-solid fa-calendar" />
+                            {event.fecha} -{" "}
+                            <i className="fa fa-solid fa-clock" />
+                            {event.hora}{" "}
+                          </p>
+                          <p id="p-info">
+                            <i className="fa fa-solid fa-dollar-sign" />
+                            {event.precio_entrada}  -  {""}
+                            <i className="fa fa-solid fa-warehouse"/>
+                            Un máximo de {event.aforo}  {""} personas.
+                          </p>
+                        </div>
+                        <div className="dates">
+                          <i className="bx bx-time"></i>
+                          <p>
+                            Categoria: <br />
+                          </p>{" "}
+                          {event.tipo_event}{" "}
+                        </div>
+
+                        <div className="" id="descripcion-cardview">
+                          <i className="bx bx-purchase-tag-alt"></i>{" "}
+                          <p>Descripcion:</p>
+                          {event.description_event}
+                        </div>
+                      </div>
+                      <div className="buttons">
+                        <button
+                          className="reserv"
+                          onClick={() => iniciaSesion()}
+                        >
+                          Reserva
+                        </button>
+                      </div>
+                    </div>
+                
+              
+              
             ))}
           </div>
         </>
