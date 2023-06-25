@@ -5,10 +5,11 @@ import { getEventsCompany, insertImg,SelectImg } from "../../../api/App";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
-export const Images = ({ closeModal }) => {
+export const Images = ({ closeModal,x }) => {
+  console.log(x);
   const [allEventsCompany, setAllEventsCompany] = useState([]);
   const [allImg,setAllImg]= useState([])
-
+ 
 
 
   const eventEmpresa = async () => {
@@ -16,17 +17,14 @@ export const Images = ({ closeModal }) => {
     setAllEventsCompany(response.data.data);
   };
 
-  const EventImgs = async(id)=>{
-    const response= await SelectImg(id);
-    const eventsImg = response.data.data.map((event) => ({
-      ...event,
-      previewActive: false,
-    }));
-    setAllImg(eventsImg)
+  const EventImgs = async(x)=>{
+    const response= await SelectImg(x);
+    console.log(response);
+    setAllImg(response.data.data)
   }
   useEffect(() => {
     eventEmpresa();
-    EventImgs();
+    EventImgs(x);
   }, []);
 
   const navigate = useNavigate();
@@ -132,11 +130,11 @@ export const Images = ({ closeModal }) => {
                       </div>
                     </Form>
                   </div>
-                  {allImg.map((event) => (
+                  {allImg.map((EventImgs) => (
                           <div>
-                            <img src={event.img}  />
+                            <img src={EventImgs.img}  />
                           </div>
-                          
+
                         ))}
                 </div>
               </div>

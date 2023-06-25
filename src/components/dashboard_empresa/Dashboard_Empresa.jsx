@@ -62,13 +62,15 @@ export const Dashboard = () => {
             {company ? (
                 <>
                     <div className="page-header">
-                        <div className="user-icon">
+                       
 
                             {traerCompany.map((company,i) => (
+                                 <div className="user-icon">
                                 <img className='icon2' id='user-icon' src={company.img_empresa || userIcon} alt="icon" key={`${i}Empresa`} />
+                                <p id='nom-user'> {company.nom_empresa} </p>
+                                </div>
                             ))}
-                        </div>
-                        <p id='nom-user'> {company.charAt(0).toUpperCase() + company.slice(1)} </p>
+                     
 
                         <nav>
                             <button className="toggle-mob-menu" aria-expanded="false" aria-label="open menu">

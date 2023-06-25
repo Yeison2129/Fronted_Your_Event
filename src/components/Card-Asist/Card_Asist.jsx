@@ -21,7 +21,7 @@ export const CardAsist = () => {
 
   const asistEventsCompany = async (id) => {
     const response = await AsistEventCompany(id);
-    console.log(response);
+    return response
   };
 
   useEffect(() => {
@@ -87,7 +87,7 @@ export const CardAsist = () => {
 
                     </div>
                     <div className="icon-cardA">
-                    <Drop2 id_event={eventEmpresa.id_event}/>
+                    <Drop2 id={eventEmpresa.id_event}/>
                     </div>
                   </div>
                   <div className="imagen-card">

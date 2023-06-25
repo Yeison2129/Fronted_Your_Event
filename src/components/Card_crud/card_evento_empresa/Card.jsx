@@ -154,7 +154,7 @@ export const Card_crud = () => {
               <p>{eventEmpresa.nom_event}</p>
             </div>
             {open && <Set closeModal={{ setOpen, evento: event }}/>}
-            {open2 && <Images closeModal={{setOpen2,evento:event}}/>}
+            {open2 && <Images closeModal={{setOpen2,evento:event, x:eventEmpresa.id_event}}/>}
           </div>
         ))}
      </div>
