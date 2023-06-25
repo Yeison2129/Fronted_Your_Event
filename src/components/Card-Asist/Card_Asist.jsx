@@ -12,16 +12,6 @@ export const CardAsist = () => {
   let user = localStorage.getItem("user")
   const [allEvents, setAllEvents] = useState([]);
   const [allEventsCompany, setAllEventsCompany] = useState([]);
-
-  const handleClick = (event) => {
-    event.previewActive = !event.previewActive;
-    setAllEvents([...allEvents]);
-  };
-
-  const closePreview = (event) => {
-    event.previewActive = false;
-    setAllEvents([...allEvents]);
-  };
   const [isOpen, setIsOpen] = useState(false);
 
   const eventEmpresa = async () => {
@@ -97,8 +87,6 @@ export const CardAsist = () => {
                     </div>
                     <div className="icon-cardA">
                     <Drop2/>
-
-
                     </div>
                   </div>
                   <div className="imagen-card">

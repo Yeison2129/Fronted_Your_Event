@@ -8,6 +8,7 @@ let id_user1 = localStorage.getItem("id_user")
 let id_empresa = localStorage.getItem("id_empresa")
 let id_empresa1 = localStorage.getItem("id_empresa")
 let id_event1 = localStorage.getItem("id_event")
+let id_event = localStorage.getItem("id_event")
 let url = 'http://localhost:4000'
 //Users
 export const registerUser = async (newUser) =>
@@ -139,6 +140,10 @@ export const updatePassEmpresa = async (updatePass) =>
 
 //Events
 
+export const SelectImg = async () => {
+    return await axios.get(`${url}/getImg/${id_event}`)
+}
+console.log(id_event);
 export const EventsRandom = async ()=>{
   return await axios.get(`${url}/getEventsRandom`)
 } 
@@ -267,7 +272,7 @@ export const asistEvents = async (id_event1, asistEvent) =>
     })
 
     export const AsistEventsCompany = async (id_event, asistEvent) =>
-    await axios.post(`${url}//AsistEventCompany/${id_event}`, asistEvent, {
+    await axios.post(`${url}/AsistEventCompany/${id_event}`, asistEvent, {
         headers: {
             token_company: token_company
         }

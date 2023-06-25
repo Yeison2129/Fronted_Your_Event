@@ -47,7 +47,7 @@ export const CardView = () => {
   const [allEvents, setAllEvents] = useState([]);
   const [filteredEvents, setFilteredEvents] = useState([]);
 
-  const events = async () => {
+    const events = async () => {
     const response = await getEvents();
     const eventsData = response.data.data.map((event) => ({
       ...event,
