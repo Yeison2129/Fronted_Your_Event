@@ -7,22 +7,41 @@
   }
 
   .box1-home p{
-    width: 250px;
+    width: 100%;
+    padding: 10px 0;
+    color: #601a69;
   }
   .estado{
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .estado p{
-    padding: 0 10px;
-    color: green;
+  #other-text{
+    width: 100px;
+    font-size: 1rem;
+    color: #000;
+    overflow: hidden;
+    border-right: .15em solid rgb(82, 12, 85);
+    white-space: nowrap;
+    animation: typing 4s steps(30) infinite, blink-caret .75s step-end infinite;
   }
-  .point{
-    background-color: green;
-    width: 10px;
-    height: 10px;
-    border-radius: 20px;
+ 
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 65%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: rgb(143, 28, 127);
+    }
   }
   .miFoto{
     width: 70px;
@@ -35,26 +54,35 @@
   .miFoto img{
     width: 90%;
   }
-  .datosUser{
-    width: 50%;
-    justify-content: space-evenly;
-    align-items: center;
-    display: flex;
+  .datosUser {
+    width: 80%;
+
   }
-  .datosUser p{
+  .button-crear{
+    width: 100px;
+    height: 40px;
+    margin:36px 0;
+    border: none;
+  }
+  .datosUser #p-home{
+    font-size: 2rem;
+    animation: fadeIn 2s linear;
+    text-shadow: 1px 2px 3px rgb(221, 221, 221);
     color: #000;
+    font-weight: 300;
+    width: 100%;
   }
   .box1-home{
-    display: flex;
-    align-items: center;
+   display: flex;
     justify-content: space-around;
-    width: 70%;
+    width: 85%;
     box-shadow: 1px 1px 4px 1px #949494;
-    background-color: #f4f4f494;
-    height: 125px;
-    padding: 10px;
-    margin: 3rem 0px 19px; 
-    border-radius:2rem ;
+    background-color: #ffffff94;
+    height: 400px;
+    padding: 60px;
+    margin: 3rem 0px 19px;
+    border-radius: 1rem;
+
   }
   .box2-home{
     font-size: 15px;
@@ -71,6 +99,15 @@
   .contadores{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     font-size: 1.2rem;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }

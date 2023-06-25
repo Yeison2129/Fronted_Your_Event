@@ -37,29 +37,30 @@ export const Homedash = () => {
                 <div className="box1-home">
                   <div className="datosUser">
 
-                    <div className="miFoto">
+                    {/* <div className="miFoto">
                       {traerCompany.map((company) => (
                         <img id='user-icon' src={company.img_empresa || userIcon} alt="icon" />
                       ))}
-                    </div>
+                    </div> */}
                     <Link>
-                      <p>BIENVENIDO DE NUEVO </p>
-                      <p>{company.charAt(0).toUpperCase() + company.slice(1)}</p>
+                      <p id='p-home'>BIENVENIDO DE NUEVO </p>
+                      <p id='p-home'>{company.charAt(0).toUpperCase() + company.slice(1)}</p>
+                      <p  id='other-text'>Descubre con nosotros la magia de crear eventos</p>
+
                     </Link>
+                    <button className='button-crear'>
+                      Crea un evento
+                    </button>
                   </div>
 
-                  <div className="estado">
-                    <div className="point "></div>
-                    <p>Activo</p>
-                  </div>
-
-                </div>
-                <div className="box2-home">
                   <div className="contadores">
                     <p>{eventos}</p>
                     <h3>Eventos creados</h3>
                   </div>
+        
+
                 </div>
+              
 
               </div>
             </section>
