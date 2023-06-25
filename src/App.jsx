@@ -29,7 +29,7 @@ import { CardAsist } from "./components/Card-Asist/Card_Asist.jsx"
 import { HelpIndex } from "./components/Index/Help-index/HelpIndex"
 import { Carrusel } from "./components/Carrusel/Carrusel"
 import { Drop2 } from "./components/DropDown/Drop2/Drop2"
-import { ImageUploadForm } from "./components/Upload_image/UploadImage.jsx"
+import { Images } from "./components/Card_crud/Imagenes/Imagenes"
  
 
 export default function App() {
@@ -66,7 +66,7 @@ export default function App() {
             <Route path='/Help' element={<HelpIndex/>}/>
             <Route path='/Carrusel' element={<Carrusel/>}/>
             <Route path='/drop2' element={<Drop2/>}/>
-            <Route path='/imagenes' element={<ImageUploadForm/>}/>
+            <Route path='/imagenes' element={<Images/>}/>
 
 
         </Routes>
