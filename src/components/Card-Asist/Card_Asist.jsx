@@ -2,9 +2,10 @@ import React, { useEffect, useRef } from "react";
 import "./cardasist.css";
 import { useState } from "react";
 import swal from "sweetalert2";
-import { asistEvents, consultAsist, getEvents, getEventsCompany, AsistEventCompany, } from "../../api/App";
+import { asistEvents, consultAsist, getEvents, getEventsCompany, AsistEventCompany, AsistEventsCompany, } from "../../api/App";
 import { Formik, Field } from "formik";
 import { Dashboard } from "../dashboard_empresa/Dashboard_Empresa";
+import { Drop2 } from "../DropDown/Drop2/Drop2";
 
 export const CardAsist = () => {
   let company = localStorage.getItem("company")
@@ -105,7 +106,7 @@ export const CardAsist = () => {
                     <img
                       src={eventEmpresa.img_event}
                       alt=""
-                      onClick={() => AsistUserss(eventEmpresa.id_event)}
+                      onClick={() => AsistEventsCompany(eventEmpresa.id_event)}
                     />
                   </div>
                   <div className="shadow">
@@ -114,7 +115,7 @@ export const CardAsist = () => {
                 </div>
               ))}
             </section>
-          {isOpen &&  <Set closeModal={{ setIsOpen, evento: event }} />}
+          {isOpen &&  <Drop2 closeModal={{setIsOpen}} />}
           </div>
         </>
       ) : null}

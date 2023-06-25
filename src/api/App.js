@@ -250,6 +250,13 @@ export const asistEvents = async (id_event1, asistEvent) =>
         }
     })
 
+    export const AsistEventsCompany = async (id_event, asistEvent) =>
+    await axios.post(`${url}//AsistEventCompany/${id_event}`, asistEvent, {
+        headers: {
+            token_company: token_company
+        }
+    })
+
 export const consultAsist = async () =>
     await axios.get(`${url}/ConsultAsistEvent/${id_user1}`, {
         headers: {

@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import { useTable } from 'react-table';
 import './drop.css';
 
-export const Drop2 = () => {
-
-    const [isOpen, setIsOpen] = useState(false);
-  
+export const Drop2 = ({closeModal}) => {
     const data = React.useMemo(
       () => [
         { col1: 'mari', col2: '1095178011', col3: 'marianavalenciahenao0@gmail.com', col4: '3232930273' },
@@ -34,9 +31,9 @@ export const Drop2 = () => {
     } = useTable({ columns, data });
   
     return (
+      <>
+      {closeModal(() => (
       <div className="dropdown">
-        
-        {isOpen && (
           <div className="dropdown-content">
             <table {...getTableProps()} className="table">
               <thead>
@@ -64,8 +61,10 @@ export const Drop2 = () => {
               </tbody>
             </table>
           </div>
-        )}
+        
       </div>
+      ))}
+      </>
     );
   };
   
