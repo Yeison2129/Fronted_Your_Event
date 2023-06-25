@@ -91,7 +91,13 @@ const navigate = useNavigate()
           >
           {({ handleChange, setFieldValue, handleSubmit,isSubmitting }) => (
             <div className="edit-info-all">
-              <Dashc />
+              {/* <Dashc />
+              <div className="edit-info">
+                <div className="content-editi">
+                  <Form className="info-dash" action="" onSubmit={handleSubmit}>
+                    <div className="imgUpdate">
+                      <label className="selec-cert" htmlFor="">
+                      */}
               <div className="edit-info">
                 <div className="content-editi">
                   <Form className="info-dash" action="" onSubmit={handleSubmit}>
