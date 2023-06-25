@@ -92,12 +92,12 @@ export const CardAsist = () => {
                     }}
                   ></div>
                   <div className="head-card">
-                    <div className="icon-card">
+                    <div className="icon-cardA">
 
                     </div>
-                    <div className="icon-card">
-                    
-                    {isOpen &&  <Drop2 closeModal={{setIsOpen}} />}
+                    <div className="icon-cardA">
+                    <Drop2/>
+                    {/* {isOpen &&  <Drop2 closeModal={{setIsOpen}} />} */}
 
 
                     </div>

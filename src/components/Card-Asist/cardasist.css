@@ -1,8 +1,26 @@
+.icon-cardA{
+   display: flex;
+   justify-content: center;
+   margin: auto 1.3rem;
+   background-color: white;
+   color: #000;
+   z-index: 1;
+   border-radius: 8px;
+}
+.icon-cardA i{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   width: 30px;
+   height: 30px;
+   border-radius: 100%;
 
-.buton-asist{
+}
+/* .buton-asist{
    width: 60px;
    height: 60px;
-}
+} */
 /* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
 
 .
