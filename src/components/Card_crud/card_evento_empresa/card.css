@@ -36,7 +36,6 @@
      border-radius: 20px;
      position: relative;
     border: 1px solid #bdbdbd;
-     z-index: 1;
     }
 
 .fondo{
@@ -78,7 +77,16 @@ border-radius: 10px;
     color: #000;
     border-radius: 8px;
 }
+.icon-card i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
 
+}
 .head-card{
     display: flex;
     justify-content: space-between;
