@@ -14,7 +14,7 @@ img.loginEmpresa-wave {
 	transition:.4s;
 }
 div.loginEmpresa-container {
-    width: 100vw;
+    width: 125vw;
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -36,7 +36,7 @@ div.loginEmpresa-login-content{
 }
 
 div.loginEmpresa-img > img{
-	width: 500px;
+	width: 523px;
 }
 
 Form.formulario-formik {

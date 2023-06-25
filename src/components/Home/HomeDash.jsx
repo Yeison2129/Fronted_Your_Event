@@ -4,6 +4,7 @@ import './homeDash.css'
 import { Link } from 'react-router-dom'
 import { CountEventsCompany, getCompany } from "../../api/App";
 import userIcon from "../../assets/userIcon.svg";
+import  imgHome  from '../../assets/homeI/img-home.png'
 
 
 const EventsCompany = await CountEventsCompany();
@@ -32,34 +33,42 @@ export const Homedash = () => {
           <Dashboard />
           <div className="home-dash">
             <section className="content-home1">
-              <h1 id='h1-cardEvent'> MI PERFIL <hr /> </h1>
+              <h1 id='h1-cardEvent'>INICIO <hr /> </h1>
               <div className='content-dash'>
                 <div className="box1-home">
                   <div className="datosUser">
 
-                    <div className="miFoto">
+                    {/* <div className="miFoto">
                       {traerCompany.map((company) => (
                         <img id='user-icon' src={company.img_empresa || userIcon} alt="icon" />
                       ))}
-                    </div>
+                    </div> */}
                     <Link>
-                      <p>BIENVENIDO DE NUEVO </p>
-                      <p>{company.charAt(0).toUpperCase() + company.slice(1)}</p>
+                      <p id='p-home'>BIENVENIDO DE NUEVO </p>
+                      <p id='p-home'>{company.charAt(0).toUpperCase() + company.slice(1)}</p>
+                      <p  id='other-text'>Descubre con nosotros la magia de crear eventos</p>
+
                     </Link>
+                    <button className='button-crear'>
+                      <Link to="/crud_eventos">
+                      Crea un evento
+
+                      </Link>
+                    </button>
                   </div>
 
-                  <div className="estado">
-                    <div className="point "></div>
-                    <p>Activo</p>
-                  </div>
-
-                </div>
-                <div className="box2-home">
                   <div className="contadores">
+                    <div className="estado">
+                      <p>Tienes</p>
                     <p>{eventos}</p>
-                    <h3>Eventos creados</h3>
+                    <p>Eventos creados</p>
+                    </div> <div class="emoji">😊</div>
+                    
                   </div>
+        
+
                 </div>
+              
 
               </div>
             </section>
