@@ -12,16 +12,6 @@ export const CardAsist = () => {
   let user = localStorage.getItem("user")
   const [allEvents, setAllEvents] = useState([]);
   const [allEventsCompany, setAllEventsCompany] = useState([]);
-
-  const handleClick = (event) => {
-    event.previewActive = !event.previewActive;
-    setAllEvents([...allEvents]);
-  };
-
-  const closePreview = (event) => {
-    event.previewActive = false;
-    setAllEvents([...allEvents]);
-  };
   const [isOpen, setIsOpen] = useState(false);
 
   const eventEmpresa = async () => {
@@ -31,6 +21,7 @@ export const CardAsist = () => {
 
   const asistEventsCompany = async (id) => {
     const response = await AsistEventCompany(id);
+    return response
   };
 
   useEffect(() => {
@@ -96,17 +87,14 @@ export const CardAsist = () => {
 
                     </div>
                     <div className="icon-cardA">
-                    <Drop2/>
-                    {/* {isOpen &&  <Drop2 closeModal={{setIsOpen}} />} */}
-
-
+                    <Drop2 id={eventEmpresa.id_event}/>
                     </div>
                   </div>
                   <div className="imagen-card">
                     <img
                       src={eventEmpresa.img_event}
                       alt=""
-                      onClick={() => AsistEventsCompany(eventEmpresa.id_event)}
+                      onClick={() => asistEventsCompany(eventEmpresa.id_event)}
                     />
                   </div>
                   <div className="shadow">

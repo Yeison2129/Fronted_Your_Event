@@ -16,7 +16,6 @@ export const Card_crud = () => {
   // const [active,setActive]=useState(false);
   const [open, setOpen] = useState(false);
   const [open2,setOpen2]= useState(false)
-  const [id, setId] = useState("");
   const [allEventsCompany, setAllEventsCompany] = useState([]);
   const [event, setEvent] = useState([]);
 
@@ -25,6 +24,15 @@ export const Card_crud = () => {
     setAllEventsCompany(response.data.data);
   };
   const navigate = useNavigate();
+
+  const EventImgs = async(id)=>{
+    const response= await SelectImg(id);
+    const eventsImg = response.data.data.map((event) => ({
+      ...event,
+      previewActive: false,
+    }));
+    setAllImg(eventsImg)
+  }
 
 
   

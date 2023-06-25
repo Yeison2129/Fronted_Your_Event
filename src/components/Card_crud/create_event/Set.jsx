@@ -9,7 +9,6 @@ export const Set = ({ closeModal }) => {
   const [allEventsCompany, setAllEventsCompany] = useState([]);
   const eventEmpresa = async () => {
     const response = await getEventsCompany();
-    console.log(response);
     setAllEventsCompany(response.data.data);
   };
 
