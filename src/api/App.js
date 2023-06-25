@@ -174,6 +174,19 @@ export const createEvent = async (registerEvent) => {
 }
 
 
+export const insertImg = async (InsertImg,id) => {
+    const formData = new FormData();
+    formData.append('image',InsertImg.img)
+    const events = await axios.post(`${url}/InsertImg/${id}`, formData, {
+        headers: {
+            token_company: token_company,
+            'Content-Type': 'multipart/form-data'
+        }
+    });
+    return events.data
+}
+
+
 export const updateEvent = async (updateEvent,id) => {
     const formData = new FormData();
     formData.append('nom_event', updateEvent.nom_event);
