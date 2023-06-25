@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { useTable } from 'react-table';
 import './drop.css';
+import { AsistEventsCompany } from '../../../api/App';
 
 export const Drop2 = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const data = React.useMemo(
-    () => [
-      { col1: 'Row 1, Col 1', col2: 'Row 1, Col 2', col3: 'Row 1, Col 3', col4: 'Row 1, Col 4' },
-      { col1: 'Row 2, Col 1', col2: 'Row 2, Col 2', col3: 'Row 2, Col 3', col4: 'Row 2, Col 4' },
-      { col1: 'Row 3, Col 1', col2: 'Row 3, Col 2', col3: 'Row 3, Col 3', col4: 'Row 3, Col 4' },
-    ],
+    
+        { col1: {}, col2: 'Row 1, Col 2', col3: 'Row 1, Col 3', col4: 'Row 1, Col 4' }
+    ,
     []
   );
 
@@ -55,7 +54,7 @@ export const Drop2 = () => {
               {rows.map((row) => {
                 prepareRow(row);
                 return (
-                  <tr {...row.getRowProps()}>
+                  <tr>
                     {row.cells.map((cell) => {
                       return (
                         <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
