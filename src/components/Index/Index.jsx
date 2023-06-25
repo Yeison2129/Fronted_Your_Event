@@ -28,7 +28,7 @@ import LogoNueve from "../../assets/cordoba.jpg";
 import LogoDiez from "../../assets/filandia.jpg";
 import LogoOnce from "../../assets/latebaida.jpg";
 import LogoDoce from "../../assets/salento.jpg";
-
+import { CardEventDest } from "../Card_CardEventsDest/Card-EventDest";
 // import Swiper core and required modules
 import { A11y, Autoplay } from "swiper";
 
@@ -39,11 +39,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { getCompany, getUser } from "../../api/App";
+import { EventsRandom, getCompany, getUser } from "../../api/App";
 
 export const Index = () => {
   const [traerUser, setTraerUser] = useState([]);
   const [traerCompany, setTraerCompany] = useState([]);
+  const [traerEvento, setTraerEvento] = useState([]);
 
   let user = localStorage.getItem("user");
   let company = localStorage.getItem("company");
@@ -56,6 +57,15 @@ export const Index = () => {
     setTraerUser(userData);
   };
 
+  const eventsRandom = async()=>{
+    const response = await EventsRandom();
+    console.log(response);
+    const DataEvent = response.data.data.map((event)=>({
+      ...event,
+    }))
+    setTraerEvento(DataEvent);
+  }
+
   const companys = async () => {
     const response = await getCompany();
     const companyData = response.data.data.map((company) => ({
@@ -63,10 +73,11 @@ export const Index = () => {
     }));
     setTraerCompany(companyData);
   };
-
   useEffect(() => {
     users();
     companys();
+    eventsRandom()
+    
   }, []);
 
   return (
@@ -378,25 +389,13 @@ export const Index = () => {
                     delay: 3000,
                     disableOnInteraction: false,
                   }}
-                >
+                >{traerEvento.map((eventsRandom) => (
                   <SwiperSlide className="swiper-slide">
-                    <img src={logoUno} alt="" width="400px" />
+                    <div>
+                    <CardEventDest/>
+                    </div>
                   </SwiperSlide>
-                  <SwiperSlide className="swiper-slide">
-                    <img src={logoDos} alt="" width="400px" />
-                  </SwiperSlide>
-                  <SwiperSlide className="swiper-slide">
-                    <img src={logoTres} alt="" width="400px" />
-                  </SwiperSlide>
-                  <SwiperSlide className="swiper-slide">
-                    <img src={logoCuatro} alt="" width="400px" />
-                  </SwiperSlide>
-                  <SwiperSlide className="swiper-slide">
-                    <img src={logoCinco} alt="" width="400px" />
-                  </SwiperSlide>
-                  <SwiperSlide className="swiper-slide">
-                    <img src={logoSeis} alt="" width="400px" />
-                  </SwiperSlide>
+                ))}
                 </Swiper>
               </div>
             </div>

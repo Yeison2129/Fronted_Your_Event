@@ -139,6 +139,9 @@ export const updatePassEmpresa = async (updatePass) =>
 
 //Events
 
+export const EventsRandom = async ()=>{
+  return await axios.get(`${url}/getEventsRandom`)
+} 
 export const CountEvents = async () => {
     return await axios.get(`${url}/CountEvents`)
 }
