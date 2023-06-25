@@ -34,9 +34,11 @@ export const Drop2 = () => {
 
   return (
     <div className="dropdown">
-      <i id="img-card-pointer" className="fa fa-solid fa-users dropdown-button"  onClick={() => setIsOpen(!isOpen)} />
+      <i id="img-card-pointer" className="fa fa-solid fa-users "  onClick={() => setIsOpen(!isOpen)} />
 
-    
+      <button className="dropdown-button" onClick={() => setIsOpen(!isOpen)}>
+        Open Dropdown
+      </button>
       {isOpen && (
         <div className="dropdown-content">
           <table {...getTableProps()} className="table">
