@@ -16,10 +16,10 @@ export const Drop2 = () => {
 
   const columns = React.useMemo(
     () => [
-      { Header: 'Column 1', accessor: 'col1' },
-      { Header: 'Column 2', accessor: 'col2' },
-      { Header: 'Column 3', accessor: 'col3' },
-      { Header: 'Column 4', accessor: 'col4' },
+      { Header: 'Nombre', accessor: 'col1' },
+      { Header: 'No Documento', accessor: 'col2' },
+      { Header: 'Teléfono', accessor: 'col3' },
+      { Header: 'Correo', accessor: 'col4' },
     ],
     []
   );
@@ -36,9 +36,9 @@ export const Drop2 = () => {
     <div className="dropdown">
       <i id="img-card-pointer" className="fa fa-solid fa-users "  onClick={() => setIsOpen(!isOpen)} />
 
-      <button className="dropdown-button" onClick={() => setIsOpen(!isOpen)}>
+      {/* <button className="dropdown-button" onClick={() => setIsOpen(!isOpen)}>
         Open Dropdown
-      </button>
+      </button> */}
       {isOpen && (
         <div className="dropdown-content">
           <table {...getTableProps()} className="table">
