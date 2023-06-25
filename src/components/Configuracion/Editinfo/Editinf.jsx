@@ -214,6 +214,7 @@ const navigate = useNavigate()
               const timeout = () =>{
                 setTimeout(function(){
                   navigate("/editap")
+                  window.location.reload()
                 },2000)
               }
               timeout()
