@@ -61,7 +61,7 @@
 }
 
 .cards-bg {
-  background-image: url('../../assets/categorias-1.jpg');
+  background-image: url('../../assets/categorias16.jpg');
   opacity: 0.5;
   position: absolute;
   width: 100%;
@@ -75,7 +75,7 @@
   pointer-events: none;
 }
 .cards-bg-one{
-  background-image: url('../../assets/categorias-2.jpg');
+  background-image: url('../../assets/categorias16.jpg');
   opacity: 0.5;
   position: absolute;
   width: 100%;
