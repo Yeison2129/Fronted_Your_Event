@@ -39,13 +39,13 @@ export const Homedash = () => {
                   <div className="datosUser">
 
                     {/* <div className="miFoto">
-                      {traerCompany.map((company) => (
-                        <img id='user-icon' src={company.img_empresa || userIcon} alt="icon" />
-                      ))}
+                    
                     </div> */}
                     <Link>
                       <p id='p-home'>BIENVENIDO DE NUEVO </p>
-                      <p id='p-home'>{company.charAt(0).toUpperCase() + company.slice(1)}</p>
+                      {traerCompany.map((company) => (
+                      <p id='p-home'>{company.nom_empresa}</p>
+                      ))}
                       <p  id='other-text'>Descubre con nosotros la magia de crear eventos</p>
 
                     </Link>
