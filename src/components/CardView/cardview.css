@@ -83,14 +83,13 @@
    z-index: 10;
 }
 
-
-
 .cardBig {
-   height: 90%;
-   width: 38%;
-   margin: 20px 0;
+   height: 81%;
+   width: 56%;
+   margin: 31px 0;
    border-radius: 1100px;
 }
+
 .bigImg{
    display: flex;
    width: 100%;
