@@ -56,7 +56,7 @@ export const Card_crud = () => {
       const response = await deleteEvents(id);
       if (response.data.data == "Delete_ok") {
         Swal.fire({
-          title: "Evento Eliminado",
+          title: "Evento Eliminado exitosamente",
           text: "",
           icon: "success",
           boton: "Ok",
@@ -71,7 +71,7 @@ export const Card_crud = () => {
       if (response.data.data == "ERROR 404") {
         Swal.fire({
           title: "Error al eliminar el evento",
-          text: "",
+          text: "Intentelo nuevamente",
           icon: "warning",
           boton: "Ok",
           time: 1500,

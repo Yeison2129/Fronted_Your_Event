@@ -38,6 +38,7 @@ const Crud_eventos = () => {
               const timeout = () => {
                 setTimeout(function () {
                   navigate("/cardCrud");
+                  window.location.reload();
                 }, 2000);
               };
               timeout();
@@ -54,7 +55,7 @@ const Crud_eventos = () => {
             if (events.data == "La fecha no puede ser pasada") {
               Swal.fire({
                 title: "Ingrese una fecha valida",
-                text: "Vuelve a intentarlo",
+                text: "Intentalo Nuevamente",
                 icon: "warning",
                 boton: "Ok",
                 time: 1500,
@@ -63,7 +64,7 @@ const Crud_eventos = () => {
             if (events.data == "La hora no puede ser pasada") {
               Swal.fire({
                 title: "Ingrese una hora valida",
-                text: "Vuelve a intentarlo",
+                text: "Intentalo Nuevamente",
                 icon: "warning",
                 boton: "Ok",
                 time: 1500,
@@ -72,7 +73,7 @@ const Crud_eventos = () => {
             if (events.data == "La hora no puede ser pasada") {
               Swal.fire({
                 title: "Ingrese una hora valida",
-                text: "Vuelve a intentarlo",
+                text: "Intentalo Nuevamente",
                 icon: "warning",
                 boton: "Ok",
                 time: 1500,
@@ -81,7 +82,7 @@ const Crud_eventos = () => {
             if (events.data == "horaExacta") {
               Swal.fire({
                 title: "Ingrese una hora valida",
-                text: "Vuelve a intentarlo",
+                text: "Intentalo Nuevamente",
                 icon: "warning",
                 boton: "Ok",
                 time: 1500,

@@ -25,8 +25,8 @@ export const Inicio_Sesion = () => {
 
             if (response.data.data == "logueado") {
               swal.fire({
-                title: "Logueado",
-                text: "Bienvenido",
+                title: "Bienvenido",
+                text: "Gracias por iniciar con nosotros",
                 icon: "success",
                 boton: "Ok",
                 time: 1500,
@@ -44,8 +44,8 @@ export const Inicio_Sesion = () => {
             }
             if (response.data.data == "PASSWORD_ERROR") {
               swal.fire({
-                title: "Contraseña incorrecta",
-                text: "",
+                title: "Corre o Contraseña incorrecta",
+                text: "Verificalos nuevamente para inicar",
                 icon: "warning",
                 boton: "Ok",
                 time: 1500,

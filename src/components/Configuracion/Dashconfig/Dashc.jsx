@@ -17,7 +17,7 @@ export const Dashc = () => {
 
   const deleteUser = async () => {
     Swal.fire({
-      title: "¿Deseas eliminar tu cuenta de Your Event?",
+      title: "¿Deseas eliminar tu cuenta de YourEvent?",
       text: "Dale OK para confirmar",
       icon: "question",
       showCancelButton: true,
@@ -41,7 +41,7 @@ export const Dashc = () => {
     localStorage.clear();
     setTimeout(() => {
       navigate("/")
-      // window.location.href = "/password"
+      window.location.reload();
     }, 2000);
   };
 
@@ -49,7 +49,7 @@ export const Dashc = () => {
 
   const DeleteCompany = async()=>{
     Swal.fire({
-      title: "¿Deseas eliminar tu cuenta de Your Event?",
+      title: "¿Deseas eliminar tu cuenta de YourEvent?",
       text: "Dale OK para confirmar",
       icon: "question",
       showCancelButton: true,
@@ -77,6 +77,7 @@ export const Dashc = () => {
     localStorage.clear();
     setTimeout(() => {
       navigate("/")
+      window.location.reload();
     }, 1500);
   };
 

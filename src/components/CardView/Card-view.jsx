@@ -93,7 +93,7 @@ export const CardView = () => {
     console.log(response);
     if (response.data.data == "AsistenciaCreada") {
       swal.fire({
-        title: "Asistencia Exitosa",
+        title: "Asistencia registrada Exitosamente",
         text: "Ya puedes asistir a este evento",
         icon: "success",
         boton: "Ok",

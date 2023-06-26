@@ -45,7 +45,7 @@ export const LoginEmpresa = () => {
             }
             if (respons.data.data == "Usuario_No_existe") {
               swal.fire({
-                title: "Empresa No existe",
+                title: "Esta Empresa No existe",
                 text: "por favor Registrate",
                 icon: "warning",
                 boton: "Ok",
@@ -54,7 +54,7 @@ export const LoginEmpresa = () => {
             }
             if (respons.data.data == "PASSWORD_ERROR") {
               swal.fire({
-                title: "Contraseña Incorrecta",
+                title: "Correo o Contraseña Incorrecta",
                 text: "Verifica tu contraseña",
                 icon: "warning",
                 boton: "Ok",
