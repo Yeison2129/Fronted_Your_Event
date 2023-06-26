@@ -437,7 +437,7 @@ export const CardView = () => {
                         id="cierre-ventana"
                       ></i>
                       <div className="bigImg">
-                        <Carrusel />
+                         <img src={event.img_event} alt="" /> 
                       </div>
                       <div className="info">
                         <div className="title-infcard">
