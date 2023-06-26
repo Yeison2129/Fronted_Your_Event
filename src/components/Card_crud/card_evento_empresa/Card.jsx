@@ -146,17 +146,9 @@ export const Card_crud = () => {
             </div>
             
             <div className="shadow">
-           
               <p>{eventEmpresa.nom_event}</p>
-              <div className="icon-card">
-                <i
-                  className="fa fa-solid fa-camera"
-                  onClick={() => openImage(eventEmpresa.id_event)}
-                />
-              </div>
             </div>
             {open && <Set closeModal={{ setOpen, evento: event }}/>}
-            {open2 && <Images closeModal={{setOpen2,evento:event, x:eventEmpresa.id_event}}/>}
           </div>
         ))}
      </div>
