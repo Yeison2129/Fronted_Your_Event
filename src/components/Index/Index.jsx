@@ -167,23 +167,58 @@ export const Index = () => {
             <CardView />
           </div>
         </section>
-        <section className="statas">
-          <div className="titulo_bar">
-            <h2 className="h2-title">
-              {" "}
-              Estadísticas
-              <hr />
-            </h2>
-          </div>
-          <div className=" estadist">
-            <div className="grafico">
-              <Stats />
+        <section className="slider" id="slider">
+            <div className="titulo_bar">
+              <h2 className="h2-title">
+                {" "}
+                Eventos destacados
+                <hr />
+              </h2>
             </div>
-            <div className="map">
-              <MapView />
+
+            <div className="swiper-container home-slider">
+              <div className="swiper-wrapper">
+                <Swiper
+                  modules={[A11y, Autoplay]}
+                  effect={"coverflow"}
+                  grabCursor={true}
+                  centeredSlides={true}
+                  slidesPerView={1}
+                  coverflowEffect={{
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 2,
+                    slideShadows: true,
+                  }}
+                  spaceBetween={0}
+                  loop={true}
+                  breakpoints={{
+                    100: {
+                      slidesPerView: 1,
+                    },
+                    700: {
+                      slidesPerView: 2,
+                    },
+                    1050: {
+                      slidesPerView: 3,
+                    },
+                  }}
+                  autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                  }}
+                >{traerEvento.map((eventsRandom) => (
+                  <SwiperSlide className="swiper-slide">
+                    <div>
+                    <CardEventDest/>
+                    </div>
+                  </SwiperSlide>
+                ))}
+                </Swiper>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
       </main>
       <div className="slider">
         <div className="titulo_bar">
@@ -336,58 +371,23 @@ export const Index = () => {
               </Link>
             </div>
           </section>
-          <section className="slider" id="slider">
-            <div className="titulo_bar">
-              <h2 className="h2-title">
-                {" "}
-                Eventos destacados
-                <hr />
-              </h2>
+          <section className="statas">
+          <div className="titulo_bar">
+            <h2 className="h2-title">
+              {" "}
+              Estadísticas
+              <hr />
+            </h2>
+          </div>
+          <div className=" estadist">
+            <div className="grafico">
+              <Stats />
             </div>
-
-            <div className="swiper-container home-slider">
-              <div className="swiper-wrapper">
-                <Swiper
-                  modules={[A11y, Autoplay]}
-                  effect={"coverflow"}
-                  grabCursor={true}
-                  centeredSlides={true}
-                  slidesPerView={1}
-                  coverflowEffect={{
-                    rotate: 0,
-                    stretch: 0,
-                    depth: 100,
-                    modifier: 2,
-                    slideShadows: true,
-                  }}
-                  spaceBetween={0}
-                  loop={true}
-                  breakpoints={{
-                    100: {
-                      slidesPerView: 1,
-                    },
-                    700: {
-                      slidesPerView: 2,
-                    },
-                    1050: {
-                      slidesPerView: 3,
-                    },
-                  }}
-                  autoplay={{
-                    delay: 3000,
-                    disableOnInteraction: false,
-                  }}
-                >{traerEvento.map((eventsRandom) => (
-                  <SwiperSlide className="swiper-slide">
-                    <div>
-                    <CardEventDest/>
-                    </div>
-                  </SwiperSlide>
-                ))}
-                </Swiper>
-              </div>
+            <div className="map">
+              <MapView />
             </div>
-          </section>
+          </div>
+        </section>
 
           <br />
           <section className="contenedor sobre-nosotros">

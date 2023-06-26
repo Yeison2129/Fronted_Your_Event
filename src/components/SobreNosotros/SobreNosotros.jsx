@@ -80,7 +80,7 @@ const handlePrevious = () => {
 
             {user ? (
               <>
-              <Link to=""><i className="fa fa-solid fa-bell" /></Link>
+             
               <div className="dropDown"> 
               <p to="" id="enter1">
                   {user.charAt(0).toUpperCase() + user.slice(1)}
