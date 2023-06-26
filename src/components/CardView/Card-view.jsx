@@ -230,8 +230,13 @@ export const CardView = () => {
                         onClick={() => closePreview(event)}
                         id="cierre-ventana"
                       ></i>
-                      <div className="bigImg">
-                        <Carrusel />
+                     <div className="bigImg">
+                        <img
+                          id="img-cardview"
+                          className="cardBig"
+                          src={event.img_event}
+                          alt=""
+                        />
                       </div>
                       <div className="info">
                         <div className="title-infcard">
