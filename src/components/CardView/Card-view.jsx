@@ -47,7 +47,7 @@ export const CardView = () => {
   const [allEvents, setAllEvents] = useState([]);
   const [filteredEvents, setFilteredEvents] = useState([]);
 
-    const events = async () => {
+  const events = async () => {
     const response = await getEvents();
     const eventsData = response.data.data.map((event) => ({
       ...event,
@@ -244,7 +244,7 @@ export const CardView = () => {
                           <p id="p-info">
                             {" "}
                             <i className="fa fa-solid fa-address-book" />
-                             {event.phone_event} 
+                            {event.phone_event}
                           </p>
                           <p id="p-info">
                             <i className="fa fa-solid fa-calendar" />
@@ -254,9 +254,9 @@ export const CardView = () => {
                           </p>
                           <p id="p-info">
                             <i className="fa fa-solid fa-dollar-sign" />
-                            {event.precio_entrada}  -  {""}
-                            <i className="fa fa-solid fa-warehouse"/>
-                            Un máximo de {event.aforo}  {""} personas.
+                            {event.precio_entrada} - {""}
+                            <i className="fa fa-solid fa-warehouse" />
+                            Un máximo de {event.aforo} {""} personas.
                           </p>
                         </div>
                         <div className="dates">
@@ -334,7 +334,12 @@ export const CardView = () => {
                         id="cierre-ventana"
                       ></i>
                       <div className="bigImg">
-                        <Carrusel />
+                        <img
+                          id="img-cardview"
+                          className="cardBig"
+                          src={event.img_event}
+                          alt=""
+                        />
                       </div>
                       <div className="info">
                         <div className="title-infcard">
@@ -347,7 +352,7 @@ export const CardView = () => {
                           <p id="p-info">
                             {" "}
                             <i className="fa fa-solid fa-address-book" />
-                             {event.phone_event} 
+                            {event.phone_event}
                           </p>
                           <p id="p-info">
                             <i className="fa fa-solid fa-calendar" />
@@ -357,9 +362,9 @@ export const CardView = () => {
                           </p>
                           <p id="p-info">
                             <i className="fa fa-solid fa-dollar-sign" />
-                            {event.precio_entrada}  -  {""}
-                            <i className="fa fa-solid fa-warehouse"/>
-                            Un máximo de {event.aforo}  {""} personas.
+                            {event.precio_entrada} - {""}
+                            <i className="fa fa-solid fa-warehouse" />
+                            Un máximo de {event.aforo} {""} personas.
                           </p>
                         </div>
                         <div className="dates">
@@ -437,7 +442,12 @@ export const CardView = () => {
                         id="cierre-ventana"
                       ></i>
                       <div className="bigImg">
-                        <Carrusel />
+                        <img
+                          id="img-cardview"
+                          className="cardBig"
+                          src={event.img_event}
+                          alt=""
+                        />
                       </div>
                       <div className="info">
                         <div className="title-infcard">
@@ -450,7 +460,7 @@ export const CardView = () => {
                           <p id="p-info">
                             {" "}
                             <i className="fa fa-solid fa-address-book" />
-                             {event.phone_event} 
+                            {event.phone_event}
                           </p>
                           <p id="p-info">
                             <i className="fa fa-solid fa-calendar" />
@@ -460,9 +470,9 @@ export const CardView = () => {
                           </p>
                           <p id="p-info">
                             <i className="fa fa-solid fa-dollar-sign" />
-                            {event.precio_entrada}  -  {""}
-                            <i className="fa fa-solid fa-warehouse"/>
-                            Un máximo de {event.aforo}  {""} personas.
+                            {event.precio_entrada} - {""}
+                            <i className="fa fa-solid fa-warehouse" />
+                            Un máximo de {event.aforo} {""} personas.
                           </p>
                         </div>
                         <div className="dates">
