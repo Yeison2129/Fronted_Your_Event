@@ -174,7 +174,7 @@ Field.loginEmpresa-btn:hover {
 	background-position: right;
 }
 .input-loginE{
-    background-color: #f0f0f0;
+    background-color: #aaa;
 	width:90%;
 	border: none;
 	outline: none;
@@ -183,7 +183,7 @@ Field.loginEmpresa-btn:hover {
 .input-field-LE{
 	
     width: 100%;
-    background-color: #f0f0f0;
+    background-color: #aaa;
     margin: 10px 0;
     height: 55px;
     border-radius: 55px;
